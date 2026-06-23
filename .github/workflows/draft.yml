@@ -1,0 +1,37 @@
+name: Draft post
+
+# Triggered by the Telegram bot (Pages Function) via repository_dispatch when
+# the owner runs /draft. Does the heavy AI drafting + web-search verification,
+# stores the candidate in Cloudflare KV, and sends a Telegram preview with
+# Approve / Reject buttons.
+
+on:
+  repository_dispatch:
+    types: [draft]
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install pipeline deps
+        working-directory: pipeline
+        run: npm ci
+
+      - name: Draft + notify
+        working-directory: pipeline
+        run: npx tsx src/runDraft.ts
+        env:
+          FRAGMENT_ID: ${{ github.event.client_payload.id }}
+          FRAGMENT_TEXT: ${{ github.event.client_payload.text }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_OWNER_ID: ${{ secrets.TELEGRAM_OWNER_ID }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

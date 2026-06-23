@@ -1,0 +1,41 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>AI agents are coming to your industry. We help you get ready.</h1>
+			<p>
+				<strong>Vertical Agent Solutions</strong> is a plain-English field guide to the agentic wave —
+				the shift from software you operate to software that operates on your behalf. No hype, no jargon
+				dumps. Every post is researched, fact-checked, and written to be understood by someone who
+				doesn't write code for a living.
+			</p>
+			<p>Here you'll find:</p>
+			<ul>
+				<li><strong>What agents actually are</strong> — and what they are not.</li>
+				<li><strong>Where they're already working</strong> — real use cases, by industry.</li>
+				<li><strong>How to adopt them</strong> — practical first steps, not science projects.</li>
+			</ul>
+			<p>
+				<a href="/blog">Read the latest →</a>
+			</p>
+			<hr />
+			<p>
+				<strong>Want this built for your business?</strong> We design and ship agentic systems for teams
+				that would rather adopt the wave than be flattened by it.
+				<a href="/about">Work with us →</a>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

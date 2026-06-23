@@ -1,0 +1,22 @@
+{
+  "name": "vas-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Vertical Agent Solutions content pipeline — Telegram idea inbox + (later) writer, gates, lead intake.",
+  "scripts": {
+    "bot": "tsx src/bot.ts",
+    "bot:watch": "tsx watch src/bot.ts",
+    "draft": "tsx src/draft.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.105.0",
+    "dotenv": "^17.4.2",
+    "grammy": "^1.44.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "tsx": "^4.22.4",
+    "typescript": "^6.0.3"
+  }
+}
