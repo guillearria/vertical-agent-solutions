@@ -34,13 +34,15 @@ export interface Parsed {
 }
 
 export function parseOutput(text: string): Parsed {
-	const title = text.match(/^TITLE:\s*(.+)$/m)?.[1]?.trim() ?? 'Untitled draft';
-	const descMatch = text.match(/^DESCRIPTION:\s*(.+)$/m);
-	const description = descMatch?.[1]?.trim() ?? '';
+	// Tolerant of bold markers (**TITLE:**), `:` or `-` separators, and case.
+	const titleMatch = text.match(/^\s*\**\s*TITLE\s*[:\-]\s*(.+?)\s*$/im);
+	let title = titleMatch?.[1]?.replace(/\*+/g, '').trim();
+	const descMatch = text.match(/^\s*\**\s*DESCRIPTION\s*[:\-]\s*(.+?)\s*$/im);
+	const description = (descMatch?.[1] ?? '').replace(/\*+/g, '').trim();
 
 	let body = text;
 	let sources: string[] = [];
-	const sourcesIdx = text.search(/^SOURCES:\s*$/m);
+	const sourcesIdx = text.search(/^\s*\**\s*SOURCES\s*[:\-]?\s*\**\s*$/im);
 	if (sourcesIdx !== -1) {
 		sources = text
 			.slice(sourcesIdx)
@@ -54,8 +56,25 @@ export function parseOutput(text: string): Parsed {
 	if (descMatch) {
 		const at = body.indexOf(descMatch[0]);
 		if (at !== -1) body = body.slice(at + descMatch[0].length);
+	} else if (titleMatch) {
+		const at = body.indexOf(titleMatch[0]);
+		if (at !== -1) body = body.slice(at + titleMatch[0].length);
 	}
-	return { title, description, sources, body: body.trim() };
+	body = body.trim();
+
+	// Fallback: if the model didn't emit a TITLE line, use the first heading or line.
+	if (!title) {
+		const heading = body.match(/^#{1,3}\s+(.+)$/m);
+		title =
+			heading?.[1]?.replace(/\*+/g, '').trim() ??
+			body
+				.split('\n')
+				.map((l) => l.replace(/^#+\s*/, '').replace(/\*+/g, '').trim())
+				.find((l) => l.length > 0)
+				?.slice(0, 120) ??
+			'Untitled draft';
+	}
+	return { title, description, sources, body };
 }
 
 /** Turn a slug-friendly string from a title (used for the published filename / URL). */
@@ -112,7 +131,10 @@ export async function draftFromText(idea: string): Promise<Parsed> {
 		},
 	];
 
-	let collected = '';
+	// Collect each turn's text separately and join with newlines so the format
+	// markers (TITLE:, DESCRIPTION:, SOURCES:) stay at the start of a line even
+	// when the web-search loop splits the output across multiple turns.
+	const parts: string[] = [];
 	let stopReason: string | null | undefined;
 	for (let i = 0; i < 6; i++) {
 		const stream = client.messages.stream({
@@ -125,9 +147,11 @@ export async function draftFromText(idea: string): Promise<Parsed> {
 			messages,
 		});
 		const final = await stream.finalMessage();
+		let turnText = '';
 		for (const block of final.content) {
-			if (block.type === 'text') collected += block.text;
+			if (block.type === 'text') turnText += block.text;
 		}
+		if (turnText) parts.push(turnText);
 		stopReason = final.stop_reason;
 		if (stopReason === 'pause_turn') {
 			// Server-side tool loop paused — resend with the assistant turn to resume.
@@ -141,5 +165,9 @@ export async function draftFromText(idea: string): Promise<Parsed> {
 		throw new Error('The model declined to draft this fragment. Try rewording it.');
 	}
 
+	const collected = parts.join('\n');
+	if (!/^\s*\**\s*TITLE\s*[:\-]/im.test(collected)) {
+		console.warn('⚠️ No TITLE: line found in model output. First 300 chars:\n' + collected.slice(0, 300));
+	}
 	return parseOutput(collected);
 }
