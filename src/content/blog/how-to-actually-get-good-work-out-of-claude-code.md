@@ -2,8 +2,6 @@
 title: "How to Actually Get Good Work Out of Claude Code (A Non‑Coder's Playbook)"
 description: "A plain‑English guide to Claude Code best practices for business owners — what it is, how to set it up, and the habits that make it reliable."
 pubDate: 'Jun 24 2026'
-sourceFragment: 202606241752-0ikxt
-status: draft
 sources:
   - "Anthropic — Claude Code research report (agentic coding and expertise) — https://www.anthropic.com/research/claude-code-expertise"
   - "Anthropic — Claude Code product page — https://www.anthropic.com/product/claude-code"

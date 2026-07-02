@@ -2,8 +2,6 @@
 title: "How to Set Up an AI Agent System to Manage Wealth — Without Handing Over the Keys"
 description: "A plain-English guide to using AI agents for saving, investing, and financial planning — what they do well, where they fail, and how to start safely."
 pubDate: 'Jun 24 2026'
-sourceFragment: 202606240127-jy85s
-status: draft
 sources:
   - "Statista, Robo-Advisors market forecast (AUM ~$2 trillion) — https://www.statista.com/outlook/fmo/wealth-management/digital-investment/robo-advisors/worldwide"
   - "OpenAI, \"Morgan Stanley uses AI evals…\" (GPT-4 assistant, 98% adoption) — https://openai.com/index/morgan-stanley/"

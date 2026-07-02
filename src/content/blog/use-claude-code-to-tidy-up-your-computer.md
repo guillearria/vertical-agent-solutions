@@ -2,8 +2,6 @@
 title: "Use Claude Code to Tidy Up Your Computer, One Folder at a Time"
 description: "A non-coder's guide to pointing Anthropic's Claude Code at a messy folder so it sorts, renames, and cleans up files—safely and on your terms."
 pubDate: 'Jun 27 2026'
-sourceFragment: 202606272307-83nzi
-status: draft
 sources:
   - "Claude Code Overview (Anthropic Docs) — https://code.claude.com/docs/en/overview"
   - "How we built Claude Code auto mode (Anthropic Engineering) — https://www.anthropic.com/engineering/claude-code-auto-mode"

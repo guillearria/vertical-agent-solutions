@@ -2,8 +2,6 @@
 title: "Why solo and small firms are the right target"
 description: "A done-for-you AI service that reads intake forms, retainers, and discovery, then hands attorneys structured facts to review instead of raw documents."
 pubDate: 'Jun 25 2026'
-sourceFragment: 202606250308-d1hyp
-status: draft
 sources:
   - "ABA Profile of the Legal Profession (lawyer population) — https://www.americanbar.org/news/profile-legal-profession/"
   - "Federal Bar Association / ALPS (49% of private-practice lawyers are solo) — https://www.fedbar.org/blog/insights-from-solo-attorneys-on-well-being-and-resilience/"

@@ -18,7 +18,7 @@ If you're new to the term, an "agent" is just software that can take a multi-ste
 
 ## Where agents genuinely help
 
-**Client intake and screening.** An intake agent can run your website chat or after-hours line, ask the standard qualifying questions, flag conflicts, and hand you a tidy summary before you ever pick up the phone. Think of it as a very organized receptionist who never sleeps — not a lawyer. The hard line: it can *gather* information and *route* it, but it must not *give legal advice*. That distinction matters legally, which we'll get to.
+**Client intake and screening.** An intake agent can run your website chat or after-hours line, ask the standard qualifying questions, flag conflicts, and hand you a tidy summary before you ever pick up the phone. Think of it as a very organized receptionist who never sleeps — not a lawyer. The hard line: it can *gather* information and *route* it, but it must not *give legal advice*. That distinction matters legally, which we'll get to. For a deeper dive into the document side of intake — extracting names, dates, and clauses from retainers and discovery — see [Why solo and small firms are the right target](/blog/why-solo-and-small-firms-are-the-right-target/).
 
 **First-draft document work.** Retainer agreements, demand letters, discovery request shells, routine correspondence — an agent can produce a solid first draft from your templates in seconds. You still edit and sign. Used this way, it's a faster typewriter, not a substitute for your judgment.
 
