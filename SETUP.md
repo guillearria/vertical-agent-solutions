@@ -4,13 +4,13 @@ This wires the repo into the **$0-compute serverless** setup:
 
 - **Cloudflare Pages** — hosts the static Astro site, auto-deploys on every push to `main`.
 - **Cloudflare Pages Functions** — `functions/api/telegram.ts` (Telegram webhook: capture, `/list`, `/draft`, Approve/Reject/Archive/Undo) and `functions/api/contact.ts` (contact form → Telegram, Turnstile-protected).
-- **GitHub Actions** — the heavy AI work: manual drafting (`draft.yml`) and the **daily autonomous editor** (`editor.yml`).
+- **GitHub Actions** — the heavy AI work: manual drafting (`draft.yml`) and the **daily autonomous editor** (`editor.yml`). All model calls run through headless Claude Code on the owner's **Claude Max subscription** (`CLAUDE_CODE_OAUTH_TOKEN`), not metered API credits.
 - **Cloudflare KV** — captured ideas, pending draft candidates, editor undo tokens, contact-form rate limits.
 
 Two publishing paths:
 
 ```
-Manual (phone):  Telegram idea → /draft → repository_dispatch → Action (Claude + web_search)
+Manual (phone):  Telegram idea → /draft → repository_dispatch → Action (Claude Code + WebSearch)
                  → candidate in KV → Telegram preview [Approve][Reject]
                  → Approve → Function writes src/content/blog/<slug>.md via GitHub API → live
 
@@ -83,7 +83,7 @@ curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
 
 1. **Hosting:** push any change → Pages build succeeds → the site, `/blog`, and `/rss.xml` are live.
 2. **Capture:** Telegram → send text → `Saved ✓ <id>`. From a different account → `This inbox is private.` `/list` shows recent ideas.
-3. **Draft:** `/draft` → "Drafting…" → a preview with title/description/source count + **Approve/Reject** arrives (the `draft` Action run shows web_search calls).
+3. **Draft:** `/draft` → "Drafting…" → a preview with title/description/source count + **Approve/Reject** arrives (the `draft` Action run shows the WebSearch-backed drafting).
 4. **Publish:** tap **Approve** → new file in `src/content/blog/`, Pages redeploys, `Published ✓ <url>`, post is live + in RSS.
 5. **Reject:** tap **Reject** on another → `Discarded`, nothing committed.
 6. **Daily editor:** Actions tab → run **Daily editor** with `dry_run: true` → check the run log for the decision JSON (nothing pushed). Then run it for real → a commit lands, Pages rebuilds, and a Telegram summary with **↩️ Undo** arrives. Tap Undo → a revert commit lands via the GitHub API.
