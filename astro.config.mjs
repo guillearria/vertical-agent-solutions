@@ -6,7 +6,10 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://verticalagentsolutions.com',
+	// TODO: flip to https://verticalagentsolutions.com once the custom domain is
+	// connected in Cloudflare Pages (also update SITE_URL in the Pages env and
+	// DEFAULT_SITE in functions/api/telegram.ts).
+	site: 'https://vertical-agent-solutions.pages.dev',
 	integrations: [mdx(), sitemap()],
 	fonts: [
 		{

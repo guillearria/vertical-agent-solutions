@@ -17,6 +17,8 @@
  *   GITHUB_BRANCH (optional, default "main"), SITE_URL (optional).
  */
 
+import { slugify } from '../../lib/slug';
+
 interface Env {
 	INBOX_KV: KVNamespace;
 	TELEGRAM_BOT_TOKEN: string;
@@ -36,7 +38,8 @@ interface KVNamespace {
 	list(opts?: { prefix?: string }): Promise<{ keys: { name: string }[] }>;
 }
 
-const DEFAULT_SITE = 'https://verticalagentsolutions.com';
+// TODO: flip back to https://verticalagentsolutions.com once the custom domain is connected.
+const DEFAULT_SITE = 'https://vertical-agent-solutions.pages.dev';
 
 // ---------- helpers ----------
 
@@ -44,18 +47,6 @@ function makeId(now: Date): string {
 	const stamp = now.toISOString().slice(0, 16).replace(/[-:T]/g, ''); // 202606201655
 	const rand = Math.random().toString(36).slice(2, 7);
 	return `${stamp}-${rand}`;
-}
-
-function slugify(title: string): string {
-	return (
-		title
-			.toLowerCase()
-			.replace(/['"]/g, '')
-			.replace(/[^a-z0-9]+/g, '-')
-			.replace(/^-+|-+$/g, '')
-			// kept short so `archive:<slug>` stays within Telegram's 64-byte callback_data
-			.slice(0, 50) || 'post'
-	);
 }
 
 function toBase64(str: string): string {
@@ -123,6 +114,15 @@ async function ghPutFile(env: Env, path: string, content: string, message: strin
 		body: JSON.stringify({ message, content: toBase64(content), branch: ghBranch(env), sha }),
 	});
 	if (!res.ok) throw new Error(`GitHub putFile ${path} failed: ${res.status} ${await res.text()}`);
+}
+
+async function ghDeleteFile(env: Env, path: string, message: string, sha: string): Promise<void> {
+	const res = await fetch(`https://api.github.com/repos/${env.GITHUB_REPO}/contents/${path}`, {
+		method: 'DELETE',
+		headers: { ...ghHeaders(env), 'Content-Type': 'application/json' },
+		body: JSON.stringify({ message, branch: ghBranch(env), sha }),
+	});
+	if (!res.ok) throw new Error(`GitHub deleteFile ${path} failed: ${res.status} ${await res.text()}`);
 }
 
 // ---------- fragment storage (KV) ----------
@@ -252,6 +252,30 @@ async function publishCandidate(env: Env, id: string): Promise<string> {
 	return `${site}/blog/${slug}/`;
 }
 
+/** Written by the daily editor (pipeline/src/editor.ts) under `undo:<token>`. */
+interface UndoRecord {
+	type: 'new_post' | 'improve_post' | 'archive_post';
+	slug: string;
+	path: string;
+	prevContent?: string;
+}
+
+async function undoEditorAction(env: Env, token: string): Promise<string> {
+	const raw = await env.INBOX_KV.get(`undo:${token}`);
+	if (!raw) throw new Error('expired');
+	const undo = JSON.parse(raw) as UndoRecord;
+
+	const file = await ghGetFile(env, undo.path);
+	if (undo.type === 'new_post') {
+		if (file) await ghDeleteFile(env, undo.path, `Undo publish: ${undo.slug}`, file.sha);
+	} else {
+		if (!undo.prevContent) throw new Error('undo record missing previous content');
+		await ghPutFile(env, undo.path, undo.prevContent, `Undo ${undo.type}: ${undo.slug}`, file?.sha);
+	}
+	await env.INBOX_KV.delete(`undo:${token}`);
+	return undo.slug;
+}
+
 async function archivePost(env: Env, slug: string): Promise<void> {
 	const path = `src/content/blog/${slug}.md`;
 	const file = await ghGetFile(env, path);
@@ -283,12 +307,16 @@ async function handleCallback(env: Env, cb: any): Promise<void> {
 			await archivePost(env, arg);
 			await ack('Archived');
 			await reply(env, chatId, `Archived ✓  ${arg} (hidden after the next build).`);
+		} else if (action === 'undo') {
+			const slug = await undoEditorAction(env, arg);
+			await ack('Reverting…');
+			await reply(env, chatId, `Reverted ✓  ${slug} (live after the next build).`);
 		} else {
 			await ack('Unknown action');
 		}
 	} catch (err) {
 		const msg = (err as Error).message;
-		await ack(msg === 'expired' ? 'That draft expired' : 'Failed');
+		await ack(msg === 'expired' ? 'That action expired' : 'Failed');
 		await reply(env, chatId, `Action failed: ${msg}`);
 	}
 }

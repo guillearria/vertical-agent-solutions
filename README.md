@@ -1,63 +1,34 @@
-# Astro Starter Kit: Blog
+# Vertical Agent Solutions
 
-```sh
-npm create astro@latest -- --template blog
-```
+Plain-English guides on adopting AI agents, industry by industry — written for business owners, not engineers. Live at **https://vertical-agent-solutions.pages.dev** (custom domain `verticalagentsolutions.com` pending).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The blog runs itself:
 
-Features:
+- **Daily editor** (`.github/workflows/editor.yml` → `pipeline/src/editor.ts`) — every day an AI "editor-in-chief" reviews the whole catalog and takes the single highest-value action: publish a new post, improve an existing one, archive redundant content, or skip. It publishes autonomously and reports to Telegram with an Undo button.
+- **Phone-to-publish** (manual, still available) — send an idea to the Telegram bot, `/draft` turns it into a fact-checked draft (Claude + web search), tap Approve to publish.
+- **Contact form** (`/about`) — posts to `functions/api/contact.ts`, which forwards to Telegram. Spam-guarded by Cloudflare Turnstile + honeypot + rate limit.
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+## Stack
 
-## 🚀 Project Structure
+| Piece | Where |
+|---|---|
+| Astro static site | `src/` (content collection in `src/content/blog/`) |
+| Cloudflare Pages Functions (Telegram webhook, contact form) | `functions/api/` |
+| Node pipeline run by GitHub Actions (drafting, daily editor) | `pipeline/` |
+| Shared helpers (both runtimes) | `lib/` |
 
-Inside of your Astro project, you'll see the following folders and files:
+Hosting: Cloudflare Pages, auto-builds on every push to `main`. State (idea fragments, draft candidates, undo tokens): Cloudflare KV.
 
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
-```
+## Commands
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+| Command | Action |
+|---|---|
+| `npm install && npm run dev` | Site at `localhost:4321` |
+| `npm run build` | Production build to `dist/` |
+| `cd pipeline && EDITOR_DRY_RUN=1 npx tsx src/editor.ts` | Dry-run the daily editor (no push, no Telegram) |
+| `cd pipeline && npx tsc --noEmit` | Type-check the pipeline |
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Docs
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- `SETUP.md` — full architecture + one-time setup (Cloudflare, GitHub, Telegram, Turnstile).
+- `BACKLOG.md` — status and pending work.

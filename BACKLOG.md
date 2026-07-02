@@ -1,26 +1,20 @@
 # Backlog
 
-Status: **MVP live and working** at `https://vertical-agent-solutions.pages.dev` — phone → Telegram → AI draft (Opus + web-search verification) → preview → Approve → published → deployed. See `SETUP.md` for the architecture.
+Status: **fully automated.** The daily editor (`editor.yml` → `pipeline/src/editor.ts`) reviews the catalog every day and autonomously publishes / improves / archives / skips, reporting to Telegram with an Undo button. The manual phone → `/draft` → Approve flow still works alongside it. Contact form on `/about` forwards to Telegram. See `SETUP.md` for architecture.
 
-## Polish (quick wins)
-- [ ] **Drop leftover `status: draft`** from published frontmatter (it's cosmetic — Astro/zod ignores it). Fix in `buildFrontmatter` (`pipeline/src/writer.ts`) or flip it during publish in `functions/api/telegram.ts` (`publishCandidate`).
-- [ ] **Slug cuts mid-word** (e.g. `...actually-help-an`). Trim to the last whole word. ⚠️ The 50-char cap exists so `archive:<slug>` stays within Telegram's 64-byte `callback_data` — keep that constraint (or switch archive to a short KV token instead of the raw slug). Touches `slugify` in `functions/api/telegram.ts` (+ the unused copy in `pipeline/src/writer.ts`).
-- [ ] **Silence Node 20 deprecation warning** in Actions — bump `actions/checkout` / `actions/setup-node` (`.github/workflows/*.yml`).
+## Needs a one-time manual step (Cloudflare dashboard)
+- [ ] **Turnstile keys** — create the widget and set `PUBLIC_TURNSTILE_SITE_KEY` (build-time) + `TURNSTILE_SECRET_KEY` in the Pages env (SETUP.md § Cloudflare step 5). Until then the contact form relies on honeypot + rate limit only.
+- [ ] **Update Pages env `SITE_URL`** to `https://vertical-agent-solutions.pages.dev` (it may still point at the unconnected custom domain).
+- [ ] **Connect custom domain** `verticalagentsolutions.com` (Pages → Custom domains), then flip `site` in `astro.config.mjs`, `DEFAULT_SITE` in `functions/api/telegram.ts`, `SITE_URL` vars, and the Turnstile hostname.
 
-## Mobile / UI (site looks cramped on mobile)
-- [ ] Responsive audit + fixes for narrow viewports. Likely culprits:
-  - `main { width: 960px }` (fixed, no max-width) in `src/pages/blog/index.astro`
-  - `.prose { width: 720px }` in `src/layouts/BlogPost.astro`
-  - `src/components/Header.astro`, `src/styles/global.css`
-  - Goal: full, comfortable readability on a phone.
+## First-run verification (once pushed)
+- [ ] Run **Daily editor** via `workflow_dispatch` with `dry_run: true`, then for real; confirm the commit, the Pages rebuild, the Telegram summary, and that **Undo** reverts.
+- [ ] Submit the contact form on `/about` and confirm the Telegram message.
+- [ ] Submit the site to **Google Search Console** (verification meta/DNS) now that robots.txt, sitemap, and JSON-LD are in place.
 
-## Bigger feature (speculative): conversational authoring
-- [ ] Build a post through a **back-and-forth conversation** with the bot, not one-shot draft→post.
-- [ ] **Versioning / revisions** — keep multiple drafts of a post and iterate on them.
-- [ ] **Full draft read on mobile** — read the entire draft (not just the ~400-char preview), e.g. a web preview page or paginated Telegram messages.
-
-## Also pending (from the original plan)
-- [ ] Connect custom domain `verticalagentsolutions.com` (Pages → Custom domains).
-- [ ] Exercise the **weekly maintenance cron** (dedup/overlap + prune/archive) — wired in `.github/workflows/maintenance.yml`, not yet run for real.
-- [ ] Voice / image fragments (`bot.ts` currently text-only).
-- [ ] Not built (deferred earlier): "re-verify & refresh claims" and "broken-link / stale-stat" maintenance jobs.
+## Ideas (not started)
+- [ ] Per-post `heroImage` (would also fix social cards being the generic placeholder).
+- [ ] Analytics (Plausible/Fathom or Cloudflare Web Analytics).
+- [ ] Voice / image fragments in the Telegram capture flow (text-only today).
+- [ ] Conversational multi-turn authoring; draft versioning/revisions.
+- [ ] Editor: a periodic "re-verify claims / broken-link" pass on old posts.

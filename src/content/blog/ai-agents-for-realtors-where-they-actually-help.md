@@ -2,8 +2,6 @@
 title: "AI Agents for Realtors: Where They Actually Help (and Where They Don't)"
 description: "A plain-English guide for real estate agents on using AI agents for lead follow-up, listings, and admin — with honest limits and a first step."
 pubDate: 'Jun 23 2026'
-sourceFragment: 202606230234-m2pc4
-status: draft
 sources:
   - "NAR — REALTORS® Embrace AI, Digital Tools (2025 Technology Survey) — https://www.nar.realtor/newsroom/realtors-embrace-ai-digital-tools-to-enhance-client-service-nar-survey-finds"
   - "HousingWire — NAR 2025 Technology Survey: Realtor tech usage trends — https://www.housingwire.com/articles/nar-2025-technology-survey-realtor-tech-usage-trends/"

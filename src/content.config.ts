@@ -16,6 +16,8 @@ const blog = defineCollection({
 			heroImage: z.optional(image()),
 			// Set by the maintenance flow to retire a post without deleting it.
 			archived: z.boolean().optional(),
+			// Provenance: web sources the writer verified claims against.
+			sources: z.array(z.string()).optional(),
 		}),
 });
 

@@ -38,3 +38,24 @@ export async function kvGet<T = unknown>(key: string): Promise<T | null> {
 	if (!res.ok) throw new Error(`KV get failed (${res.status}): ${await res.text()}`);
 	return (await res.json()) as T;
 }
+
+/** List key names under a prefix. */
+export async function kvList(prefix: string): Promise<string[]> {
+	const url = new URL(`${base()}/keys`);
+	url.searchParams.set('prefix', prefix);
+	const res = await fetch(url, { headers: authHeaders() });
+	if (!res.ok) throw new Error(`KV list failed (${res.status}): ${await res.text()}`);
+	const json = (await res.json()) as { result: { name: string }[] };
+	return json.result.map((k) => k.name);
+}
+
+/** Delete a key (no-op if it doesn't exist). */
+export async function kvDelete(key: string): Promise<void> {
+	const res = await fetch(`${base()}/values/${encodeURIComponent(key)}`, {
+		method: 'DELETE',
+		headers: authHeaders(),
+	});
+	if (!res.ok && res.status !== 404) {
+		throw new Error(`KV delete failed (${res.status}): ${await res.text()}`);
+	}
+}

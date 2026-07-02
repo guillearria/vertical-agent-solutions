@@ -36,7 +36,7 @@ async function main(): Promise<void> {
 		throw err;
 	}
 
-	const frontmatter = buildFrontmatter(parsed, id);
+	const frontmatter = buildFrontmatter(parsed);
 	await kvPut(
 		`cand:${id}`,
 		{ id, title: parsed.title, description: parsed.description, sources: parsed.sources, frontmatter, createdAt: new Date().toISOString() },

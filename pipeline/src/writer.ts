@@ -1,10 +1,13 @@
 import Anthropic from '@anthropic-ai/sdk';
+import { slugify, truncateDescription } from '../../lib/slug';
 
 /**
  * The shared "staff writer" core: turns a raw idea into a finished, fact-checked
- * Vertical Agent Solutions post. Used by both the local CLI (`draft.ts`) and the
- * GitHub Action runner (`runDraft.ts`).
+ * Vertical Agent Solutions post. Used by the GitHub Action runners
+ * (`runDraft.ts`, `editor.ts`).
  */
+
+export { slugify };
 
 export const SYSTEM = `You are the staff writer for "Vertical Agent Solutions", a blog that teaches people across every industry how to adopt AI agents.
 
@@ -15,6 +18,8 @@ Voice and rules:
 - Deeply verify every factual claim. Use the web_search tool to check anything that is a stat, a date, a capability claim, or a reference to a real product/company/study. If you cannot find support for a claim, soften it to opinion or cut it. Never invent sources.
 - Aim for roughly 600–900 words. Tight is better than padded.
 - End with a short, non-salesy close that points the reader toward a concrete next step they could take.
+- SEO: the TITLE should read like something the target reader would actually type into Google — a specific industry plus a specific problem. No clickbait.
+- SEO: the DESCRIPTION must work as a Google search snippet — one concrete sentence, under 160 characters, that makes the right reader click.
 
 Output format — follow it exactly:
 TITLE: <a clear, specific headline>
@@ -77,59 +82,53 @@ export function parseOutput(text: string): Parsed {
 	return { title, description, sources, body };
 }
 
-/** Turn a slug-friendly string from a title (used for the published filename / URL). */
-export function slugify(title: string): string {
-	return (
-		title
-			.toLowerCase()
-			.replace(/['"]/g, '')
-			.replace(/[^a-z0-9]+/g, '-')
-			.replace(/^-+|-+$/g, '')
-			.slice(0, 50) || 'post'
-	);
-}
-
 /** A pubDate string Astro's `z.coerce.date()` accepts, e.g. "Jun 20 2026". */
 export function pubDateString(d = new Date()): string {
 	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 	return `${months[d.getMonth()]} ${d.getDate()} ${d.getFullYear()}`;
 }
 
-export function buildFrontmatter(p: Parsed, fragmentId: string): string {
+export function buildFrontmatter(p: Parsed, opts: { pubDate?: string; updatedDate?: string } = {}): string {
 	const sourcesBlock = p.sources.length
 		? '\n' + p.sources.map((s) => `  - ${JSON.stringify(s)}`).join('\n')
 		: ' []';
-	return [
+	const lines = [
 		'---',
 		`title: ${JSON.stringify(p.title)}`,
-		`description: ${JSON.stringify(p.description)}`,
-		`pubDate: '${pubDateString()}'`,
-		`sourceFragment: ${fragmentId}`,
-		'status: draft',
-		`sources:${sourcesBlock}`,
-		'---',
-		'',
-		p.body,
-		'',
-	].join('\n');
+		`description: ${JSON.stringify(truncateDescription(p.description))}`,
+		`pubDate: '${opts.pubDate ?? pubDateString()}'`,
+	];
+	if (opts.updatedDate) lines.push(`updatedDate: '${opts.updatedDate}'`);
+	lines.push(`sources:${sourcesBlock}`, '---', '', p.body, '');
+	return lines.join('\n');
+}
+
+/** An existing post the writer may internally link to. */
+export interface CatalogEntry {
+	slug: string;
+	title: string;
+}
+
+function catalogNote(catalog?: CatalogEntry[]): string {
+	if (!catalog?.length) return '';
+	const list = catalog.map((c) => `- /blog/${c.slug}/ — ${c.title}`).join('\n');
+	return (
+		`\n\nAlready published on this blog:\n${list}\n\n` +
+		`Where genuinely relevant, link to 1–3 of these existing posts in the body, using their ` +
+		`relative URLs exactly as listed. Never link to a post that is not in this list, and never ` +
+		`force a link where it doesn't help the reader.`
+	);
 }
 
 /**
- * Run the model (with server-side web search) against a raw idea and return the
- * parsed draft. Requires ANTHROPIC_API_KEY in the environment.
+ * Run the writer (with server-side web search) against a user message and
+ * return the parsed draft. Requires ANTHROPIC_API_KEY in the environment.
  * Throws on refusal.
  */
-export async function draftFromText(idea: string): Promise<Parsed> {
+async function runWriter(userContent: string): Promise<Parsed> {
 	const client = new Anthropic();
 
-	const messages: Anthropic.MessageParam[] = [
-		{
-			role: 'user',
-			content:
-				`Here is a raw idea fragment I captured from my phone:\n\n"""\n${idea}\n"""\n\n` +
-				`Develop it into a finished Vertical Agent Solutions post, following every rule in your instructions.`,
-		},
-	];
+	const messages: Anthropic.MessageParam[] = [{ role: 'user', content: userContent }];
 
 	// Collect each turn's text separately and join with newlines so the format
 	// markers (TITLE:, DESCRIPTION:, SOURCES:) stay at the start of a line even
@@ -162,7 +161,7 @@ export async function draftFromText(idea: string): Promise<Parsed> {
 	}
 
 	if (stopReason === 'refusal') {
-		throw new Error('The model declined to draft this fragment. Try rewording it.');
+		throw new Error('The model declined to write this. Try rewording the idea.');
 	}
 
 	const collected = parts.join('\n');
@@ -170,4 +169,45 @@ export async function draftFromText(idea: string): Promise<Parsed> {
 		console.warn('⚠️ No TITLE: line found in model output. First 300 chars:\n' + collected.slice(0, 300));
 	}
 	return parseOutput(collected);
+}
+
+/** Draft a brand-new post from a raw idea / editorial brief. */
+export async function draftFromText(idea: string, opts: { catalog?: CatalogEntry[] } = {}): Promise<Parsed> {
+	return runWriter(
+		`Here is the idea for the next post:\n\n"""\n${idea}\n"""\n\n` +
+			`Develop it into a finished Vertical Agent Solutions post, following every rule in your instructions.` +
+			catalogNote(opts.catalog),
+	);
+}
+
+/** The parts of an already-published post that `improvePost` revises. */
+export interface CurrentPost {
+	title: string;
+	description: string;
+	body: string;
+	sources: string[];
+}
+
+/** Revise an existing post per an editorial brief (same voice, same topic, same URL). */
+export async function improvePost(
+	current: CurrentPost,
+	brief: string,
+	catalog?: CatalogEntry[],
+): Promise<Parsed> {
+	const sourcesList = current.sources.map((s) => `- ${s}`).join('\n') || '- none';
+	return runWriter(
+		`Below is a post already published on the blog. Revise and improve it per this editorial brief:\n\n` +
+			`"""\n${brief}\n"""\n\n` +
+			`Rules for the revision:\n` +
+			`- Keep the same core topic and angle — this is an upgrade, not a new post.\n` +
+			`- Re-verify key stats and claims with web_search; update or cut anything stale.\n` +
+			`- Target 700–1000 words.\n` +
+			`- Keep the TITLE close to the original unless the brief says otherwise.\n` +
+			`- Follow every rule in your instructions, including the exact output format.` +
+			catalogNote(catalog) +
+			`\n\nCurrent title: ${current.title}\n` +
+			`Current description: ${current.description}\n\n` +
+			`Current body:\n"""\n${current.body}\n"""\n\n` +
+			`Sources previously cited:\n${sourcesList}`,
+	);
 }
