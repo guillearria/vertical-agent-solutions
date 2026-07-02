@@ -6,9 +6,10 @@ Status: **fully automated.** The daily editor (`editor.yml` → `pipeline/src/ed
 - [ ] **Turnstile keys** — create the widget and set `PUBLIC_TURNSTILE_SITE_KEY` (build-time) + `TURNSTILE_SECRET_KEY` in the Pages env (SETUP.md § Cloudflare step 5). Dashboard gotcha: after typing `vertical-agent-solutions.pages.dev` in the hostname field you must confirm it (press Enter / pick the suggestion) so it appears as a list entry below the field — otherwise Create fails with "At least 1 hostname must be added". `pages.dev` subdomains are supported. Until the keys are set the contact form relies on honeypot + rate limit only.
 - [ ] **Connect custom domain** `verticalagentsolutions.com` (Pages → Custom domains), then flip `site` in `astro.config.mjs`, `DEFAULT_SITE` in `functions/api/telegram.ts`, `SITE_URL` vars, and the Turnstile hostname.
 
-## First-run verification (once pushed)
-- [ ] Run **Daily editor** via `workflow_dispatch` with `dry_run: true`, then for real; confirm the commit, the Pages rebuild, the Telegram summary, and that **Undo** reverts.
-- [ ] Submit the contact form on `/about` and confirm the Telegram message.
+## First-run verification
+- [x] **Dry run passed** (Jul 2 2026): decision call chose `new_post` (dental vertical), full draft produced in the runner, nothing pushed.
+- [ ] **Real editor run** — blocked on Anthropic API credits (console.anthropic.com → Plans & Billing). Once topped up: `gh workflow run editor.yml` (or Actions → Daily editor → Run), then confirm the commit, the Pages rebuild, the Telegram summary, and that **Undo** reverts. Failures now ping Telegram.
+- [ ] Submit the contact form on `/about` **from a browser** (Turnstile challenge required — curl without a token is correctly rejected) and confirm the Telegram message.
 - [ ] Submit the site to **Google Search Console** (verification meta/DNS) now that robots.txt, sitemap, and JSON-LD are in place.
 
 ## Ideas (not started)
