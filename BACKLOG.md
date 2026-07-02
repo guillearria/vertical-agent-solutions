@@ -8,7 +8,8 @@ Status: **fully automated.** The daily editor (`editor.yml` → `pipeline/src/ed
 
 ## First-run verification
 - [x] **Dry run passed** (Jul 2 2026): decision call chose `new_post` (dental vertical), full draft produced in the runner, nothing pushed.
-- [ ] **Real editor run** — blocked on Anthropic API credits (console.anthropic.com → Plans & Billing). Once topped up: `gh workflow run editor.yml` (or Actions → Daily editor → Run), then confirm the commit, the Pages rebuild, the Telegram summary, and that **Undo** reverts. Failures now ping Telegram.
+- [ ] **Add the `CLAUDE_CODE_OAUTH_TOKEN` Actions secret** — run `claude setup-token` locally, then `gh secret set CLAUDE_CODE_OAUTH_TOKEN` (paste when prompted). The pipeline now runs on the Max subscription via headless Claude Code; the old `ANTHROPIC_API_KEY` secret is unused and can be deleted.
+- [ ] **Real editor run** — once the secret exists: `gh workflow run editor.yml` (or Actions → Daily editor → Run), then confirm the commit, the Pages rebuild, the Telegram summary, and that **Undo** reverts. Failures ping Telegram.
 - [ ] Submit the contact form on `/about` **from a browser** (Turnstile challenge required — curl without a token is correctly rejected) and confirm the Telegram message.
 - [ ] Submit the site to **Google Search Console** (verification meta/DNS) now that robots.txt, sitemap, and JSON-LD are in place.
 

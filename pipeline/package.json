@@ -8,9 +8,6 @@
     "draft": "tsx src/runDraft.ts",
     "editor": "tsx src/editor.ts"
   },
-  "dependencies": {
-    "@anthropic-ai/sdk": "^0.105.0"
-  },
   "devDependencies": {
     "@types/node": "^26.0.0",
     "tsx": "^4.22.4",

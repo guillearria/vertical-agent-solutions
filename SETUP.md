@@ -30,7 +30,7 @@ The repo is already pushed. Add **Actions secrets** (Settings → Secrets and va
 
 | Secret | Value |
 |---|---|
-| `ANTHROPIC_API_KEY` | from console.anthropic.com |
+| `CLAUDE_CODE_OAUTH_TOKEN` | run `claude setup-token` locally (needs the Claude Max/Pro subscription) and paste the token — AI runs bill the subscription, not API credits. Expires after ~1 year |
 | `TELEGRAM_BOT_TOKEN` | from @BotFather |
 | `TELEGRAM_OWNER_ID` | your numeric id (from @userinfobot) |
 | `CF_ACCOUNT_ID` | Cloudflare → account ID |
@@ -91,5 +91,5 @@ curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
 
 ## Local development
 - `npm run dev` — site at localhost:4321.
-- **Editor dry run:** `cd pipeline && EDITOR_DRY_RUN=1 npx tsx src/editor.ts` with `ANTHROPIC_API_KEY` set (see `pipeline/.env.example`). Prints the decision and writes any draft into the working tree — no push, no KV writes, no Telegram.
+- **Editor dry run:** `cd pipeline && EDITOR_DRY_RUN=1 npx tsx src/editor.ts` — uses the logged-in `claude` CLI (subscription auth; no API key). Prints the decision and writes any draft into the working tree — no push, no KV writes, no Telegram.
 - **Functions:** `npm run build && npx wrangler pages dev dist --kv INBOX_KV` serves the site + Functions locally (use Turnstile test keys: site `1x00000000000000000000AA`, secret `1x0000000000000000000000000000000AA`).

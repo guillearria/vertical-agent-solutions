@@ -1,7 +1,7 @@
 import { execFileSync } from 'node:child_process';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import Anthropic from '@anthropic-ai/sdk';
+import { runClaude } from './claude';
 import { kvDelete, kvGet, kvList, kvPut } from './kv';
 import { loadPosts, repoRoot, splitPost, frontmatterValue, type Post } from './posts';
 import { sendMessage } from './telegram';
@@ -32,7 +32,8 @@ import {
  * per-slug cooldown (from the committed editor-log.json), an archive floor of
  * 4 active posts, and no archiving of anything touched in the last 30 days.
  *
- * Env: ANTHROPIC_API_KEY, TELEGRAM_BOT_TOKEN, TELEGRAM_OWNER_ID,
+ * Env: CLAUDE_CODE_OAUTH_TOKEN (CI; locally the logged-in `claude` CLI is used),
+ *      TELEGRAM_BOT_TOKEN, TELEGRAM_OWNER_ID,
  *      CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID, CF_API_TOKEN,
  *      SITE_URL (optional), EDITOR_DRY_RUN=1 (optional — no push/KV/Telegram).
  */
@@ -153,14 +154,8 @@ async function decide(posts: Post[], log: LogEntry[], fragments: Fragment[]): Pr
 		`Pending idea fragments from the owner:\n${ideas.join('\n') || '- none'}\n\n` +
 		`Pick today's single action.`;
 
-	const client = new Anthropic();
-	const msg = await client.messages.create({
-		model: 'claude-opus-4-8',
-		max_tokens: 2000,
-		system: DECIDER_SYSTEM,
-		messages: [{ role: 'user', content: user }],
-	});
-	return parseDecision(msg.content.map((b) => (b.type === 'text' ? b.text : '')).join(''));
+	// No tools: the decider must answer from the catalog alone, in one shot.
+	return parseDecision(await runClaude({ system: DECIDER_SYSTEM, prompt: user, timeoutMs: 5 * 60_000 }));
 }
 
 /** Apply the hard guards; returns the (possibly downgraded) decision. */

@@ -1,4 +1,4 @@
-import Anthropic from '@anthropic-ai/sdk';
+import { runClaude } from './claude';
 import { slugify, truncateDescription } from '../../lib/slug';
 
 /**
@@ -15,7 +15,7 @@ Voice and rules:
 - Write in plain English for a smart but non-technical reader — a business owner, not an engineer. Assume no coding background.
 - No hype, no buzzword salad, no "in today's fast-paced world" filler. Be concrete and specific.
 - Simplify hard ideas with everyday analogies and real, named use cases across different industries.
-- Deeply verify every factual claim. Use the web_search tool to check anything that is a stat, a date, a capability claim, or a reference to a real product/company/study. If you cannot find support for a claim, soften it to opinion or cut it. Never invent sources.
+- Deeply verify every factual claim. Use the WebSearch tool to check anything that is a stat, a date, a capability claim, or a reference to a real product/company/study. If you cannot find support for a claim, soften it to opinion or cut it. Never invent sources.
 - Aim for roughly 600–900 words. Tight is better than padded.
 - End with a short, non-salesy close that points the reader toward a concrete next step they could take.
 - SEO: the TITLE should read like something the target reader would actually type into Google — a specific industry plus a specific problem. No clickbait.
@@ -29,7 +29,7 @@ DESCRIPTION: <one sentence, max ~160 chars, summarizing the post>
 
 SOURCES:
 - <source label> — <url>
-(List only sources you actually used via web_search. If you used none, write "SOURCES:" followed by "- none".)`;
+(List only sources you actually used via WebSearch. If you used none, write "SOURCES:" followed by "- none".)`;
 
 export interface Parsed {
 	title: string;
@@ -121,54 +121,17 @@ function catalogNote(catalog?: CatalogEntry[]): string {
 }
 
 /**
- * Run the writer (with server-side web search) against a user message and
- * return the parsed draft. Requires ANTHROPIC_API_KEY in the environment.
- * Throws on refusal.
+ * Run the writer (headless Claude Code with WebSearch) against a user message
+ * and return the parsed draft. Retries once if the output format is ignored.
  */
 async function runWriter(userContent: string): Promise<Parsed> {
-	const client = new Anthropic();
-
-	const messages: Anthropic.MessageParam[] = [{ role: 'user', content: userContent }];
-
-	// Collect each turn's text separately and join with newlines so the format
-	// markers (TITLE:, DESCRIPTION:, SOURCES:) stay at the start of a line even
-	// when the web-search loop splits the output across multiple turns.
-	const parts: string[] = [];
-	let stopReason: string | null | undefined;
-	for (let i = 0; i < 6; i++) {
-		const stream = client.messages.stream({
-			model: 'claude-opus-4-8',
-			max_tokens: 16000,
-			thinking: { type: 'adaptive' },
-			output_config: { effort: 'high' },
-			tools: [{ type: 'web_search_20260209', name: 'web_search' }],
-			system: SYSTEM,
-			messages,
-		});
-		const final = await stream.finalMessage();
-		let turnText = '';
-		for (const block of final.content) {
-			if (block.type === 'text') turnText += block.text;
-		}
-		if (turnText) parts.push(turnText);
-		stopReason = final.stop_reason;
-		if (stopReason === 'pause_turn') {
-			// Server-side tool loop paused — resend with the assistant turn to resume.
-			messages.push({ role: 'assistant', content: final.content });
-			continue;
-		}
-		break;
+	let text = '';
+	for (let attempt = 1; attempt <= 2; attempt++) {
+		text = await runClaude({ system: SYSTEM, prompt: userContent, tools: ['WebSearch'] });
+		if (/^\s*\**\s*TITLE\s*[:\-]/im.test(text)) break;
+		console.warn(`⚠️ Attempt ${attempt}: no TITLE: line in output. First 300 chars:\n` + text.slice(0, 300));
 	}
-
-	if (stopReason === 'refusal') {
-		throw new Error('The model declined to write this. Try rewording the idea.');
-	}
-
-	const collected = parts.join('\n');
-	if (!/^\s*\**\s*TITLE\s*[:\-]/im.test(collected)) {
-		console.warn('⚠️ No TITLE: line found in model output. First 300 chars:\n' + collected.slice(0, 300));
-	}
-	return parseOutput(collected);
+	return parseOutput(text);
 }
 
 /** Draft a brand-new post from a raw idea / editorial brief. */
@@ -200,7 +163,7 @@ export async function improvePost(
 			`"""\n${brief}\n"""\n\n` +
 			`Rules for the revision:\n` +
 			`- Keep the same core topic and angle — this is an upgrade, not a new post.\n` +
-			`- Re-verify key stats and claims with web_search; update or cut anything stale.\n` +
+			`- Re-verify key stats and claims with WebSearch; update or cut anything stale.\n` +
 			`- Target 700–1000 words.\n` +
 			`- Keep the TITLE close to the original unless the brief says otherwise.\n` +
 			`- Follow every rule in your instructions, including the exact output format.` +

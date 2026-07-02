@@ -11,7 +11,8 @@ import { buildFrontmatter, draftFromText } from './writer';
  * Approve / Reject buttons. Approving (handled by the Pages Function) promotes
  * the candidate into `src/content/blog/`.
  *
- * Env: FRAGMENT_ID, FRAGMENT_TEXT, ANTHROPIC_API_KEY,
+ * Env: FRAGMENT_ID, FRAGMENT_TEXT,
+ *      CLAUDE_CODE_OAUTH_TOKEN (CI; locally the logged-in `claude` CLI is used),
  *      TELEGRAM_BOT_TOKEN, TELEGRAM_OWNER_ID,
  *      CF_ACCOUNT_ID, CF_KV_NAMESPACE_ID, CF_API_TOKEN.
  */
