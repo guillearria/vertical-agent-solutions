@@ -3,8 +3,7 @@
 Status: **fully automated.** The daily editor (`editor.yml` → `pipeline/src/editor.ts`) reviews the catalog every day and autonomously publishes / improves / archives / skips, reporting to Telegram with an Undo button. The manual phone → `/draft` → Approve flow still works alongside it. Contact form on `/about` forwards to Telegram. See `SETUP.md` for architecture.
 
 ## Needs a one-time manual step (Cloudflare dashboard)
-- [ ] **Turnstile keys** — create the widget and set `PUBLIC_TURNSTILE_SITE_KEY` (build-time) + `TURNSTILE_SECRET_KEY` in the Pages env (SETUP.md § Cloudflare step 5). Until then the contact form relies on honeypot + rate limit only.
-- [ ] **Update Pages env `SITE_URL`** to `https://vertical-agent-solutions.pages.dev` (it may still point at the unconnected custom domain).
+- [ ] **Turnstile keys** — create the widget and set `PUBLIC_TURNSTILE_SITE_KEY` (build-time) + `TURNSTILE_SECRET_KEY` in the Pages env (SETUP.md § Cloudflare step 5). Dashboard gotcha: after typing `vertical-agent-solutions.pages.dev` in the hostname field you must confirm it (press Enter / pick the suggestion) so it appears as a list entry below the field — otherwise Create fails with "At least 1 hostname must be added". `pages.dev` subdomains are supported. Until the keys are set the contact form relies on honeypot + rate limit only.
 - [ ] **Connect custom domain** `verticalagentsolutions.com` (Pages → Custom domains), then flip `site` in `astro.config.mjs`, `DEFAULT_SITE` in `functions/api/telegram.ts`, `SITE_URL` vars, and the Turnstile hostname.
 
 ## First-run verification (once pushed)
