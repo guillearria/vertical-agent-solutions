@@ -64,5 +64,11 @@
 		"action": "manual_cleanup",
 		"slug": "ai-agents-for-auto-repair-shops-where-they",
 		"reason": "De-template pass: published earlier today by the pre-rules pipeline with the formula title and \"plain-English guide\" opener; retitled, new description, linked the agent explainer, varied closing header."
+	},
+	{
+		"date": "2026-07-04T14:47:58.749Z",
+		"action": "new_post",
+		"slug": "one-friday-night-at-a-40-seat-restaurant-what-the",
+		"reason": "Breadth over depth: legal, real estate, dental, finance, home-services, and auto repair are covered, so reaching restaurants — another high-phone-volume small-business vertical — advances the blog most, and a case walkthrough varies from the recent 'where they help' guides."
 	}
 ]
