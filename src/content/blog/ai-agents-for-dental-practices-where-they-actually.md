@@ -1,7 +1,8 @@
 ---
-title: "AI Agents for Dental Practices: Where They Actually Help (and Where They Don't)"
-description: "A plain-English guide for dentists and office managers on the front-desk jobs AI agents handle well — and the HIPAA and clinical lines they shouldn't cross."
+title: "How Dental Practices Use AI Agents at the Front Desk Without Breaking HIPAA"
+description: "Automated reminders, waitlist filling, and insurance checks are the dental front-desk jobs AI agents do well — if the vendor signs a BAA first."
 pubDate: 'Jul 2 2026'
+updatedDate: 'Jul 3 2026'
 sources:
   - "Text reminders cut no-shows ~38% (Imperial College London), via Klara — https://www.klara.com/blog/text-message-appointment-reminders-reduce-no-shows-by-38-study-finds"
   - "Dental no-show rate benchmarks (Arini) — https://www.arini.ai/blog/dental-practice-no-show-rate"
@@ -14,11 +15,7 @@ sources:
 
 If your front desk spends half its day on the phone confirming appointments, chasing insurance details, and trying to refill a chair that just opened up, you've probably wondered whether "AI" can take some of that off their plate. The honest answer is: some of it, yes — and a few things you should keep well away from it.
 
-This follows the same pattern we found writing about [realtors](/blog/ai-agents-for-realtors-where-they-actually-help/) and [small law firms](/blog/ai-agents-for-small-law-firms-and-solo-attorneys/): an AI agent earns its keep on repetitive, rules-based busywork, and gets you in trouble the moment you hand it judgment or sensitive data it isn't built to protect.
-
-## First, what an "agent" actually is
-
-Think of an AI agent as a very fast, tireless assistant who can read messages, look things up, and take simple actions — send a text, update a calendar, draft a note — without a human doing each step. It doesn't get bored, it works at 2 a.m., and it does exactly what it's told. That last part is the catch: it has no judgment. It's a diligent clerk, not a decision-maker.
+This follows the same pattern we found writing about [realtors](/blog/ai-agents-for-realtors-where-they-actually-help/) and [small law firms](/blog/ai-agents-for-small-law-firms-and-solo-attorneys/): an AI agent earns its keep on repetitive, rules-based busywork, and gets you in trouble the moment you hand it judgment or sensitive data it isn't built to protect. (New to the term? [The Agentic Wave Is Here — and It Is Not Just for Tech Companies](/blog/the-agentic-wave-is-not-just-for-tech/) explains what these assistants are in two minutes — the short version: a tireless clerk that follows instructions exactly, with no judgment of its own.)
 
 ## The jobs it genuinely does well in a dental office
 
@@ -38,7 +35,7 @@ Think of an AI agent as a very fast, tireless assistant who can read messages, l
 
 **Loose handling of patient data.** This is the big one. Under HIPAA, any vendor whose software touches protected health information counts as a "business associate," and you must have a signed Business Associate Agreement (BAA) with them before that data flows. Public, consumer versions of tools like ChatGPT or Gemini do **not** sign BAAs — pasting patient details into them is a violation. Only use a vendor who will sign a BAA and will contractually promise not to use your patients' data to train their models.
 
-## One concrete first step
+## Start with the empty chair
 
 Don't try to automate the whole front desk. Pick the single job with the clearest, most measurable payoff: **appointment reminders and confirmations.**
 

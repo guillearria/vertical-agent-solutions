@@ -5,6 +5,7 @@ import { runClaude } from './claude';
 import { kvDelete, kvGet, kvList, kvPut } from './kv';
 import { loadPosts, repoRoot, splitPost, frontmatterValue, type Post } from './posts';
 import { sendMessage } from './telegram';
+import { catalogHealth } from './variety';
 import {
 	buildFrontmatter,
 	draftFromText,
@@ -19,8 +20,10 @@ import {
  * Daily editor-in-chief (GitHub Actions, scheduled). Reviews the whole catalog
  * plus any stale idea fragments, then takes exactly ONE action:
  *
- *   new_post      — write & publish a post on an uncovered vertical/topic
- *   improve_post  — upgrade an existing thin/stale post (URL unchanged)
+ *   new_post      — write & publish a post on an uncovered vertical/topic,
+ *                   in a format the decider picks to vary article structure
+ *   improve_post  — upgrade an existing thin/stale/style-redundant post
+ *                   (may retitle; the slug/URL never changes)
  *   archive_post  — retire a post that is redundant with a better one
  *   skip          — nothing worth doing today
  *
@@ -52,6 +55,7 @@ interface Decision {
 	slug?: string;
 	topic?: string;
 	brief?: string;
+	format?: string;
 	fragmentId?: string;
 	reason?: string;
 }
@@ -72,8 +76,8 @@ interface Fragment {
 const DECIDER_SYSTEM = `You are the editor-in-chief of "Vertical Agent Solutions", a blog teaching non-technical business owners how to adopt AI agents, one industry (vertical) at a time. Once per day you pick exactly ONE action that most moves the blog forward.
 
 Actions:
-- "new_post": commission a post on a vertical or topic the blog has not covered yet. Prefer breadth — reach new industries before deepening covered ones. Phrase "topic" the way the target reader would type it into Google, and write a 2–4 sentence "brief" for the writer.
-- "improve_post": upgrade an existing post that is thin (well under ~600 words), stale, or weaker than its topic deserves. Set "slug" and a specific "brief" saying what to fix or expand.
+- "new_post": commission a post on a vertical or topic the blog has not covered yet. Prefer breadth — reach new industries before deepening covered ones. Phrase "topic" the way the target reader would type it into Google, and write a 2–4 sentence "brief" for the writer. Also set "format" — the article's structure — picked to differ from what recent posts used: practical guide, cost/ROI breakdown, FAQ, case walkthrough, myth-busting, checklist, or comparison.
+- "improve_post": upgrade an existing post that is thin (well under ~600 words), stale, weaker than its topic deserves, or style-redundant — a templated title that mirrors another post's phrasing, or boilerplate sections duplicated across posts (see "Catalog health"). Set "slug" and a specific "brief" saying what to fix or expand. Retitling is allowed and encouraged for templated titles — say so explicitly in the brief; the URL/slug never changes, so it is safe.
 - "archive_post": retire a post that is clearly redundant with a better one or off-mission. Set "slug" and "reason". Be conservative — only clear cases.
 - "skip": nothing worth doing today. A respectable choice; do not invent work.
 
@@ -84,7 +88,7 @@ Rules:
 - Always explain "reason" in one or two sentences.
 
 Respond with ONLY a JSON object, no prose, in exactly this shape (omit fields that don't apply):
-{"action":"new_post|improve_post|archive_post|skip","slug":"...","topic":"...","brief":"...","fragmentId":"...","reason":"..."}`;
+{"action":"new_post|improve_post|archive_post|skip","slug":"...","topic":"...","brief":"...","format":"...","fragmentId":"...","reason":"..."}`;
 
 function git(...args: string[]): string {
 	return execFileSync('git', args, { cwd: repoRoot, encoding: 'utf8' });
@@ -147,8 +151,13 @@ async function decide(posts: Post[], log: LogEntry[], fragments: Fragment[]): Pr
 	const recent = log.slice(-10).map((e) => `- ${e.date.slice(0, 10)}: ${e.action} ${e.slug} — ${e.reason}`);
 	const ideas = fragments.map((f) => `- [${f.id}] ${f.text.replace(/\s+/g, ' ').slice(0, 200)}`);
 
+	// Computed in code so redundancy is a fact in front of the decider, not an inference.
+	const health = catalogHealth(active);
+	console.log(`Catalog health:\n${health}`);
+
 	const user =
 		`Today is ${pubDateString()}. The catalog has ${active.length} active post(s):\n\n${catalog}\n\n` +
+		`Catalog health (computed template-collision check):\n${health}\n\n` +
 		`Recently touched (cooldown — do not pick these):\n${cooling.join('\n') || '- none'}\n\n` +
 		`Recent editor actions:\n${recent.join('\n') || '- none'}\n\n` +
 		`Pending idea fragments from the owner:\n${ideas.join('\n') || '- none'}\n\n` +
@@ -215,7 +224,7 @@ async function uniqueSlug(title: string): Promise<string> {
 async function execute(decision: Decision, posts: Post[], fragments: Fragment[]): Promise<Outcome> {
 	const activeCatalog: CatalogEntry[] = posts
 		.filter((p) => !p.archived)
-		.map((p) => ({ slug: p.slug, title: p.title }));
+		.map((p) => ({ slug: p.slug, title: p.title, description: p.description }));
 	const logEntry = (action: string, slug: string): LogEntry => ({
 		date: new Date().toISOString(),
 		action,
@@ -227,6 +236,7 @@ async function execute(decision: Decision, posts: Post[], fragments: Fragment[])
 		const fragment = fragments.find((f) => f.id === decision.fragmentId);
 		const idea =
 			`${decision.topic}\n\nEditorial brief: ${decision.brief ?? 'none'}` +
+			(decision.format ? `\n\nArticle format: ${decision.format}` : '') +
 			(fragment ? `\n\nOwner's raw idea note:\n${fragment.text}` : '');
 		const parsed = await draftFromText(idea, { catalog: activeCatalog });
 		const slug = await uniqueSlug(parsed.title);
@@ -255,8 +265,12 @@ async function execute(decision: Decision, posts: Post[], fragments: Fragment[])
 			decision.brief!,
 			activeCatalog.filter((c) => c.slug !== target.slug),
 		);
-		// Keep the original title/URL; the revision may only refine body+description.
-		const updated: Parsed = { ...parsed, title: target.title || parsed.title };
+		// The URL/slug never changes, but the writer may retitle when the brief
+		// asks for it. Only accept a title that came from a real TITLE: line —
+		// a degenerate parse must not destroy a good title.
+		const newTitle = parsed.titleExplicit && parsed.title.trim() ? parsed.title : target.title;
+		const updated: Parsed = { ...parsed, title: newTitle };
+		const retitled = newTitle !== target.title;
 		await fs.writeFile(
 			absPath,
 			buildFrontmatter(updated, {
@@ -266,9 +280,11 @@ async function execute(decision: Decision, posts: Post[], fragments: Fragment[])
 		);
 		return {
 			summary:
-				`🤖 Daily editor: improved *${target.slug}*\n\n_Why: ${decision.reason}_\n` +
+				`🤖 Daily editor: improved *${target.slug}*\n\n` +
+				(retitled ? `Retitled: "${target.title}" → "${newTitle}"\n\n` : '') +
+				`_Why: ${decision.reason}_\n` +
 				`${SITE_URL}/blog/${target.slug}/\n(Live in ~30–60s after the build.)`,
-			commitMessage: `Editor: improve "${target.title}"`,
+			commitMessage: `Editor: improve "${newTitle}"`,
 			changedFiles: [target.filePath],
 			logEntry: logEntry('improve_post', target.slug),
 			undo: { type: 'improve_post', slug: target.slug, path: target.filePath, prevContent },

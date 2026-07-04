@@ -22,5 +22,47 @@
 		"action": "new_post",
 		"slug": "ai-agents-for-auto-repair-shops-where-they",
 		"reason": "Breadth over depth: legal, real estate, dental, finance, and home-services trades are covered, so reaching auto repair — another high-phone-volume small-business vertical — advances the blog most."
+	},
+	{
+		"date": "2026-07-03T23:53:12.608Z",
+		"action": "manual_cleanup",
+		"slug": "ai-agents-for-dental-practices-where-they-actually",
+		"reason": "De-template pass: retitled off the shared formula, linked the agent explainer instead of re-explaining, new description, varied closing header."
+	},
+	{
+		"date": "2026-07-03T23:53:12.608Z",
+		"action": "manual_cleanup",
+		"slug": "ai-agents-for-small-law-firms-and-solo-attorneys",
+		"reason": "De-template pass: retitled off the shared formula; rewrote the truncated description."
+	},
+	{
+		"date": "2026-07-03T23:53:12.608Z",
+		"action": "manual_cleanup",
+		"slug": "ai-agents-for-realtors-where-they-actually-help",
+		"reason": "De-template pass: kept the title (single formula instance), linked the agent explainer instead of re-explaining, new description opener."
+	},
+	{
+		"date": "2026-07-03T23:53:12.608Z",
+		"action": "manual_cleanup",
+		"slug": "why-solo-and-small-firms-are-the-right-target",
+		"reason": "De-template pass: retitled — the old title had no AI or law keywords and made no sense standalone."
+	},
+	{
+		"date": "2026-07-03T23:53:12.608Z",
+		"action": "manual_cleanup",
+		"slug": "use-claude-code-to-tidy-up-your-computer",
+		"reason": "De-template pass: linked the Claude Code playbook instead of re-explaining the tool; new description opener."
+	},
+	{
+		"date": "2026-07-03T23:53:12.608Z",
+		"action": "manual_cleanup",
+		"slug": "how-to-set-up-an-ai-agent-system-to-manage-wealth",
+		"reason": "De-template pass: new description opener (was the fifth \"plain-English guide\")."
+	},
+	{
+		"date": "2026-07-03T23:53:12.608Z",
+		"action": "manual_cleanup",
+		"slug": "ai-agents-for-auto-repair-shops-where-they",
+		"reason": "De-template pass: published earlier today by the pre-rules pipeline with the formula title and \"plain-English guide\" opener; retitled, new description, linked the agent explainer, varied closing header."
 	}
 ]

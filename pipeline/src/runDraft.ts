@@ -1,4 +1,5 @@
 import { kvPut } from './kv';
+import { loadPosts } from './posts';
 import { sendMessage } from './telegram';
 import { buildFrontmatter, draftFromText } from './writer';
 
@@ -29,9 +30,14 @@ async function main(): Promise<void> {
 
 	console.log(`Drafting fragment ${id} (researching + fact-checking via web search)…`);
 
+	// Same catalog the editor passes: internal links + the anti-template variety gate.
+	const catalog = (await loadPosts())
+		.filter((p) => !p.archived)
+		.map((p) => ({ slug: p.slug, title: p.title, description: p.description }));
+
 	let parsed;
 	try {
-		parsed = await draftFromText(text);
+		parsed = await draftFromText(text, { catalog });
 	} catch (err) {
 		await sendMessage(`⚠️ Draft failed for \`${id}\`: ${(err as Error).message}`);
 		throw err;

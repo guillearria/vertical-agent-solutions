@@ -21,6 +21,8 @@ Autonomous:      editor.yml (daily cron) → editor.ts reviews the catalog → O
 
 The manual path still requires your Approve tap. The daily editor publishes on its own and you supervise after the fact via the Undo button. Hard-coded guards keep it sane: one action per day, a 14-day per-slug cooldown (`pipeline/editor-log.json`), it never archives below 4 active posts nor anything touched in the last 30 days.
 
+Anti-template safeguards (`pipeline/src/variety.ts`): every draft — editor or manual — is checked in code against the catalog for reused title phrasing and repeated description openers, and retried once with feedback if it collides; the decider is shown a computed `Catalog health:` block and picks a per-post article format; `improve_post` may retitle a templated post (the slug/URL never changes, and the Telegram summary shows the retitle).
+
 ---
 
 ## One-time setup

@@ -1,6 +1,6 @@
 ---
-title: "AI Agents for Auto Repair Shops: Where They Actually Help (and Where They Don't)"
-description: "A plain-English guide for independent auto shop owners on where AI agents earn their keep — booking, status texts, follow-ups — and where humans stay in charge."
+title: "Missed Calls and Declined Repairs: What an AI Agent Fixes at an Auto Shop"
+description: "Auto shops lose work to unanswered phones and declined repairs — the two jobs an AI agent does reliably, and the conversations it should never touch."
 pubDate: 'Jul 3 2026'
 sources:
   - "Auto Repair Shop Phone Statistics (AgentZap) — https://agentzap.ai/blog/auto-repair-phone-statistics"
@@ -11,11 +11,7 @@ sources:
 
 If your phone rings while you're under a car with your hands full, that call often goes to voicemail — and a fair share of those callers just dial the next shop on the list. That's the gap most independent auto repair shops live with every day. AI agents are being sold as the fix for it, and for some of that gap, they genuinely are. For other parts of your business, handing the work to software is a fast way to lose a customer's trust.
 
-Here's the honest split, based on how these tools actually behave.
-
-## First, what an "AI agent" really is here
-
-Think of it as a very capable receptionist who never sleeps, works from your scripts, and only knows what you've told it. It can talk to customers by text or phone, read your calendar, and follow rules you set. It does not know whether that Civic needs a new water pump. It doesn't have judgment. It has patience and speed. Aim it at the repetitive, predictable stuff and it shines. Aim it at diagnosis or a delicate money conversation and it flails.
+Here's the honest split, based on how these tools actually behave. (If "AI agent" is a new term, [The Agentic Wave Is Here — and It Is Not Just for Tech Companies](/blog/the-agentic-wave-is-not-just-for-tech/) is the two-minute primer. For a shop, think of a tireless receptionist who works from your scripts: it has patience and speed, not judgment — it does not know whether that Civic needs a new water pump.)
 
 ## Where AI agents actually help
 
@@ -37,7 +33,7 @@ Think of it as a very capable receptionist who never sleeps, works from your scr
 
 The pattern is the same one we've laid out for [dental practices](/blog/ai-agents-for-dental-practices-where-they-actually/) and [realtors](/blog/ai-agents-for-realtors-where-they-actually-help/): let the agent handle the repetitive front-desk motion, and keep humans on anything that needs judgment or builds trust.
 
-## A realistic first step
+## Start where the money leaks
 
 Don't try to automate the whole shop. Pick the one job that's clearly costing you money and clearly follows rules. For most shops that's after-hours call handling or declined-repair follow-ups.
 

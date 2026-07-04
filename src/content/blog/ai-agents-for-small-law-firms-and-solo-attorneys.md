@@ -1,7 +1,8 @@
 ---
-title: "AI Agents for Small Law Firms and Solo Attorneys: Where They Help and Where They Bite"
-description: "A plain-English guide to using AI agents for intake, drafting, deadlines, and billing — plus the confidentiality and hallucination limits every attorney…"
+title: "What AI Agents Can Safely Do in a Small Law Firm — and What Gets Lawyers Sanctioned"
+description: "Intake, drafting, deadlines, and billing are fair game for AI agents in a small firm — hallucinated citations and confidentiality slips are not."
 pubDate: 'Jul 2 2026'
+updatedDate: 'Jul 3 2026'
 sources:
   - "Mata v. Avianca, Inc. — Wikipedia — https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc."
   - "Practical Lessons from the Attorney AI Missteps in Mata v. Avianca (ACC) — https://www.acc.com/resource-library/practical-lessons-attorney-ai-missteps-mata-v-avianca"
@@ -18,7 +19,7 @@ If you're new to the term, an "agent" is just software that can take a multi-ste
 
 ## Where agents genuinely help
 
-**Client intake and screening.** An intake agent can run your website chat or after-hours line, ask the standard qualifying questions, flag conflicts, and hand you a tidy summary before you ever pick up the phone. Think of it as a very organized receptionist who never sleeps — not a lawyer. The hard line: it can *gather* information and *route* it, but it must not *give legal advice*. That distinction matters legally, which we'll get to. For a deeper dive into the document side of intake — extracting names, dates, and clauses from retainers and discovery — see [Why solo and small firms are the right target](/blog/why-solo-and-small-firms-are-the-right-target/).
+**Client intake and screening.** An intake agent can run your website chat or after-hours line, ask the standard qualifying questions, flag conflicts, and hand you a tidy summary before you ever pick up the phone. Think of it as a very organized receptionist who never sleeps — not a lawyer. The hard line: it can *gather* information and *route* it, but it must not *give legal advice*. That distinction matters legally, which we'll get to. For a deeper dive into the document side of intake — extracting names, dates, and clauses from retainers and discovery — see [AI Document Review for Solo Attorneys: The Safe, Unglamorous Win](/blog/why-solo-and-small-firms-are-the-right-target/).
 
 **First-draft document work.** Retainer agreements, demand letters, discovery request shells, routine correspondence — an agent can produce a solid first draft from your templates in seconds. You still edit and sign. Used this way, it's a faster typewriter, not a substitute for your judgment.
 

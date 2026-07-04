@@ -1,7 +1,8 @@
 ---
 title: "AI Agents for Realtors: Where They Actually Help (and Where They Don't)"
-description: "A plain-English guide for real estate agents on using AI agents for lead follow-up, listings, and admin — with honest limits and a first step."
+description: "Speed-to-lead is where AI agents pay off for real estate agents — plus listings and admin help, honest limits, and a one-month test to prove it."
 pubDate: 'Jun 23 2026'
+updatedDate: 'Jul 3 2026'
 sources:
   - "NAR — REALTORS® Embrace AI, Digital Tools (2025 Technology Survey) — https://www.nar.realtor/newsroom/realtors-embrace-ai-digital-tools-to-enhance-client-service-nar-survey-finds"
   - "HousingWire — NAR 2025 Technology Survey: Realtor tech usage trends — https://www.housingwire.com/articles/nar-2025-technology-survey-realtor-tech-usage-trends/"
@@ -9,11 +10,9 @@ sources:
   - "Ignitvio — Speed to Lead (Oldroyd/MIT Lead Response Management Study) — https://www.ignitvio.com/blog/speed-to-lead/"
 ---
 
-Most real estate advice about AI either oversells it ("fire your assistant!") or waves it away as a gimmick. The truth sits in the middle, and it's useful. Let's walk through what an "AI agent" actually is, the handful of jobs it does well in real estate, and where it still falls short.
+Most real estate advice about AI either oversells it ("fire your assistant!") or waves it away as a gimmick. The truth sits in the middle, and it's useful. Let's walk through the handful of jobs an AI agent does well in real estate, and where it still falls short.
 
-## First, what is an "AI agent"?
-
-A regular chatbot answers one question and stops. An AI *agent* is software you give a goal — "follow up with every new lead until they book a showing or tell us to stop" — and it carries out the steps on its own: sending texts, answering questions, checking your calendar, and booking the appointment. Think of it less like a search box and more like a tireless junior assistant who works nights and weekends and never forgets to call someone back.
+If the term is new to you, [The Agentic Wave Is Here — and It Is Not Just for Tech Companies](/blog/the-agentic-wave-is-not-just-for-tech/) covers what separates an *agent* from a chatbot: you give it a goal — "follow up with every new lead until they book a showing" — and it carries out the steps on its own, nights and weekends included.
 
 You're not alone in trying this. According to the National Association of REALTORS®' 2025 Technology Survey (published September 18, 2025), agents are leaning into AI alongside staples like eSignature and social media — though tools like crypto remain rare. Independent reporting on the same survey put AI adoption among agents at roughly two-thirds. So this is mainstream now, not fringe.
 

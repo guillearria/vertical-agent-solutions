@@ -1,7 +1,8 @@
 ---
 title: "Use Claude Code to Tidy Up Your Computer, One Folder at a Time"
-description: "A non-coder's guide to pointing Anthropic's Claude Code at a messy folder so it sorts, renames, and cleans up files—safely and on your terms."
+description: "Point Claude Code at a messy Downloads folder and it sorts, renames, and de-duplicates from plain-English instructions — you approve every move."
 pubDate: 'Jun 27 2026'
+updatedDate: 'Jul 3 2026'
 sources:
   - "Claude Code Overview (Anthropic Docs) — https://code.claude.com/docs/en/overview"
   - "How we built Claude Code auto mode (Anthropic Engineering) — https://www.anthropic.com/engineering/claude-code-auto-mode"
@@ -15,11 +16,9 @@ Your Downloads folder is a junk drawer. Screenshots, invoices, three slightly di
 
 There's a tool built for programmers that turns out to be unexpectedly good at exactly this kind of grunt work: Claude Code. You don't need to write any code to use it for cleanup. You just talk to it in plain English, point it at a folder, and approve what it does.
 
-## What Claude Code actually is
+(Claude Code is Anthropic's AI assistant that runs in your computer's "terminal" — the plain text window programmers use. Our [non-coder's playbook for Claude Code](/blog/how-to-actually-get-good-work-out-of-claude-code/) covers what it is and how to set it up.)
 
-Claude Code is Anthropic's AI assistant that runs in your computer's "terminal"—the plain text window programmers use to type commands instead of clicking. Claude Code is an agentic coding tool that reads your codebase, edits files, runs commands, and integrates with your development tools, available in your terminal, IDE, desktop app, and browser.
-
-The word "agentic" just means it can take actions on its own behalf, not only chat. The same abilities that let it edit code—reading files, renaming them, moving them, running commands—are exactly what file cleanup needs. Think of it less like a chatbot and more like a very literal, very fast assistant who can see your files and rearrange them when you say go.
+What matters here: the same abilities that let it edit code—reading files, renaming them, moving them, running commands—are exactly what file cleanup needs. Think of it less like a chatbot and more like a very literal, very fast assistant who can see your files and rearrange them when you say go.
 
 ## Why it's safe enough to try
 

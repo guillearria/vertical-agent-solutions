@@ -1,4 +1,5 @@
 import { runClaude } from './claude';
+import { varietyFeedback } from './variety';
 import { slugify, truncateDescription } from '../../lib/slug';
 
 /**
@@ -21,6 +22,12 @@ Voice and rules:
 - SEO: the TITLE should read like something the target reader would actually type into Google — a specific industry plus a specific problem. No clickbait.
 - SEO: the DESCRIPTION must work as a Google search snippet — one concrete sentence, under 160 characters, that makes the right reader click.
 
+Variety — the catalog must never read as if one template wrote it:
+- Never reuse the headline structure of any already-published post shown to you. A new title needs a different grammatical shape, not a reworded copy of an existing one.
+- Never open the DESCRIPTION the way an existing post's description opens (if "A plain-English guide…" already exists, no post may open that way again). Each description must read like a distinct search snippet.
+- Vary section headers across posts. In particular, do not default the closing section to a "first step" style header — the close should still point to a concrete next step, but name the section differently than other posts do.
+- If the editorial brief names an article format (FAQ, cost breakdown, case walkthrough, checklist, myth-busting, comparison, …), commit to that structure for the whole post instead of the default guide shape.
+
 Output format — follow it exactly:
 TITLE: <a clear, specific headline>
 DESCRIPTION: <one sentence, max ~160 chars, summarizing the post>
@@ -33,6 +40,8 @@ SOURCES:
 
 export interface Parsed {
 	title: string;
+	/** True when the title came from a real `TITLE:` line, not fallback extraction. */
+	titleExplicit: boolean;
 	description: string;
 	sources: string[];
 	body: string;
@@ -42,6 +51,7 @@ export function parseOutput(text: string): Parsed {
 	// Tolerant of bold markers (**TITLE:**), `:` or `-` separators, and case.
 	const titleMatch = text.match(/^\s*\**\s*TITLE\s*[:\-]\s*(.+?)\s*$/im);
 	let title = titleMatch?.[1]?.replace(/\*+/g, '').trim();
+	const titleExplicit = !!title;
 	const descMatch = text.match(/^\s*\**\s*DESCRIPTION\s*[:\-]\s*(.+?)\s*$/im);
 	const description = (descMatch?.[1] ?? '').replace(/\*+/g, '').trim();
 
@@ -79,7 +89,7 @@ export function parseOutput(text: string): Parsed {
 				?.slice(0, 120) ??
 			'Untitled draft';
 	}
-	return { title, description, sources, body };
+	return { title, titleExplicit, description, sources, body };
 }
 
 /** A pubDate string Astro's `z.coerce.date()` accepts, e.g. "Jun 20 2026". */
@@ -103,17 +113,27 @@ export function buildFrontmatter(p: Parsed, opts: { pubDate?: string; updatedDat
 	return lines.join('\n');
 }
 
-/** An existing post the writer may internally link to. */
+/** An existing post the writer may internally link to (and must not imitate). */
 export interface CatalogEntry {
 	slug: string;
 	title: string;
+	/** Used by the variety gate to catch repeated description openers. */
+	description?: string;
 }
+
+const AGENT_EXPLAINER_SLUG = 'the-agentic-wave-is-not-just-for-tech';
 
 function catalogNote(catalog?: CatalogEntry[]): string {
 	if (!catalog?.length) return '';
 	const list = catalog.map((c) => `- /blog/${c.slug}/ — ${c.title}`).join('\n');
+	const explainerRule = catalog.some((c) => c.slug === AGENT_EXPLAINER_SLUG)
+		? `Never re-explain what an AI agent is: when the reader needs that grounding, link to ` +
+			`/blog/${AGENT_EXPLAINER_SLUG}/ in a single sentence instead of writing your own explainer section. `
+		: '';
 	return (
 		`\n\nAlready published on this blog:\n${list}\n\n` +
+		`These are listed so you can link to them — NOT as models to imitate. Do not copy their ` +
+		`title structures, description openers, or section skeletons. ${explainerRule}` +
 		`Where genuinely relevant, link to 1–3 of these existing posts in the body, using their ` +
 		`relative URLs exactly as listed. Never link to a post that is not in this list, and never ` +
 		`force a link where it doesn't help the reader.`
@@ -122,16 +142,45 @@ function catalogNote(catalog?: CatalogEntry[]): string {
 
 /**
  * Run the writer (headless Claude Code with WebSearch) against a user message
- * and return the parsed draft. Retries once if the output format is ignored.
+ * and return the parsed draft. Retries once if the output format is ignored,
+ * and once more if the draft's title/description collide with the catalog
+ * (the variety gate) — the prompt rules request variety, this enforces it.
+ * A draft that still collides after the retry is accepted with a warning:
+ * publishing a templated post beats a failed run, and the improve loop can
+ * fix it later.
  */
-async function runWriter(userContent: string): Promise<Parsed> {
+async function runWriter(userContent: string, catalog?: CatalogEntry[]): Promise<Parsed> {
 	let text = '';
 	for (let attempt = 1; attempt <= 2; attempt++) {
 		text = await runClaude({ system: SYSTEM, prompt: userContent, tools: ['WebSearch'] });
 		if (/^\s*\**\s*TITLE\s*[:\-]/im.test(text)) break;
 		console.warn(`⚠️ Attempt ${attempt}: no TITLE: line in output. First 300 chars:\n` + text.slice(0, 300));
 	}
-	return parseOutput(text);
+	let parsed = parseOutput(text);
+
+	const feedback = catalog?.length ? varietyFeedback(parsed, catalog) : null;
+	if (feedback) {
+		console.warn(`⚠️ Variety gate: draft collides with the catalog — retrying once.\n${feedback}`);
+		const retryText = await runClaude({
+			system: SYSTEM,
+			prompt:
+				userContent +
+				`\n\nYour previous draft failed a variety check against the published catalog:\n${feedback}\n\n` +
+				`Previous draft:\n"""\n${text}\n"""\n\n` +
+				`Produce the corrected post in the exact same output format. Keep the substance, sources, and ` +
+				`verified facts; restructure what the check flagged (and anything else that echoes an existing post).`,
+			tools: ['WebSearch'],
+		});
+		const retry = parseOutput(retryText);
+		if (retry.titleExplicit) {
+			parsed = retry;
+			const still = varietyFeedback(parsed, catalog!);
+			if (still) console.warn(`⚠️ Variety gate: still colliding after retry — accepting anyway.\n${still}`);
+		} else {
+			console.warn('⚠️ Variety gate: retry output lost the TITLE format — keeping the first draft.');
+		}
+	}
+	return parsed;
 }
 
 /** Draft a brand-new post from a raw idea / editorial brief. */
@@ -140,6 +189,7 @@ export async function draftFromText(idea: string, opts: { catalog?: CatalogEntry
 		`Here is the idea for the next post:\n\n"""\n${idea}\n"""\n\n` +
 			`Develop it into a finished Vertical Agent Solutions post, following every rule in your instructions.` +
 			catalogNote(opts.catalog),
+		opts.catalog,
 	);
 }
 
@@ -172,5 +222,6 @@ export async function improvePost(
 			`Current description: ${current.description}\n\n` +
 			`Current body:\n"""\n${current.body}\n"""\n\n` +
 			`Sources previously cited:\n${sourcesList}`,
+		catalog,
 	);
 }
