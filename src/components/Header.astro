@@ -40,7 +40,7 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	nav a {
 		padding: 1em 0.5em;
-		color: var(--black);
+		color: rgb(var(--black));
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
@@ -58,5 +58,21 @@ import HeaderLink from './HeaderLink.astro';
 	}
 	.cta-link a:hover {
 		opacity: 0.9;
+	}
+	@media (max-width: 720px) {
+		h2 {
+			width: 100%;
+			padding-top: 0.75em;
+		}
+		h2 a {
+			padding: 0;
+		}
+		nav a {
+			padding: 0.6em 0.4em;
+		}
+		.cta-link a {
+			font-size: 0.85em;
+			padding: 0.4em 0.7em;
+		}
 	}
 </style>
