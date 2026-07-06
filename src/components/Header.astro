@@ -9,7 +9,6 @@ import HeaderLink from './HeaderLink.astro';
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
 		</div>
 		<div class="cta-link">
 			<a href="/about">Work with us</a>
@@ -60,19 +59,28 @@ import HeaderLink from './HeaderLink.astro';
 		opacity: 0.9;
 	}
 	@media (max-width: 720px) {
+		nav {
+			justify-content: center;
+			column-gap: 0.5em;
+		}
 		h2 {
 			width: 100%;
 			padding-top: 0.75em;
+			text-align: center;
 		}
 		h2 a {
 			padding: 0;
 		}
+		.internal-links {
+			display: flex;
+			gap: 0.25em;
+		}
 		nav a {
-			padding: 0.6em 0.4em;
+			padding: 0.6em 0.5em;
 		}
 		.cta-link a {
 			font-size: 0.85em;
-			padding: 0.4em 0.7em;
+			padding: 0.45em 0.9em;
 		}
 	}
 </style>
