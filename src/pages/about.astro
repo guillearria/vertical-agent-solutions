@@ -1,4 +1,5 @@
 ---
+import { AUTHOR_NAME, AUTHOR_URL } from '../consts';
 import Layout from '../layouts/BlogPost.astro';
 
 // Set in the Cloudflare Pages build environment; the widget (and its script)
@@ -25,6 +26,25 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 		review loop — fact-checked against real sources, simplified for a non-technical reader, and
 		checked against everything we've already published so we never waste your time repeating
 		ourselves.
+	</p>
+
+	<h2>Who runs this</h2>
+	<!-- Photo goes here when available: a small portrait of Guillermo, floated
+	     right of the paragraph below (e.g. <Image> from astro:assets). The
+	     section is written to read complete without it. -->
+	<p>
+		<strong>{AUTHOR_NAME}</strong> is a software engineer building autonomous,
+		verification-gated AI systems — agents that do real work, with the safety rules enforced in
+		code rather than left to a model's judgment. He runs a portfolio of live agent systems, of
+		which this site is one: its daily editor publishes, improves, and retires posts on its own,
+		and he reviews everything it ships. He is based in the US, on Eastern time, and you can find
+		his work on <a href={AUTHOR_URL}>GitHub</a>.
+		{/* TODO: add LinkedIn URL once live — see hq/jobs/applications/linkedin-profile.md */}
+	</p>
+	<p>
+		Messages sent through the form below land directly with him — a real person reads and answers
+		every one. And if you're curious how an autonomously-edited site actually operates, read
+		<a href="/how-this-site-writes-itself/">how this site writes itself</a>.
 	</p>
 
 	<h2>Work with us</h2>

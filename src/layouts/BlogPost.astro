@@ -6,6 +6,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import { AUTHOR_NAME, AUTHOR_URL } from '../consts';
 
 // isArticle=false lets non-post pages (e.g. /about) reuse this layout without
 // getting article metadata / BlogPosting structured data.
@@ -24,8 +25,16 @@ const jsonLd = isArticle && {
 	url: canonicalURL.toString(),
 	mainEntityOfPage: canonicalURL.toString(),
 	image: new URL((heroImage ?? FallbackImage).src, Astro.site).toString(),
+	// Author stays the Organization: posts are machine-written by the autonomous
+	// editor, so claiming personal authorship would be dishonest. The human shows
+	// up where he belongs — as the publisher's founder.
 	author: { '@type': 'Organization', name: 'Vertical Agent Solutions', url: Astro.site?.toString() },
-	publisher: { '@type': 'Organization', name: 'Vertical Agent Solutions', url: Astro.site?.toString() },
+	publisher: {
+		'@type': 'Organization',
+		name: 'Vertical Agent Solutions',
+		url: Astro.site?.toString(),
+		founder: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL, sameAs: [AUTHOR_URL] },
+	},
 };
 ---
 
@@ -78,6 +87,19 @@ const jsonLd = isArticle && {
 			.last-updated-on {
 				font-style: italic;
 			}
+			.byline {
+				margin: 0 0 1em 0;
+				font-size: 0.8em;
+				color: rgb(var(--gray));
+			}
+			.byline a {
+				color: rgb(var(--gray));
+				text-decoration: underline;
+				text-underline-offset: 3px;
+			}
+			.byline a:hover {
+				color: rgb(var(--gray-dark));
+			}
 		</style>
 	</head>
 
@@ -103,6 +125,14 @@ const jsonLd = isArticle && {
 							)
 						}
 						<h1>{title}</h1>
+						{
+							isArticle && (
+								<p class="byline">
+									Published by the <a href="/how-this-site-writes-itself/">autonomous editor</a> ·
+									built and reviewed by <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
+								</p>
+							)
+						}
 						<hr />
 					</div>
 					<slot />

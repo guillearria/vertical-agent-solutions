@@ -1,4 +1,6 @@
 ---
+import { AUTHOR_NAME, AUTHOR_URL } from '../consts';
+
 const today = new Date();
 ---
 
@@ -6,7 +8,12 @@ const today = new Date();
 	&copy; {today.getFullYear()} Vertical Agent Solutions. All rights reserved.
 	<div class="footer-links">
 		<a href="/about/">About</a>
+		<a href="/how-this-site-writes-itself/">How this site writes itself</a>
 		<a href="/rss.xml">RSS</a>
+	</div>
+	<div class="footer-built-by">
+		Built by <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
+		{/* TODO: add LinkedIn URL once live — see hq/jobs/applications/linkedin-profile.md */}
 	</div>
 </footer>
 <style>
@@ -29,6 +36,16 @@ const today = new Date();
 		color: rgb(var(--gray));
 	}
 	.footer-links a:hover {
+		color: rgb(var(--gray-dark));
+	}
+	.footer-built-by {
+		margin-top: 0.75em;
+		font-size: 0.9em;
+	}
+	.footer-built-by a {
+		color: rgb(var(--gray));
+	}
+	.footer-built-by a:hover {
 		color: rgb(var(--gray-dark));
 	}
 </style>

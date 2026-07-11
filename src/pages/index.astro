@@ -2,8 +2,9 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { AUTHOR_NAME, AUTHOR_URL, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
+const founderId = new URL('#founder', Astro.site).toString();
 const jsonLd = {
 	'@context': 'https://schema.org',
 	'@graph': [
@@ -17,6 +18,14 @@ const jsonLd = {
 			'@type': 'Organization',
 			name: SITE_TITLE,
 			url: Astro.site?.toString(),
+			founder: { '@id': founderId },
+		},
+		{
+			'@type': 'Person',
+			'@id': founderId,
+			name: AUTHOR_NAME,
+			url: AUTHOR_URL,
+			sameAs: [AUTHOR_URL],
 		},
 	],
 };
