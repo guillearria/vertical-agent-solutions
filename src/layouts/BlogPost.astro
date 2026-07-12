@@ -3,19 +3,36 @@ import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import BaseHead from '../components/BaseHead.astro';
+import CtaBand from '../components/CtaBand.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
+import PostCard from '../components/PostCard.astro';
+import Sources from '../components/Sources.astro';
 import { AUTHOR_NAME, AUTHOR_URL } from '../consts';
 
 // isArticle=false lets non-post pages (e.g. /about) reuse this layout without
 // getting article metadata / BlogPosting structured data.
-type Props = CollectionEntry<'blog'>['data'] & { isArticle?: boolean };
+type Props = CollectionEntry<'blog'>['data'] & {
+	isArticle?: boolean;
+	readingMinutes?: number;
+	related?: CollectionEntry<'blog'>[];
+};
 
-const { title, description, pubDate, updatedDate, heroImage, isArticle = true } = Astro.props;
+const {
+	title,
+	description,
+	pubDate,
+	updatedDate,
+	heroImage,
+	sources,
+	isArticle = true,
+	readingMinutes,
+	related = [],
+} = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const jsonLd = isArticle && {
+const blogPostingLd = isArticle && {
 	'@context': 'https://schema.org',
 	'@type': 'BlogPosting',
 	headline: title,
@@ -36,6 +53,15 @@ const jsonLd = isArticle && {
 		founder: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL, sameAs: [AUTHOR_URL] },
 	},
 };
+const breadcrumbLd = isArticle && {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: new URL('/', Astro.site).toString() },
+		{ '@type': 'ListItem', position: 2, name: 'Guides', item: new URL('/blog/', Astro.site).toString() },
+		{ '@type': 'ListItem', position: 3, name: title },
+	],
+};
 ---
 
 <html lang="en">
@@ -48,57 +74,75 @@ const jsonLd = isArticle && {
 			pubDate={pubDate}
 			updatedDate={updatedDate}
 		/>
-		{jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+		{blogPostingLd && (
+			<script is:inline type="application/ld+json" set:html={JSON.stringify(blogPostingLd)} />
+		)}
+		{breadcrumbLd && (
+			<script is:inline type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />
+		)}
 		<style>
 			main {
-				width: calc(100% - 2em);
+				width: 100%;
 				max-width: 100%;
 				margin: 0 auto;
+				padding: var(--space-2xl) 0 var(--space-3xl);
 			}
 			.hero-image {
-				width: 100%;
+				max-width: var(--container-text);
+				margin: 0 auto var(--space-lg);
+				padding: 0 var(--space-md);
 			}
 			.hero-image img {
 				display: block;
 				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+				border-radius: var(--radius-md);
 			}
 			.prose {
 				width: 100%;
-				max-width: 720px;
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
+				margin: 0 auto;
+				padding: 0 var(--space-md);
 			}
 			.title {
-				margin-bottom: 1em;
-				padding: 0.5em 0;
-				text-align: center;
-				line-height: 1.15;
+				margin-bottom: var(--space-xl);
 			}
 			.title h1 {
-				margin: 0 0 0.5em 0;
+				margin: 0 0 var(--space-sm);
 			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
+			.meta {
+				margin: 0 0 var(--space-xs);
+				font-size: 0.875rem;
+				color: var(--text-secondary);
 			}
 			.byline {
-				margin: 0 0 1em 0;
-				font-size: 0.8em;
-				color: rgb(var(--gray));
+				margin: 0;
+				font-size: 0.875rem;
+				color: var(--text-faint);
 			}
 			.byline a {
-				color: rgb(var(--gray));
+				color: var(--text-faint);
 				text-decoration: underline;
 				text-underline-offset: 3px;
 			}
 			.byline a:hover {
-				color: rgb(var(--gray-dark));
+				color: var(--text-secondary);
+			}
+			.keep-reading {
+				max-width: 68ch;
+				margin: var(--space-xl) auto 0;
+				padding-top: var(--space-lg);
+				border-top: 1px solid var(--border);
+			}
+			.keep-reading h2 {
+				margin: 0 0 var(--space-lg);
+				font-size: 1.3125rem;
+			}
+			.keep-reading ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: var(--space-lg);
 			}
 		</style>
 	</head>
@@ -114,14 +158,16 @@ const jsonLd = isArticle && {
 					<div class="title">
 						{
 							isArticle && (
-								<div class="date">
+								<p class="meta">
 									<FormattedDate date={pubDate} />
+									{readingMinutes && <> · {readingMinutes} min read</>}
 									{updatedDate && (
-										<div class="last-updated-on">
-											Last updated on <FormattedDate date={updatedDate} />
-										</div>
+										<>
+											{' '}
+											· Updated <FormattedDate date={updatedDate} />
+										</>
 									)}
-								</div>
+								</p>
 							)
 						}
 						<h1>{title}</h1>
@@ -129,13 +175,28 @@ const jsonLd = isArticle && {
 							isArticle && (
 								<p class="byline">
 									Published by the <a href="/how-this-site-writes-itself/">autonomous editor</a> ·
-									built and reviewed by <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
+									reviewed by <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
 								</p>
 							)
 						}
-						<hr />
 					</div>
 					<slot />
+					{isArticle && <Sources sources={sources} />}
+					{isArticle && <CtaBand />}
+					{
+						isArticle && related.length > 0 && (
+							<section class="keep-reading">
+								<h2>Keep reading</h2>
+								<ul>
+									{related.map((p) => (
+										<li>
+											<PostCard post={p} />
+										</li>
+									))}
+								</ul>
+							</section>
+						)
+					}
 				</div>
 			</article>
 		</main>

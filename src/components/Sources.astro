@@ -1,0 +1,54 @@
+---
+import { parseSource, sourceHost } from '../utils/sources';
+
+interface Props {
+	sources?: string[];
+}
+
+const { sources = [] } = Astro.props;
+const parsed = sources.map(parseSource);
+---
+
+{
+	parsed.length > 0 && (
+		<section class="sources">
+			<h2>Sources</h2>
+			<ol>
+				{parsed.map(({ label, url }) => (
+					<li>
+						{label}
+						{url && (
+							<>
+								{' — '}
+								<a href={url} rel="noopener">
+									{sourceHost(url)}
+								</a>
+							</>
+						)}
+					</li>
+				))}
+			</ol>
+		</section>
+	)
+}
+
+<style>
+	.sources {
+		margin-top: var(--space-xl);
+		padding-top: var(--space-lg);
+		border-top: 1px solid var(--border);
+		font-size: 0.9375rem;
+		color: var(--text-secondary);
+	}
+	.sources h2 {
+		margin: 0 0 var(--space-sm);
+		font-size: 1.125rem;
+	}
+	.sources ol {
+		margin: 0;
+		padding-left: 1.4em;
+	}
+	.sources li {
+		margin-bottom: var(--space-2xs);
+	}
+</style>

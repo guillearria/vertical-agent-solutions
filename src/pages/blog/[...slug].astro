@@ -1,6 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
+import { readingTime } from '../../utils/readingTime';
 
 export async function getStaticPaths() {
 	const posts = (await getCollection('blog')).filter((post) => !post.data.archived);
@@ -13,8 +14,23 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+
+const readingMinutes = readingTime(post.body ?? '');
+
+// "Keep reading": same industry first (field lands with the taxonomy work;
+// guarded so untagged posts fall back cleanly), then most recent others.
+const others = (await getCollection('blog')).filter(
+	(p) => !p.data.archived && p.id !== post.id,
+);
+const industry = (post.data as { industry?: string }).industry;
+const sameIndustry = industry
+	? others.filter((p) => (p.data as { industry?: string }).industry === industry)
+	: [];
+const byDate = (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
+	b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
+const related = [...sameIndustry.sort(byDate), ...others.filter((p) => !sameIndustry.includes(p)).sort(byDate)].slice(0, 2);
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} readingMinutes={readingMinutes} related={related}>
 	<Content />
 </BlogPost>

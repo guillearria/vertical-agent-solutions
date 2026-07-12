@@ -1,51 +1,77 @@
 ---
-import { AUTHOR_NAME, AUTHOR_URL } from '../consts';
+import { AUTHOR_NAME, AUTHOR_URL, SITE_TITLE } from '../consts';
+import Logo from './Logo.astro';
 
 const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Vertical Agent Solutions. All rights reserved.
-	<div class="footer-links">
-		<a href="/about/">About</a>
-		<a href="/how-this-site-writes-itself/">How this site writes itself</a>
-		<a href="/rss.xml">RSS</a>
-	</div>
-	<div class="footer-built-by">
-		Built by <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
-		{/* TODO: add LinkedIn URL once live — see hq/jobs/applications/linkedin-profile.md */}
+	<div class="inner">
+		<p class="mission">
+			<Logo size={20} />
+			<span>Plain-English guides to putting AI agents to work in your business.</span>
+		</p>
+		<nav class="footer-links" aria-label="Footer">
+			<a href="/blog/">Guides</a>
+			<a href="/about/">About</a>
+			<a href="/how-this-site-writes-itself/">How this site writes itself</a>
+			<a href="/rss.xml">RSS</a>
+		</nav>
+		<p class="fine">
+			&copy; {today.getFullYear()} {SITE_TITLE} · Built and reviewed by
+			<a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
+			{/* TODO: add LinkedIn URL once live — see hq/jobs/applications/linkedin-profile.md */}
+		</p>
 	</div>
 </footer>
+
 <style>
 	footer {
-		padding: 2em 1em;
 		margin-top: auto;
-		background: linear-gradient(var(--gray-gradient)) no-repeat;
-		color: rgb(var(--gray));
+		background: var(--bg-raised);
+		border-top: 1px solid var(--border);
+		color: var(--text-secondary);
+		font-size: 0.9375rem;
+	}
+	.inner {
+		max-width: var(--container-wide);
+		margin: 0 auto;
+		padding: var(--space-xl) var(--space-md);
 		text-align: center;
-		font-size: 0.9em;
+	}
+	.mission {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--space-xs);
+		margin: 0 0 var(--space-md);
+	}
+	.mission :global(svg) {
+		flex-shrink: 0;
 	}
 	.footer-links {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
-		gap: 1.5em;
-		margin-top: 0.75em;
+		gap: var(--space-md) var(--space-lg);
+		margin-bottom: var(--space-md);
 	}
 	.footer-links a {
+		color: var(--text-secondary);
 		text-decoration: none;
-		color: rgb(var(--gray));
 	}
 	.footer-links a:hover {
-		color: rgb(var(--gray-dark));
+		color: var(--text);
 	}
-	.footer-built-by {
-		margin-top: 0.75em;
-		font-size: 0.9em;
+	.fine {
+		margin: 0;
+		font-size: 0.875rem;
+		color: var(--text-faint);
 	}
-	.footer-built-by a {
-		color: rgb(var(--gray));
+	.fine a {
+		color: var(--text-faint);
 	}
-	.footer-built-by a:hover {
-		color: rgb(var(--gray-dark));
+	.fine a:hover {
+		color: var(--text);
 	}
 </style>
