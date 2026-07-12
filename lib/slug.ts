@@ -7,8 +7,8 @@
 
 /**
  * Slug for the published filename / URL, e.g. "AI Agents for Realtors" →
- * "ai-agents-for-realtors". Capped at 50 chars — `archive:<slug>` must stay
- * within Telegram's 64-byte callback_data limit — without cutting mid-word.
+ * "ai-agents-for-realtors". Capped at 50 chars without cutting mid-word —
+ * keeps URLs tidy, and existing published slugs already follow this cap.
  */
 export function slugify(title: string): string {
 	let slug = title

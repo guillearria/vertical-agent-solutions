@@ -5,7 +5,6 @@
   "type": "module",
   "description": "Vertical Agent Solutions content pipeline — AI drafting, daily editor, Telegram notifications.",
   "scripts": {
-    "draft": "tsx src/runDraft.ts",
     "editor": "tsx src/editor.ts"
   },
   "devDependencies": {

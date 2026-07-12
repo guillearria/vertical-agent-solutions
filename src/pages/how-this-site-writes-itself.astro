@@ -19,8 +19,8 @@ import Layout from '../layouts/BlogPost.astro';
 	<p>
 		Once a day, a GitHub Actions workflow wakes up and runs an autonomous editor — a Node script
 		driving headless Claude Code. The editor is shown the entire catalog (every post's title,
-		description, word count, and excerpt), a log of its own recent actions, and any idea fragments
-		the owner has captured from his phone. Then it takes exactly <strong>one action</strong>:
+		description, word count, and excerpt) and a log of its own recent actions. Then it takes
+		exactly <strong>one action</strong>:
 	</p>
 	<ul>
 		<li><strong>Publish</strong> a new post on an industry the blog hasn't covered yet,</li>
@@ -60,8 +60,9 @@ import Layout from '../layouts/BlogPost.astro';
 	<h2>Every action is supervised</h2>
 	<p>
 		The editor commits directly to the live branch, which redeploys the site — and immediately
-		reports what it did to the owner's Telegram, with an <strong>Undo</strong> button that reverts
-		the change through the GitHub API. Nothing here runs unwatched; it runs unblocked. That is the
+		reports what it did to the owner's Telegram. The report is purely informational: no buttons,
+		no approval step. Every action is one commit in a public repository, so a bad call is one
+		<code>git revert</code> away. Nothing here runs unwatched; it runs unblocked. That is the
 		difference between automation you babysit and automation you supervise.
 	</p>
 

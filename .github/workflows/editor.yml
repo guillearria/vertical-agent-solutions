@@ -3,7 +3,7 @@ name: Daily editor
 # The autonomous editor-in-chief: once a day it reviews the catalog and takes
 # the single highest-value action (new post / improve / archive / skip),
 # pushes the result (Cloudflare Pages rebuilds on push), and reports to
-# Telegram with an Undo button. See pipeline/src/editor.ts.
+# Telegram with a plain informational message. See pipeline/src/editor.ts.
 
 on:
   schedule:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run (no push, no KV writes, no Telegram)'
+        description: 'Dry run (no push, no Telegram)'
         type: boolean
         default: false
 
@@ -47,9 +47,6 @@ jobs:
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_OWNER_ID: ${{ secrets.TELEGRAM_OWNER_ID }}
-          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
-          CF_KV_NAMESPACE_ID: ${{ secrets.CF_KV_NAMESPACE_ID }}
-          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
           SITE_URL: ${{ vars.SITE_URL }}
           EDITOR_DRY_RUN: ${{ inputs.dry_run && '1' || '' }}
 

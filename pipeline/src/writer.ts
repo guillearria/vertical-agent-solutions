@@ -4,8 +4,7 @@ import { slugify, truncateDescription } from '../../lib/slug';
 
 /**
  * The shared "staff writer" core: turns a raw idea into a finished, fact-checked
- * Vertical Agent Solutions post. Used by the GitHub Action runners
- * (`runDraft.ts`, `editor.ts`).
+ * Vertical Agent Solutions post. Used by the daily editor (`editor.ts`).
  */
 
 export { slugify };

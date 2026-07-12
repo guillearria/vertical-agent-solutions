@@ -3,25 +3,23 @@
 This wires the repo into the **$0-compute serverless** setup:
 
 - **Cloudflare Pages** — hosts the static Astro site, auto-deploys on every push to `main`.
-- **Cloudflare Pages Functions** — `functions/api/telegram.ts` (Telegram webhook: capture, `/list`, `/draft`, Approve/Reject/Archive/Undo) and `functions/api/contact.ts` (contact form → Telegram, Turnstile-protected).
-- **GitHub Actions** — the heavy AI work: manual drafting (`draft.yml`) and the **daily autonomous editor** (`editor.yml`). All model calls run through headless Claude Code on the owner's **Claude Max subscription** (`CLAUDE_CODE_OAUTH_TOKEN`), not metered API credits.
-- **Cloudflare KV** — captured ideas, pending draft candidates, editor undo tokens, contact-form rate limits.
+- **Cloudflare Pages Functions** — `functions/api/contact.ts` (contact form → Telegram, Turnstile-protected).
+- **GitHub Actions** — the heavy AI work: the **daily autonomous editor** (`editor.yml`). All model calls run through headless Claude Code on the owner's **Claude Max subscription** (`CLAUDE_CODE_OAUTH_TOKEN`), not metered API credits.
+- **Cloudflare KV** — contact-form rate-limit counters only.
 
-Two publishing paths:
+Telegram is **outbound-only and purely informational**: the editor reports what it did, the workflow alerts on failure, and the contact form forwards messages. There is no webhook, no bot commands, and no interactive buttons. Supervision happens in git — every editor action is a single commit, so undoing one is `git revert`.
+
+One publishing path:
 
 ```
-Manual (phone):  Telegram idea → /draft → repository_dispatch → Action (Claude Code + WebSearch)
-                 → candidate in KV → Telegram preview [Approve][Reject]
-                 → Approve → Function writes src/content/blog/<slug>.md via GitHub API → live
-
 Autonomous:      editor.yml (daily cron) → editor.ts reviews the catalog → ONE action
                  (new post / improve post / archive / skip) → commit + push → live
-                 → Telegram summary with [↩️ Undo] (token in KV, 7-day TTL)
+                 → plain Telegram summary
 ```
 
-The manual path still requires your Approve tap. The daily editor publishes on its own and you supervise after the fact via the Undo button. Hard-coded guards keep it sane: one action per day, a 14-day per-slug cooldown (`pipeline/editor-log.json`), it never archives below 4 active posts nor anything touched in the last 30 days.
+The daily editor publishes on its own and you supervise after the fact. Hard-coded guards keep it sane: one action per day, a 14-day per-slug cooldown (`pipeline/editor-log.json`), it never archives below 4 active posts nor anything touched in the last 30 days.
 
-Anti-template safeguards (`pipeline/src/variety.ts`): every draft — editor or manual — is checked in code against the catalog for reused title phrasing and repeated description openers, and retried once with feedback if it collides; the decider is shown a computed `Catalog health:` block and picks a per-post article format; `improve_post` may retitle a templated post (the slug/URL never changes, and the Telegram summary shows the retitle).
+Anti-template safeguards (`pipeline/src/variety.ts`): every draft is checked in code against the catalog for reused title phrasing and repeated description openers, and retried once with feedback if it collides; the decider is shown a computed `Catalog health:` block and picks a per-post article format; `improve_post` may retitle a templated post (the slug/URL never changes, and the Telegram summary shows the retitle).
 
 ---
 
@@ -35,63 +33,41 @@ The repo is already pushed. Add **Actions secrets** (Settings → Secrets and va
 | `CLAUDE_CODE_OAUTH_TOKEN` | run `claude setup-token` locally (needs the Claude Max/Pro subscription) and paste the token — AI runs bill the subscription, not API credits. Expires after ~1 year |
 | `TELEGRAM_BOT_TOKEN` | from @BotFather |
 | `TELEGRAM_OWNER_ID` | your numeric id (from @userinfobot) |
-| `CF_ACCOUNT_ID` | Cloudflare → account ID |
-| `CF_KV_NAMESPACE_ID` | the KV namespace id from step 2 |
-| `CF_API_TOKEN` | Cloudflare API token with **Workers KV Storage: Edit** |
 
 Optionally add a repo **variable** (Settings → Secrets and variables → Actions → Variables): `SITE_URL` = the live base URL (defaults to `https://vertical-agent-solutions.pages.dev` in code).
 
-### 2. Cloudflare — KV + Pages
-1. **KV:** Workers & Pages → KV → Create namespace, e.g. `vas-inbox`. Note its **namespace ID** (→ `CF_KV_NAMESPACE_ID`).
-2. **Pages:** Workers & Pages → Create → Pages → **Connect to Git** → this repo.
+### 2. Cloudflare — Pages + KV
+1. **Pages:** Workers & Pages → Create → Pages → **Connect to Git** → this repo.
    - Framework preset **Astro**, build command `npm run build`, output dir `dist`.
    - Build var `NODE_VERSION = 22`.
-3. **Bind KV to the Pages project:** Pages project → Settings → Functions → **KV namespace bindings** → variable name **`INBOX_KV`** → your namespace.
-4. **Pages env vars** (Settings → Environment variables, Production):
+2. **KV (contact-form rate limiting):** Workers & Pages → KV → Create namespace, e.g. `vas-inbox`. Bind it to the Pages project: Settings → Functions → **KV namespace bindings** → variable name **`INBOX_KV`** → your namespace.
+3. **Pages env vars** (Settings → Environment variables, Production):
    | Var | Value |
    |---|---|
    | `TELEGRAM_BOT_TOKEN` | same bot token |
    | `TELEGRAM_OWNER_ID` | your numeric id |
-   | `TELEGRAM_SECRET_TOKEN` | a random string you invent (used in step 4) |
-   | `GITHUB_REPO` | `guillearria/vertical-agent-solutions` |
-   | `GITHUB_DISPATCH_TOKEN` | fine-grained PAT (step 3) |
-   | `GITHUB_BRANCH` | `main` (optional) |
-   | `SITE_URL` | `https://vertical-agent-solutions.pages.dev` (optional) |
-   | `TURNSTILE_SECRET_KEY` | from step 5 (contact-form spam check; skipped if unset) |
-   | `PUBLIC_TURNSTILE_SITE_KEY` | from step 5 — ⚠️ needed at **build** time (Astro inlines it), so set it for the build environment and redeploy |
-5. **Turnstile (contact-form spam protection):** Cloudflare dashboard → **Turnstile** → Add widget → hostname `vertical-agent-solutions.pages.dev` (add `verticalagentsolutions.com` later), mode **Managed**. ⚠️ Type the hostname, then **press Enter / pick the suggestion** so it becomes a list entry under the field — if the text isn't confirmed, Create fails with "At least 1 hostname must be added" (`pages.dev` subdomains are supported). Copy the **Site Key** → `PUBLIC_TURNSTILE_SITE_KEY` and **Secret Key** → `TURNSTILE_SECRET_KEY` (both in the Pages env vars above). Until these are set, the form still works behind the honeypot + rate limit only.
-6. **Custom domain (pending):** Pages project → Custom domains → add `verticalagentsolutions.com`. Then flip `site` in `astro.config.mjs`, `DEFAULT_SITE` in `functions/api/telegram.ts`, the `SITE_URL` vars, and the Turnstile hostname.
-7. **Avoid wasted builds (optional):** Settings → Builds → Build watch paths → include `src/*` so non-`src` commits don't rebuild.
+   | `TURNSTILE_SECRET_KEY` | from step 4 (contact-form spam check; skipped if unset) |
+   | `PUBLIC_TURNSTILE_SITE_KEY` | from step 4 — ⚠️ needed at **build** time (Astro inlines it), so set it for the build environment and redeploy |
+4. **Turnstile (contact-form spam protection):** Cloudflare dashboard → **Turnstile** → Add widget → hostname `vertical-agent-solutions.pages.dev` (add `verticalagentsolutions.com` later), mode **Managed**. ⚠️ Type the hostname, then **press Enter / pick the suggestion** so it becomes a list entry under the field — if the text isn't confirmed, Create fails with "At least 1 hostname must be added" (`pages.dev` subdomains are supported). Copy the **Site Key** → `PUBLIC_TURNSTILE_SITE_KEY` and **Secret Key** → `TURNSTILE_SECRET_KEY` (both in the Pages env vars above). Until these are set, the form still works behind the honeypot + rate limit only.
+5. **Custom domain (pending):** Pages project → Custom domains → add `verticalagentsolutions.com`. Then flip `site` in `astro.config.mjs`, the `SITE_URL` vars, and the Turnstile hostname.
+6. **Avoid wasted builds (optional):** Settings → Builds → Build watch paths → include `src/*` so non-`src` commits don't rebuild.
 
-### 3. GitHub fine-grained PAT (for the Function)
-GitHub → Settings → Developer settings → Fine-grained tokens → only this repo →
-**Repository permissions: Contents = Read and write** (this also authorizes `repository_dispatch`).
-Put it in the Pages `GITHUB_DISPATCH_TOKEN` env var.
-
-### 4. Point Telegram at the webhook
-After the first Pages deploy, register the webhook (run locally, substituting values):
+### 3. Telegram bot
+Create the bot with @BotFather; the token is only ever used to **send** messages. The bot must have **no webhook registered** — if one exists from an earlier setup, remove it:
 
 ```sh
-curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
-  -d "url=https://vertical-agent-solutions.pages.dev/api/telegram" \
-  -d "secret_token=<TELEGRAM_SECRET_TOKEN>"
+curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/deleteWebhook"
 ```
-
-(Switch to the custom-domain URL once it's live.)
 
 ---
 
 ## Verify end-to-end
 
 1. **Hosting:** push any change → Pages build succeeds → the site, `/blog`, and `/rss.xml` are live.
-2. **Capture:** Telegram → send text → `Saved ✓ <id>`. From a different account → `This inbox is private.` `/list` shows recent ideas.
-3. **Draft:** `/draft` → "Drafting…" → a preview with title/description/source count + **Approve/Reject** arrives (the `draft` Action run shows the WebSearch-backed drafting).
-4. **Publish:** tap **Approve** → new file in `src/content/blog/`, Pages redeploys, `Published ✓ <url>`, post is live + in RSS.
-5. **Reject:** tap **Reject** on another → `Discarded`, nothing committed.
-6. **Daily editor:** Actions tab → run **Daily editor** with `dry_run: true` → check the run log for the decision JSON (nothing pushed). Then run it for real → a commit lands, Pages rebuilds, and a Telegram summary with **↩️ Undo** arrives. Tap Undo → a revert commit lands via the GitHub API.
-7. **Contact form:** submit the form on `/contact` → a `📬 Contact form` message arrives in Telegram. Fill the hidden "Company" field (or submit 6× in an hour) → silently dropped / rate-limited.
+2. **Daily editor:** Actions tab → run **Daily editor** with `dry_run: true` → check the run log for the decision JSON (nothing pushed). Then run it for real → a commit lands, Pages rebuilds, and a plain Telegram summary arrives (no buttons). To undo an action, revert its commit.
+3. **Contact form:** submit the form on `/contact` → a `📬 Contact form` message arrives in Telegram. Fill the hidden "Company" field (or submit 6× in an hour) → silently dropped / rate-limited.
 
 ## Local development
 - `npm run dev` — site at localhost:4321.
-- **Editor dry run:** `cd pipeline && EDITOR_DRY_RUN=1 npx tsx src/editor.ts` — uses the logged-in `claude` CLI (subscription auth; no API key). Prints the decision and writes any draft into the working tree — no push, no KV writes, no Telegram.
-- **Functions:** `npm run build && npx wrangler pages dev dist --kv INBOX_KV` serves the site + Functions locally (use Turnstile test keys: site `1x00000000000000000000AA`, secret `1x0000000000000000000000000000000AA`).
+- **Editor dry run:** `cd pipeline && EDITOR_DRY_RUN=1 npx tsx src/editor.ts` — uses the logged-in `claude` CLI (subscription auth; no API key). Prints the decision and writes any draft into the working tree — no push, no Telegram.
+- **Functions:** `npm run build && npx wrangler pages dev dist --kv INBOX_KV` serves the site + contact form locally (use Turnstile test keys: site `1x00000000000000000000AA`, secret `1x0000000000000000000000000000000AA`).
