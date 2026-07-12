@@ -1,6 +1,6 @@
 # Backlog
 
-Status: **fully automated and verified end-to-end** (Jul 2 2026). The daily editor (`editor.yml` → `pipeline/src/editor.ts`, cron 13:17 UTC) reviews the catalog daily and autonomously publishes / improves / archives / skips, reporting to Telegram with an Undo button; failed runs also ping Telegram. All AI runs go through headless Claude Code (`pipeline/src/claude.ts`) on the owner's **Claude Max subscription** (`CLAUDE_CODE_OAUTH_TOKEN` secret) — never metered API billing. The manual phone → `/draft` → Approve flow works alongside it. The contact form on `/about` forwards to Telegram (Turnstile + honeypot + rate limit). See `SETUP.md` for architecture.
+Status: **fully automated and verified end-to-end** (Jul 2 2026). The daily editor (`editor.yml` → `pipeline/src/editor.ts`, cron 13:17 UTC) reviews the catalog daily and autonomously publishes / improves / archives / skips, reporting to Telegram with an Undo button; failed runs also ping Telegram. All AI runs go through headless Claude Code (`pipeline/src/claude.ts`) on the owner's **Claude Max subscription** (`CLAUDE_CODE_OAUTH_TOKEN` secret) — never metered API billing. The manual phone → `/draft` → Approve flow works alongside it. The contact form on `/contact` forwards to Telegram (Turnstile + honeypot + rate limit). See `SETUP.md` for architecture.
 
 ## Open items
 

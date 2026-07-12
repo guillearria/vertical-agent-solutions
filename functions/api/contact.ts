@@ -30,7 +30,7 @@ const RATE_LIMIT = 5; // messages per IP per hour
 function respond(request: Request, status: number, error?: string): Response {
 	// No-JS fallback: a plain form POST expects a page back, so redirect.
 	if ((request.headers.get('Accept') ?? '').includes('text/html')) {
-		const to = error ? `/about/?error=${encodeURIComponent(error)}` : '/about/?sent=1';
+		const to = error ? `/contact/?error=${encodeURIComponent(error)}` : '/contact/?sent=1';
 		return new Response(null, { status: 303, headers: { Location: to } });
 	}
 	return new Response(JSON.stringify(error ? { ok: false, error } : { ok: true }), {

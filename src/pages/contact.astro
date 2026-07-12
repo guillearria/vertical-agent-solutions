@@ -1,0 +1,95 @@
+---
+import ContactForm from '../components/ContactForm.astro';
+import { AUTHOR_NAME, AUTHOR_URL, SITE_TITLE } from '../consts';
+import Layout from '../layouts/BlogPost.astro';
+
+const faqs = [
+	{
+		q: 'Do you only work with tech companies?',
+		a: 'No — the opposite. Main-street businesses are the point: salons, repair shops, law firms, clinics, agencies. If your team runs on phones, calendars, and repetitive admin work, that is exactly where agentic systems earn their keep.',
+	},
+	{
+		q: 'How much does this cost?',
+		a: 'Scoping is free. You tell us what you are trying to automate, we tell you what an agent can and cannot do for it, and what a build would involve. You only pay if we agree there is something worth building.',
+	},
+	{
+		q: 'Will you tell me if AI agents are the wrong tool?',
+		a: 'Yes, in writing. Plenty of problems are better solved with a checklist, a calendar rule, or a part-time hire. Saying so costs us a project and saves you a bad quarter — that trade is fine with us.',
+	},
+	{
+		q: 'Who actually does the work?',
+		a: `${AUTHOR_NAME}, a software engineer who builds verification-gated agent systems — the same approach that runs this site's autonomous editor. No outsourcing, no hand-offs.`,
+	},
+];
+
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'ContactPage',
+			name: `Contact ${SITE_TITLE}`,
+			url: new URL('/contact/', Astro.site).toString(),
+			description:
+				'Tell us what you are trying to automate. A real person reads every message and replies within two business days.',
+		},
+		{
+			'@type': 'FAQPage',
+			mainEntity: faqs.map(({ q, a }) => ({
+				'@type': 'Question',
+				name: q,
+				acceptedAnswer: { '@type': 'Answer', text: a },
+			})),
+		},
+	],
+};
+---
+
+<Layout
+	title="Work With Us — Contact Vertical Agent Solutions"
+	description="Tell us what you're trying to automate. A real person reads every message and replies within two business days — honest advice, even when the answer is 'you don't need an agent.'"
+	pubDate={new Date('Jul 12 2026')}
+	isArticle={false}
+>
+	<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+	<p>
+		Reading is the start. If your team wants to actually deploy agentic systems — to automate the
+		repetitive, augment the skilled, and move faster than competitors still doing it by hand —
+		that's what we build. Tell us where you're stuck and we'll tell you whether agents are the
+		right tool for it, honestly, including when they're not.
+	</p>
+
+	<h2>What happens when you write to us</h2>
+	<p>
+		The guides on this site are written by an autonomous editor, but this inbox is not. Your
+		message lands directly on <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>'s phone. A real person reads
+		every message and replies by email, usually within one to two business days (US Eastern
+		hours). No automated replies, no sales sequence, and your address never goes on a mailing
+		list.
+	</p>
+
+	<h2>What to include</h2>
+	<ul>
+		<li><strong>Your industry</strong> — a salon books differently than a law firm intake desk.</li>
+		<li>
+			<strong>The repetitive task eating your hours</strong> — missed calls, follow-ups, scheduling,
+			data entry, whatever it is.
+		</li>
+		<li>
+			<strong>The tools you already use</strong> — your calendar, booking system, or practice
+			software, so we can tell you what an agent could actually plug into.
+		</li>
+	</ul>
+
+	<h2>Common questions</h2>
+	{
+		faqs.map(({ q, a }) => (
+			<>
+				<h3>{q}</h3>
+				<p>{a}</p>
+			</>
+		))
+	}
+
+	<h2>Send us a message</h2>
+	<ContactForm />
+</Layout>

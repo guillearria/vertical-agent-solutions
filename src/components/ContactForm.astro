@@ -1,0 +1,133 @@
+---
+// Set in the Cloudflare Pages build environment; the widget (and its script)
+// is omitted when absent so the form still works before Turnstile is set up.
+const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+
+<form id="contact-form" method="POST" action="/api/contact">
+	<label>
+		Your name
+		<input type="text" name="name" required maxlength="100" autocomplete="name" />
+	</label>
+	<label>
+		Email
+		<input type="email" name="email" required maxlength="200" autocomplete="email" />
+	</label>
+	<label>
+		What are you trying to automate?
+		<textarea name="message" required minlength="10" maxlength="2000" rows="6"></textarea>
+	</label>
+	<p class="hp-field" aria-hidden="true">
+		<label>Company <input type="text" name="company" tabindex="-1" autocomplete="off" /></label>
+	</p>
+	{turnstileSiteKey && <div class="cf-turnstile" data-sitekey={turnstileSiteKey} />}
+	<button type="submit" class="button">Send message</button>
+	<p class="form-status" hidden></p>
+</form>
+<p id="contact-thanks" hidden>
+	<strong>Thanks — your message is on its way.</strong> We read everything and reply by email.
+</p>
+
+{
+	turnstileSiteKey && (
+		<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer />
+	)
+}
+<script is:inline>
+	(() => {
+		const form = document.getElementById('contact-form');
+		const thanks = document.getElementById('contact-thanks');
+		if (!form || !thanks) return;
+		const status = form.querySelector('.form-status');
+		const params = new URLSearchParams(location.search);
+		if (params.get('sent') === '1') {
+			form.hidden = true;
+			thanks.hidden = false;
+			return;
+		}
+		if (params.get('error')) {
+			status.textContent = params.get('error');
+			status.hidden = false;
+		}
+		form.addEventListener('submit', async (e) => {
+			e.preventDefault();
+			const button = form.querySelector('button');
+			button.disabled = true;
+			status.hidden = true;
+			try {
+				const res = await fetch(form.action, {
+					method: 'POST',
+					body: new FormData(form),
+					headers: { Accept: 'application/json' },
+				});
+				const data = await res.json().catch(() => ({}));
+				if (res.ok && data.ok) {
+					form.hidden = true;
+					thanks.hidden = false;
+					return;
+				}
+				status.textContent = data.error || 'Something went wrong — please try again.';
+			} catch {
+				status.textContent = 'Network error — please try again.';
+			}
+			status.hidden = false;
+			button.disabled = false;
+			if (window.turnstile) window.turnstile.reset();
+		});
+	})();
+</script>
+
+<style>
+	#contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-md);
+		margin-top: var(--space-lg);
+	}
+	#contact-form label {
+		display: flex;
+		flex-direction: column;
+		gap: var(--space-2xs);
+		font-weight: 700;
+		font-size: 1rem;
+	}
+	#contact-form input,
+	#contact-form textarea {
+		font-weight: normal;
+		padding: var(--space-xs) var(--space-sm);
+		background: var(--bg);
+		color: var(--text);
+		border: 1px solid var(--border-strong);
+		border-radius: var(--radius-sm);
+	}
+	#contact-form input:focus,
+	#contact-form textarea:focus {
+		outline: 2px solid var(--accent);
+		outline-offset: 0;
+		border-color: transparent;
+	}
+	#contact-form button {
+		align-self: flex-start;
+	}
+	#contact-form button:disabled {
+		opacity: 0.6;
+		cursor: wait;
+	}
+	.form-status {
+		color: #b3261e;
+		margin: 0;
+	}
+	@media (prefers-color-scheme: dark) {
+		.form-status {
+			color: #f2b8b5;
+		}
+	}
+	/* Honeypot: moved off-screen (not display:none — some bots skip that). */
+	.hp-field {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+</style>

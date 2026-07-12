@@ -89,7 +89,7 @@ curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/setWebhook" \
 4. **Publish:** tap **Approve** → new file in `src/content/blog/`, Pages redeploys, `Published ✓ <url>`, post is live + in RSS.
 5. **Reject:** tap **Reject** on another → `Discarded`, nothing committed.
 6. **Daily editor:** Actions tab → run **Daily editor** with `dry_run: true` → check the run log for the decision JSON (nothing pushed). Then run it for real → a commit lands, Pages rebuilds, and a Telegram summary with **↩️ Undo** arrives. Tap Undo → a revert commit lands via the GitHub API.
-7. **Contact form:** submit the form on `/about` → a `📬 Contact form` message arrives in Telegram. Fill the hidden "Company" field (or submit 6× in an hour) → silently dropped / rate-limited.
+7. **Contact form:** submit the form on `/contact` → a `📬 Contact form` message arrives in Telegram. Fill the hidden "Company" field (or submit 6× in an hour) → silently dropped / rate-limited.
 
 ## Local development
 - `npm run dev` — site at localhost:4321.
