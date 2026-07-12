@@ -4,9 +4,13 @@ import type { HTMLAttributes } from 'astro/types';
 type Props = HTMLAttributes<'a'>;
 
 const { href, class: className, ...props } = Astro.props;
-const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
-const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+
+// Compare with trailing slashes stripped so `/blog/` matches `/blog`, and
+// treat section roots as active on their subpages (`/blog/` on `/blog/post/`).
+const strip = (p: string) => (p.length > 1 ? p.replace(/\/+$/, '') : p);
+const current = strip(Astro.url.pathname);
+const target = strip(String(href ?? ''));
+const isActive = target === current || (target !== '/' && current.startsWith(target + '/'));
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
@@ -18,7 +22,9 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 		text-decoration: none;
 	}
 	a.active {
-		font-weight: bolder;
 		text-decoration: underline;
+		text-decoration-color: var(--accent);
+		text-decoration-thickness: 2px;
+		text-underline-offset: 6px;
 	}
 </style>

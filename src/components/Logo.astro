@@ -1,0 +1,26 @@
+---
+// The brand mark: a "V" whose right stroke rises into a wave tail — the same
+// graphic as public/favicon.svg, inlined so it inherits sizing from CSS.
+interface Props {
+	size?: number;
+}
+const { size = 28 } = Astro.props;
+---
+
+<svg
+	width={size}
+	height={size}
+	viewBox="0 0 128 128"
+	xmlns="http://www.w3.org/2000/svg"
+	aria-hidden="true"
+	focusable="false"
+>
+	<rect width="128" height="128" rx="28" fill="#0F766E"></rect>
+	<path
+		d="M34 46 L57 90 C68 66 78 52 96 38"
+		fill="none"
+		stroke="#FFFFFF"
+		stroke-width="13"
+		stroke-linecap="round"
+		stroke-linejoin="round"></path>
+</svg>

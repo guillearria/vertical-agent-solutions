@@ -10,8 +10,21 @@ export default defineConfig({
 	// connected in Cloudflare Pages (also update SITE_URL in the Pages env and
 	// DEFAULT_SITE in functions/api/telegram.ts).
 	site: 'https://vertical-agent-solutions.pages.dev',
+	trailingSlash: 'always',
 	integrations: [mdx(), sitemap()],
 	fonts: [
+		{
+			// Display face for headings; downloaded and self-hosted at build time.
+			// If the build-time fetch ever flakes on Pages, vendor the woff2 files
+			// into src/assets/fonts and switch to fontProviders.local().
+			provider: fontProviders.google(),
+			name: 'Newsreader',
+			cssVariable: '--font-display',
+			weights: [500, 600],
+			styles: ['normal', 'italic'],
+			subsets: ['latin'],
+			fallbacks: ['Georgia', 'Times New Roman', 'serif'],
+		},
 		{
 			provider: fontProviders.local(),
 			name: 'Atkinson',
