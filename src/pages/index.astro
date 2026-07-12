@@ -1,8 +1,16 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
+import CtaBand from '../components/CtaBand.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import PostCard from '../components/PostCard.astro';
 import { AUTHOR_NAME, AUTHOR_URL, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+
+const latest = (await getCollection('blog'))
+	.filter((post) => !post.data.archived)
+	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+	.slice(0, 4);
 
 const founderId = new URL('#founder', Astro.site).toString();
 const jsonLd = {
@@ -36,31 +44,144 @@ const jsonLd = {
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+		<style>
+			.hero {
+				padding: var(--space-xl) 0 var(--space-2xl);
+			}
+			.hero h1 {
+				font-size: clamp(2.5rem, 1.5rem + 5vw, 3.5rem);
+				line-height: 1.1;
+				margin: 0 0 var(--space-md);
+			}
+			.standfirst {
+				font-size: 1.1875rem;
+				line-height: 1.7;
+				color: var(--text-secondary);
+				max-width: 38rem;
+				margin: 0 0 var(--space-lg);
+			}
+			.hero-ctas {
+				display: flex;
+				align-items: center;
+				gap: var(--space-lg);
+				margin: 0;
+			}
+			.text-cta {
+				font-weight: 700;
+			}
+			section {
+				margin-bottom: var(--space-2xl);
+			}
+			.section-heading {
+				font-size: 0.875rem;
+				font-family: var(--font-body), sans-serif;
+				font-weight: 700;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: var(--text-faint);
+				margin: 0 0 var(--space-lg);
+			}
+			.latest ul {
+				list-style: none;
+				margin: 0 0 var(--space-lg);
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: var(--space-lg);
+			}
+			.latest li {
+				margin: 0;
+				padding-bottom: var(--space-lg);
+				border-bottom: 1px solid var(--border);
+			}
+			.latest li:last-child {
+				border-bottom: none;
+				padding-bottom: 0;
+			}
+			.all-link {
+				font-weight: 700;
+			}
+			.what-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: var(--space-lg);
+				margin-bottom: var(--space-xl);
+			}
+			.what-grid h3 {
+				margin: 0 0 var(--space-2xs);
+				font-size: 1.125rem;
+			}
+			.what-grid p {
+				margin: 0;
+				color: var(--text-secondary);
+				font-size: 0.9375rem;
+			}
+			@media (max-width: 640px) {
+				.what-grid {
+					grid-template-columns: 1fr;
+				}
+			}
+			.trust {
+				font-style: italic;
+				color: var(--text-secondary);
+				border-top: 1px solid var(--border);
+				padding-top: var(--space-lg);
+				margin: 0;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>AI agents are coming to your industry. We help you get ready.</h1>
-			<p>
-				<strong>Vertical Agent Solutions</strong> is a plain-English field guide to the agentic wave —
-				the shift from software you operate to software that operates on your behalf. No hype, no jargon
-				dumps. Every post is researched, fact-checked, and written to be understood by someone who
-				doesn't write code for a living.
-			</p>
-			<p>Here you'll find:</p>
-			<ul>
-				<li><strong>What agents actually are</strong> — and what they are not.</li>
-				<li><strong>Where they're already working</strong> — real use cases, by industry.</li>
-				<li><strong>How to adopt them</strong> — practical first steps, not science projects.</li>
-			</ul>
-			<p>
-				<a href="/blog/">Read the latest →</a>
-			</p>
-			<hr />
-			<p>
-				<strong>Want this built for your business?</strong> We design and ship agentic systems for teams
-				that would rather adopt the wave than be flattened by it.
-				<a href="/contact/">Work with us →</a>
+			<section class="hero">
+				<h1>AI agents are coming to your industry. We help you get ready.</h1>
+				<p class="standfirst">
+					Plain-English, deeply-verified guides to the agentic wave — the shift from software you
+					operate to software that operates on your behalf. Written for people who run real
+					businesses, not for engineers.
+				</p>
+				<p class="hero-ctas">
+					<a class="button" href="/blog/">Read the guides</a>
+					<a class="text-cta" href="/contact/">Work with us →</a>
+				</p>
+			</section>
+
+			<section class="latest">
+				<h2 class="section-heading">Latest guides</h2>
+				<ul>
+					{
+						latest.map((post) => (
+							<li>
+								<PostCard post={post} />
+							</li>
+						))
+					}
+				</ul>
+				<p><a class="all-link" href="/blog/">All guides →</a></p>
+			</section>
+
+			<section class="what">
+				<h2 class="section-heading">What you'll find here</h2>
+				<div class="what-grid">
+					<div>
+						<h3>What agents actually are</h3>
+						<p>And what they are not — no hype, no jargon dumps.</p>
+					</div>
+					<div>
+						<h3>Where they're already working</h3>
+						<p>Real use cases, industry by industry, with the limits spelled out.</p>
+					</div>
+					<div>
+						<h3>How to adopt them</h3>
+						<p>Practical first steps, not science projects.</p>
+					</div>
+				</div>
+				<CtaBand />
+			</section>
+
+			<p class="trust">
+				Every guide on this site is researched, written, and maintained by an AI editor — and
+				reviewed by a human. <a href="/how-this-site-writes-itself/">See how it works →</a>
 			</p>
 		</main>
 		<Footer />
