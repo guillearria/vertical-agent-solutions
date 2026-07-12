@@ -2,6 +2,7 @@
 title: "Filling Empty Class Spots and Reviving Lapsed Members: AI Agents for Small Gyms"
 description: "See where an AI agent earns its keep at an independent gym — after-hours inquiries, waitlist fills, failed payments — and where it should never step in."
 pubDate: 'Jul 10 2026'
+industry: gyms-fitness
 sources:
   - "HFA / industry retention benchmarks (via Nutripy) — https://nutripy.io/blog/gym-retention-rate-benchmarks-2026"
   - "Involuntary churn & gym payment-failure rates (Fitness Payment Services) — https://fitnesspaymentservices.com/gym-member-churn-how-payment-system-issues-drive-cancellations/"

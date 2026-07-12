@@ -2,6 +2,7 @@
 title: "No, It Won't Double-Book You: The Myths Salons Believe About AI Booking Agents"
 description: "The honest reality behind five fears salon, barbershop, and spa owners have about AI booking — robotic voices, double-bookings, lost personal touch, and more."
 pubDate: 'Jul 9 2026'
+industry: salons
 sources:
   - "Phorest — Online Booking Software for Premium Salons & Med Spas — https://www.phorest.com/us/features/online-booking/"
   - "Klara — Text appointment reminders reduce no-shows by 38% — https://www.klara.com/blog/text-message-appointment-reminders-reduce-no-shows-by-38-study-finds"

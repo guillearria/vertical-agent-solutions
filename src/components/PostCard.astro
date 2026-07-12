@@ -1,15 +1,17 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { industryName } from '../data/industries';
 import { readingTime } from '../utils/readingTime';
 import FormattedDate from './FormattedDate.astro';
 
 interface Props {
 	post: CollectionEntry<'blog'>;
-	/** Optional context label shown in the meta line, e.g. the industry name. */
-	label?: string;
+	/** Suppress the industry label, e.g. on a hub page where it's redundant. */
+	hideLabel?: boolean;
 }
 
-const { post, label } = Astro.props;
+const { post, hideLabel = false } = Astro.props;
+const label = hideLabel ? undefined : industryName(post.data.industry);
 const minutes = readingTime(post.body ?? '');
 ---
 

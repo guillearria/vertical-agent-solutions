@@ -3,6 +3,7 @@ title: "What AI Agents Can Safely Do in a Small Law Firm — and What Gets Lawye
 description: "Intake, drafting, deadlines, and billing are fair game for AI agents in a small firm — hallucinated citations and confidentiality slips are not."
 pubDate: 'Jul 2 2026'
 updatedDate: 'Jul 3 2026'
+industry: law-firms
 sources:
   - "Mata v. Avianca, Inc. — Wikipedia — https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc."
   - "Practical Lessons from the Attorney AI Missteps in Mata v. Avianca (ACC) — https://www.acc.com/resource-library/practical-lessons-attorney-ai-missteps-mata-v-avianca"

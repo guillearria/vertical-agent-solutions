@@ -2,6 +2,7 @@
 title: "AI Receptionist vs. Answering Service vs. a New Hire: What Fits a Busy Vet Clinic"
 description: "Weighing an AI phone agent against a second receptionist or an answering service for a small-animal clinic — on cost, coverage, accuracy, and emergency…"
 pubDate: 'Jul 7 2026'
+industry: veterinary
 sources:
   - "Veterinary Practice Phone Statistics — https://agentzap.ai/blog/veterinary-phone-statistics"
   - "Reduce Missed Calls at Your Vet Clinic (PupPilot) — https://www.puppilot.co/blog/how-to-reduce-missed-calls-vet-clinic"

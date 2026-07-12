@@ -17,15 +17,12 @@ const { Content } = await render(post);
 
 const readingMinutes = readingTime(post.body ?? '');
 
-// "Keep reading": same industry first (field lands with the taxonomy work;
-// guarded so untagged posts fall back cleanly), then most recent others.
+// "Keep reading": same-industry posts first, then the most recent others.
 const others = (await getCollection('blog')).filter(
 	(p) => !p.data.archived && p.id !== post.id,
 );
-const industry = (post.data as { industry?: string }).industry;
-const sameIndustry = industry
-	? others.filter((p) => (p.data as { industry?: string }).industry === industry)
-	: [];
+const industry = post.data.industry;
+const sameIndustry = industry ? others.filter((p) => p.data.industry === industry) : [];
 const byDate = (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
 	b.data.pubDate.valueOf() - a.data.pubDate.valueOf();
 const related = [...sameIndustry.sort(byDate), ...others.filter((p) => !sameIndustry.includes(p)).sort(byDate)].slice(0, 2);

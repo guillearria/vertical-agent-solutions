@@ -3,6 +3,7 @@ title: "AI Agents for Realtors: Where They Actually Help (and Where They Don't)"
 description: "Speed-to-lead is where AI agents pay off for real estate agents — plus listings and admin help, honest limits, and a one-month test to prove it."
 pubDate: 'Jun 23 2026'
 updatedDate: 'Jul 3 2026'
+industry: real-estate
 sources:
   - "NAR — REALTORS® Embrace AI, Digital Tools (2025 Technology Survey) — https://www.nar.realtor/newsroom/realtors-embrace-ai-digital-tools-to-enhance-client-service-nar-survey-finds"
   - "HousingWire — NAR 2025 Technology Survey: Realtor tech usage trends — https://www.housingwire.com/articles/nar-2025-technology-survey-realtor-tech-usage-trends/"

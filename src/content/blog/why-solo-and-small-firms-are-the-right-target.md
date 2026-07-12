@@ -3,6 +3,7 @@ title: "AI Document Review for Solo Attorneys: The Safe, Unglamorous Win"
 description: "A done-for-you AI service that reads intake forms, retainers, and discovery, then hands attorneys structured facts to review instead of raw documents."
 pubDate: 'Jun 25 2026'
 updatedDate: 'Jul 3 2026'
+industry: law-firms
 sources:
   - "ABA Profile of the Legal Profession (lawyer population) — https://www.americanbar.org/news/profile-legal-profession/"
   - "Federal Bar Association / ALPS (49% of private-practice lawyers are solo) — https://www.fedbar.org/blog/insights-from-solo-attorneys-on-well-being-and-resilience/"

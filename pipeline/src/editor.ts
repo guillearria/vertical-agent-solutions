@@ -276,6 +276,7 @@ async function execute(decision: Decision, posts: Post[], fragments: Fragment[])
 			buildFrontmatter(updated, {
 				pubDate: frontmatterValue(fm, 'pubDate') || undefined,
 				updatedDate: pubDateString(),
+				industry: frontmatterValue(fm, 'industry') || undefined,
 			}),
 		);
 		return {

@@ -2,6 +2,7 @@
 title: "One Friday Night at a 40-Seat Restaurant: What the AI Answered and What It Didn't"
 description: "Follow an independent restaurant through a Friday dinner rush to see which phone calls a voice agent handled and which ones it handed to a human."
 pubDate: 'Jul 4 2026'
+industry: restaurants
 sources:
   - "QSR Magazine — while the phone rings, restaurants losing $20 billion — https://www.qsrmagazine.com/story/while-the-phone-rings-restaurants-are-losing-20-billion/"
   - "Kea AI — Voice AI order accuracy benchmarks — https://kea.ai/resources/voice-ai-order-accuracy-benchmarks-2026"

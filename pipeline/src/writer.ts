@@ -98,7 +98,10 @@ export function pubDateString(d = new Date()): string {
 	return `${months[d.getMonth()]} ${d.getDate()} ${d.getFullYear()}`;
 }
 
-export function buildFrontmatter(p: Parsed, opts: { pubDate?: string; updatedDate?: string } = {}): string {
+export function buildFrontmatter(
+	p: Parsed,
+	opts: { pubDate?: string; updatedDate?: string; industry?: string } = {},
+): string {
 	const sourcesBlock = p.sources.length
 		? '\n' + p.sources.map((s) => `  - ${JSON.stringify(s)}`).join('\n')
 		: ' []';
@@ -109,6 +112,8 @@ export function buildFrontmatter(p: Parsed, opts: { pubDate?: string; updatedDat
 		`pubDate: '${opts.pubDate ?? pubDateString()}'`,
 	];
 	if (opts.updatedDate) lines.push(`updatedDate: '${opts.updatedDate}'`);
+	// Preserved across the improve flow so hand-tagged industry hubs don't decay.
+	if (opts.industry) lines.push(`industry: ${opts.industry}`);
 	lines.push(`sources:${sourcesBlock}`, '---', '', p.body, '');
 	return lines.join('\n');
 }

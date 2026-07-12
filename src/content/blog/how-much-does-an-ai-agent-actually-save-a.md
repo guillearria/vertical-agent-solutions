@@ -2,6 +2,7 @@
 title: "How Much Does an AI Agent Actually Save a Bookkeeping Firm? A Line-by-Line Breakdown"
 description: "We price the repetitive hours, the tool costs, and the break-even point of AI agents for a small accounting firm — with the human sign-off left intact."
 pubDate: 'Jul 5 2026'
+industry: accounting-bookkeeping
 sources:
   - "US Bureau of Labor Statistics — Bookkeeping, Accounting, and Auditing Clerks — https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm"
   - "NerdWallet — QuickBooks Pricing 2026 — https://www.nerdwallet.com/business/software/learn/quickbooks-pricing"

@@ -2,6 +2,7 @@
 title: "An AI Agent Checklist for Independent Insurance Agencies: What to Automate and What to Leave Alone"
 description: "Before your P&C, life, or health agency turns on an AI agent, run this checklist of safe tasks, compliance red lines, and PII rules."
 pubDate: 'Jul 8 2026'
+industry: insurance-agencies
 sources:
   - "NAIC Model Bulletin on Use of AI by Insurers — https://content.naic.org/article/naic-members-approve-model-bulletin-use-ai-insurers"
   - "NAIC Insurance Data Security Model Law (Government Affairs Brief) — https://content.naic.org/sites/default/files/government-affairs-brief-data-security-model-law.pdf"

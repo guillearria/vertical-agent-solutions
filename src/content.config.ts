@@ -14,6 +14,9 @@ const blog = defineCollection({
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
+			// Industry hub slug (see src/data/industries.ts); optional so
+			// pipeline-written posts without a tag still validate.
+			industry: z.string().optional(),
 			// Set by the maintenance flow to retire a post without deleting it.
 			archived: z.boolean().optional(),
 			// Provenance: web sources the writer verified claims against.

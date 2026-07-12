@@ -1,0 +1,92 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+import { industries } from '../../data/industries';
+
+const active = (await getCollection('blog')).filter((p) => !p.data.archived);
+const hubs = Object.entries(industries)
+	.map(([slug, industry]) => ({
+		slug,
+		industry,
+		count: active.filter((p) => p.data.industry === slug).length,
+	}))
+	.filter((h) => h.count > 0)
+	.sort((a, b) => a.industry.name.localeCompare(b.industry.name));
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Industries — ${SITE_TITLE}`}
+			description="AI agent guides by industry: dental, auto repair, law, real estate, salons, restaurants, and more — where agents help, and where they must not."
+		/>
+		<style>
+			.standfirst {
+				color: var(--text-secondary);
+				margin: 0 0 var(--space-xl);
+			}
+			ul {
+				list-style: none;
+				margin: 0 0 var(--space-xl);
+				padding: 0;
+			}
+			li {
+				padding: var(--space-md) 0;
+				border-bottom: 1px solid var(--border);
+				margin: 0;
+			}
+			li:last-child {
+				border-bottom: none;
+			}
+			li a {
+				font-family: var(--font-display), Georgia, serif;
+				font-weight: 600;
+				font-size: 1.1875rem;
+				color: var(--text);
+				text-decoration: none;
+			}
+			li a:hover {
+				color: var(--accent);
+			}
+			.count {
+				font-size: 0.875rem;
+				color: var(--text-faint);
+				margin-left: var(--space-xs);
+			}
+			.general {
+				color: var(--text-secondary);
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Guides by industry</h1>
+			<p class="standfirst">
+				Every business runs on different busywork. Pick your industry for the guides that map AI
+				agents onto the work you actually do.
+			</p>
+			<ul>
+				{
+					hubs.map(({ slug, industry, count }) => (
+						<li>
+							<a href={`/industries/${slug}/`}>AI Agents for {industry.name}</a>
+							<span class="count">
+								{count} guide{count === 1 ? '' : 's'}
+							</span>
+						</li>
+					))
+				}
+			</ul>
+			<p class="general">
+				Not your industry yet? The cross-industry guides in <a href="/blog/">all guides</a> cover
+				what agents are and how to adopt them anywhere — and new industries land regularly.
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

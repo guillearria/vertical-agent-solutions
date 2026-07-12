@@ -2,6 +2,7 @@
 title: "Missed Calls and Declined Repairs: What an AI Agent Fixes at an Auto Shop"
 description: "Auto shops lose work to unanswered phones and declined repairs — the two jobs an AI agent does reliably, and the conversations it should never touch."
 pubDate: 'Jul 3 2026'
+industry: auto-repair
 sources:
   - "Auto Repair Shop Phone Statistics (AgentZap) — https://agentzap.ai/blog/auto-repair-phone-statistics"
   - "How to Follow Up on Declined Repairs (Affinitiv) — https://www.affinitiv.com/blog/how-to-follow-up-on-declined-repairs/"

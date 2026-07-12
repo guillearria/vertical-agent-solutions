@@ -3,6 +3,7 @@ title: "How Dental Practices Use AI Agents at the Front Desk Without Breaking HI
 description: "Automated reminders, waitlist filling, and insurance checks are the dental front-desk jobs AI agents do well — if the vendor signs a BAA first."
 pubDate: 'Jul 2 2026'
 updatedDate: 'Jul 3 2026'
+industry: dental-practices
 sources:
   - "Text reminders cut no-shows ~38% (Imperial College London), via Klara — https://www.klara.com/blog/text-message-appointment-reminders-reduce-no-shows-by-38-study-finds"
   - "Dental no-show rate benchmarks (Arini) — https://www.arini.ai/blog/dental-practice-no-show-rate"
