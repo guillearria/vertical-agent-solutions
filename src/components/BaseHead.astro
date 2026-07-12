@@ -29,6 +29,10 @@ const {
 } = Astro.props;
 
 const imageURL = new URL(typeof image === 'string' ? image : image.src, Astro.site);
+
+// Cloudflare Web Analytics: enabled only when the beacon token is configured
+// in the Pages build environment (mirrors the Turnstile pattern).
+const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 ---
 
 <!-- Global Metadata -->
@@ -80,3 +84,14 @@ const imageURL = new URL(typeof image === 'string' ? image : image.src, Astro.si
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageURL} />
+
+{
+	cfBeaconToken && (
+		<script
+			is:inline
+			defer
+			src="https://static.cloudflareinsights.com/beacon.min.js"
+			data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
+		/>
+	)
+}

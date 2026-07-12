@@ -6,8 +6,11 @@ Status: **fully automated and verified end-to-end** (Jul 2 2026). The daily edit
 
 - [ ] **Watch the next 2–3 editor runs** (cron 13:17 UTC) for varied titles/formats now that the de-templating rules are live; the HVAC vertical is uncovered and fair game again.
 - [ ] **Improve overall site styling** — broader visual polish beyond the Jul 6 fixes (About-page date removal, mobile-header declutter, article column centering). Candidate areas: typography & vertical rhythm, the default Astro `--accent` blue (`#2337ff` in `src/styles/global.css`) → a real brand palette, the homepage/hero, blog-list cards, and spacing consistency across pages. Owner to iterate later.
-- [ ] Submit the site to **Google Search Console** (verification meta/DNS) — robots.txt, sitemap, and JSON-LD are ready.
-- [ ] **Connect custom domain** `verticalagentsolutions.com` (Pages → Custom domains), then flip `site` in `astro.config.mjs`, `DEFAULT_SITE` in `functions/api/telegram.ts`, `SITE_URL` vars, and the Turnstile hostname.
+- [ ] **Owner actions — SEO go-live checklist** (in this order; don't spend link equity on `pages.dev`):
+  1. **Connect custom domain** `verticalagentsolutions.com` (Pages → Custom domains), then flip in one commit: `site` in `astro.config.mjs`, `DEFAULT_SITE` in `functions/api/telegram.ts`, `SITE_URL` Pages/Actions vars, and the Turnstile hostname allowlist.
+  2. **Google Search Console**: verify via DNS TXT record, submit `sitemap-index.xml`.
+  3. **Bing Webmaster Tools**: one-click import from GSC (Bing/DuckDuckGo matter for older small-business demographics).
+  4. **Cloudflare Web Analytics**: create the site in the CF dashboard, set `PUBLIC_CF_BEACON_TOKEN` in the Pages build env (the beacon in `BaseHead.astro` is a no-op until then).
 - [ ] **Teach the pipeline to tag new posts with `industry:`** — the decider should pick a hub slug from `src/data/industries.ts` (or propose a new one) and the writer should emit an `INDUSTRY:` line that lands in frontmatter. Until then, new posts arrive untagged and get hand-tagged; the improve flow already preserves existing tags (`buildFrontmatter` `opts.industry`).
 - [ ] Delete the now-unused `ANTHROPIC_API_KEY` GitHub Actions secret (nothing reads it; `claude.ts` strips it defensively anyway).
 - [ ] **~Jul 2027:** `CLAUDE_CODE_OAUTH_TOKEN` expires — re-run `claude setup-token` and update the secret.
