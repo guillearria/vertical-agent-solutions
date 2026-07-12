@@ -28,6 +28,6 @@ const byDate = (a: CollectionEntry<'blog'>, b: CollectionEntry<'blog'>) =>
 const related = [...sameIndustry.sort(byDate), ...others.filter((p) => !sameIndustry.includes(p)).sort(byDate)].slice(0, 2);
 ---
 
-<BlogPost {...post.data} readingMinutes={readingMinutes} related={related}>
+<BlogPost {...post.data} readingMinutes={readingMinutes} related={related} postId={post.id}>
 	<Content />
 </BlogPost>

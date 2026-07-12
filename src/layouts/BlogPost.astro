@@ -1,7 +1,6 @@
 ---
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import FallbackImage from '../assets/blog-placeholder-1.jpg';
 import BaseHead from '../components/BaseHead.astro';
 import CtaBand from '../components/CtaBand.astro';
 import Footer from '../components/Footer.astro';
@@ -17,6 +16,8 @@ type Props = CollectionEntry<'blog'>['data'] & {
 	isArticle?: boolean;
 	readingMinutes?: number;
 	related?: CollectionEntry<'blog'>[];
+	/** Post id, used to point social cards at the generated /og/<id>.png. */
+	postId?: string;
 };
 
 const {
@@ -29,7 +30,10 @@ const {
 	isArticle = true,
 	readingMinutes,
 	related = [],
+	postId,
 } = Astro.props;
+
+const socialImage = heroImage ?? (postId ? `/og/${postId}.png` : undefined);
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const blogPostingLd = isArticle && {
@@ -41,7 +45,10 @@ const blogPostingLd = isArticle && {
 	dateModified: (updatedDate ?? pubDate).toISOString(),
 	url: canonicalURL.toString(),
 	mainEntityOfPage: canonicalURL.toString(),
-	image: new URL((heroImage ?? FallbackImage).src, Astro.site).toString(),
+	image: new URL(
+		typeof socialImage === 'string' ? socialImage : (socialImage?.src ?? '/og/default.png'),
+		Astro.site,
+	).toString(),
 	// Author stays the Organization: posts are machine-written by the autonomous
 	// editor, so claiming personal authorship would be dishonest. The human shows
 	// up where he belongs — as the publisher's founder.
@@ -69,7 +76,8 @@ const breadcrumbLd = isArticle && {
 		<BaseHead
 			title={title}
 			description={description}
-			image={heroImage}
+			image={socialImage}
+			imageAlt={title}
 			type={isArticle ? 'article' : 'website'}
 			pubDate={pubDate}
 			updatedDate={updatedDate}

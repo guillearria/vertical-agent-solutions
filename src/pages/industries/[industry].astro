@@ -15,6 +15,7 @@ export async function getStaticPaths() {
 		.map(([slug, industry]) => ({
 			params: { industry: slug },
 			props: {
+				slug,
 				industry,
 				posts: active
 					.filter((p) => p.data.industry === slug)
@@ -24,11 +25,12 @@ export async function getStaticPaths() {
 }
 
 interface Props {
+	slug: string;
 	industry: Industry;
 	posts: CollectionEntry<'blog'>[];
 }
 
-const { industry, posts } = Astro.props;
+const { slug, industry, posts } = Astro.props;
 const title = `AI Agents for ${industry.name}`;
 // Meta description: the blurb's first sentence.
 const description = industry.blurb.split(/(?<=\.)\s/)[0];
@@ -62,7 +64,12 @@ const jsonLd = {
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`${title} — ${SITE_TITLE}`} description={description} />
+		<BaseHead
+			title={`${title} — ${SITE_TITLE}`}
+			description={description}
+			image={`/og/industries/${slug}.png`}
+			imageAlt={title}
+		/>
 		<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 		<style>
 			.blurb {
