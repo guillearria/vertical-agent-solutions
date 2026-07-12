@@ -32,8 +32,9 @@ interface Props {
 
 const { slug, industry, posts } = Astro.props;
 const title = `AI Agents for ${industry.name}`;
-// Meta description: the blurb's first sentence.
-const description = industry.blurb.split(/(?<=\.)\s/)[0];
+// Meta description: the blurb's first sentence (terminator may sit inside a
+// closing quote, and some blurbs open with a question).
+const description = industry.blurb.match(/^.*?[.!?]["'”’]?(?=\s|$)/)?.[0] ?? industry.blurb;
 
 const jsonLd = {
 	'@context': 'https://schema.org',

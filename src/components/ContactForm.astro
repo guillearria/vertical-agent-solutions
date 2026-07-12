@@ -84,6 +84,11 @@ const turnstileSiteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 		gap: var(--space-md);
 		margin-top: var(--space-lg);
 	}
+	/* The id rule above outranks the UA's [hidden] { display: none }, so the
+	   post-submit form.hidden = true needs this to actually hide the form. */
+	#contact-form[hidden] {
+		display: none;
+	}
 	#contact-form label {
 		display: flex;
 		flex-direction: column;
