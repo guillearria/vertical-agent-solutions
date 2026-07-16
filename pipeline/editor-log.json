@@ -136,5 +136,11 @@
 		"action": "new_post",
 		"slug": "which-cleaning-jobs-should-an-ai-booking-agent",
 		"reason": "Residential cleaning/maid services are a large, unreached high-booking-volume vertical distinct from other home services, and checklist is the least-recently-used format (last on Jul 8)."
+	},
+	{
+		"date": "2026-07-16T15:16:28.915Z",
+		"action": "new_post",
+		"slug": "four-fears-tutoring-centers-have-about-ai-agents",
+		"reason": "Education (tutoring/test-prep centers) is a large unreached vertical distinct from the saturated home-services and clinic posts, and myth-busting is the least-recently-used format (last on Jul 9)."
 	}
 ]
