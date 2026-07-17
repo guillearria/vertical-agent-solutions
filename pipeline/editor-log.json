@@ -142,5 +142,11 @@
 		"action": "new_post",
 		"slug": "four-fears-tutoring-centers-have-about-ai-agents",
 		"reason": "Education (tutoring/test-prep centers) is a large unreached vertical distinct from the saturated home-services and clinic posts, and myth-busting is the least-recently-used format (last on Jul 9)."
+	},
+	{
+		"date": "2026-07-17T14:56:52.807Z",
+		"action": "new_post",
+		"slug": "ai-agents-for-daycare-centers-yes-to-enrollment",
+		"reason": "Childcare/daycare is a large, unreached vertical distinct from tutoring (which covers older students, not toddlers/safety-sensitive supervision), and practical guide is the least-recently-used format, last seen Jul 10."
 	}
 ]
