@@ -160,5 +160,11 @@
 		"action": "new_post",
 		"slug": "booked-flagged-or-handed-off-an-ai-agent-works-a",
 		"reason": "Pet grooming/boarding is a large, unreached high-booking-volume vertical distinct from the covered vet clinic, and a case walkthrough is the least-recently-used format (last on Jul 11) after a run of ROI breakdowns, guides, and checklists."
+	},
+	{
+		"date": "2026-07-20T15:23:46.157Z",
+		"action": "new_post",
+		"slug": "a-moving-companys-faq-on-ai-phone-agents-quotes",
+		"reason": "Moving companies are a large, unreached high-call-volume home-services vertical distinct from the covered pest control, landscaping, and cleaning, and FAQ is the least-recently-used format (last on Jul 13)."
 	}
 ]
