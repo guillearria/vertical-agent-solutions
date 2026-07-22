@@ -172,5 +172,11 @@
 		"action": "new_post",
 		"slug": "would-an-ai-answer-a-grieving-familys-call-where",
 		"reason": "Funeral homes are a large, unreached, emotionally sensitive vertical distinct from the covered home-services and clinic posts, and myth-busting (last used Jul 16) varies from the recent FAQ, case walkthrough, ROI, and guide posts."
+	},
+	{
+		"date": "2026-07-22T15:19:35.004Z",
+		"action": "new_post",
+		"slug": "should-a-small-dealership-use-an-ai-agent-or-a-bdc",
+		"reason": "Car dealerships are a large, unreached auto-sales vertical distinct from the covered auto repair shop, and comparison is the least-recently-used format (last on Jul 14) after a run of FAQ, case walkthrough, ROI, and myth-busting posts."
 	}
 ]
