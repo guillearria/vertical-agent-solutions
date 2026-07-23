@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-02T05:17:06.912Z",
-		"action": "new_post",
-		"slug": "ai-agents-for-small-law-firms-and-solo-attorneys",
-		"reason": "The blog has only two posts; reaching a new high-value vertical (legal) advances breadth over deepening existing coverage."
-	},
-	{
 		"date": "2026-07-02T14:01:38.065Z",
 		"action": "new_post",
 		"slug": "ai-agents-for-dental-practices-where-they-actually",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "should-a-small-dealership-use-an-ai-agent-or-a-bdc",
 		"reason": "Car dealerships are a large, unreached auto-sales vertical distinct from the covered auto repair shop, and comparison is the least-recently-used format (last on Jul 14) after a run of FAQ, case walkthrough, ROI, and myth-busting posts."
+	},
+	{
+		"date": "2026-07-23T15:28:31.233Z",
+		"action": "new_post",
+		"slug": "a-roofers-green-light-red-line-checklist-for-ai",
+		"reason": "Roofing contractors are a large, unreached, storm-driven high-lead-value home-services vertical distinct from the covered movers, landscaping, cleaning, and pest control, and checklist is the least-recently-used format (last on Jul 15) after a run of comparison, myth-busting, FAQ, case walkthrough, ROI, and guide posts."
 	}
 ]
