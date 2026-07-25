@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-02T14:51:15.206Z",
-		"action": "new_post",
-		"slug": "ai-agents-for-hvac-and-plumbing-contractors-where",
-		"reason": "The blog covers legal, real estate, dental, and finance; home-services trades are a large, high-volume-phone vertical not yet reached, advancing breadth."
-	},
-	{
 		"date": "2026-07-03T15:28:09.551Z",
 		"action": "new_post",
 		"slug": "ai-agents-for-auto-repair-shops-where-they",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "order-status-tickets-are-drowning-your-stores",
 		"reason": "E-commerce/online retail is a large, digital-native vertical entirely unreached by the catalog's local-service and clinic focus, and practical guide is the least-recently-used format (last on Jul 17) after a run of checklist, comparison, myth-busting, FAQ, case walkthrough, and ROI posts."
+	},
+	{
+		"date": "2026-07-25T14:46:56.769Z",
+		"action": "improve_post",
+		"slug": "the-agentic-wave-is-not-just-for-tech",
+		"reason": "After ten consecutive new posts, the site's most-linked cornerstone page is also its thinnest (424 words) and oldest; strengthening the primer lifts every vertical post that points to it."
 	}
 ]
