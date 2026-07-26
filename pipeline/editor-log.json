@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-03T15:28:09.551Z",
-		"action": "new_post",
-		"slug": "ai-agents-for-auto-repair-shops-where-they",
-		"reason": "Breadth over depth: legal, real estate, dental, finance, and home-services trades are covered, so reaching auto repair — another high-phone-volume small-business vertical — advances the blog most."
-	},
-	{
 		"date": "2026-07-03T23:53:12.608Z",
 		"action": "manual_cleanup",
 		"slug": "ai-agents-for-dental-practices-where-they-actually",
@@ -178,5 +172,11 @@
 		"action": "improve_post",
 		"slug": "the-agentic-wave-is-not-just-for-tech",
 		"reason": "After ten consecutive new posts, the site's most-linked cornerstone page is also its thinnest (424 words) and oldest; strengthening the primer lifts every vertical post that points to it."
+	},
+	{
+		"date": "2026-07-26T14:48:12.707Z",
+		"action": "new_post",
+		"slug": "what-an-ai-check-call-agent-costs-a-5-person",
+		"reason": "Freight brokerage and small trucking is a large logistics vertical the catalog has never touched, far from its saturated home-services and clinic posts, and cost/ROI is the least-recently-used format (last on Jul 18)."
 	}
 ]
