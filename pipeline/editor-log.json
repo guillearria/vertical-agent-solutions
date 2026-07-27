@@ -2,12 +2,6 @@
 	{
 		"date": "2026-07-03T23:53:12.608Z",
 		"action": "manual_cleanup",
-		"slug": "ai-agents-for-dental-practices-where-they-actually",
-		"reason": "De-template pass: retitled off the shared formula, linked the agent explainer instead of re-explaining, new description, varied closing header."
-	},
-	{
-		"date": "2026-07-03T23:53:12.608Z",
-		"action": "manual_cleanup",
 		"slug": "ai-agents-for-small-law-firms-and-solo-attorneys",
 		"reason": "De-template pass: retitled off the shared formula; rewrote the truncated description."
 	},
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "what-an-ai-check-call-agent-costs-a-5-person",
 		"reason": "Freight brokerage and small trucking is a large logistics vertical the catalog has never touched, far from its saturated home-services and clinic posts, and cost/ROI is the least-recently-used format (last on Jul 18)."
+	},
+	{
+		"date": "2026-07-27T15:55:31.663Z",
+		"action": "new_post",
+		"slug": "40-caregivers-60-clients-one-bad-monday-where-a",
+		"reason": "In-home senior care is a large, unreached vertical with a distinct staffing-plus-intake problem, and case walkthrough is the least-recently-used format (last on Jul 19) after guide, improve, and ROI posts."
 	}
 ]
