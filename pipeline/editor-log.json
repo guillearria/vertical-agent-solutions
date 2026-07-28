@@ -2,12 +2,6 @@
 	{
 		"date": "2026-07-03T23:53:12.608Z",
 		"action": "manual_cleanup",
-		"slug": "ai-agents-for-small-law-firms-and-solo-attorneys",
-		"reason": "De-template pass: retitled off the shared formula; rewrote the truncated description."
-	},
-	{
-		"date": "2026-07-03T23:53:12.608Z",
-		"action": "manual_cleanup",
 		"slug": "ai-agents-for-realtors-where-they-actually-help",
 		"reason": "De-template pass: kept the title (single formula instance), linked the agent explainer instead of re-explaining, new description opener."
 	},
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "40-caregivers-60-clients-one-bad-monday-where-a",
 		"reason": "In-home senior care is a large, unreached vertical with a distinct staffing-plus-intake problem, and case walkthrough is the least-recently-used format (last on Jul 19) after guide, improve, and ROI posts."
+	},
+	{
+		"date": "2026-07-28T15:39:40.912Z",
+		"action": "new_post",
+		"slug": "self-storage-rental-calls-and-ai-agents-a-straight",
+		"reason": "Self-storage is a large, phone-driven vertical the catalog has never touched and sits apart from its saturated home-services and clinic posts, and FAQ is the least-recently-used format (last on Jul 20) after myth-busting, comparison, checklist, guide, ROI, and case walkthrough."
 	}
 ]
