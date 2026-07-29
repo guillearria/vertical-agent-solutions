@@ -2,12 +2,6 @@
 	{
 		"date": "2026-07-03T23:53:12.608Z",
 		"action": "manual_cleanup",
-		"slug": "ai-agents-for-realtors-where-they-actually-help",
-		"reason": "De-template pass: kept the title (single formula instance), linked the agent explainer instead of re-explaining, new description opener."
-	},
-	{
-		"date": "2026-07-03T23:53:12.608Z",
-		"action": "manual_cleanup",
 		"slug": "why-solo-and-small-firms-are-the-right-target",
 		"reason": "De-template pass: retitled — the old title had no AI or law keywords and made no sense standalone."
 	},
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "self-storage-rental-calls-and-ai-agents-a-straight",
 		"reason": "Self-storage is a large, phone-driven vertical the catalog has never touched and sits apart from its saturated home-services and clinic posts, and FAQ is the least-recently-used format (last on Jul 20) after myth-busting, comparison, checklist, guide, ROI, and case walkthrough."
+	},
+	{
+		"date": "2026-07-29T15:24:12.185Z",
+		"action": "new_post",
+		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
+		"reason": "Independent pharmacy is a large, phone-saturated vertical the catalog has never touched and sits apart from the dental/vet clinic and home-services clusters, and myth-busting is the least-recently-used format (last on Jul 21)."
 	}
 ]
