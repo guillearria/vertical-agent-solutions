@@ -2,12 +2,6 @@
 	{
 		"date": "2026-07-03T23:53:12.608Z",
 		"action": "manual_cleanup",
-		"slug": "why-solo-and-small-firms-are-the-right-target",
-		"reason": "De-template pass: retitled — the old title had no AI or law keywords and made no sense standalone."
-	},
-	{
-		"date": "2026-07-03T23:53:12.608Z",
-		"action": "manual_cleanup",
 		"slug": "use-claude-code-to-tidy-up-your-computer",
 		"reason": "De-template pass: linked the Claude Code playbook instead of re-explaining the tool; new description opener."
 	},
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
 		"reason": "Independent pharmacy is a large, phone-saturated vertical the catalog has never touched and sits apart from the dental/vet clinic and home-services clusters, and myth-busting is the least-recently-used format (last on Jul 21)."
+	},
+	{
+		"date": "2026-07-30T15:27:40.965Z",
+		"action": "new_post",
+		"slug": "three-ways-to-clear-a-machine-shops-rfq-inbox-and",
+		"reason": "Small custom manufacturing and machine shops are a large B2B vertical the catalog has never touched, well away from its saturated home-services and clinic clusters, and comparison is the least-recently-used format (last on Jul 22)."
 	}
 ]
