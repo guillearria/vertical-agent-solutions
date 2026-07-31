@@ -2,12 +2,6 @@
 	{
 		"date": "2026-07-03T23:53:12.608Z",
 		"action": "manual_cleanup",
-		"slug": "use-claude-code-to-tidy-up-your-computer",
-		"reason": "De-template pass: linked the Claude Code playbook instead of re-explaining the tool; new description opener."
-	},
-	{
-		"date": "2026-07-03T23:53:12.608Z",
-		"action": "manual_cleanup",
 		"slug": "how-to-set-up-an-ai-agent-system-to-manage-wealth",
 		"reason": "De-template pass: new description opener (was the fifth \"plain-English guide\")."
 	},
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "three-ways-to-clear-a-machine-shops-rfq-inbox-and",
 		"reason": "Small custom manufacturing and machine shops are a large B2B vertical the catalog has never touched, well away from its saturated home-services and clinic clusters, and comparison is the least-recently-used format (last on Jul 22)."
+	},
+	{
+		"date": "2026-07-31T15:33:18.075Z",
+		"action": "new_post",
+		"slug": "before-you-let-an-ai-agent-near-your-wedding",
+		"reason": "Wedding and event venues are a large, booking-driven vertical the catalog has never covered and sits well apart from its saturated home-services and clinic clusters, and checklist is the least-recently-used format (last on Jul 23) after guide, ROI, case walkthrough, FAQ, myth-busting, and comparison posts."
 	}
 ]
