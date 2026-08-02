@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-03T23:53:12.608Z",
-		"action": "manual_cleanup",
-		"slug": "ai-agents-for-auto-repair-shops-where-they",
-		"reason": "De-template pass: published earlier today by the pre-rules pipeline with the formula title and \"plain-English guide\" opener; retitled, new description, linked the agent explainer, varied closing header."
-	},
-	{
 		"date": "2026-07-04T14:47:58.749Z",
 		"action": "new_post",
 		"slug": "one-friday-night-at-a-40-seat-restaurant-what-the",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "a-30-day-plan-for-nonprofits-that-want-an-ai-agent",
 		"reason": "Nonprofits are a large, entirely unreached sector that sits well outside the catalog's saturated home-services, clinic, and B2B clusters, and practical guide is the least-recently-used format (last on Jul 24)."
+	},
+	{
+		"date": "2026-08-02T14:48:10.476Z",
+		"action": "new_post",
+		"slug": "your-msp-needs-about-350-tickets-a-month-before-an",
+		"reason": "Managed IT service providers are a sizable B2B vertical the catalog has never touched, distinct from its saturated home-services and clinic clusters, and cost/ROI is the least-recently-used format (last on Jul 26) after guide, checklist, comparison, myth-busting, FAQ, and case walkthrough."
 	}
 ]
