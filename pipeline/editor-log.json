@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-04T14:47:58.749Z",
-		"action": "new_post",
-		"slug": "one-friday-night-at-a-40-seat-restaurant-what-the",
-		"reason": "Breadth over depth: legal, real estate, dental, finance, home-services, and auto repair are covered, so reaching restaurants — another high-phone-volume small-business vertical — advances the blog most, and a case walkthrough varies from the recent 'where they help' guides."
-	},
-	{
 		"date": "2026-07-05T14:56:28.313Z",
 		"action": "new_post",
 		"slug": "how-much-does-an-ai-agent-actually-save-a",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "your-msp-needs-about-350-tickets-a-month-before-an",
 		"reason": "Managed IT service providers are a sizable B2B vertical the catalog has never touched, distinct from its saturated home-services and clinic clusters, and cost/ROI is the least-recently-used format (last on Jul 26) after guide, checklist, comparison, myth-busting, FAQ, and case walkthrough."
+	},
+	{
+		"date": "2026-08-03T16:00:35.203Z",
+		"action": "new_post",
+		"slug": "member-calls-tripled-after-the-holiday-what-a",
+		"reason": "Credit unions and community banks are a large, regulated vertical the catalog has never touched, well away from its saturated home-services and clinic clusters, and case walkthrough is the least-recently-used format (last on Jul 27)."
 	}
 ]
