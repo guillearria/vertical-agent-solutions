@@ -4,7 +4,9 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 import { industryName } from '../data/industries';
 
 export async function GET(context) {
-	const posts = (await getCollection('blog')).filter((post) => !post.data.archived);
+	const posts = (await getCollection('blog'))
+		.filter((post) => !post.data.archived)
+		.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 	return rss({
 		title: SITE_TITLE,
 		description: SITE_DESCRIPTION,
