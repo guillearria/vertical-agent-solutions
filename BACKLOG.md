@@ -4,6 +4,7 @@ Status: **fully automated and verified end-to-end** (Jul 2 2026; Telegram made i
 
 ## Open items
 
+- [ ] **Sort `rss.xml` newest-first** — `src/pages/rss.xml.js` emits posts in `getCollection('blog')` file order (alphabetical by slug), so the feed's first item is not the latest post and any reader that trusts item order shows the wrong "newest" (bit the guillearria profile README on Aug 5 2026; its script now sorts by `pubDate` itself as a workaround). One-line fix: `.sort((a, b) => b.data.pubDate - a.data.pubDate)` after the `archived` filter. Minor while there: `pubDate`s are date-only (midnight GMT), so same-day ordering is undefined — harmless at one post/day.
 - [ ] **Watch the next 2–3 editor runs** (cron 13:17 UTC) for varied titles/formats now that the de-templating rules are live; the HVAC vertical is uncovered and fair game again.
 - [ ] **Improve overall site styling** — broader visual polish beyond the Jul 6 fixes (About-page date removal, mobile-header declutter, article column centering). Candidate areas: typography & vertical rhythm, the default Astro `--accent` blue (`#2337ff` in `src/styles/global.css`) → a real brand palette, the homepage/hero, blog-list cards, and spacing consistency across pages. Owner to iterate later.
 - [ ] **Link the custom domain** `verticalagentsolutions.com` — Pages → Custom domains, then flip in one commit: `site` in `astro.config.mjs`, `SITE_URL` Pages/Actions vars, and the Turnstile hostname allowlist. Do this before the SEO checklist below (don't spend link equity on `pages.dev`).
