@@ -12,11 +12,11 @@ Status: **fully automated and verified end-to-end** (Jul 2 2026; Telegram made i
   2. **Bing Webmaster Tools**: one-click import from GSC (Bing/DuckDuckGo matter for older small-business demographics).
   3. **Cloudflare Web Analytics**: create the site in the CF dashboard, set `PUBLIC_CF_BEACON_TOKEN` in the Pages build env (the beacon in `BaseHead.astro` is a no-op until then).
 - [ ] **Teach the pipeline to tag new posts with `industry:`** — the decider should pick a hub slug from `src/data/industries.ts` (or propose a new one) and the writer should emit an `INDUSTRY:` line that lands in frontmatter. Until then, new posts arrive untagged and get hand-tagged; the improve flow already preserves existing tags (`buildFrontmatter` `opts.industry`).
-- [ ] Delete the now-unused `ANTHROPIC_API_KEY` GitHub Actions secret (nothing reads it; `claude.ts` strips it defensively anyway).
-- [ ] **Owner actions — retire the interactive-Telegram leftovers** (Jul 12 2026: the webhook, `/draft` flow, and Undo were removed from the code; the cloud side still has their credentials):
-  1. Unregister the bot webhook: `curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/deleteWebhook"` (the `/api/telegram` endpoint no longer exists; old inline buttons in chat history will simply do nothing).
-  2. Delete GitHub **Actions secrets** `CF_ACCOUNT_ID`, `CF_KV_NAMESPACE_ID`, `CF_API_TOKEN` (the pipeline no longer touches KV).
-  3. Delete **Pages env vars** `TELEGRAM_SECRET_TOKEN`, `GITHUB_REPO`, `GITHUB_DISPATCH_TOKEN`, `GITHUB_BRANCH`, and **revoke the fine-grained PAT** behind `GITHUB_DISPATCH_TOKEN` (nothing dispatches or writes via the GitHub API anymore).
+- [x] Delete the now-unused `ANTHROPIC_API_KEY` GitHub Actions secret (nothing reads it; `claude.ts` strips it defensively anyway). **Done Aug 5 2026.**
+- [x] **Owner actions — retire the interactive-Telegram leftovers** — **completed Aug 5 2026** (Jul 12 2026: the webhook, `/draft` flow, and Undo were removed from the code; the cloud-side credentials are now all gone too):
+  1. ~~Unregister the bot webhook~~ — **done Aug 5 2026**: `deleteWebhook` returned ok and `getWebhookInfo` now shows no URL. (Old inline buttons in chat history simply do nothing.)
+  2. ~~Delete GitHub **Actions secrets** `CF_ACCOUNT_ID`, `CF_KV_NAMESPACE_ID`, `CF_API_TOKEN`~~ — **done Aug 5 2026** (only `CLAUDE_CODE_OAUTH_TOKEN`, `TELEGRAM_BOT_TOKEN`, `TELEGRAM_OWNER_ID` remain). The KV-scoped API token itself was found already gone (Aug 5 2026: no token in the account carries Workers KV Storage — nothing left to revoke; the remaining "vertical-agent-solutions build token" is Cloudflare's own Pages build token, leave it).
+  3. ~~Delete **Pages env vars** `TELEGRAM_SECRET_TOKEN`, `GITHUB_REPO`, `GITHUB_DISPATCH_TOKEN`, `GITHUB_BRANCH`~~ — **done Aug 5 2026.** The fine-grained PAT behind `GITHUB_DISPATCH_TOKEN` — **revoked Aug 5 2026**.
   4. Keep the `INBOX_KV` binding + namespace (contact-form rate limiting uses it). Optionally purge stale `frag:` keys (`cand:`/`undo:` keys expire on their own TTLs).
 - [ ] **~Jul 2027:** `CLAUDE_CODE_OAUTH_TOKEN` expires — re-run `claude setup-token` and update the secret.
 
