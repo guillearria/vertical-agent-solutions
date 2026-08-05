@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-06T16:32:46.550Z",
-		"action": "new_post",
-		"slug": "tenant-calls-late-rent-and-vendor-scheduling-an-ai",
-		"reason": "Breadth over depth: legal, real estate, dental, finance, home-services, auto repair, restaurants, and accounting are covered, so property management is a large unreached high-call-volume vertical, and an FAQ format varies from the recent guides, case walkthrough, and ROI breakdown."
-	},
-	{
 		"date": "2026-07-07T15:59:31.750Z",
 		"action": "new_post",
 		"slug": "ai-receptionist-vs-answering-service-vs-a-new-hire",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "11-questions-equipment-rental-yards-ask-before",
 		"reason": "Construction and tool rental yards are a large, phone-driven vertical the catalog has never touched, well away from its saturated home-services and clinic clusters, and FAQ is the least-recently-used format (last on Jul 28)."
+	},
+	{
+		"date": "2026-08-05T15:33:28.177Z",
+		"action": "new_post",
+		"slug": "your-title-agencys-five-objections-to-ai-agents",
+		"reason": "Title and escrow is a large, regulated real-estate-adjacent vertical the catalog has never covered, distinct from its saturated home-services and clinic clusters, and myth-busting is the least-recently-used format (last on Jul 29)."
 	}
 ]
