@@ -1,6 +1,6 @@
 ---
 title: "Which Cleaning Jobs Should an AI Booking Agent Touch? A Sorting Checklist for Maid Services"
-description: "A green-light/red-line checklist for cleaning and maid-service owners deciding which bookings, quotes, and follow-ups to hand an AI agent — and which to keep…"
+description: "A sorting checklist for maid-service owners: the bookings, quotes, and follow-ups worth handing to an AI agent, and the jobs to keep for yourself."
 pubDate: 'Jul 15 2026'
 sources:
   - "Housecall Pro — Maid Service Software — https://www.housecallpro.com/industries/maid-service-software/"

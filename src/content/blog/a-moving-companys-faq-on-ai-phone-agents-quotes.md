@@ -1,6 +1,6 @@
 ---
 title: "A Moving Company's FAQ on AI Phone Agents: Quotes, Surveys, and Deposits"
-description: "Straight answers for movers on what an AI phone and text agent can quote, book, and remind — and the calls it must always hand to a person."
+description: "A moving company FAQ on AI phone agents: what they can quote, book, and remind, and when a caller needs a real person on the line."
 pubDate: 'Jul 20 2026'
 sources:
   - "What is a binding move estimate? — FMCSA — https://www.fmcsa.dot.gov/consumer-protection/protect-your-move/what-binding-move-estimate"

@@ -1,6 +1,6 @@
 ---
 title: "Use Claude Code to Tidy Up Your Computer, One Folder at a Time"
-description: "Point Claude Code at a messy Downloads folder and it sorts, renames, and de-duplicates from plain-English instructions — you approve every move."
+description: "Point Claude Code at a messy Downloads folder and it sorts, renames, and de-duplicates from plain-English instructions, with you approving every move."
 pubDate: 'Jun 27 2026'
 updatedDate: 'Jul 3 2026'
 sources:

@@ -1,6 +1,6 @@
 ---
 title: "How Much Does an AI Agent Actually Save a Bookkeeping Firm? A Line-by-Line Breakdown"
-description: "We price the repetitive hours, the tool costs, and the break-even point of AI agents for a small accounting firm — with the human sign-off left intact."
+description: "The repetitive hours, tool costs, and break-even point of AI agents at a small accounting firm, all priced in real numbers."
 pubDate: 'Jul 5 2026'
 industry: accounting-bookkeeping
 sources:

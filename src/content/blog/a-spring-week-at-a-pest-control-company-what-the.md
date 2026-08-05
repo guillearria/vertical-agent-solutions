@@ -1,6 +1,6 @@
 ---
 title: "A Spring Week at a Pest Control Company: What the AI Booking Agent Caught and What It Passed to a Human"
-description: "Walk through five busy spring days at a small pest control company to see exactly which calls an AI scheduling agent handled — and which ones it handed off."
+description: "Five spring days at a small pest control company, call by call: what the AI scheduler booked, what it escalated, and why."
 pubDate: 'Jul 11 2026'
 industry: pest-control
 sources:

@@ -1,6 +1,6 @@
 ---
 title: "Missed Calls and Declined Repairs: What an AI Agent Fixes at an Auto Shop"
-description: "Auto shops lose work to unanswered phones and declined repairs — the two jobs an AI agent does reliably, and the conversations it should never touch."
+description: "Unanswered phones and declined repairs cost auto shops real work. Both are jobs an AI agent does reliably, unlike diagnosing the noise in an engine."
 pubDate: 'Jul 3 2026'
 industry: auto-repair
 sources:

@@ -1,6 +1,6 @@
 ---
 title: "Can an AI Answering Service Keep Up With a Landscaping Company's Spring Phone Flood?"
-description: "Straight answers for lawn care owners on what an AI phone agent books, quotes, and reschedules in peak season — and what still needs a human."
+description: "When spring floods a landscaping company's phone lines, an AI agent can book, quote, and reschedule enough to keep crews moving. The numbers inside."
 pubDate: 'Jul 13 2026'
 sources:
   - "411 Locals: SMBs Don't Answer 62% of Phone Calls — https://411locals.us/small-business-owners-dont-answer-62-of-phone-calls/"

@@ -1,6 +1,6 @@
 ---
 title: "What AI Agents Can Safely Do in a Small Law Firm — and What Gets Lawyers Sanctioned"
-description: "Intake, drafting, deadlines, and billing are fair game for AI agents in a small firm — hallucinated citations and confidentiality slips are not."
+description: "Intake, drafting, deadlines, and billing are fair game for AI agents at a small law firm. Hallucinated citations and confidentiality slips are not."
 pubDate: 'Jul 2 2026'
 updatedDate: 'Jul 3 2026'
 industry: law-firms

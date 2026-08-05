@@ -1,6 +1,6 @@
 ---
 title: "Tenant Calls, Late Rent, and Vendor Scheduling: An AI Agent FAQ for Small Landlords"
-description: "Straight answers for small residential property managers on where an AI agent helps with tenant calls, screening, and rent — and where it must not."
+description: "Where an AI agent helps a small residential property manager with tenant calls, late rent, and vendor scheduling, plus the fair-housing lines it cannot cross."
 pubDate: 'Jul 6 2026'
 industry: property-management
 sources:

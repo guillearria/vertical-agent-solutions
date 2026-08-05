@@ -1,6 +1,6 @@
 ---
 title: "Member Calls Tripled After the Holiday. What a Credit Union's AI Agent Did With All 412."
-description: "412 calls hit a three-person credit union contact center in one day — here's what the AI agent closed, what it escalated in seconds, and what broke."
+description: "412 calls hit a three-person credit union contact center in one day. What the AI agent closed, what it escalated in seconds, and what broke."
 pubDate: 'Aug 3 2026'
 sources:
   - "CFPB — 12 CFR 1005.11, Procedures for resolving errors — https://www.consumerfinance.gov/rules-policy/regulations/1005/11/"

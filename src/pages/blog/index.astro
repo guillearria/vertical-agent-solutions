@@ -16,7 +16,7 @@ const posts = (await getCollection('blog'))
 	<head>
 		<BaseHead
 			title={`All Guides — ${SITE_TITLE}`}
-			description="Every guide we've published on putting AI agents to work — industry by industry, with the limits spelled out."
+			description="Every guide we've published on putting AI agents to work, industry by industry, newest first."
 		/>
 		<style>
 			.standfirst {
@@ -45,8 +45,7 @@ const posts = (await getCollection('blog'))
 		<main>
 			<h1>All guides</h1>
 			<p class="standfirst">
-				Practical, deeply-verified guides to adopting AI agents — one industry at a time, newest
-				first.
+				Practical guides to adopting AI agents, one industry at a time. Newest first.
 			</p>
 			<ul>
 				{

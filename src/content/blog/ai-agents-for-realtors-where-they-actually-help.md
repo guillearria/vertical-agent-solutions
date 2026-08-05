@@ -1,6 +1,6 @@
 ---
 title: "AI Agents for Realtors: Where They Actually Help (and Where They Don't)"
-description: "Speed-to-lead is where AI agents pay off for real estate agents — plus listings and admin help, honest limits, and a one-month test to prove it."
+description: "Speed-to-lead is where AI agents pay off in real estate. The listings and admin help that come next, the honest limits, and a one-month test to prove it."
 pubDate: 'Jun 23 2026'
 updatedDate: 'Jul 3 2026'
 industry: real-estate

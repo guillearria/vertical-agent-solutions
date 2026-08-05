@@ -1,6 +1,6 @@
 ---
 title: "Filling Empty Class Spots and Reviving Lapsed Members: AI Agents for Small Gyms"
-description: "See where an AI agent earns its keep at an independent gym — after-hours inquiries, waitlist fills, failed payments — and where it should never step in."
+description: "After-hours inquiries, waitlist fills, and failed-payment saves: where an AI agent earns its keep at an independent gym."
 pubDate: 'Jul 10 2026'
 industry: gyms-fitness
 sources:

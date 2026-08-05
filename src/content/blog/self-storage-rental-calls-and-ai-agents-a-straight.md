@@ -1,6 +1,6 @@
 ---
 title: "Self-Storage Rental Calls and AI Agents: A Straight Q&A on Availability, Move-Ins, and Lien Files"
-description: "Straight answers for self-storage owners on AI phone agents — live unit availability, after-hours move-ins, gate codes, and the calls one must never take."
+description: "A straight Q&A for self-storage owners on AI phone agents: unit availability, after-hours move-ins, gate codes, and why lien calls stay off limits."
 pubDate: 'Jul 28 2026'
 sources:
   - "SpareFoot — U.S. Self-Storage Industry Statistics — https://www.sparefoot.com/blog/self-storage-industry-statistics"

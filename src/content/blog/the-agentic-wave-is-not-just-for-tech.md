@@ -1,6 +1,6 @@
 ---
 title: "The Agentic Wave, Explained: How an AI Agent Differs From a Chatbot and an Automation"
-description: "An agent, a chatbot, and an automation are three different things — here's how to tell them apart and how to pick the one task worth handing over first."
+description: "An agent, a chatbot, and an automation are three different things. Learn to tell them apart and pick the one task worth handing over first."
 pubDate: 'Jun 20 2026'
 updatedDate: 'Jul 25 2026'
 sources:

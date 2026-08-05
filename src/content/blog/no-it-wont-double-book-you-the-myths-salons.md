@@ -1,6 +1,6 @@
 ---
 title: "No, It Won't Double-Book You: The Myths Salons Believe About AI Booking Agents"
-description: "The honest reality behind five fears salon, barbershop, and spa owners have about AI booking — robotic voices, double-bookings, lost personal touch, and more."
+description: "Five fears salon, barbershop, and spa owners have about AI booking, tested against how modern scheduling agents actually behave."
 pubDate: 'Jul 9 2026'
 industry: salons
 sources:

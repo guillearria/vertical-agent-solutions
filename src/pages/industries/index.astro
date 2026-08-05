@@ -22,7 +22,7 @@ const hubs = Object.entries(industries)
 	<head>
 		<BaseHead
 			title={`Industries — ${SITE_TITLE}`}
-			description="AI agent guides by industry: dental, auto repair, law, real estate, salons, restaurants, and more — where agents help, and where they must not."
+			description="AI agent guides by industry: dental, auto repair, law, real estate, salons, restaurants, and more. Pick yours for guides that map onto your actual work."
 		/>
 		<style>
 			.standfirst {
@@ -74,7 +74,7 @@ const hubs = Object.entries(industries)
 				{
 					hubs.map(({ slug, industry, count }) => (
 						<li>
-							<a href={`/industries/${slug}/`}>AI Agents for {industry.name}</a>
+							<a href={`/industries/${slug}/`}>{industry.name}</a>
 							<span class="count">
 								{count} guide{count === 1 ? '' : 's'}
 							</span>

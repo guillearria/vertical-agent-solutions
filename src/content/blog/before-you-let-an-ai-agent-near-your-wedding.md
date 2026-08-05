@@ -1,6 +1,6 @@
 ---
 title: "Before You Let an AI Agent Near Your Wedding Venue's Calendar: A Booking-Season Checklist"
-description: "Date checks, tour bookings, and deposit reminders can go to an AI agent. Custom pricing and day-of chaos can't. Here's the line — and how to test it first."
+description: "Date checks, tour bookings, and deposit reminders can go to an AI agent. Custom pricing and day-of chaos can't. A checklist for testing the line first."
 pubDate: 'Jul 31 2026'
 sources:
   - "Lead Response Management Study (MIT / InsideSales, Dr. James Oldroyd) — https://www.leadresponsemanagement.org/lrm_study/"

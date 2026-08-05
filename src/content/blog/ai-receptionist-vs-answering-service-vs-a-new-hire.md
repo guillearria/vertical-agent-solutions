@@ -1,6 +1,6 @@
 ---
 title: "AI Receptionist vs. Answering Service vs. a New Hire: What Fits a Busy Vet Clinic"
-description: "Weighing an AI phone agent against a second receptionist or an answering service for a small-animal clinic — on cost, coverage, accuracy, and emergency…"
+description: "Cost, coverage, and emergency triage compared across three ways a small-animal clinic can stop missing calls: AI agent, answering service, or new hire."
 pubDate: 'Jul 7 2026'
 industry: veterinary
 sources:

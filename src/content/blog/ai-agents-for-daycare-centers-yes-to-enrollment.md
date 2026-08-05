@@ -1,6 +1,6 @@
 ---
 title: "AI Agents for Daycare Centers: Yes to Enrollment Calls, No to Incident Reports"
-description: "See which daycare front-desk tasks — enrollment calls, waitlists, tuition reminders — an AI agent can safely take on, and which must stay with a person."
+description: "Which daycare front-desk tasks can an AI agent safely take on? Enrollment calls and tuition reminders, yes. Incident reports, never."
 pubDate: 'Jul 17 2026'
 sources:
   - "Child Care Ratios by State 2026 — https://worldpopulationreview.com/state-rankings/child-care-ratio-by-state"

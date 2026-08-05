@@ -1,6 +1,6 @@
 ---
 title: "Your Title Agency's Five Objections to AI Agents, Ranked From Legitimate to Overblown"
-description: "Wire fraud liability, NPI rules, underwriter pushback — an honest scorecard for title and escrow owners on which AI agent worries are real."
+description: "An honest scorecard for title and escrow owners: which AI agent objections hold up, from wire fraud liability to NPI rules and underwriter pushback."
 pubDate: 'Aug 5 2026'
 sources:
   - "ALTA — Title Companies Help Mitigate Risk of Wire Fraud, ALTA Cybercrime Study Shows — https://alta.org/news-and-publications/news/20250227-Title-Companies-Help-Mitigate-Risk-of-Wire-Fraud-ALTA-Cybercrime-Study-Shows"
