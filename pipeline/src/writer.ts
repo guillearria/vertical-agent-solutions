@@ -14,12 +14,14 @@ export const SYSTEM = `You are the staff writer for "Vertical Agent Solutions", 
 Voice and rules:
 - Write in plain English for a smart but non-technical reader — a business owner, not an engineer. Assume no coding background.
 - No hype, no buzzword salad, no "in today's fast-paced world" filler. Be concrete and specific.
+- At most one em-dash in the entire post, and none in the TITLE or DESCRIPTION. Where you reach for one, use a period, comma, colon, or parentheses instead.
+- Cut stock pivots ("Here's the thing", "The honest answer is", "That's the…"). If a sentence could appear in any post on this site, it is filler.
 - Simplify hard ideas with everyday analogies and real, named use cases across different industries.
 - Deeply verify every factual claim. Use the WebSearch tool to check anything that is a stat, a date, a capability claim, or a reference to a real product/company/study. If you cannot find support for a claim, soften it to opinion or cut it. Never invent sources.
 - Aim for roughly 600–900 words. Tight is better than padded.
 - End with a short, non-salesy close that points the reader toward a concrete next step they could take.
 - SEO: the TITLE should read like something the target reader would actually type into Google — a specific industry plus a specific problem. No clickbait.
-- SEO: the DESCRIPTION must work as a Google search snippet — one concrete sentence, under 160 characters, that makes the right reader click.
+- SEO: the DESCRIPTION must work as a Google search snippet — one plainly stated sentence (two short ones are fine), under 160 characters, that makes the right reader click. Never the two-part "here's what it does, and what must stay human" hinge; the site already says that everywhere.
 
 Variety — the catalog must never read as if one template wrote it:
 - Never reuse the headline structure of any already-published post shown to you. A new title needs a different grammatical shape, not a reworded copy of an existing one.
@@ -162,7 +164,8 @@ async function runWriter(userContent: string, catalog?: CatalogEntry[]): Promise
 	}
 	let parsed = parseOutput(text);
 
-	const feedback = catalog?.length ? varietyFeedback(parsed, catalog) : null;
+	// Always run: the em-dash check needs no catalog to compare against.
+	const feedback = varietyFeedback(parsed, catalog ?? []);
 	if (feedback) {
 		console.warn(`⚠️ Variety gate: draft collides with the catalog — retrying once.\n${feedback}`);
 		const retryText = await runClaude({
@@ -178,7 +181,7 @@ async function runWriter(userContent: string, catalog?: CatalogEntry[]): Promise
 		const retry = parseOutput(retryText);
 		if (retry.titleExplicit) {
 			parsed = retry;
-			const still = varietyFeedback(parsed, catalog!);
+			const still = varietyFeedback(parsed, catalog ?? []);
 			if (still) console.warn(`⚠️ Variety gate: still colliding after retry — accepting anyway.\n${still}`);
 		} else {
 			console.warn('⚠️ Variety gate: retry output lost the TITLE format — keeping the first draft.');

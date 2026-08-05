@@ -5,6 +5,9 @@
  * formulas (which only catches yesterday's template), these checks flag any
  * word-level overlap:
  *
+ *   - titles/descriptions: an em-dash. The catalog converged on "X — and what
+ *     must stay human" hinges (27 of 41 descriptions at the Aug 2026 cleanup);
+ *     banning the dash there is the cheapest proxy for varied sentence shape.
  *   - titles: a shared 4-word sequence. 4 is deliberate — "ai agents for
  *     realtors" vs "ai agents for dental practices" don't collide (the
  *     vertical name breaks the run), but "help and where they" catches both
@@ -128,6 +131,17 @@ export function varietyFeedback(
 	catalog: VarietyEntry[],
 ): string | null {
 	const problems: string[] = [];
+	for (const [field, value] of [
+		['TITLE', draft.title],
+		['DESCRIPTION', draft.description],
+	] as const) {
+		if (value.includes('—')) {
+			problems.push(
+				`Your ${field} contains an em-dash ("${value}"). Em-dashes are banned in titles and ` +
+					`descriptions — rephrase with a period, comma, colon, or parentheses.`,
+			);
+		}
+	}
 	const t = titleCollision(draft.title, catalog);
 	if (t) {
 		problems.push(
