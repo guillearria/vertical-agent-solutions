@@ -47,15 +47,20 @@ const jsonLd = {
 	isArticle={false}
 >
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+	<style>
+		.after-form {
+			margin-top: var(--space-2xl);
+		}
+	</style>
 	<p>
-		Tell us where you're stuck and we'll tell you honestly whether an agent is the right tool,
-		including when it isn't. The most useful messages mention your industry, the repetitive task
-		eating your hours, and the tools you already use.
+		Tell us where you're stuck and we'll tell you honestly whether an agent is the right tool.
+		The most useful messages mention your industry, the repetitive task eating your hours, and
+		the tools you already use.
 	</p>
 
 	<ContactForm />
 
-	<h2>What happens next</h2>
+	<h2 class="after-form">What happens next</h2>
 	<p>
 		The guides on this site are written by an autonomous editor, but this inbox is not. Your
 		message lands directly on <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>'s phone, and a reply comes by
