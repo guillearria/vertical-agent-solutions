@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-07T15:59:31.750Z",
-		"action": "new_post",
-		"slug": "ai-receptionist-vs-answering-service-vs-a-new-hire",
-		"reason": "Veterinary clinics are an unreached high-call-volume small-business vertical, and a head-to-head comparison format varies from the recent FAQ, ROI breakdown, and case walkthrough."
-	},
-	{
 		"date": "2026-07-08T15:38:13.398Z",
 		"action": "new_post",
 		"slug": "an-ai-agent-checklist-for-independent-insurance",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "your-title-agencys-five-objections-to-ai-agents",
 		"reason": "Title and escrow is a large, regulated real-estate-adjacent vertical the catalog has never covered, distinct from its saturated home-services and clinic clusters, and myth-busting is the least-recently-used format (last on Jul 29)."
+	},
+	{
+		"date": "2026-08-07T00:47:04.947Z",
+		"action": "new_post",
+		"slug": "denial-follow-up-at-12-000-claims-a-month-ai-agent",
+		"reason": "Medical billing/RCM firms are a sizable B2B vertical the catalog has never touched, distinct from its saturated clinic and home-services clusters, and comparison is the least-recently-used format (last on Jul 30)."
 	}
 ]
