@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-08T15:38:13.398Z",
-		"action": "new_post",
-		"slug": "an-ai-agent-checklist-for-independent-insurance",
-		"reason": "Insurance agencies are a large, unreached high-call-volume vertical, and a checklist format varies from the recent comparison, FAQ, ROI breakdown, and case walkthrough."
-	},
-	{
 		"date": "2026-07-09T16:11:40.903Z",
 		"action": "new_post",
 		"slug": "no-it-wont-double-book-you-the-myths-salons",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "denial-follow-up-at-12-000-claims-a-month-ai-agent",
 		"reason": "Medical billing/RCM firms are a sizable B2B vertical the catalog has never touched, distinct from its saturated clinic and home-services clusters, and comparison is the least-recently-used format (last on Jul 30)."
+	},
+	{
+		"date": "2026-08-07T14:22:46.849Z",
+		"action": "new_post",
+		"slug": "checklist-what-an-ai-receptionist-can-and-cant",
+		"reason": "Private mental health practices are a large, regulated vertical the catalog has never covered and whose crisis-call red lines are genuinely distinct from the dental/vet clinic posts, and checklist is the least-recently-used format (last on Jul 31)."
 	}
 ]
