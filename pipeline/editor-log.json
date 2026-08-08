@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-09T16:11:40.903Z",
-		"action": "new_post",
-		"slug": "no-it-wont-double-book-you-the-myths-salons",
-		"reason": "Salons and spas are a large, unreached high-appointment-volume vertical, and a myth-busting format varies from the recent checklist, comparison, FAQ, and ROI breakdown."
-	},
-	{
 		"date": "2026-07-10T15:42:14.294Z",
 		"action": "new_post",
 		"slug": "filling-empty-class-spots-and-reviving-lapsed",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "checklist-what-an-ai-receptionist-can-and-cant",
 		"reason": "Private mental health practices are a large, regulated vertical the catalog has never covered and whose crisis-call red lines are genuinely distinct from the dental/vet clinic posts, and checklist is the least-recently-used format (last on Jul 31)."
+	},
+	{
+		"date": "2026-08-08T14:01:25.282Z",
+		"action": "new_post",
+		"slug": "an-ai-agent-for-wholesale-distributor-order-taking",
+		"reason": "Wholesale distribution is a large B2B vertical the catalog has never touched and sits well away from its saturated home-services and clinic clusters, and practical guide is the least-recently-used format (last on Aug 1)."
 	}
 ]
