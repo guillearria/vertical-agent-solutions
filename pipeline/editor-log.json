@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-15T15:03:55.309Z",
-		"action": "new_post",
-		"slug": "which-cleaning-jobs-should-an-ai-booking-agent",
-		"reason": "Residential cleaning/maid services are a large, unreached high-booking-volume vertical distinct from other home services, and checklist is the least-recently-used format (last on Jul 8)."
-	},
-	{
 		"date": "2026-07-16T15:16:28.915Z",
 		"action": "new_post",
 		"slug": "four-fears-tutoring-centers-have-about-ai-agents",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "the-overnight-phone-at-a-6-truck-towing-company",
 		"reason": "Towing and roadside assistance is a large, 24/7 phone-driven vertical the catalog has never covered and is distinct from the auto repair and dealership posts, and comparison is the least-recently-used format (last on Aug 7)."
+	},
+	{
+		"date": "2026-08-14T14:32:00.741Z",
+		"action": "new_post",
+		"slug": "sorting-which-loan-inquiry-tasks-a-mortgage",
+		"reason": "Independent mortgage brokerages are a large, speed-to-lead-driven vertical the catalog has never covered and whose lending-compliance red lines are distinct from the title/escrow and credit union posts, and checklist is the least-recently-used format (last on Aug 7)."
 	}
 ]
