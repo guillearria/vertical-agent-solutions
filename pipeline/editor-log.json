@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-16T15:16:28.915Z",
-		"action": "new_post",
-		"slug": "four-fears-tutoring-centers-have-about-ai-agents",
-		"reason": "Education (tutoring/test-prep centers) is a large unreached vertical distinct from the saturated home-services and clinic posts, and myth-busting is the least-recently-used format (last on Jul 9)."
-	},
-	{
 		"date": "2026-07-17T14:56:52.807Z",
 		"action": "new_post",
 		"slug": "ai-agents-for-daycare-centers-yes-to-enrollment",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "sorting-which-loan-inquiry-tasks-a-mortgage",
 		"reason": "Independent mortgage brokerages are a large, speed-to-lead-driven vertical the catalog has never covered and whose lending-compliance red lines are distinct from the title/escrow and credit union posts, and checklist is the least-recently-used format (last on Aug 7)."
+	},
+	{
+		"date": "2026-08-15T13:50:03.203Z",
+		"action": "new_post",
+		"slug": "put-an-ai-agent-on-fire-inspection-scheduling",
+		"reason": "Fire protection and alarm/security service companies are a sizable, compliance-driven vertical the catalog has never touched and whose recurring-inspection scheduling problem is distinct from its home-services and clinic clusters; practical guide is the least-recently-used format (last on Aug 8)."
 	}
 ]
