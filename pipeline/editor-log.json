@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-17T14:56:52.807Z",
-		"action": "new_post",
-		"slug": "ai-agents-for-daycare-centers-yes-to-enrollment",
-		"reason": "Childcare/daycare is a large, unreached vertical distinct from tutoring (which covers older students, not toddlers/safety-sensitive supervision), and practical guide is the least-recently-used format, last seen Jul 10."
-	},
-	{
 		"date": "2026-07-18T14:34:31.951Z",
 		"action": "new_post",
 		"slug": "where-a-staffing-agencys-recruiter-hours-go-and",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "put-an-ai-agent-on-fire-inspection-scheduling",
 		"reason": "Fire protection and alarm/security service companies are a sizable, compliance-driven vertical the catalog has never touched and whose recurring-inspection scheduling problem is distinct from its home-services and clinic clusters; practical guide is the least-recently-used format (last on Aug 8)."
+	},
+	{
+		"date": "2026-08-16T13:49:11.760Z",
+		"action": "new_post",
+		"slug": "ai-answering-service-pricing-for-hvac-shops-the",
+		"reason": "HVAC/plumbing is the largest trade vertical the catalog has never covered, and its after-hours emergency dispatch economics are distinct from the roofing/landscaping/pest posts; cost/ROI is the least-recently-used format (last on Aug 9)."
 	}
 ]
