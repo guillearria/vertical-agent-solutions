@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-18T14:34:31.951Z",
-		"action": "new_post",
-		"slug": "where-a-staffing-agencys-recruiter-hours-go-and",
-		"reason": "Staffing/recruiting is a large unreached professional-services vertical distinct from the saturated local home-services and clinic posts, and a cost/ROI breakdown is the least-recently-used format (last on Jul 12) after a run of guides, myth-busting, and checklists."
-	},
-	{
 		"date": "2026-07-19T14:37:24.686Z",
 		"action": "new_post",
 		"slug": "booked-flagged-or-handed-off-an-ai-agent-works-a",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "ai-answering-service-pricing-for-hvac-shops-the",
 		"reason": "HVAC/plumbing is the largest trade vertical the catalog has never covered, and its after-hours emergency dispatch economics are distinct from the roofing/landscaping/pest posts; cost/ROI is the least-recently-used format (last on Aug 9)."
+	},
+	{
+		"date": "2026-08-17T13:57:04.708Z",
+		"action": "new_post",
+		"slug": "ai-phone-agent-for-pool-service-companies-a-heat",
+		"reason": "Pool service and repair is a sizable, seasonal, route-based vertical the catalog has never covered and is distinct from its landscaping/pest/HVAC posts, and case walkthrough is the least-recently-used format (last on Aug 10)."
 	}
 ]
