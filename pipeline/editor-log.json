@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-19T14:37:24.686Z",
-		"action": "new_post",
-		"slug": "booked-flagged-or-handed-off-an-ai-agent-works-a",
-		"reason": "Pet grooming/boarding is a large, unreached high-booking-volume vertical distinct from the covered vet clinic, and a case walkthrough is the least-recently-used format (last on Jul 11) after a run of ROI breakdowns, guides, and checklists."
-	},
-	{
 		"date": "2026-07-20T15:23:46.157Z",
 		"action": "new_post",
 		"slug": "a-moving-companys-faq-on-ai-phone-agents-quotes",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "ai-phone-agent-for-pool-service-companies-a-heat",
 		"reason": "Pool service and repair is a sizable, seasonal, route-based vertical the catalog has never covered and is distinct from its landscaping/pest/HVAC posts, and case walkthrough is the least-recently-used format (last on Aug 10)."
+	},
+	{
+		"date": "2026-08-18T14:01:34.847Z",
+		"action": "new_post",
+		"slug": "from-first-call-to-pto-what-ai-phone-agents-handle",
+		"reason": "Residential solar is a large, speed-to-lead-driven vertical the catalog has never covered and is distinct from its roofing/HVAC/home-services posts, and FAQ is the least-recently-used format (last on Aug 11)."
 	}
 ]
