@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-22T15:19:35.004Z",
-		"action": "new_post",
-		"slug": "should-a-small-dealership-use-an-ai-agent-or-a-bdc",
-		"reason": "Car dealerships are a large, unreached auto-sales vertical distinct from the covered auto repair shop, and comparison is the least-recently-used format (last on Jul 14) after a run of FAQ, case walkthrough, ROI, and myth-busting posts."
-	},
-	{
 		"date": "2026-07-23T15:28:31.233Z",
 		"action": "new_post",
 		"slug": "a-roofers-green-light-red-line-checklist-for-ai",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "plan-of-care-dropoff-in-physical-therapy-ai-agent",
 		"reason": "Outpatient PT/chiropractic clinics are a large uncovered vertical whose visit-adherence and recall problem is distinct from the dental, vet, and therapy-practice posts, and comparison is the least-recently-used format (last on Aug 13)."
+	},
+	{
+		"date": "2026-08-21T14:04:07.515Z",
+		"action": "new_post",
+		"slug": "an-ai-agent-can-book-your-trade-schools-campus",
+		"reason": "Private trade/vocational schools are a large, speed-to-lead-driven vertical with compliance rules unlike anything covered (K-12, daycare, tutoring are all different buyers), and checklist is the least-recently-used format (last on Aug 14)."
 	}
 ]
