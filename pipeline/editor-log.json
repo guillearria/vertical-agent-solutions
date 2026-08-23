@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-24T15:10:39.460Z",
-		"action": "new_post",
-		"slug": "order-status-tickets-are-drowning-your-stores",
-		"reason": "E-commerce/online retail is a large, digital-native vertical entirely unreached by the catalog's local-service and clinic focus, and practical guide is the least-recently-used format (last on Jul 17) after a run of checklist, comparison, myth-busting, FAQ, case walkthrough, and ROI posts."
-	},
-	{
 		"date": "2026-07-25T14:46:56.769Z",
 		"action": "improve_post",
 		"slug": "the-agentic-wave-is-not-just-for-tech",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "setting-up-an-ai-phone-agent-for-the-homeowner",
 		"reason": "HOA/community association management is a large, phone-flooded vertical the catalog has never covered and is distinct from the small-landlord property management post, and practical guide is the least-recently-used format (last on Aug 15)."
+	},
+	{
+		"date": "2026-08-23T13:51:08.038Z",
+		"action": "new_post",
+		"slug": "why-a-marina-should-price-its-ai-phone-agent-by",
+		"reason": "Marinas, boat dealers, and boatyards are a sizable, intensely seasonal, phone-driven vertical the catalog has never touched and is distinct from its auto repair, dealership, and equipment rental posts; cost/ROI is the least-recently-used format (last on Aug 16)."
 	}
 ]
