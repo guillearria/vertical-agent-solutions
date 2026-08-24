@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-25T14:46:56.769Z",
-		"action": "improve_post",
-		"slug": "the-agentic-wave-is-not-just-for-tech",
-		"reason": "After ten consecutive new posts, the site's most-linked cornerstone page is also its thinnest (424 words) and oldest; strengthening the primer lifts every vertical post that points to it."
-	},
-	{
 		"date": "2026-07-26T14:48:12.707Z",
 		"action": "new_post",
 		"slug": "what-an-ai-check-call-agent-costs-a-5-person",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "why-a-marina-should-price-its-ai-phone-agent-by",
 		"reason": "Marinas, boat dealers, and boatyards are a sizable, intensely seasonal, phone-driven vertical the catalog has never touched and is distinct from its auto repair, dealership, and equipment rental posts; cost/ROI is the least-recently-used format (last on Aug 16)."
+	},
+	{
+		"date": "2026-08-24T14:08:11.248Z",
+		"action": "new_post",
+		"slug": "a-propane-dealer-put-an-ai-agent-on-the-phone-the",
+		"reason": "Propane and heating-oil delivery is a large, intensely seasonal, phone-flooded vertical the catalog has never covered and whose life-safety escalation rules are distinct from its HVAC, pool, and other home-services posts; case walkthrough is the least-recently-used format (last on Aug 17)."
 	}
 ]
