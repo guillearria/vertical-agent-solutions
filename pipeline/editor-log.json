@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-27T15:55:31.663Z",
-		"action": "new_post",
-		"slug": "40-caregivers-60-clients-one-bad-monday-where-a",
-		"reason": "In-home senior care is a large, unreached vertical with a distinct staffing-plus-intake problem, and case walkthrough is the least-recently-used format (last on Jul 19) after guide, improve, and ROI posts."
-	},
-	{
 		"date": "2026-07-28T15:39:40.912Z",
 		"action": "new_post",
 		"slug": "self-storage-rental-calls-and-ai-agents-a-straight",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "quote-the-corporate-lunches-route-the-weddings",
 		"reason": "Catering and event food service is a sizable, inquiry-flooded vertical the catalog has never covered and is distinct from the wedding venue and restaurant posts, and FAQ is the least-recently-used format (last on Aug 18)."
+	},
+	{
+		"date": "2026-08-26T14:09:05.735Z",
+		"action": "improve_post",
+		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
+		"reason": "It is the only non-cooldown post flagged for a templated title, and pharmacy deserves deeper treatment on outbound refill outreach and counseling rules than the current 913 words give it."
 	}
 ]
