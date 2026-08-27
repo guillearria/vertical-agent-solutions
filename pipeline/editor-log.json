@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-28T15:39:40.912Z",
-		"action": "new_post",
-		"slug": "self-storage-rental-calls-and-ai-agents-a-straight",
-		"reason": "Self-storage is a large, phone-driven vertical the catalog has never touched and sits apart from its saturated home-services and clinic posts, and FAQ is the least-recently-used format (last on Jul 20) after myth-busting, comparison, checklist, guide, ROI, and case walkthrough."
-	},
-	{
 		"date": "2026-07-29T15:24:12.185Z",
 		"action": "new_post",
 		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
@@ -178,5 +172,11 @@
 		"action": "improve_post",
 		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
 		"reason": "It is the only non-cooldown post flagged for a templated title, and pharmacy deserves deeper treatment on outbound refill outreach and counseling rules than the current 913 words give it."
+	},
+	{
+		"date": "2026-08-27T23:01:12.818Z",
+		"action": "new_post",
+		"slug": "ai-receptionist-for-audiology-clinics-do-older",
+		"reason": "Audiology and hearing aid clinics are a sizable, phone-heavy vertical the catalog has never touched, with a patient-population objection unlike any covered practice type; myth-busting is the least-recently-used format (last on Aug 19)."
 	}
 ]
