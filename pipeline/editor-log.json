@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-29T15:24:12.185Z",
-		"action": "new_post",
-		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
-		"reason": "Independent pharmacy is a large, phone-saturated vertical the catalog has never touched and sits apart from the dental/vet clinic and home-services clusters, and myth-busting is the least-recently-used format (last on Jul 21)."
-	},
-	{
 		"date": "2026-07-30T15:27:40.965Z",
 		"action": "new_post",
 		"slug": "three-ways-to-clear-a-machine-shops-rfq-inbox-and",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "ai-receptionist-for-audiology-clinics-do-older",
 		"reason": "Audiology and hearing aid clinics are a sizable, phone-heavy vertical the catalog has never touched, with a patient-population objection unlike any covered practice type; myth-busting is the least-recently-used format (last on Aug 19)."
+	},
+	{
+		"date": "2026-08-28T23:06:54.983Z",
+		"action": "new_post",
+		"slug": "cpap-and-dme-resupply-outreach-compared-ai-agent",
+		"reason": "Independent DME/HME suppliers are a sizable, phone-and-outreach-driven vertical the catalog has never covered and is distinct from its pharmacy, PT, and NEMT posts; comparison is the least-recently-used format (last on Aug 20)."
 	}
 ]
