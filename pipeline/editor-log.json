@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-30T15:27:40.965Z",
-		"action": "new_post",
-		"slug": "three-ways-to-clear-a-machine-shops-rfq-inbox-and",
-		"reason": "Small custom manufacturing and machine shops are a large B2B vertical the catalog has never touched, well away from its saturated home-services and clinic clusters, and comparison is the least-recently-used format (last on Jul 22)."
-	},
-	{
 		"date": "2026-07-31T15:33:18.075Z",
 		"action": "new_post",
 		"slug": "before-you-let-an-ai-agent-near-your-wedding",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "cpap-and-dme-resupply-outreach-compared-ai-agent",
 		"reason": "Independent DME/HME suppliers are a sizable, phone-and-outreach-driven vertical the catalog has never covered and is distinct from its pharmacy, PT, and NEMT posts; comparison is the least-recently-used format (last on Aug 20)."
+	},
+	{
+		"date": "2026-08-29T17:12:34.978Z",
+		"action": "new_post",
+		"slug": "ai-phone-agents-at-roll-off-dumpster-companies",
+		"reason": "Roll-off dumpster rental and waste hauling is a sizable, dispatch-and-phone-driven vertical the catalog has never covered and is distinct from the equipment rental yard and home-services posts; checklist is the least-recently-used format (last on Aug 21)."
 	}
 ]
