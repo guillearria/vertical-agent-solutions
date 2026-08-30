@@ -318,8 +318,15 @@ async function main(): Promise<void> {
 
 	commitAndPush([...outcome.changedFiles, 'pipeline/editor-log.json'], outcome.commitMessage);
 
-	await sendMessage(outcome.summary);
-	console.log(`✓ ${outcome.commitMessage} — pushed, Telegram sent.`);
+	try {
+		await sendMessage(outcome.summary);
+		console.log(`✓ ${outcome.commitMessage} — pushed, Telegram sent.`);
+	} catch (err) {
+		// The push already succeeded and Telegram is informational only, so a
+		// failed notification must not fail the run (and trip the workflow's
+		// "editor failed" alert) after the day's work is published.
+		console.warn(`✓ ${outcome.commitMessage} — pushed, but the Telegram notification failed:`, err);
+	}
 }
 
 main().catch((err) => {
