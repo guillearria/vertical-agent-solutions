@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-07-31T15:33:18.075Z",
-		"action": "new_post",
-		"slug": "before-you-let-an-ai-agent-near-your-wedding",
-		"reason": "Wedding and event venues are a large, booking-driven vertical the catalog has never covered and sits well apart from its saturated home-services and clinic clusters, and checklist is the least-recently-used format (last on Jul 23) after guide, ROI, case walkthrough, FAQ, myth-busting, and comparison posts."
-	},
-	{
 		"date": "2026-08-01T14:43:24.976Z",
 		"action": "new_post",
 		"slug": "a-30-day-plan-for-nonprofits-that-want-an-ai-agent",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "ai-phone-agents-at-roll-off-dumpster-companies",
 		"reason": "Roll-off dumpster rental and waste hauling is a sizable, dispatch-and-phone-driven vertical the catalog has never covered and is distinct from the equipment rental yard and home-services posts; checklist is the least-recently-used format (last on Aug 21)."
+	},
+	{
+		"date": "2026-08-30T17:36:09.149Z",
+		"action": "new_post",
+		"slug": "how-to-configure-an-optometry-practices-ai-front",
+		"reason": "Independent optometry and optical retail is a sizable, phone-heavy vertical the catalog has never touched, distinct from the audiology, dental, and vet posts because of the vision-vs-medical insurance and eyewear-order call types; practical guide is the least-recently-used format (last on Aug 22)."
 	}
 ]
