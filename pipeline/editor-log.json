@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-01T14:43:24.976Z",
-		"action": "new_post",
-		"slug": "a-30-day-plan-for-nonprofits-that-want-an-ai-agent",
-		"reason": "Nonprofits are a large, entirely unreached sector that sits well outside the catalog's saturated home-services, clinic, and B2B clusters, and practical guide is the least-recently-used format (last on Jul 24)."
-	},
-	{
 		"date": "2026-08-02T14:48:10.476Z",
 		"action": "new_post",
 		"slug": "your-msp-needs-about-350-tickets-a-month-before-an",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "how-to-configure-an-optometry-practices-ai-front",
 		"reason": "Independent optometry and optical retail is a sizable, phone-heavy vertical the catalog has never touched, distinct from the audiology, dental, and vet posts because of the vision-vs-medical insurance and eyewear-order call types; practical guide is the least-recently-used format (last on Aug 22)."
+	},
+	{
+		"date": "2026-08-31T19:35:22.860Z",
+		"action": "new_post",
+		"slug": "what-does-an-ai-phone-agent-cost-a-kitchen-and",
+		"reason": "Residential remodeling and design-build contractors are a large, high-ticket vertical the catalog has never covered and is distinct from its roofing, solar, and HVAC posts; cost/ROI is the least-recently-used format (last on Aug 23)."
 	}
 ]
