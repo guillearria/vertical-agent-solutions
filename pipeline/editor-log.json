@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-03T16:00:35.203Z",
-		"action": "new_post",
-		"slug": "member-calls-tripled-after-the-holiday-what-a",
-		"reason": "Credit unions and community banks are a large, regulated vertical the catalog has never touched, well away from its saturated home-services and clinic clusters, and case walkthrough is the least-recently-used format (last on Jul 27)."
-	},
-	{
 		"date": "2026-08-04T15:42:08.905Z",
 		"action": "new_post",
 		"slug": "11-questions-equipment-rental-yards-ask-before",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "parts-counter-triage-at-a-farm-equipment-dealer",
 		"reason": "Agriculture — farm equipment dealers' parts and service counters — is a large, intensely seasonal, phone-driven vertical the catalog has never touched and is distinct from its auto repair, dealership, and equipment rental posts; case walkthrough is the least-recently-used format (last on Aug 24)."
+	},
+	{
+		"date": "2026-09-02T17:15:57.996Z",
+		"action": "new_post",
+		"slug": "three-piles-of-quote-requests-at-a-print-and-sign",
+		"reason": "Commercial print and sign shops are a sizable, quote-and-proof-driven B2B vertical the catalog has never covered and is distinct from the machine shop RFQ and wholesale distributor posts; FAQ is the least-recently-used format (last on Aug 25)."
 	}
 ]
