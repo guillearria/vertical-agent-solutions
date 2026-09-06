@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-07T14:22:46.849Z",
-		"action": "new_post",
-		"slug": "checklist-what-an-ai-receptionist-can-and-cant",
-		"reason": "Private mental health practices are a large, regulated vertical the catalog has never covered and whose crisis-call red lines are genuinely distinct from the dental/vet clinic posts, and checklist is the least-recently-used format (last on Jul 31)."
-	},
-	{
 		"date": "2026-08-08T14:01:25.282Z",
 		"action": "new_post",
 		"slug": "an-ai-agent-for-wholesale-distributor-order-taking",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "a-go-no-go-list-for-limo-and-black-car-fleets",
 		"reason": "Chauffeured ground transportation (limo, black car, shuttle) is a sizable 24/7 phone-and-dispatch vertical the catalog has never covered and is distinct from the NEMT and towing posts; checklist is the least-recently-used format (last on Aug 29)."
+	},
+	{
+		"date": "2026-09-06T16:22:55.792Z",
+		"action": "new_post",
+		"slug": "status-texts-first-phone-second-an-ai-agent",
+		"reason": "Collision repair and auto body is a large, status-call-heavy vertical the catalog has never covered and is distinct from the mechanical auto repair and dealership lead-follow-up posts; practical guide is the least-recently-used format (last on Aug 30)."
 	}
 ]
