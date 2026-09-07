@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-08T14:01:25.282Z",
-		"action": "new_post",
-		"slug": "an-ai-agent-for-wholesale-distributor-order-taking",
-		"reason": "Wholesale distribution is a large B2B vertical the catalog has never touched and sits well away from its saturated home-services and clinic clusters, and practical guide is the least-recently-used format (last on Aug 1)."
-	},
-	{
 		"date": "2026-08-09T14:06:14.594Z",
 		"action": "new_post",
 		"slug": "absence-calls-tour-requests-and-the-price-tag-on-a",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "status-texts-first-phone-second-an-ai-agent",
 		"reason": "Collision repair and auto body is a large, status-call-heavy vertical the catalog has never covered and is distinct from the mechanical auto repair and dealership lead-follow-up posts; practical guide is the least-recently-used format (last on Aug 30)."
+	},
+	{
+		"date": "2026-09-07T18:20:09.089Z",
+		"action": "new_post",
+		"slug": "ai-scheduling-agent-costs-for-a-home-inspection",
+		"reason": "Home inspection firms are a distinct, referral-speed-driven vertical the catalog has never covered, separate from the remodeler, roofing, and realtor posts; cost/ROI is the least-recently-used format (last on Aug 31)."
 	}
 ]
