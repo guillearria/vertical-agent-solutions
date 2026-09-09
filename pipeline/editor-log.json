@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-10T14:37:38.230Z",
-		"action": "new_post",
-		"slug": "when-187-calls-hit-a-12-van-nemt-dispatch-board",
-		"reason": "Non-emergency medical transportation is a sizable, phone- and dispatch-driven vertical the catalog has never touched, distinct from its saturated home-services, clinic, and B2B clusters, and case walkthrough is the least-recently-used format (last on Aug 3)."
-	},
-	{
 		"date": "2026-08-11T14:35:32.566Z",
 		"action": "new_post",
 		"slug": "can-an-ai-agent-recruit-truck-drivers-answers-for",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "how-a-family-entertainment-center-runs-birthday",
 		"reason": "Family entertainment and party venues are a sizable, booking-driven consumer vertical the catalog has never touched and is distinct from the wedding venue, golf, restaurant, and gym posts; case walkthrough is the least-recently-used format (last on Sep 1)."
+	},
+	{
+		"date": "2026-09-09T17:16:28.188Z",
+		"action": "improve_post",
+		"slug": "ai-agents-for-realtors-where-they-actually-help",
+		"reason": "Thirteen consecutive new posts have left the oldest entries stale, and this one is both thin and still using the retired templated title pattern we've already replaced on two sibling posts."
 	}
 ]
