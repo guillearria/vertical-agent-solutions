@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-12T14:36:31.702Z",
-		"action": "new_post",
-		"slug": "adult-children-wont-talk-to-a-bot-and-four-other",
-		"reason": "Assisted living and senior living communities are a large, uncovered vertical distinct from the in-home care agency post, and myth-busting is the least-recently-used format (last on Aug 5)."
-	},
-	{
 		"date": "2026-08-13T14:37:56.748Z",
 		"action": "new_post",
 		"slug": "the-overnight-phone-at-a-6-truck-towing-company",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "no-square-foot-quotes-no-alarm-codes-an-ai-phone",
 		"reason": "Commercial janitorial/BSC is a huge B2B vertical the catalog has never covered, with a callout-and-complaint call pattern distinct from the residential maid-service post; FAQ is the least-recently-used format (last on Sep 2)."
+	},
+	{
+		"date": "2026-09-11T17:05:05.432Z",
+		"action": "new_post",
+		"slug": "travel-advisors-worry-an-ai-agent-will-cost-them",
+		"reason": "Leisure travel agencies and tour operators are a sizable, relationship-driven vertical the catalog has never touched and is distinct from the B&B/hotel and wedding venue posts; myth-busting is the least-recently-used format (last on Sep 3)."
 	}
 ]
