@@ -4,6 +4,31 @@ Status: **fully automated and verified end-to-end** (Jul 2 2026; Telegram made i
 
 ## Open items
 
+- [ ] **Design floor: the footer needs a repo link** — *one must-fail, one line.* A
+  deterministic floor checker now grades the three public sites in this portfolio on the same
+  fifteen required elements. This site scores **one must-fail**, and it is the only one:
+  **F8 — the footer must carry a link to the project's own source repo.** The ruled floor is a
+  one-line footer `Project code on [GitHub] · Built by [Guillermo Arria-Devoe]`; a **richer
+  footer like this site's is an explicitly permitted superset — but only if the repo link is
+  present**, and today `Footer.astro`'s `.fine` line carries the author link and no repo link.
+  Fix: add one `<a>` to the repo in `src/components/Footer.astro` (either in `.fine` beside the
+  author link or as a `footer-links` entry). Nothing else about this footer changes — it was
+  reviewed and is the reference for the rest of the portfolio. This site is otherwise at 14/15
+  and was the donor the standard was extracted from.
+- [ ] **Three source comments point at a file in a different, private repo** — *found by a
+  portfolio sweep 2026-09-11, low severity, three-line fix.* `src/components/Footer.astro:25`,
+  `src/pages/about.astro:59`, and `src/pages/how-this-site-writes-itself.astro:79` each carry
+  `{/* TODO: add LinkedIn URL once live — see <path in a private repo> */}`. They are
+  compile-time JSX comments, so **nothing reaches the rendered HTML and no visitor ever sees
+  them** (verified against the deployed page). Two reasons to clean them up anyway: this is a
+  **public** repo and the comment names an internal path in a **private** one, and the house
+  rule across this portfolio is that a document may name another repo but must never depend on
+  a file path inside one — paths break silently when the other repo reorganises. Fix: keep the
+  TODO, drop the path — `{/* TODO: add LinkedIn URL once live */}`. Present since 2026-08-05.
+- [ ] **One-line cutover, later — not now.** When the portfolio's front-door site goes live, the
+  footer's author link (`AUTHOR_URL` in `src/consts.ts`) changes from the GitHub profile to the
+  front door. One string; listed here only so it is not a surprise.
+
 - [x] **Sort `rss.xml` newest-first** — **done Aug 5 2026**: feed now sorts by `pubDate` (descending) after the `archived` filter. Remaining quirk: `pubDate`s are date-only (midnight GMT), so same-day ordering is undefined — harmless at one post/day.
 - [ ] **Watch the next 2–3 editor runs** (cron 13:17 UTC) for varied titles/formats now that the de-templating rules are live; the HVAC vertical is uncovered and fair game again.
 - [ ] **Improve overall site styling** — broader visual polish beyond the Jul 6 fixes (About-page date removal, mobile-header declutter, article column centering). Candidate areas: typography & vertical rhythm, the default Astro `--accent` blue (`#2337ff` in `src/styles/global.css`) → a real brand palette, the homepage/hero, blog-list cards, and spacing consistency across pages. Owner to iterate later.
