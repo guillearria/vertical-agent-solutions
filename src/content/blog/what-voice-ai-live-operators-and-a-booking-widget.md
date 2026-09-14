@@ -4,7 +4,6 @@ description: "A six-tech appliance repair shop weighs three intake fixes against
 pubDate: 'Sep 12 2026'
 industry: home-services
 sources:
-  - "Rossware, Warranty Companies That Dispatch Through ServiceBench — https://rossware.freshdesk.com/support/solutions/articles/31000146283-warranty-companies-that-dispatch-through-servicebench"
   - "Warranty Week, NEW Acquires ServiceBench — https://www.warrantyweek.com/archive/ww20080123.html"
   - "PR Newswire, Whirlpool Corporation Selects ServiceBench — https://www.prnewswire.com/news-releases/whirlpool-corporation-selects-servicebench-business-management-software-300265733.html"
   - "Housecall Pro, Online Booking — https://www.housecallpro.com/features/online-booking/"

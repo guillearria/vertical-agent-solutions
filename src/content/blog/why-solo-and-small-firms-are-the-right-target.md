@@ -8,7 +8,6 @@ sources:
   - "ABA Profile of the Legal Profession (lawyer population) — https://www.americanbar.org/news/profile-legal-profession/"
   - "Federal Bar Association / ALPS (49% of private-practice lawyers are solo) — https://www.fedbar.org/blog/insights-from-solo-attorneys-on-well-being-and-resilience/"
   - "Legal.io on Bloomberg Law 2024 Attorney Workload & Hours Survey — https://www.legal.io/blog/5685631/Lawyers-Are-Working-More-Billing-Less-and-Many-Want-Out"
-  - "Legal Edge Services (Thomson Reuters & Clio non-billable time data) — https://legaledgeservices.com/non-billable-administrative-tasks-waste-time/"
   - "RemoteAttorneys summary of ABA 2024 AI TechReport (solo AI adoption) — https://www.remoteattorneys.com/blog/lawyer-legal-statistics"
   - "Litera Kira (extraction accuracy and time savings) — https://www.litera.com/products/kira"
   - "Mata v. Avianca, Inc. — https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc."

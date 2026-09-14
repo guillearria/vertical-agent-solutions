@@ -4,8 +4,8 @@ description: "Funeral directors' fears about AI phone agents, examined honestly,
 pubDate: 'Jul 21 2026'
 industry: personal-services
 sources:
-  - "NFDA — number of funeral homes, ownership, cremation and cost figures — https://nfda.org/news/media-center/nfda-news-releases/id/9786/nfda-releases-2025-cremation-burial-report-comprehensive-insights-to-guide-the-future-of-funeral-service"
-  - "NFDA 2025 Cremation & Burial Report (cremation rate) — https://nfda.org/news/media-center/nfda-news-releases/id/9772/americans-choosing-cremation-at-historic-rates-nfda-report-finds"
+  - "NFDA — number of funeral homes, ownership, cremation and cost figures — https://web.archive.org/web/20260415140229/https://nfda.org/news/media-center/nfda-news-releases/id/9786/nfda-releases-2025-cremation-burial-report-comprehensive-insights-to-guide-the-future-of-funeral-service"
+  - "NFDA 2025 Cremation & Burial Report press release, Sep 16 2025 (PRWeb) — https://www.prweb.com/releases/americans-choosing-cremation-at-historic-rates-nfda-report-finds-302556357.html"
   - "ASD Answering Service for Directors — first-call handling practice — https://www.myasd.com/"
 ---
 

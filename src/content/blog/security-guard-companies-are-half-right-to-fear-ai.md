@@ -12,7 +12,7 @@ sources:
   - "CALSAGA training requirements FAQ — https://calsaga.org/training-requirements-faq/"
   - "Belfry Software, security guard license lookup tools — https://www.belfrysoftware.com/blog/security-guard-license-lookup"
   - "California SB 1001 (bot disclosure) — https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201720180SB1001"
-  - "Perkins Coie on California's bot disclosure law — https://perkinscoie.com/insights/update/i-am-robot-californias-new-law-requires-disclosure-use-bots"
+  - "Perkins Coie on California's bot disclosure law — https://web.archive.org/web/20260121155639/https://perkinscoie.com/insights/update/i-am-robot-californias-new-law-requires-disclosure-use-bots"
   - "TCPAWorld, TCPA in the workplace — https://tcpaworld.com/2021/03/08/tcpa-in-the-workplace-an-employers-guide-to-telecom-laws-impacting-employee-outreach/"
 ---
 

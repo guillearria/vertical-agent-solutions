@@ -7,7 +7,7 @@ sources:
   - "CMS DMEPOS Refill Requirements — https://www.cms.gov/dmepos-refill-requirements"
   - "Medtrade, CMS Codifies Refill Rules for DMEPOS — https://medtrade.com/news/billing-reimbursement/cms-codifies-refill-rules-for-dmepos/"
   - "Noridian, Standard Written Order (SWO) — https://med.noridianmedicare.com/web/jddme/topics/documentation/standard-written-order"
-  - "CMS MLN SE19003, Proof of Delivery Documentation Requirements — https://www.cms.gov/outreach-and-education/medicare-learning-network-mln/mlnmattersarticles/downloads/se19003.pdf"
+  - "CMS, DME proof of delivery requirements (CERT MAC message) — https://www.cms.gov/files/document/cert-dme-proof-delivery-requirements-mac-message.pdf"
   - "FCC, AI-Generated Voices in Robocalls Are Illegal (Declaratory Ruling FCC 24-17) — https://docs.fcc.gov/public/attachments/FCC-24-17A1.pdf"
   - "BCLP, The TCPA's New Opt-Out Rules Take Effect April 11, 2025 — https://www.bclplaw.com/en-US/events-insights-news/the-tcpas-new-opt-out-rules-take-effect-on-april-11-2025-what-does-this-mean-for-businesses.html"
   - "Nixon Peabody, FCC partially delays new TCPA consent revocation rules — https://www.nixonpeabody.com/insights/alerts/2025/04/11/fcc-partially-delays-new-tcpa-consent-revocation-rules"
