@@ -30,9 +30,13 @@ const {
 
 const imageURL = new URL(typeof image === 'string' ? image : image.src, Astro.site);
 
-// Cloudflare Web Analytics: enabled only when the beacon token is configured
-// in the Pages build environment (mirrors the Turnstile pattern).
-const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+// Google Search Console ownership proof: set PUBLIC_GSC_VERIFICATION in the
+// Pages build environment to the `content` value the console hands out for
+// the HTML-tag method (mirrors the Turnstile pattern; no-op until set).
+// Traffic analytics is Cloudflare Web Analytics, switched on in the Pages
+// project's Metrics tab: Cloudflare injects its own beacon at deploy time,
+// so this file carries none.
+const gscVerification = import.meta.env.PUBLIC_GSC_VERIFICATION;
 ---
 
 <!-- Global Metadata -->
@@ -85,13 +89,4 @@ const cfBeaconToken = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
 <meta name="twitter:description" content={description} />
 <meta name="twitter:image" content={imageURL} />
 
-{
-	cfBeaconToken && (
-		<script
-			is:inline
-			defer
-			src="https://static.cloudflareinsights.com/beacon.min.js"
-			data-cf-beacon={JSON.stringify({ token: cfBeaconToken })}
-		/>
-	)
-}
+{gscVerification && <meta name="google-site-verification" content={gscVerification} />}
