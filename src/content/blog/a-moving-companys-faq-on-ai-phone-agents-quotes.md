@@ -14,8 +14,6 @@ sources:
 
 Movers lose jobs in the gap between a customer's call and a callback. When you're under a truck's tailgate wrapping a sofa, the phone rings, and the person on the other end is dialing three other companies too. An AI phone and text agent is built for exactly that gap. Here are the questions movers actually ask about them.
 
-If you want the ground-level explanation of what an "AI agent" even is, start with our [plain-English primer](/blog/the-agentic-wave-is-not-just-for-tech/) and come back. This piece assumes you have the gist.
-
 ## What can it actually do when someone calls or texts?
 
 The reliable work is intake. A good agent answers on the first ring, day or night, and collects the details every estimate depends on: origin and destination ZIP codes, home size (studio, two-bedroom, four-bedroom house), stairs or elevator, preferred dates, and whether there are special items like a piano or a gun safe. It logs all of it into your lead system in a clean, consistent format — no scribbled sticky notes lost by Monday.

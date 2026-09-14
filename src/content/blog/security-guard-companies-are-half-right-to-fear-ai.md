@@ -18,7 +18,7 @@ sources:
 
 Your night dispatcher's phone rings at 1:47 a.m. An officer posted at a warehouse says his car won't start and he can't make the 2:00 relief. You have thirteen minutes before that post goes dark and a property manager starts asking questions.
 
-That moment is why most owners running 30 to 300 officers dismiss AI phone agents on the spot. Part of that instinct is correct and worth defending. Part of it is quietly costing you billable hours every week. Five beliefs, five blunt verdicts. (If the difference between an agent and the phone tree you already hate is fuzzy, [read this first](/blog/the-agentic-wave-is-not-just-for-tech/).)
+That moment is why most owners running 30 to 300 officers dismiss AI phone agents on the spot. Part of that instinct is correct and worth defending. Part of it is quietly costing you billable hours every week. Five beliefs, five blunt verdicts.
 
 ## "A bot can't handle a 2 a.m. call-off. Coverage is life-safety."
 

@@ -21,7 +21,7 @@ sources:
 
 Your front office has two people in it, and between 7:40 and 8:30 a.m. the phone rings more than either of them can pick up. Most of those calls are "Maeve has a dentist appointment, she'll be in at 10." One of them is a family who found you on a Google search and wants to see the school. The second call is worth vastly more than the first, and right now both get the same treatment: voicemail.
 
-Below is the arithmetic on handing part of that phone line to an AI agent. If you want grounding on what an agent is and how it differs from a phone tree, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).
+Below is the arithmetic on handing part of that phone line to an AI agent.
 
 ## First, count the phone hours
 

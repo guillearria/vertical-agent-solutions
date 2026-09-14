@@ -21,7 +21,7 @@ sources:
   - "Printing terms and conditions, customer artwork warranties (A&A Printing) — https://www.printshopcentral.com/terms-conditions/"
 ---
 
-Commercial print, sign, and promo shops share one bottleneck: the one or two people who can actually price a job, buried under emails that mostly ask the same eight questions. Below are the questions owners of 5-to-40-person shops ask before handing any of that to software. (For the ground-level difference between an agent, a chatbot, and a plain automation, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).)
+Commercial print, sign, and promo shops share one bottleneck: the one or two people who can actually price a job, buried under emails that mostly ask the same eight questions. Below are the questions owners of 5-to-40-person shops ask before handing any of that to software.
 
 ## 1. Can it quote, or only pretend to?
 

@@ -15,7 +15,7 @@ sources:
 
 Ask any daycare owner what eats their day, and you'll hear the same two things. First, the phone rings constantly during the hours you're supposed to be watching a room full of two-year-olds — and someone has to step away from the floor to answer it, which is exactly the moment you don't want a staff member distracted. Second, by the time anyone calls that enrollment lead back, the parent has already toured three other centers and picked one.
 
-Both problems are about timing, not judgment. That's precisely the kind of gap an AI agent is built for — it can pick up, answer, and log things instantly, at a fraction of what a full-time front-desk hire costs. If you want the broader case for why this shift is happening across small businesses generally, [we've covered that here](/blog/the-agentic-wave-is-not-just-for-tech/). This piece is about where the line sits specifically for childcare.
+Both problems are about timing, not judgment. That's precisely the kind of gap an AI agent is built for — it can pick up, answer, and log things instantly, at a fraction of what a full-time front-desk hire costs. This piece is about where the line sits specifically for childcare.
 
 ## Where an agent can safely take over
 

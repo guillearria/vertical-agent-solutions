@@ -13,7 +13,7 @@ sources:
 
 Meet the Fennel Room, a 40-seat neighborhood restaurant with one landline, two hosts, and a Friday problem: the phone never stops between 6 and 8 p.m., and that's exactly when nobody can pick it up. The numbers back up the pain. One QSR Magazine analysis estimated restaurants collectively lose around $20 billion a year to calls that ring out unanswered. Every missed call is a table that didn't book or an order that went to the pizza place down the street.
 
-This walkthrough follows a single busy shift after the Fennel Room added an AI voice agent to answer the phone. The setup is a composite drawn from how these tools actually behave — grounded in what real systems can and can't do — not a testimonial for any one product. If you're new to what an "AI agent" even means, this one-line primer covers it: [The Agentic Wave Is Here](/blog/the-agentic-wave-is-not-just-for-tech/).
+This walkthrough follows a single busy shift after the Fennel Room added an AI voice agent to answer the phone. The setup is a composite drawn from how these tools actually behave — grounded in what real systems can and can't do — not a testimonial for any one product. 
 
 ## 6:12 p.m. — The call nobody would have caught
 

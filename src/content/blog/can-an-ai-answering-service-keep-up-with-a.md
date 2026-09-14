@@ -14,7 +14,7 @@ Every spring, the same thing happens. The grass wakes up, every homeowner on you
 
 ## What is an AI answering service for a landscaping business?
 
-It's software that picks up your phone, talks to the caller in a normal voice, and handles the routine parts of the conversation: taking down the address, booking an estimate, answering "do you do weekly mowing?", and texting the caller a confirmation. It works from instructions you set, and hands off anything it can't handle. If you want the plain-English background on what these agents are, we wrote a [primer here](/blog/the-agentic-wave-is-not-just-for-tech/). This post assumes you've got the gist and focuses on lawn care specifics.
+It's software that picks up your phone, talks to the caller in a normal voice, and handles the routine parts of the conversation: taking down the address, booking an estimate, answering "do you do weekly mowing?", and texting the caller a confirmation. It works from instructions you set, and hands off anything it can't handle. This post focuses on lawn care specifics.
 
 ## I already have voicemail. Why isn't that enough?
 

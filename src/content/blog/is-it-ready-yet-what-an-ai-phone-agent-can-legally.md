@@ -24,7 +24,7 @@ sources:
 
 Your phone rings while a technician is mid-count. It's the fourth "is my prescription ready?" of the hour. Research on community pharmacies has measured interruption rates anywhere from under five to more than twenty per hour, with phone calls among the biggest sources. When one academic health system moved calls to a central call center, phone interruptions at seven community pharmacies dropped 46.4%.
 
-So the appeal is obvious, and so is the hesitation. Below are the five objections owners actually raise, then the part most vendors skip: the rules that govern calls your pharmacy makes, not just the ones it receives. (If you want background on what an agent is versus a chatbot, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).)
+So the appeal is obvious, and so is the hesitation. Below are the five objections owners actually raise, then the part most vendors skip: the rules that govern calls your pharmacy makes, not just the ones it receives.
 
 ## Claim 1: "It will end up giving clinical advice"
 

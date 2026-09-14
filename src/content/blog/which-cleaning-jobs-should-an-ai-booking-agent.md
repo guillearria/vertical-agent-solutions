@@ -11,7 +11,7 @@ sources:
 
 If you run a residential or commercial cleaning company, your phone rings all day: recurring clients rescheduling, one-time quote-seekers, a cancellation that just blew a hole in tomorrow's route. You can't answer all of it while you're on a job site, so some of it goes to voicemail — and voicemail doesn't rebook.
 
-An AI booking agent (if you're new to the idea, here's the [plain-English primer](/blog/the-agentic-wave-is-not-just-for-tech/)) can pick up that overflow. But handing it the wrong task is worse than handing it nothing. Use the checklist below to sort what's safe from what should always land on a human.
+An AI booking agent can pick up that overflow. But handing it the wrong task is worse than handing it nothing. Use the checklist below to sort what's safe from what should always land on a human.
 
 ## Green light: hand these over
 

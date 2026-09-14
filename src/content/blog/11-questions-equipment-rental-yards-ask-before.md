@@ -26,7 +26,7 @@ sources:
 
 The phone at a rental yard rings hardest between 6:30 and 9:00 a.m., which is exactly when your counter person is outside strapping a plate compactor to a trailer. And the volume isn't shrinking: the American Rental Association's updated forecast puts the U.S. construction, industrial and general tool rental market at $83.5 billion in 2026, up 3.6%, with event rental up 8% to $6.1 billion. More demand, same one guy on the counter.
 
-Below are the questions rental owners actually ask when someone pitches them an AI phone agent — with blunt answers. (If you want the basic difference between an agent, a chatbot and a plain automation first, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).)
+Below are the questions rental owners actually ask when someone pitches them an AI phone agent — with blunt answers.
 
 ## 1. Can it quote day, week and month rates?
 

@@ -24,7 +24,7 @@ sources:
 
 Originating a loan is expensive work. The Mortgage Bankers Association put total loan production expense at $11,898 per loan for independent mortgage banks in the first quarter of 2026, up from $11,102 the quarter before. Against that number, a purchase lead who submits a form at 9:40 p.m. and hears nothing until Tuesday morning is a costly shrug. Harvard Business Review's audit of 2,241 companies, published in 2011, found that firms responding within an hour were nearly seven times more likely to have a real conversation with a decision maker than those waiting just one hour longer.
 
-The appeal of an AI agent on loan inquiries follows from that. So does the risk: mortgage is one of the most heavily regulated sales conversations in America. If you want grounding on what an agent actually is, [start here](/blog/the-agentic-wave-is-not-just-for-tech/). Otherwise, sort your tasks against the list below.
+The appeal of an AI agent on loan inquiries follows from that. So does the risk: mortgage is one of the most heavily regulated sales conversations in America. Sort your tasks against the list below.
 
 ## Tasks you can hand over
 

@@ -12,7 +12,7 @@ sources:
 
 When a hailstorm rolls through, your phone doesn't ring politely one call at a time. It floods. And you're forty feet up on a steep-slope tear-off with your hands full, watching the missed-call number climb. Every one of those you don't catch tonight is a homeowner dialing the next roofer on Google tomorrow.
 
-That's the exact gap an AI phone agent is built to fill — a tool that answers, texts, and books around the clock. If you want the plain-English version of what these agents are before you read on, start with [our primer on the agentic wave](/blog/the-agentic-wave-is-not-just-for-tech/). This post is narrower: a sorting list for a small crew deciding what to hand the machine and what to keep in human hands.
+That's the exact gap an AI phone agent is built to fill — a tool that answers, texts, and books around the clock. This post is narrower: a sorting list for a small crew deciding what to hand the machine and what to keep in human hands.
 
 Why it matters that someone answers fast: a widely cited study out of MIT and *Harvard Business Review* found that businesses responding to a new lead within five minutes were 100 times more likely to reach the person and 21 times more likely to move them into an actual sales conversation than those who waited 30 minutes. During a storm surge, "within five minutes" is impossible for a human crew. It's trivial for software.
 

@@ -17,7 +17,7 @@ sources:
 
 Most fire and security shops with 5 to 40 people don't lose money on the work. They lose it on the calling. Someone has to work the recurring-service list every month, reach a property manager who never picks up, land a date that fits a tech's route, and then chase the paperwork proving the inspection happened before the AHJ deadline passes.
 
-That work has a shape a phone agent handles well, as long as you introduce it in the right order and fence it off from anything life-safety. If you want a quick grounding on what an AI agent actually is versus a chatbot, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).
+That work has a shape a phone agent handles well, as long as you introduce it in the right order and fence it off from anything life-safety.
 
 ## Red lines you write before the first vendor demo
 

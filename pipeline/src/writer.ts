@@ -131,11 +131,17 @@ const AGENT_EXPLAINER_SLUG = 'the-agentic-wave-is-not-just-for-tech';
 
 function catalogNote(catalog?: CatalogEntry[]): string {
 	if (!catalog?.length) return '';
-	const list = catalog.map((c) => `- /blog/${c.slug}/ — ${c.title}`).join('\n');
-	const explainerRule = catalog.some((c) => c.slug === AGENT_EXPLAINER_SLUG)
-		? `Never re-explain what an AI agent is: when the reader needs that grounding, link to ` +
-			`/blog/${AGENT_EXPLAINER_SLUG}/ in a single sentence instead of writing your own explainer section. `
-		: '';
+	// The primer is deliberately left off the list. By Sep 2026, 68 of 78 posts
+	// had grown the same "if you want the plain-English version, start here"
+	// sentence around it, so the post layout now links it once and bodies never do.
+	const list = catalog
+		.filter((c) => c.slug !== AGENT_EXPLAINER_SLUG)
+		.map((c) => `- /blog/${c.slug}/ — ${c.title}`)
+		.join('\n');
+	const explainerRule =
+		`Never re-explain what an AI agent is, and never link the site's primer on it: every post page ` +
+		`already carries a "New to AI agents?" link above the article. If a reader needs grounding, one ` +
+		`clause inside a sentence is the most you may spend on it. `;
 	return (
 		`\n\nAlready published on this blog:\n${list}\n\n` +
 		`These are listed so you can link to them — NOT as models to imitate. Do not copy their ` +

@@ -20,7 +20,7 @@ sources:
 
 A small brokerage doesn't lose money on bad lanes. It loses money on the 40 minutes per load that nobody bills for — the check calls, the "where's my truck" emails, the third request for a signed POD.
 
-This is a cost breakdown, not a pitch. The model below assumes a five-person brokerage moving about 250 loads a month (roughly 12 a day) with a mix of dry van and flatbed. If you're smaller, the fixed costs hurt more; the math at the end shows where the line sits. If you want the difference between an agent and a plain automation before you read on, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).
+This is a cost breakdown, not a pitch. The model below assumes a five-person brokerage moving about 250 loads a month (roughly 12 a day) with a mix of dry van and flatbed. If you're smaller, the fixed costs hurt more; the math at the end shows where the line sits.
 
 ## Where the unbilled minutes go
 

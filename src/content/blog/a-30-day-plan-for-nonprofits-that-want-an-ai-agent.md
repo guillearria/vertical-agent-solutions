@@ -17,7 +17,7 @@ sources:
 
 Small shops don't have a communications problem. They have a Tuesday problem: 31 volunteer shift emails, a donor asking why her receipt says the wrong amount, four RSVPs to a gala that closed, and a thank-you letter backlog going back to March.
 
-That's the pile an AI agent can genuinely take. Not fundraising strategy — the pile. If you're fuzzy on how an agent differs from the chatbot on your website, [start here](/blog/the-agentic-wave-is-not-just-for-tech/), then come back.
+That's the pile an AI agent can genuinely take. Not fundraising strategy — the pile.
 
 Here's a month that works.
 

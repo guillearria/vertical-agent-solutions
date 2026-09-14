@@ -12,7 +12,7 @@ sources:
 
 If your phone rings while you're under a car with your hands full, that call often goes to voicemail — and a fair share of those callers just dial the next shop on the list. That's the gap most independent auto repair shops live with every day. AI agents are being sold as the fix for it, and for some of that gap, they genuinely are. For other parts of your business, handing the work to software is a fast way to lose a customer's trust.
 
-Here's the honest split, based on how these tools actually behave. (If "AI agent" is a new term, [The Agentic Wave Is Here — and It Is Not Just for Tech Companies](/blog/the-agentic-wave-is-not-just-for-tech/) is the two-minute primer. For a shop, think of a tireless receptionist who works from your scripts: it has patience and speed, not judgment — it does not know whether that Civic needs a new water pump.)
+Here's the honest split, based on how these tools actually behave. For a shop, think of a tireless receptionist who works from your scripts: it has patience and speed, not judgment — it does not know whether that Civic needs a new water pump.
 
 ## Where AI agents actually help
 

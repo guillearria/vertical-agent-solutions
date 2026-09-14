@@ -32,7 +32,7 @@ That is one to two full-time people's worth of phone and portal work before anyo
 3. **Eligibility and benefits.** Before the visit, in bulk.
 4. **Inbound practice questions.** Office managers asking about a specific account.
 
-Piles 1 and 3 are mostly structured data retrieval. Piles 2 and 4 involve people who can get upset. That split predicts almost everything below. (If you want the general grounding on what an "agent" actually is versus a chatbot, see [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).)
+Piles 1 and 3 are mostly structured data retrieval. Piles 2 and 4 involve people who can get upset. That split predicts almost everything below.
 
 ## Before you pick a worker, take the work off the phone
 

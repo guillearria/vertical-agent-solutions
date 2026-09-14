@@ -14,7 +14,7 @@ sources:
 
 A customer fills out a form on your used-inventory page at 9:40 on a Tuesday night. They also filled out three forms on three other dealers' sites. The store that replies first usually gets the conversation. Everyone else is following up on a lead that's already talking to someone else.
 
-That's the whole game with internet leads, and it's why so many dealers are rethinking who works them. You have three realistic options: hire an in-house BDC rep, pay an outsourced call center, or put an AI agent on first response. Here's how they actually stack up. (If you want the plain-English background on what an "AI agent" even is, [start here](/blog/the-agentic-wave-is-not-just-for-tech/) — I won't re-explain it below.)
+That's the whole game with internet leads, and it's why so many dealers are rethinking who works them. You have three realistic options: hire an in-house BDC rep, pay an outsourced call center, or put an AI agent on first response. Here's how they actually stack up.
 
 ## The one number that decides most of this
 

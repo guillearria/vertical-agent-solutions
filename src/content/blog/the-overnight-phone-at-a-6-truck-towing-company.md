@@ -61,7 +61,7 @@ Impound is the tricky part. California requires a listed 24-hour number for impo
 
 ## The verdict, one option at a time
 
-- **AI dispatch agent:** you're losing cash calls to voicemail, you're on rotation, and your volume arrives in waves. Cheapest per call and the only option that answers eight lines at once. It requires you to define the rules. If the difference between this and a phone tree is fuzzy, read [the agentic wave explainer](/blog/the-agentic-wave-is-not-just-for-tech/).
+- **AI dispatch agent:** you're losing cash calls to voicemail, you're on rotation, and your volume arrives in waves. Cheapest per call and the only option that answers eight lines at once. It requires you to define the rules. 
 - **Answering service:** your after-hours volume is thin (under about 100 calls a month), you want zero setup work, and you mostly need messages taken and a driver texted.
 - **Night dispatcher:** you run heavy private-property impound, police rotation, and accident work where judgment earns more than the shift costs. Best coverage per hour, worst coverage per week.
 

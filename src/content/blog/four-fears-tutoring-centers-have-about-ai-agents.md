@@ -12,7 +12,7 @@ sources:
 
 Tutoring and test-prep is built on trust. A parent handing you their worried teenager before the SATs is making an emotional decision, not booking an oil change. So when someone suggests letting an AI agent handle your enrollment inquiries, scheduling, and reminders, the gut reaction is usually "absolutely not — this is too personal for a robot."
 
-That instinct is healthy. But it's also aimed at the wrong target. An AI agent isn't there to replace the conversation where you convince a nervous mom that your center can help her son. It's there to handle the fifteen routine messages around that conversation so you're free to have it. (If you want the plain-English version of what an "agent" even is, start with [our primer on the agentic wave](/blog/the-agentic-wave-is-not-just-for-tech/).)
+That instinct is healthy. But it's also aimed at the wrong target. An AI agent isn't there to replace the conversation where you convince a nervous mom that your center can help her son. It's there to handle the fifteen routine messages around that conversation so you're free to have it.
 
 Here are the four fears owners raise most, and an honest verdict on each.
 

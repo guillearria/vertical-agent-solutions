@@ -15,7 +15,7 @@ sources:
 
 If you run an online store, you already know which email arrives most: some version of "where's my order?" These "WISMO" tickets — the industry shorthand for *Where Is My Order* — are widely cited as one of the single largest categories of e-commerce support, often landing somewhere around 20% to 40% of all tickets and climbing higher during the holiday rush. They rarely need judgment. They need a tracking number and a calm reply. That makes them the ideal first job for an AI agent.
 
-If you're new to the whole idea of software that can take actions on its own, the short primer at [/blog/the-agentic-wave-is-not-just-for-tech/](/blog/the-agentic-wave-is-not-just-for-tech/) is worth five minutes first. This piece assumes you're past that and ready to set one up without breaking anything.
+This piece is about setting one up without breaking anything.
 
 ## Start with the four tickets that repeat all day
 

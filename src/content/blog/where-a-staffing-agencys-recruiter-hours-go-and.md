@@ -15,7 +15,7 @@ sources:
 
 If you run a 2-to-5-recruiter staffing shop, your product is recruiter time. And a lot of it disappears into work that doesn't require a recruiter at all: dialing candidates for a first screen, trading emails to find an interview slot, texting reminders, and chasing references that never call back.
 
-An AI agent — software that can hold a phone or text conversation and take an action, not just answer a question ([here's the plain-English version](/blog/the-agentic-wave-is-not-just-for-tech/)) — can absorb a good chunk of that. The question isn't whether it's impressive. It's whether the math works for a small desk. Let's run it.
+An AI agent — software that can hold a phone or text conversation and take an action, not just answer a question — can absorb a good chunk of that. The question isn't whether it's impressive. It's whether the math works for a small desk. Let's run it.
 
 ## Where the hours actually go
 

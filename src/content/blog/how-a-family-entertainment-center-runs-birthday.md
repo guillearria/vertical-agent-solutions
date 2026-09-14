@@ -25,7 +25,7 @@ The agent is only as good as the five things connected to it:
 - **Blackout dates and holds**: no parties during the Tuesday youth league, nothing bookable the day of the school district buyout.
 - **Deposit policy in plain sentences**: amount, refundable window, what happens when the party shrinks.
 
-If your prices live in a laminated binder and your calendar lives in the manager's head, wire that up first. (For the difference between an agent and a phone tree, [this piece covers it](/blog/the-agentic-wave-is-not-just-for-tech/).)
+If your prices live in a laminated binder and your calendar lives in the manager's head, wire that up first.
 
 ## The Saturday, in order
 

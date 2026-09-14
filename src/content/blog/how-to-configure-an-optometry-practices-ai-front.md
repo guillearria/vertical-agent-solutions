@@ -17,7 +17,7 @@ sources:
 
 An optical office phone rings with a narrow set of questions, and they repeat all day. Somebody wants to know if their glasses came back from the lab. Somebody's contacts ran out. Somebody got a postcard about their annual exam. Meanwhile one person at the front desk is checking in a patient, pretreating a claim, and adjusting a pair of frames.
 
-That repetition is exactly what an AI phone and text agent handles well. What follows is the configuration order that keeps the agent useful and out of clinical territory. (If you want the plain-English version of what an agent actually is, start with [this explainer](/blog/the-agentic-wave-is-not-just-for-tech/).)
+That repetition is exactly what an AI phone and text agent handles well. What follows is the configuration order that keeps the agent useful and out of clinical territory.
 
 ## 1. Tally one week of calls into four buckets
 

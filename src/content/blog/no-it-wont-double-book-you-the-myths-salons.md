@@ -11,7 +11,7 @@ sources:
 
 Ask a hair salon owner about handing appointment booking to software and you'll usually get the same wince. They've heard the pitch before, and they picture a cold robot voice turning warm regulars into annoyed ex-clients.
 
-Those fears are worth taking seriously — some of them are half true. So let's go through them one at a time. If you want a plain-English grounding on what an "AI agent" even is before we start, [here's the short version](/blog/the-agentic-wave-is-not-just-for-tech/). Everything below assumes you've got that picture.
+Those fears are worth taking seriously — some of them are half true. So let's go through them one at a time. 
 
 ## Myth 1: "It'll sound like a robot and scare off my regulars"
 

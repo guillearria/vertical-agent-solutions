@@ -7,3 +7,5 @@ export const SITE_DESCRIPTION =
 export const AUTHOR_NAME = 'Guillermo Arria-Devoe';
 export const AUTHOR_URL = 'https://github.com/guillearria';
 export const REPO_URL = 'https://github.com/guillearria/vertical-agent-solutions';
+// The one primer every article links to (from the layout, never from post bodies).
+export const PRIMER_POST_ID = 'the-agentic-wave-is-not-just-for-tech';

@@ -14,7 +14,7 @@ sources:
 
 Catering is a business of small facts collected under pressure. Date, headcount, venue, load-in time, whether there's a kitchen on site or you're running off chafers in a parking lot. Most of those facts arrive by phone or email while your team is plating 180 covers somewhere else.
 
-Below are the questions catering owners actually ask before handing any of that to software. If you want the basic distinction between an agent, a chatbot, and a plain automation first, [we covered it here](/blog/the-agentic-wave-is-not-just-for-tech/). Numbers in the examples are illustrative, not benchmarks.
+Below are the questions catering owners actually ask before handing any of that to software. Numbers in the examples are illustrative, not benchmarks.
 
 ## Can it take an inquiry call and get the details right?
 

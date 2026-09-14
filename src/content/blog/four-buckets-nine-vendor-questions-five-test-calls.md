@@ -20,7 +20,7 @@ sources:
   - "State vs. SEC registration threshold (Kitces) — https://www.kitces.com/blog/switching-between-state-and-sec-registration-100-million-raum-threshold-ria/"
 ---
 
-A two-person practice and a fifteen-person one field the same inbound mix: reschedules, "did you get my signature page," portal lockouts, and occasionally a client who watched the news and wants out of equities before lunch. Sort that mix by risk before you sort it by volume. (If you want the ground-level difference between an agent and the chat widget on your website, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).)
+A two-person practice and a fifteen-person one field the same inbound mix: reschedules, "did you get my signature page," portal lockouts, and occasionally a client who watched the news and wants out of equities before lunch. Sort that mix by risk before you sort it by volume.
 
 Work through the four buckets below with your client service associate in the room. Numbers in this post are illustrative.
 

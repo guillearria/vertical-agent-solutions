@@ -17,7 +17,7 @@ The phone at a small-animal clinic doesn't ring evenly through the day. It spike
 
 Industry estimates put the average veterinary practice's missed-call rate somewhere between 20% and 30% during business hours, climbing higher at peak times. Broader call-center data is blunt about what happens next: of callers who don't reach a person, roughly 85% never call back, and a large share simply dial a competitor instead. For a clinic, a missed call isn't a lost message. It's often a lost patient.
 
-So the real question isn't "should we answer the phone better." It's *how*. Here are the three practical options, compared on the things that actually matter. (If you want a grounding on what an "AI agent" even is before we go further, this [plain-English primer](/blog/the-agentic-wave-is-not-just-for-tech/) covers it in one read.)
+So the real question isn't "should we answer the phone better." It's *how*. Here are the three practical options, compared on the things that actually matter.
 
 ## The three contenders
 

@@ -21,7 +21,7 @@ sources:
 
 Operators of senior living communities tend to hear "AI phone agent" and picture a daughter in crisis getting a robot. That fear deserves a straight answer.
 
-This post is about facility-based senior living: independent living, assisted living, and memory care, roughly 20 to 120 units, with one or two people covering the front desk, tour inquiries, and everything else. In-home care agencies have a different problem (scheduling churn), covered in [40 Caregivers, 60 Clients, One Bad Monday](/blog/40-caregivers-60-clients-one-bad-monday-where-a/). If you want the difference between an agent and the chatbot sitting on your website, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).
+This post is about facility-based senior living: independent living, assisted living, and memory care, roughly 20 to 120 units, with one or two people covering the front desk, tour inquiries, and everything else. In-home care agencies have a different problem (scheduling churn), covered in [40 Caregivers, 60 Clients, One Bad Monday](/blog/40-caregivers-60-clients-one-bad-monday-where-a/).
 
 Five beliefs, five verdicts.
 

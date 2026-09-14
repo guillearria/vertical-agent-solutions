@@ -12,7 +12,7 @@ sources:
   - "Liscio — How Accounting Firms Can Automate Client Document Collection — https://www.liscio.me/blog-posts/how-accounting-firms-can-automate-client-document-collection"
 ---
 
-Most write-ups about AI in accounting stop at "it saves time." That's useless when you're deciding whether to spend money. So this is a numbers piece: where the repetitive hours actually go, what an AI agent can realistically take off your plate, what the tools cost, and where the break-even line sits for a small firm. If you want a plain-English primer on what an "AI agent" even is, [start here](/blog/the-agentic-wave-is-not-just-for-tech/) — this post assumes you've got the gist.
+Most write-ups about AI in accounting stop at "it saves time." That's useless when you're deciding whether to spend money. So this is a numbers piece: where the repetitive hours actually go, what an AI agent can realistically take off your plate, what the tools cost, and where the break-even line sits for a small firm.
 
 ## Where the repetitive hours actually go
 

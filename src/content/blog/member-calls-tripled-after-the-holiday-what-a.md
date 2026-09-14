@@ -32,8 +32,6 @@ What it finished on its own:
 
 Ninety-one of those 118 calls ended without a human touching them. The three staff worked the other 27.
 
-(If the difference between this and the phone tree you already own isn't obvious, that's the ground covered in [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).)
-
 ## 9:30 a.m. — The sentences that end the AI's turn instantly
 
 Long weekends generate fraud calls. This one generated 31.

@@ -21,7 +21,7 @@ sources:
 
 A Zillow inquiry lands at 9:40 p.m. while you're at your kid's game. You call back at eight the next morning, and the buyer toured with another agent that afternoon. Repeat that loss a few dozen times a year and you have the one problem in residential real estate that an AI agent is genuinely good at solving. Most of the rest of the pitch is noise.
 
-If you want the plain definition of an AI agent versus a chatbot, [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/) covers it in one read. This post assumes you have that and goes straight to which conversations you can hand over.
+This post goes straight to which conversations you can hand over.
 
 ## Which inquiries the agent gets to touch
 

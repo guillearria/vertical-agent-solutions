@@ -18,7 +18,7 @@ sources:
 
 A driver fills out four applications on a Tuesday night. Whoever calls back first usually gets the orientation seat. If your recruiter is also your safety manager and your backup dispatcher, "first" is often Thursday afternoon. Meanwhile, annual turnover at large truckload carriers has run around 90% for years, and the American Trucking Associations is clear that this is mostly drivers moving between carriers, not leaving the industry. Those drivers are in play, and they are calling somebody.
 
-Below are the questions small asset-based carriers actually ask about putting an AI agent on that phone. (If you want the basic definition of an agent first, we covered it in [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).)
+Below are the questions small asset-based carriers actually ask about putting an AI agent on that phone.
 
 ## Can it really call and text an applicant within minutes?
 

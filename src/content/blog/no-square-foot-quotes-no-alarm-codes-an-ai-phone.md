@@ -20,7 +20,7 @@ Contract cleaning runs on a phone that rings when nobody is in the office. A cle
 
 ## Is this the same thing as an AI booking agent for a maid service?
 
-No. Residential cleaning is a transaction: a stranger calls, picks a date, gets a price. The agent's job there is to sort which jobs are safe to quote, which we covered in [the sorting checklist for maid services](/blog/which-cleaning-jobs-should-an-ai-booking-agent/). Your callers are almost never strangers. They are your own W-2 cleaners, property managers under a signed contract, and procurement people running a bid process. Nothing gets priced on the phone, and half the calls involve employment law. If you want the basic distinction between an agent and a chatbot first, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).
+No. Residential cleaning is a transaction: a stranger calls, picks a date, gets a price. The agent's job there is to sort which jobs are safe to quote, which we covered in [the sorting checklist for maid services](/blog/which-cleaning-jobs-should-an-ai-booking-agent/). Your callers are almost never strangers. They are your own W-2 cleaners, property managers under a signed contract, and procurement people running a bid process. Nothing gets priced on the phone, and half the calls involve employment law.
 
 ## Can it take the 9 p.m. callout and fill the shift?
 

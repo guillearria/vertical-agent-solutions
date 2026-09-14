@@ -12,7 +12,7 @@ sources:
 
 Meet Cedar Creek Grooming & Boarding — a made-up but very typical operation. Two groomers, a dozen boarding runs, and one owner named Dana who spends most of the day elbow-deep in a matted golden retriever. On a Saturday before a holiday weekend, the phone does not stop. In the old days, half those calls went to voicemail — and that's expensive: research on small-business phones suggests most people who hit voicemail never call back, and a majority simply dial a competitor instead.
 
-This Saturday runs differently. An AI booking agent answers every call and text on the first ring. If you've never seen how one of these works, here's the [plain-English primer](/blog/the-agentic-wave-is-not-just-for-tech/). The short version: it's software that talks like a person, checks the real calendar, and books real slots. Here's how the day actually unfolded, hour by hour.
+This Saturday runs differently. An AI booking agent answers every call and text on the first ring. The short version: it's software that talks like a person, checks the real calendar, and books real slots. Here's how the day actually unfolded, hour by hour.
 
 ## Morning: two easy bookings
 

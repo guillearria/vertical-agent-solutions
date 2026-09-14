@@ -21,8 +21,6 @@ Two pressures make that phone expensive. The first is downtime. Farm Progress, w
 
 The second is staffing. NAEDA has said the average farm equipment dealer would hire five more technicians today. In Farm Equipment's 2026 Dealer Business Outlook survey, 63.3% of dealers said they were "most concerned" about technician availability, its second-ranked concern overall. Nobody is solving a September phone surge by hiring in September.
 
-(For the plain distinction between an agent, a chatbot, and a phone tree, see [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).)
-
 ## Six rules on a legal pad
 
 The parts manager wrote these before anyone turned anything on. They were written in English, not software:

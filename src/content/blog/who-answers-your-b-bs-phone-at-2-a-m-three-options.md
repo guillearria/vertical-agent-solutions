@@ -21,7 +21,7 @@ So the real question isn't whether to cover the phone. It's *how*. Here are the 
 
 **Answering service.** A traditional live-operator service typically runs $135 to $450 a month, usually billed against a bucket of minutes with per-minute overages of $0.75 to $2.00 once you go over. Watch for setup fees, after-hours premiums, and per-transfer charges. ([Nextiva](https://www.nextiva.com/blog/answering-service-cost.html), [Answering365](https://www.answering365.com/blog/answering-service-cost-2026-pricing-guide/))
 
-**AI booking agent.** AI-powered phone services generally fall in the $50 to $300 a month range, with the higher end reflecting stronger language handling and the ability to connect to your booking system. ([Nextiva](https://www.nextiva.com/blog/answering-service-cost.html)) Purpose-built hotel versions that write directly into your property management system can cost more, but they don't charge per minute, so a busy night doesn't spike the bill. (If you're new to what an "agent" even means here, [this piece](/blog/the-agentic-wave-is-not-just-for-tech/) is the one-minute version.)
+**AI booking agent.** AI-powered phone services generally fall in the $50 to $300 a month range, with the higher end reflecting stronger language handling and the ability to connect to your booking system. ([Nextiva](https://www.nextiva.com/blog/answering-service-cost.html)) Purpose-built hotel versions that write directly into your property management system can cost more, but they don't charge per minute, so a busy night doesn't spike the bill.
 
 ## Coverage: the overnight hours and the check-in rush
 

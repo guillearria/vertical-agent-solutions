@@ -21,8 +21,6 @@ sources:
 
 Most quotes you'll get for an AI phone agent are a single number: a per-minute rate, or a flat monthly plan. That number is real, but it's maybe half your actual bill. Below is the full stack for a shop running 4 to 15 techs, priced against what it replaces, with the break-even worked out in jobs rather than percentages.
 
-If you're still fuzzy on what separates an agent from the phone tree you already have, [this explainer](/blog/the-agentic-wave-is-not-just-for-tech/) covers it in one read.
-
 ## Line item 1: the voice agent itself
 
 Two pricing shapes dominate.

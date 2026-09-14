@@ -13,7 +13,7 @@ sources:
 
 It's 8:40 on a Tuesday morning. Your 9 a.m. reformer Pilates class has one no-show, a prospect just DM'd asking whether you offer a trial, two members' cards bounced overnight, and the person at the front desk is also spotting someone on the rack. Small fitness businesses live in this pile-up — a hundred small tasks that all want attention during the exact hour you're busiest on the floor.
 
-This is where an AI agent can quietly take work off your hands. If you want the plain-English version of what an "AI agent" even is, [start here](/blog/the-agentic-wave-is-not-just-for-tech/). This post assumes you've got that, and gets straight to the jobs worth handing off in a gym or studio — and the ones you shouldn't.
+This is where an AI agent can quietly take work off your hands. This post gets straight to the jobs worth handing off in a gym or studio — and the ones you shouldn't.
 
 ## Catching the after-hours inbox
 

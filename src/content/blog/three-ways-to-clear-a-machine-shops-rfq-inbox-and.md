@@ -43,7 +43,7 @@ Speed matters more than shops assume. The Fabricator reported one job shop findi
 
 ## Option 3: An AI intake agent
 
-This is software that reads the incoming RFQ email and attachments, extracts part number, quantity, material, revision and due date, builds the quote record, and sends the "we're missing the STEP file" follow-up without being asked. (If the difference between this and a plain automation isn't clear, we covered it in [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).)
+This is software that reads the incoming RFQ email and attachments, extracts part number, quantity, material, revision and due date, builds the quote record, and sends the "we're missing the STEP file" follow-up without being asked.
 
 The category is real, not speculative. Paperless Parts, for example, lets shops forward an RFQ email straight into a quote and uses domain-specific AI to pull line items from emails, prints and models — the vendor says it can identify over 10,000 ASTM, AMS, MIL-SPEC and NADCAP specifications and flag export-control markings, and claims a 90% cut in quote setup time. Treat the 90% as a marketing figure until you see it on your own RFQs.
 

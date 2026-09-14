@@ -38,7 +38,7 @@ Where it breaks: it is a broadcast. Patients who ignore texts stay ignored, and 
 
 ## Option 2: An AI phone-and-text agent
 
-The agent actually calls, holds a short conversation, confirms which supplies are needed and whether the current ones are wearing out, and writes the confirmation back to your system. It answers the inbound half too: where's my order, is this covered, why is there a balance. If you want the plain-English version of how an agent differs from an automation, we covered it in [the agentic wave](/blog/the-agentic-wave-is-not-just-for-tech/).
+The agent actually calls, holds a short conversation, confirms which supplies are needed and whether the current ones are wearing out, and writes the confirmation back to your system. It answers the inbound half too: where's my order, is this covered, why is there a balance.
 
 Strength: it converts the people who never answer a text but will talk for 90 seconds, and it doesn't get pulled off the list on a busy Tuesday.
 

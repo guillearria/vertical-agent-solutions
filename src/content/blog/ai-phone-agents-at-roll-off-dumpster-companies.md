@@ -64,7 +64,7 @@ Have someone who doesn't work for you place these, then listen to the recordings
 7. "Why is my bill $180 higher than the quote?" (Should not attempt to explain the scale ticket.)
 8. "We're a GC, we'd do 15 pulls a month, what are your terms?" (Should capture and route to you.)
 
-If any of these ends with the agent improvising, fix the script before the number goes live. For a plain-English look at why these systems handle open-ended calls differently from an old phone tree, see [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).
+If any of these ends with the agent improvising, fix the script before the number goes live.
 
 ## Pick one week and one call type
 

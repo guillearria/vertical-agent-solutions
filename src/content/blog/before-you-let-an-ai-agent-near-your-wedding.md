@@ -14,7 +14,7 @@ sources:
 
 Booking season at an independent venue looks like this: forty inquiries in a week, half of them asking whether one specific Saturday is open, a third of the tours no-showing, and four signed contracts sitting unpaid because nobody had time to chase the deposit link.
 
-An AI agent — software that reads an inquiry, checks your calendar, replies, and books the tour without a human touching it — can absorb a big chunk of that. If you want the difference between an agent and a website chatbot, [we covered that here](/blog/the-agentic-wave-is-not-just-for-tech/). What follows is the sorting work: what to hand over, what to keep, and what to verify before you turn it on.
+An AI agent — software that reads an inquiry, checks your calendar, replies, and books the tour without a human touching it — can absorb a big chunk of that. What follows is the sorting work: what to hand over, what to keep, and what to verify before you turn it on.
 
 ## Green light: hand these over
 

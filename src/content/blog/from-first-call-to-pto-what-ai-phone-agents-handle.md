@@ -18,7 +18,7 @@ sources:
   - "AInora summary of lead response time research (Oldroyd / Lead Response Management study) — https://ainora.lt/blog/lead-response-time-statistics-every-study-2026"
 ---
 
-You buy leads, a door team knocks the same ZIP codes, and three national installers call the homeowner within minutes of the same form fill. Meanwhile your one office coordinator is on hold with the utility. This FAQ covers what an AI phone and text agent realistically does in that gap, and where it will get you in trouble. If you want the difference between an agent, a chatbot, and a Zapier automation first, start with [the agentic wave primer](/blog/the-agentic-wave-is-not-just-for-tech/).
+You buy leads, a door team knocks the same ZIP codes, and three national installers call the homeowner within minutes of the same form fill. Meanwhile your one office coordinator is on hold with the utility. This FAQ covers what an AI phone and text agent realistically does in that gap, and where it will get you in trouble.
 
 ## Can it actually qualify an inbound lead, or does it just take a message?
 

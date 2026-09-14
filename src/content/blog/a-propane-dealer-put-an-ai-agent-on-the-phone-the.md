@@ -27,8 +27,6 @@ The owner spent an afternoon writing these down before the vendor configured any
 5. **Money limits.** It can read a balance and take a card payment. It cannot release a credit hold, promise a delivery to an account on hold, or negotiate a payment arrangement.
 6. **It says it's automated in the first sentence, and transfers the moment someone asks for a person.**
 
-If you want the plain-English version of why an agent is different from the phone tree you already have, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).
-
 ## The day, hour by hour
 
 **5:50 a.m.** The agent has 31 items waiting from overnight: texts, voicemail transcriptions, web form requests. It has already sorted them. Twenty-two are will-call requests with tank percentages. Six are ETA questions. Three were flagged and forwarded to the on-call dispatcher's cell at the moment they came in.

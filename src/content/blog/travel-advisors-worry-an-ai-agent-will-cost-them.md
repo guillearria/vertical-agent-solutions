@@ -19,7 +19,7 @@ sources:
 
 Independent advisors, host-agency affiliates, and small tour and charter operators tend to react the same way to AI agents: *my business is the relationship, so there's nothing here for me*. Some of that instinct is correct and worth defending. Some of it is protecting work no client ever wanted from you in the first place.
 
-This is about leisure and group travel, where the sale happens weeks or months before anyone travels. If you're running rooms and a front desk, [the B&B version of this question](/blog/who-answers-your-b-bs-phone-at-2-a-m-three-options/) is a different problem. If you want the plain definition of an agent versus a chatbot, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).
+This is about leisure and group travel, where the sale happens weeks or months before anyone travels. If you're running rooms and a front desk, [the B&B version of this question](/blog/who-answers-your-b-bs-phone-at-2-a-m-three-options/) is a different problem.
 
 Five beliefs, one at a time.
 

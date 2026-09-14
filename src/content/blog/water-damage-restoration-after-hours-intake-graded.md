@@ -77,8 +77,6 @@ Draw the line at anything involving money or scope: deductibles, supplement disp
 
 The common landing spot for a 5 to 40 person firm: AI agent answers everything first and handles complete FNOL capture and status lookups, with a warm transfer to the on-call manager for anything the script flags. The answering service becomes the backup path, not the front door. The coordinator stops being a switchboard and starts working the carrier documentation that actually protects your program standing.
 
-If the idea of an agent that both takes the call and writes into your job file is new, [this piece explains the difference between an agent, a chatbot, and a plain automation](/blog/the-agentic-wave-is-not-just-for-tech/).
-
 ## Pull last month's after-hours recordings
 
 Take every call that came in after 6 p.m. for one month. Mark each one as emergency or status, then check which ones captured all nine intake fields above and how many minutes passed before someone called the insured back. That sheet, not a vendor demo, tells you which of the three options you are actually shopping for.

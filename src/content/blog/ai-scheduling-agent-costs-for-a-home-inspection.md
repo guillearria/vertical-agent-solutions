@@ -20,7 +20,7 @@ sources:
 
 A realtor with a signed contract calls three inspectors on Tuesday afternoon. You are in a crawlspace with a flashlight in your teeth. Inspector number two answers, quotes $475 for a 2,100-square-foot ranch with a radon test, and books Thursday at 9. That job was never really a competition.
 
-What follows is a cost breakdown for putting an AI voice and text agent on that booking line: every piece of the stack priced per month, what it replaces, and how many inspections it takes to pay for itself. (If you want grounding on how an AI agent differs from a chatbot, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).)
+What follows is a cost breakdown for putting an AI voice and text agent on that booking line: every piece of the stack priced per month, what it replaces, and how many inspections it takes to pay for itself.
 
 ## What one missed call is worth
 

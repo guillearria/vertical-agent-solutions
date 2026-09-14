@@ -16,7 +16,7 @@ sources:
 
 If your front desk spends half its day on the phone confirming appointments, chasing insurance details, and trying to refill a chair that just opened up, you've probably wondered whether "AI" can take some of that off their plate. The honest answer is: some of it, yes — and a few things you should keep well away from it.
 
-This follows the same pattern we found writing about [realtors](/blog/ai-agents-for-realtors-where-they-actually-help/) and [small law firms](/blog/ai-agents-for-small-law-firms-and-solo-attorneys/): an AI agent earns its keep on repetitive, rules-based busywork, and gets you in trouble the moment you hand it judgment or sensitive data it isn't built to protect. (New to the term? [The Agentic Wave Is Here — and It Is Not Just for Tech Companies](/blog/the-agentic-wave-is-not-just-for-tech/) explains what these assistants are in two minutes — the short version: a tireless clerk that follows instructions exactly, with no judgment of its own.)
+This follows the same pattern we found writing about [realtors](/blog/ai-agents-for-realtors-where-they-actually-help/) and [small law firms](/blog/ai-agents-for-small-law-firms-and-solo-attorneys/): an AI agent earns its keep on repetitive, rules-based busywork, and gets you in trouble the moment you hand it judgment or sensitive data it isn't built to protect. The short version of what these assistants are: a tireless clerk that follows instructions exactly, with no judgment of its own.
 
 ## The jobs it genuinely does well in a dental office
 

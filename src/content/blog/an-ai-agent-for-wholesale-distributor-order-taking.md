@@ -14,7 +14,7 @@ sources:
 
 A counter phone at a plumbing supply house rings about the same six things all day. Do you have it, when does it ship, what's my price, where's my backorder, can I get one more of what I bought last Tuesday, and this valve came in cracked. Two of those are pure lookup. One is a judgment call your credit manager should make. An AI agent can take the lookups off your inside sales team without touching the rest, but only if you turn things on in the right order.
 
-If you want the background on what an agent actually is and how it differs from a chatbot, [start here](/blog/the-agentic-wave-is-not-just-for-tech/). This post assumes you already know and want the rollout.
+This post skips the definitions and goes straight to the rollout.
 
 Worth noting why this still matters: in Distribution Strategy Group's survey of more than 400 distributor executives, distributors that had ecommerce reported 19.7% of 2022 sales coming through digital channels, up from 14.5% in 2021. Growing fast, and still a minority. The phone and the inbox are carrying the rest.
 

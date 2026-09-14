@@ -16,7 +16,7 @@ sources:
 
 If you run a small firm or a solo practice, you already know the real bottleneck isn't legal skill — it's everything around it. The intake calls, the first-draft engagement letters, the calendar math, the invoices that quietly go unpaid. This is exactly the kind of repetitive, deadline-driven work that AI agents are built to handle. But law is also a field where a careless tool can get you sanctioned, so it's worth being precise about where agents earn their keep and where they don't belong.
 
-If you're new to the term, an "agent" is just software that can take a multi-step task off your plate — not merely answer a question, but actually do the sequence of steps. We covered the broader shift in [The Agentic Wave Is Here — and It Is Not Just for Tech Companies](/blog/the-agentic-wave-is-not-just-for-tech/).
+If you're new to the term, an "agent" is just software that can take a multi-step task off your plate — not merely answer a question, but actually do the sequence of steps.
 
 ## Where agents genuinely help
 

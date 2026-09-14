@@ -18,7 +18,7 @@ sources:
 
 A management company running 1,500 to 15,000 doors usually has the same bottleneck: four or five community managers who need to be at meetings and site walks, and one or two people at the front desk absorbing every homeowner call in the portfolio. Community associations are not a niche. The Foundation for Community Association Research's Fact Book counts roughly 373,000 associations housing about 78.1 million residents. The call volume follows.
 
-Most of that volume lands in four buckets. Below is how to set up an AI phone agent for each one: the data it needs, the sentences it is allowed to say, and the exact moment it stops talking and gets a human. If you want the background on how an agent differs from a phone tree or a chatbot, read [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/) first.
+Most of that volume lands in four buckets. Below is how to set up an AI phone agent for each one: the data it needs, the sentences it is allowed to say, and the exact moment it stops talking and gets a human.
 
 ## Before it takes a single call
 

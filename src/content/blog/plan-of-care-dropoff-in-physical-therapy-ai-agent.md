@@ -31,7 +31,7 @@ Also worth knowing before you set expectations: a qualitative study of PT dropof
 
 ## Option 1: An AI phone and text agent working the lapsed list
 
-This is an agent that pulls patients with unused authorized visits or a gap of 10-plus days, calls them, has a short conversation, and books into open slots. If you want the plain-English version of how an agent differs from a chatbot or an automation, we covered that in [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).
+This is an agent that pulls patients with unused authorized visits or a gap of 10-plus days, calls them, has a short conversation, and books into open slots.
 
 **Cost.** Published vendor pricing for healthcare voice agents runs roughly $0.05 to $0.70 per call minute for do-it-yourself platforms, and roughly $300 to $2,000-plus per month for managed plans. Watch the compliance tier: Retell AI, for example, lists its HIPAA add-on at $2,000 a month and only signs a business associate agreement on higher editions. That detail can quadruple a quoted price.
 

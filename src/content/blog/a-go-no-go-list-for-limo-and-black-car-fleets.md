@@ -12,7 +12,7 @@ sources:
 
 If your reservation line and your dispatch line are the same phone, you know the pattern. A 6 a.m. airport pickup, a chauffeur who can't find the passenger at Terminal C, a bride's mother asking about a June Saturday, and a chargeback notice from your card processor all land on the same number, sometimes inside ten minutes.
 
-An AI phone and text agent can take a real share of that volume. Not all of it. Sort your call types before you buy anything, because the sorting is the actual work. (For the plain-English version of what an agent is and how it differs from a chatbot, see [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).)
+An AI phone and text agent can take a real share of that volume. Not all of it. Sort your call types before you buy anything, because the sorting is the actual work.
 
 ## Go: the agent can close these on its own
 

@@ -10,7 +10,7 @@ sources:
   - "What Is First Notice of Loss (FNOL)? — Sentry Insurance — https://www.sentry.com/what-we-offer/resources/articles/what-is-fnol"
 ---
 
-Insurance runs on two things that don't always cooperate: fast response and careful compliance. A prospect who fills out a quote form at 9 p.m. wants an answer before the competing agency calls back, but a renewal handled sloppily or a claim mis-triaged can cost you far more than the premium. An AI agent — software that can take in a request and carry out multi-step tasks on its own, not just answer a single question — can close the speed gap without touching the parts that get agencies in trouble. If the term "AI agent" is fuzzy, [start here](/blog/the-agentic-wave-is-not-just-for-tech/) and come back.
+Insurance runs on two things that don't always cooperate: fast response and careful compliance. A prospect who fills out a quote form at 9 p.m. wants an answer before the competing agency calls back, but a renewal handled sloppily or a claim mis-triaged can cost you far more than the premium. An AI agent — software that can take in a request and carry out multi-step tasks on its own, not just answer a single question — can close the speed gap without touching the parts that get agencies in trouble.
 
 Use the checklist below before you switch anything on.
 

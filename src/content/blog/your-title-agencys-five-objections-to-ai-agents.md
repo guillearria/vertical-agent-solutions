@@ -20,8 +20,6 @@ sources:
 
 Every title and escrow owner I've talked to about AI agents raises the same five objections, usually in the same order. Some of them are dead right. Some are recycled fear from a different industry. Here's each one, judged on its merits, for an independent agency of roughly 3 to 25 people.
 
-If you're still fuzzy on how an AI agent differs from the chatbot on your website, [start here](/blog/the-agentic-wave-is-not-just-for-tech/) — the rest of this assumes you know the difference.
-
 ## "It'll get us on the hook for a wire fraud." — True, if you let it near wires. Otherwise, no.
 
 This is the objection that deserves the most respect. An ALTA cybercrime study found that more than 40% of title companies received at least one email per month attempting to change wiring or payoff instructions, and 13% reported that a customer had wired funds to a fraudulent account. CertifID's more recent (vendor-sponsored) survey work puts the share of title companies that sent money to a wrong account at 17% in a single year, with half of those hit more than once.

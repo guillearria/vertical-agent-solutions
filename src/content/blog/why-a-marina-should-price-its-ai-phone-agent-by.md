@@ -62,7 +62,7 @@ Be blunt about this in your script, because the failure modes are expensive.
 - **Damage and insurance conversations.** Anything with a surveyor or a claim number goes to an owner or manager.
 - **Price disputes on a finished invoice.** The agent quotes published rates only, never adjusts one.
 
-The same sorting problem shows up in another seasonal trade in [our landscaping spring-flood piece](/blog/can-an-ai-answering-service-keep-up-with-a/). If you want the plain-English grounding on what an agent actually is, start with [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).
+The same sorting problem shows up in another seasonal trade in [our landscaping spring-flood piece](/blog/can-an-ai-answering-service-keep-up-with-a/).
 
 ## Your move before haul-out season
 

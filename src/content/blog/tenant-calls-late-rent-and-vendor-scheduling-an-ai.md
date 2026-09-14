@@ -14,8 +14,6 @@ sources:
 
 If you manage a few dozen rental units, you already know the shape of your day: a phone that rings during dinner, a maintenance request that turns out to be a locked screen door, and a rent roll with three names that are always a week late. AI agents are being sold hard to property managers right now. Here are honest answers to the questions you'd actually ask before letting one near your tenants.
 
-New to the idea of an "agent" in the first place? Start with our [plain-English primer](/blog/the-agentic-wave-is-not-just-for-tech/), then come back.
-
 ## Can it actually answer the tenant phone flood?
 
 Yes — this is the strongest use. A well-set-up agent can pick up calls and texts around the clock, answer the repetitive ones ("What's the gate code?", "When is rent due?", "Is the pool open?"), and log everything into your system. For a mid-size portfolio, most inbound contacts are routine, not emergencies — so an agent that handles the routine 80% frees you to deal with the rest.

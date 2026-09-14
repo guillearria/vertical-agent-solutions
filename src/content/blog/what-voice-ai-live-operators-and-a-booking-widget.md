@@ -20,7 +20,7 @@ sources:
 
 Picture a residential appliance repair company with six techs. Somewhere between 60 and 90 calls and texts land each day, and they are not the same animal. Roughly half are cash-paying homeowners with a dead fridge. A chunk are home warranty dispatches. A smaller slice is manufacturer warranty work. The rest are status calls: where's my part, where's my tech, did you get my photo.
 
-Three things can plausibly stop the leakage: an AI voice-and-text agent, a live answering service, and the self-scheduling widget already sitting inside your field-service software. Here is how each holds up against the jobs that actually matter at intake. (If you want the ground-level definition of an agent first, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).)
+Three things can plausibly stop the leakage: an AI voice-and-text agent, a live answering service, and the self-scheduling widget already sitting inside your field-service software. Here is how each holds up against the jobs that actually matter at intake.
 
 ## Side by side on five intake jobs
 

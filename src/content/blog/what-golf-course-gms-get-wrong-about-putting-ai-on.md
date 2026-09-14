@@ -17,7 +17,7 @@ The pro shop phone at a public or semi-private course rings all day, and almost 
 
 The National Golf Foundation put numbers to that in 2025: the average course phone rings 40 to 50 times a day, two-thirds of the calls are about reservations and pricing, and U.S. courses collectively burn more than 6 million phone hours a year, worth north of $100 million in staff wages. Plenty of those callers could have gotten what they needed without picking up the phone.
 
-So the phone is a cost center. What keeps most GMs from doing anything about it is a short list of beliefs. Here they are, with a verdict on each. (If you want the plain-English version of what an AI agent actually is, start with [our explainer](/blog/the-agentic-wave-is-not-just-for-tech/).)
+So the phone is a cost center. What keeps most GMs from doing anything about it is a short list of beliefs. Here they are, with a verdict on each.
 
 ## "Our members will be insulted by a robot"
 

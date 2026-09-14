@@ -18,7 +18,7 @@ sources:
 
 Meet Cedar Grove Home Care — a composite of the non-medical agencies I've looked at, not a real company. Forty caregivers, sixty clients, one full-time staffing coordinator, and an on-call phone that rings all weekend. No nursing services: bathing, dressing, meals, transfers, companionship, medication reminders.
 
-Six months ago they turned on an AI agent for two jobs only — filling open shifts and taking new inquiries. Everything else stayed human. (If you want the difference between an agent and a chatbot, [this piece covers it](/blog/the-agentic-wave-is-not-just-for-tech/).) Here's a Monday that tested the setup.
+Six months ago they turned on an AI agent for two jobs only — filling open shifts and taking new inquiries. Everything else stayed human. Here's a Monday that tested the setup.
 
 ## 5:04 a.m. — "I can't make it"
 

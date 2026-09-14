@@ -36,8 +36,6 @@ Everything else, the agent was cleared to handle end to end: skip-day and route 
 
 **4:15 p.m. to close.** A second wave of green-pool calls comes in as people get home from work and check their backyards. Same pattern as the morning: triage for safety first, then book. By 6 p.m. the agent has handled 61 calls and texts, escalated 9 (5 for chemical questions that needed a tech visit anyway, 2 safety-related, 2 billing disputes), and every escalation included a summary so the human picking it up wasn't starting cold.
 
-If you want the underlying distinction between a system that can do this kind of judgment call and one that just answers with a script, that's covered in [the agent-vs-chatbot primer](/blog/the-agentic-wave-is-not-just-for-tech/).
-
 ## What changes in month two
 
 After the first month, most owners running a setup like this make three adjustments. First, they tighten the skip-day language, because early on the agent was too literal about "next week" versus "this coming week" and it caused a few missed visits. Second, they add a short recorded or texted explainer for the most common cleaner problems, since roughly a third of "my cleaner isn't working" calls turned out to be the same stuck-wheel issue. Third, they lower the repair-quote threshold that requires human sign-off, not because the agent got a price wrong, but because customers wanted a person's voice on anything over a few hundred dollars, regardless of accuracy.

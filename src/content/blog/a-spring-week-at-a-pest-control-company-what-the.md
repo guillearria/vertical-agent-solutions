@@ -13,8 +13,6 @@ Spring is when the phone stops behaving. Pest control companies routinely see a 
 
 So let's follow one made-up-but-typical company — call it Ridgeline Pest — through a single busy week. Ridgeline runs three trucks and one office manager, Dana, who cannot answer the phone while she's also dispatching technicians. This spring, Ridgeline added an AI voice agent to pick up when Dana can't. Here's what it actually did, day by day, and where it stepped aside.
 
-If "AI agent" is a fuzzy term for you, here's a [plain-language primer](/blog/the-agentic-wave-is-not-just-for-tech/) before we start.
-
 ## Monday: the calls that used to hit voicemail
 
 The first warm Monday brings a flood. By mid-morning Dana is on the road with a technician's paperwork problem, and eleven calls come in.

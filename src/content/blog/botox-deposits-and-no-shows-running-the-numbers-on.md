@@ -16,7 +16,7 @@ sources:
 
 Med spas live and die by their appointment book. Injectables alone make up roughly 45–55% of revenue at the average clinic, and those chairs only earn when they're full. That's why the front desk — booking, reminding, chasing deposits, nudging no-shows — quietly eats more payroll than most owners realize.
 
-So let's do the arithmetic. Below is an honest cost-and-return model for a small clinic with one to three treatment rooms. If you've never looked at what an AI agent actually is, here's the [one-page version](/blog/the-agentic-wave-is-not-just-for-tech/); this post assumes you just want the money math.
+So let's do the arithmetic. Below is an honest cost-and-return model for a small clinic with one to three treatment rooms.
 
 ## The clinic we're modeling
 

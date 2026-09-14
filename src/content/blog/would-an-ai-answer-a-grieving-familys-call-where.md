@@ -13,8 +13,6 @@ Funeral directors carry a fear that most other business owners never have to thi
 
 There are roughly 15,401 funeral homes in the United States, and about three-quarters are family- or privately owned, according to the National Funeral Directors Association. Most run lean, and most forward the phone to someone after hours. The question isn't whether AI belongs at a funeral home. It's which calls it's allowed near. Let's take the fears one at a time.
 
-If you want the plain-English background on what an "AI agent" even is, [start here](/blog/the-agentic-wave-is-not-just-for-tech/) — this post assumes you have the gist.
-
 ## "It'll pick up when someone calls about a death."
 
 This is the fear worth taking most seriously, so let's answer it plainly: an at-need first call — a family or a hospice or a hospital reporting a death — must reach a human, immediately, every time. No menu, no "tell me a little about why you're calling," no hold music.

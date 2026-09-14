@@ -23,7 +23,7 @@ sources:
   - "Cognigy — PCI DSS Compliance with AI Agents — https://www.cognigy.com/product-updates/pci-dss-compliance"
 ---
 
-Most storage calls are short and nearly identical: what have you got, what's it cost, can I come today. The trouble is when they land — while the manager is sweeping out a unit, cutting a lock, or off the clock entirely. Roughly 65% of the ~52,300 self-storage facilities in the U.S. sit outside the top 100 operators, which usually means one manager, one phone, and no call center. Here's what an AI phone and text agent can honestly do about that. (If you want the basic mechanics of how these agents differ from an old phone tree, [start here](/blog/the-agentic-wave-is-not-just-for-tech/).)
+Most storage calls are short and nearly identical: what have you got, what's it cost, can I come today. The trouble is when they land — while the manager is sweeping out a unit, cutting a lock, or off the clock entirely. Roughly 65% of the ~52,300 self-storage facilities in the U.S. sit outside the top 100 operators, which usually means one manager, one phone, and no call center. Here's what an AI phone and text agent can honestly do about that.
 
 ## Can it tell a caller what's actually available right now?
 

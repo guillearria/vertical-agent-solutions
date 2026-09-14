@@ -13,7 +13,7 @@ sources:
   - "Retell AI — AI voice agent all-in per-minute cost breakdown — https://www.retellai.com/blog/ai-voice-agent-pricing-full-cost-breakdown-platform-comparison-roi-analysis"
 ---
 
-Most AI pitches to MSPs skip the arithmetic. This post is the arithmetic. If you need the distinction between an agent that takes action in your PSA and a chatbot that answers questions, that's covered in [the primer on agents versus chatbots](/blog/the-agentic-wave-is-not-just-for-tech/) — everything below assumes you already buy the concept and want to know whether the numbers work.
+Most AI pitches to MSPs skip the arithmetic. This post is the arithmetic.
 
 ## The shop we're pricing
 

@@ -20,7 +20,7 @@ sources:
 
 A prospective student fills out a form at 8:40 p.m. asking about your night HVAC program. Your two admissions reps went home at 5. By the time someone calls back Wednesday morning, that person has already talked to the school across town and stopped answering unknown numbers.
 
-That gap is the real reason trade schools look at AI phone and text agents. The catch is that admissions at a Title IV school is one of the most heavily regulated sales jobs in the country, and a vendor selling you a "24/7 enrollment closer" is describing something you are not allowed to buy. If you want the plain-English version of what an agent actually is before you sort tasks, read [The Agentic Wave, Explained](/blog/the-agentic-wave-is-not-just-for-tech/).
+That gap is the real reason trade schools look at AI phone and text agents. The catch is that admissions at a Title IV school is one of the most heavily regulated sales jobs in the country, and a vendor selling you a "24/7 enrollment closer" is describing something you are not allowed to buy.
 
 Work down this list with your admissions director and your compliance person in the same room.
 
