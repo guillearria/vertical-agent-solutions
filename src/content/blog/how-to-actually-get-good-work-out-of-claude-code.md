@@ -1,4 +1,5 @@
 ---
+archived: true
 title: "How to Actually Get Good Work Out of Claude Code (A Non‑Coder's Playbook)"
 description: "A plain-English playbook for business owners using Claude Code: what it is, how to set it up, and the habits that make it reliable."
 pubDate: 'Jun 24 2026'

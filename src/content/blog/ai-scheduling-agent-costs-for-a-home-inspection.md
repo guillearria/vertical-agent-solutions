@@ -2,6 +2,7 @@
 title: "AI Scheduling Agent Costs for a Home Inspection Business, From One Inspector to Eight"
 description: "What a voice and text booking agent really costs a home inspection firm, and how many recovered inspections a month it takes to pay for itself."
 pubDate: 'Sep 7 2026'
+industry: home-services
 sources:
   - "NAR: How Much Does a Home Inspection Cost in 2025 — https://www.nar.realtor/press-releases/in-the-news/how-much-does-a-home-inspection-cost-in-2025-house-beautiful"
   - "Angi: How Much Does a Home Inspection Cost — https://www.angi.com/articles/how-much-does-home-inspection-cost.htm"

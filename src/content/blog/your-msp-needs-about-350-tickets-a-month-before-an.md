@@ -2,6 +2,7 @@
 title: "Your MSP Needs About 350 Tickets a Month Before an AI Help Desk Agent Pays for Itself"
 description: "Break-even math for a 5–20 person MSP: the stack cost, the ticket share an AI help desk agent really closes, and the four things it can't touch."
 pubDate: 'Aug 2 2026'
+industry: professional-services
 sources:
   - "TruMethods — tickets per endpoint per month benchmark — https://www.trumethods.com/resources/blog/service-tickets-are-they-standing-in-the-way-of-productivity"
   - "BLS Occupational Outlook Handbook, Computer Support Specialists — https://www.bls.gov/ooh/computer-and-information-technology/computer-support-specialists.htm"

@@ -2,6 +2,7 @@
 title: "Order-Status Tickets Are Drowning Your Store's Inbox: An AI Setup Guide for Online Sellers"
 description: "A setup guide for Shopify and WooCommerce sellers handing \"where's my order,\" returns, and product questions to an AI support agent."
 pubDate: 'Jul 24 2026'
+industry: trade-industrial
 sources:
   - "ShippyPro — What WISMO Means & How to Reduce It — https://www.shippypro.com/blog/en/wismo-what-it-means"
   - "Salesforce — WISMO: How to Reduce \"Where Is My Order?\" Calls — https://www.salesforce.com/commerce/wismo/"

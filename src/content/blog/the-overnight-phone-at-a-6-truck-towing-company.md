@@ -2,6 +2,7 @@
 title: "The Overnight Phone at a 6-Truck Towing Company, Priced Three Ways"
 description: "AI dispatch agent, live answering service, or a part-time night dispatcher: monthly costs, surge behavior, and failure points for a small tow operation."
 pubDate: 'Aug 13 2026'
+industry: automotive-transportation
 sources:
   - "Answering Service Cost 2026 Pricing Guide (Answering365) — https://www.answering365.com/blog/answering-service-cost-2026-pricing-guide/"
   - "Answering Service Pricing: The Complete 2026 Cost Guide (Ever-Help) — https://www.ever-help.com/blog/answering-service-pricing-comparison"

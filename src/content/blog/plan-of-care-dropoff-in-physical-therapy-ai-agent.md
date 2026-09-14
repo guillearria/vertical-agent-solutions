@@ -2,6 +2,7 @@
 title: "Plan-of-Care Dropoff in Physical Therapy: AI Agent vs. Coordinator vs. EMR Recalls"
 description: "Monthly cost, realistic recovered visits, and breaking points for three ways a small PT or chiro clinic can rebook patients who quit halfway through care."
 pubDate: 'Aug 20 2026'
+industry: healthcare
 sources:
   - "StrataPT payer reimbursement benchmarks — https://www.stratapt.com/benchmarks/payer-reimbursement-rates"
   - "StrataPT New York reimbursement benchmarks — https://www.stratapt.com/benchmarks/payer-reimbursement-rates/new-york"

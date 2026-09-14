@@ -2,6 +2,7 @@
 title: "No Square-Foot Quotes, No Alarm Codes: An AI Phone Agent FAQ for Janitorial Contractors"
 description: "Building service contractors running 20 to 300 night cleaners ask how an AI agent handles callouts, skipped-restroom tickets, bilingual crews, and bid calls."
 pubDate: 'Sep 10 2026'
+industry: home-services
 sources:
   - "OSHA, Janitorial employees exposure to bloodborne pathogens (interpretation letter) — https://www.osha.gov/laws-regs/standardinterpretations/1992-06-03-0"
   - "OSHA, Most frequently asked questions concerning the bloodborne pathogens standard — https://www.osha.gov/laws-regs/standardinterpretations/1993-02-01-0"

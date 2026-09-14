@@ -2,6 +2,7 @@
 title: "Can an AI Answering Service Keep Up With a Landscaping Company's Spring Phone Flood?"
 description: "When spring floods a landscaping company's phone lines, an AI agent can book, quote, and reschedule enough to keep crews moving. The numbers inside."
 pubDate: 'Jul 13 2026'
+industry: home-services
 sources:
   - "411 Locals: SMBs Don't Answer 62% of Phone Calls — https://411locals.us/small-business-owners-dont-answer-62-of-phone-calls/"
   - "62% of Business Calls Go Unanswered: The $126K Cost — https://www.getaira.io/blog/missed-business-calls-statistics"

@@ -2,6 +2,7 @@
 title: "Water Damage Restoration After-Hours Intake, Graded Against the Carrier Contact Clock"
 description: "An AI phone agent, a restoration answering service, and an in-house coordinator scored on dispatch speed, FNOL detail, documentation, and monthly cost."
 pubDate: 'Sep 4 2026'
+industry: home-services
 sources:
   - "Water Mitigation Authority, TPA response requirements — https://watermitigationauthority.com/third-party-administrator-water-mitigation"
   - "PushLeads, TPA programs for restoration companies — https://pushleads.com/restoration-company-seo/lead-generation/tpa-marketing/"

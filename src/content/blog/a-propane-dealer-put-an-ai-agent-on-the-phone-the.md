@@ -1,7 +1,8 @@
 ---
 title: "A Propane Dealer Put an AI Agent on the Phone the Week Before a 9-Degree Freeze"
-description: "Hour by hour through a fuel dealer's first hard freeze: the will-calls and ETA checks its AI agent took, and the gas-smell calls it never touched."
+description: "A fuel dealer's first hard freeze, call by call: the will-calls and ETA checks its AI agent took, and the gas-smell calls it never touched."
 pubDate: 'Aug 24 2026'
+industry: home-services
 sources:
   - "PERC, What To Do If You Smell Gas — https://propane.com/safety/safety-articles/what-to-do-if-you-smell-gas/"
   - "Kidde, What Should I Do When My Carbon Monoxide Alarm Sounds? — https://www.kidde.com/support/carbon-monoxide-alarms/co-alarm-action"

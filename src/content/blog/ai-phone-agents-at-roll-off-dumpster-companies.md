@@ -2,6 +2,7 @@
 title: "AI Phone Agents at Roll-Off Dumpster Companies: Sort Your Call Types Before You Launch"
 description: "Roll-off haulers running 3 to 25 trucks: sort quotes, swaps, tonnage disputes, and permit calls before an AI phone agent picks up. Includes test calls."
 pubDate: 'Aug 29 2026'
+industry: home-services
 sources:
   - "Dumpsters.com, prohibited items — https://www.dumpsters.com/resources/prohibited-items"
   - "Hometown Dumpster Rental, what can go in a roll-off — https://www.hometowndumpsterrental.com/blog/what-can-i-put-in-a-dumpster"

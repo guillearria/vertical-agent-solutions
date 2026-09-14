@@ -2,6 +2,7 @@
 title: "AI Answering Service Pricing for HVAC Shops: The Whole Stack, Not Just the Per-Minute Rate"
 description: "Line-item costs for an HVAC or plumbing AI phone agent: voice minutes, telephony, setup, integrations, plus the break-even in booked jobs per month."
 pubDate: 'Aug 16 2026'
+industry: home-services
 sources:
   - "Aircall, AI Voice Agent Pricing in 2026 — https://aircall.io/blog/best-practices/ai-voice-agent-cost/"
   - "Allo, AI Call Answering for HVAC: 6 Services Compared — https://www.withallo.com/blog/ai-phone-answering-services-for-hvac"

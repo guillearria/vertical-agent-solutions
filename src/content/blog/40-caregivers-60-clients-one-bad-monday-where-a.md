@@ -2,6 +2,7 @@
 title: "40 Caregivers, 60 Clients, One Bad Monday — Where a Home Care Agency Let AI Run Scheduling"
 description: "Hour by hour through a home care agency's worst Monday: which call-outs and family inquiries an AI agent closed, and which it handed straight to a human."
 pubDate: 'Jul 27 2026'
+industry: healthcare
 sources:
   - "McKnight's Home Care — home care turnover and Activated Insights benchmarking — https://www.mcknightshomecare.com/news/home-care-revenues-rise-as-client-caregiver-turnover-rates-drop-activated-insights-reports/"
   - "HCAOA — home care turnover rate — https://www.hcaoa.org/newsletters/home-care-turnover-rate-jumps-to-80hcaoa-is-here-to-help-members"

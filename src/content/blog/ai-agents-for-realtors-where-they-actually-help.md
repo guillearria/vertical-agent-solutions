@@ -3,7 +3,7 @@ title: "Five Minutes or the Lead Is Gone: AI Follow-Up for Solo Real Estate Agen
 description: "Zillow inquiries go cold in under an hour. What it costs a solo real estate agent to run five-minute AI replies on portal leads and showing requests."
 pubDate: 'Jun 23 2026'
 updatedDate: 'Sep 9 2026'
-industry: real-estate
+industry: real-estate-property
 sources:
   - "NAR — REALTORS® Embrace AI, Digital Tools (2025 Technology Survey) — https://www.nar.realtor/press-releases/realtors-embrace-ai-digital-tools-to-enhance-client-service-nar-survey-finds"
   - "HousingWire — NAR 2025 Technology Survey: Realtor tech usage trends — https://www.housingwire.com/articles/nar-2025-technology-survey-realtor-tech-usage-trends/"

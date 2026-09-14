@@ -2,6 +2,7 @@
 title: "An AI Agent for Wholesale Distributor Order Taking, Rolled Out in Three Phases"
 description: "Stock lookups, order status, then reorder-by-part-number: the order a 10-50 person distributor should turn them on, plus a two-week test plan."
 pubDate: 'Aug 8 2026'
+industry: trade-industrial
 sources:
   - "Distribution Strategy Group, \"Distributor eCommerce Now 20% of Sales and Accelerating\" — https://distributionstrategy.com/distributor-ecommerce-now-20-of-sales-and-accelerating/"
   - "DSG 2024 State of eCommerce in Distribution report (PDF) — https://distributionstrategy.com/wp-content/uploads/2024/11/DSG-Report-2024-State-of-eCommerce-in-Distribution.pdf"

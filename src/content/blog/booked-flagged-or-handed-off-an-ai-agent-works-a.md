@@ -2,6 +2,7 @@
 title: "Booked, Flagged, or Handed Off: An AI Agent Works a Dog Kennel's Holiday Saturday"
 description: "A holiday Saturday at a dog boarding facility, as worked by an AI booking agent: the reservations it closed and the three calls it wisely passed on."
 pubDate: 'Jul 19 2026'
+industry: personal-services
 sources:
   - "Dog Boarding Requirements: What Vaccines Does My Dog Need — https://millsanimalhospital.com/blog/dog-boarding-requirements-vaccines-needed/"
   - "The 5 Shots & Vaccines Dogs Need To Be Boarded, Wag Hotels — https://www.waghotels.com/blog/the-5-shots-vaccines-dogs-need-to-be-boarded/"

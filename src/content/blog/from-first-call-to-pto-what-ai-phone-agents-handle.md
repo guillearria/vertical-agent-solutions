@@ -2,6 +2,7 @@
 title: "From First Call to PTO: What AI Phone Agents Handle at a Residential Solar Company"
 description: "Nine questions residential solar installers ask about AI phone and text agents: lead qualifying, survey booking, PTO status texts, TCPA limits, and hard red…"
 pubDate: 'Aug 18 2026'
+industry: home-services
 sources:
   - "Goodwin, Eleventh Circuit vacates TCPA one-to-one consent rule — https://www.goodwinlaw.com/en/insights/publications/2025/01/alerts-otherindustries-eleventh-circuit-deals-fatal-blow"
   - "Justia, Insurance Marketing Coalition Ltd. v. FCC (11th Cir. 2025) — https://law.justia.com/cases/federal/appellate-courts/ca11/24-10277/24-10277-2025-01-24.html"

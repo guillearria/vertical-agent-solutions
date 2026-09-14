@@ -2,6 +2,7 @@
 title: "Would an AI Answer a Grieving Family's Call? Where Funeral Homes Should Draw the Line"
 description: "Funeral directors' fears about AI phone agents, examined honestly, including the one type of call that must always reach a human first."
 pubDate: 'Jul 21 2026'
+industry: personal-services
 sources:
   - "NFDA — number of funeral homes, ownership, cremation and cost figures — https://nfda.org/news/media-center/nfda-news-releases/id/9786/nfda-releases-2025-cremation-burial-report-comprehensive-insights-to-guide-the-future-of-funeral-service"
   - "NFDA 2025 Cremation & Burial Report (cremation rate) — https://nfda.org/news/media-center/nfda-news-releases/id/9772/americans-choosing-cremation-at-historic-rates-nfda-report-finds"

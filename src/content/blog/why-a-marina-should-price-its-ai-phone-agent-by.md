@@ -2,6 +2,7 @@
 title: "Why a Marina Should Price Its AI Phone Agent by the Year, Not the Month"
 description: "Marinas and boatyards budget seasonally, so this cost stack runs annually, with break-even worked in billed shop hours and winterization contracts."
 pubDate: 'Aug 23 2026'
+industry: hospitality-leisure
 sources:
   - "AgentZap, AI receptionist pricing guide — https://agentzap.ai/blog/ai-receptionist-pricing-complete-cost-guide-2025"
   - "Voksha, AI receptionist pricing and ROI guide — https://voksha.com/guide/ai-receptionist-pricing-guide/"

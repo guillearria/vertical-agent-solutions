@@ -2,6 +2,7 @@
 title: "Setting Up an AI Phone Agent for the Homeowner Calls Flooding Your HOA Management Office"
 description: "Concrete setup steps for community association managers putting an AI agent on assessment, ARC, work-order, and gate-fob calls, plus the escalation red lines."
 pubDate: 'Aug 22 2026'
+industry: real-estate-property
 sources:
   - "Foundation for Community Association Research, industry data — https://foundation.caionline.org/research/industry-data/"
   - "FindHOALaw, Civil Code Section 4765 architectural review procedures — https://findhoalaw.com/civil-code-section-4765-architectural-review-procedures/"

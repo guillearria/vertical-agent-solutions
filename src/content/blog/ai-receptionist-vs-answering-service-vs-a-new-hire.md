@@ -2,7 +2,7 @@
 title: "AI Receptionist vs. Answering Service vs. a New Hire: What Fits a Busy Vet Clinic"
 description: "Cost, coverage, and emergency triage compared across three ways a small-animal clinic can stop missing calls: AI agent, answering service, or new hire."
 pubDate: 'Jul 7 2026'
-industry: veterinary
+industry: healthcare
 sources:
   - "Veterinary Practice Phone Statistics — https://agentzap.ai/blog/veterinary-phone-statistics"
   - "Reduce Missed Calls at Your Vet Clinic (PupPilot) — https://www.puppilot.co/blog/how-to-reduce-missed-calls-vet-clinic"

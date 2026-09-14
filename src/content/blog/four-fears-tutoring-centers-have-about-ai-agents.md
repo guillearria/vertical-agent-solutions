@@ -2,6 +2,7 @@
 title: "Four Fears Tutoring Centers Have About AI Agents — and Which Ones Hold Up"
 description: "Anxious parents, struggling students, and minors' data: we weigh the four biggest fears test-prep and tutoring owners have about AI agents against reality."
 pubDate: 'Jul 16 2026'
+industry: education-nonprofits
 sources:
   - "FTC — Complying with COPPA: Frequently Asked Questions — https://www.ftc.gov/business-guidance/resources/complying-coppa-frequently-asked-questions"
   - "U.S. Dept. of Education — To which educational agencies or institutions does FERPA apply? — https://studentprivacy.ed.gov/faq/which-educational-agencies-or-institutions-does-ferpa-apply"

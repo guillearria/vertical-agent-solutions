@@ -2,6 +2,7 @@
 title: "CPAP and DME Resupply Outreach, Compared: AI Agent, Resupply Software, or a Coordinator on Payroll"
 description: "Illustrative monthly costs, contact volumes, and shipped-order math for three ways an independent CPAP and DME supplier can work its resupply list."
 pubDate: 'Aug 28 2026'
+industry: healthcare
 sources:
   - "CMS DMEPOS Refill Requirements — https://www.cms.gov/dmepos-refill-requirements"
   - "Medtrade, CMS Codifies Refill Rules for DMEPOS — https://medtrade.com/news/billing-reimbursement/cms-codifies-refill-rules-for-dmepos/"

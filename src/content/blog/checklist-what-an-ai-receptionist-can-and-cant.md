@@ -2,6 +2,7 @@
 title: "Checklist: What an AI Receptionist Can and Can't Handle at a Therapy Practice"
 description: "A call-by-call checklist for solo counselors and group practices weighing an AI receptionist, with a crisis escalation script and pre-launch test calls."
 pubDate: 'Aug 7 2026'
+industry: healthcare
 sources:
   - "Senate Finance Committee secret shopper study on ghost networks — https://www.finance.senate.gov/chairmans-news/wyden-calls-for-action-to-get-rid-of-ghost-networks-releases-secret-shopper-study"
   - "HIPAA Journal, February 16, 2026 compliance deadline for the Part 2 final rule — https://www.hipaajournal.com/february-16-2026-compliance-deadline-part-2-final-rule/"

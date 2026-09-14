@@ -2,6 +2,7 @@
 title: "How to Configure an Optometry Practice's AI Front-Desk Agent, From Recall Calls to Retinal Emergencies"
 description: "Optometry front desks field the same four calls all day. Set up recalls, lab status, reorders, and benefits questions with hard rules for eye emergencies."
 pubDate: 'Aug 30 2026'
+industry: healthcare
 sources:
   - "FTC, The Contact Lens Rule: A Guide for Prescribers and Sellers — https://www.ftc.gov/business-guidance/resources/contact-lens-rule-guide-prescribers-sellers"
   - "FTC, FAQs: Complying with the Contact Lens Rule — https://www.ftc.gov/business-guidance/resources/faqs-complying-contact-lens-rule"

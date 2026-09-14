@@ -1,4 +1,5 @@
 ---
+archived: true
 title: "How to Set Up an AI Agent System to Manage Wealth — Without Handing Over the Keys"
 description: "From robo-advisors to bank-grade assistants: how to hand AI agents the busywork of saving and investing while a human keeps the final sign-off."
 pubDate: 'Jun 24 2026'

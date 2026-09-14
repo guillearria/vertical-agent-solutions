@@ -2,6 +2,7 @@
 title: "Security Guard Companies Are Half Right to Fear AI Phone Agents"
 description: "Call-offs, open-shift texts, and alarm calls: which AI phone agent fears at a contract security firm are real and which cost you billable hours."
 pubDate: 'Aug 19 2026'
+industry: trade-industrial
 sources:
   - "ASIS International, guard force turnover — https://www.asisonline.org/security-management-magazine/latest-news/today-in-security/2025/october/guard-force-turnover/"
   - "Belfry Software, how much security companies charge clients — https://www.belfrysoftware.com/blog/how-much-do-security-companies-charge-clients"

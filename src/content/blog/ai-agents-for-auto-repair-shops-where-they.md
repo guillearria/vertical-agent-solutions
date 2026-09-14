@@ -2,7 +2,7 @@
 title: "Missed Calls and Declined Repairs: What an AI Agent Fixes at an Auto Shop"
 description: "Unanswered phones and declined repairs cost auto shops real work. Both are jobs an AI agent does reliably, unlike diagnosing the noise in an engine."
 pubDate: 'Jul 3 2026'
-industry: auto-repair
+industry: automotive-transportation
 sources:
   - "Auto Repair Shop Phone Statistics (AgentZap) — https://agentzap.ai/blog/auto-repair-phone-statistics"
   - "How to Follow Up on Declined Repairs (Affinitiv) — https://www.affinitiv.com/blog/how-to-follow-up-on-declined-repairs/"

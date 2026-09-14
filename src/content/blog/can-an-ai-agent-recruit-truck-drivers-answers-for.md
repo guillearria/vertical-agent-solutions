@@ -2,6 +2,7 @@
 title: "Can an AI Agent Recruit Truck Drivers? Answers for Carriers Running 10 to 75 Trucks"
 description: "Straight answers on letting an AI agent call and text CDL applicants within minutes, pre-screen them, book orientation, and chase down DQ file paperwork."
 pubDate: 'Aug 11 2026'
+industry: automotive-transportation
 sources:
   - "eCFR, 49 CFR 391.23 Investigation and inquiries — https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-391/subpart-C/section-391.23"
   - "FMCSA Drug and Alcohol Clearinghouse, Queries and Consent Requests FAQ — https://clearinghouse.fmcsa.dot.gov/FAQ/Topics/Queries_and_Consent_Requests"

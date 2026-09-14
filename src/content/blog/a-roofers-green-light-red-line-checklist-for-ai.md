@@ -2,6 +2,7 @@
 title: "A Roofer's Green-Light, Red-Line Checklist for AI Phone Agents"
 description: "Storm calls pile up while you're on a roof. This checklist sorts the ones an AI agent can safely catch from the ones that need you on the phone."
 pubDate: 'Jul 23 2026'
+industry: home-services
 sources:
   - "Lead Response Management study (MIT/InsideSales, 2007) — https://www.leadresponsemanagement.org/lrm_study/"
   - "Oldroyd et al., Harvard Business Review lead-response findings — https://www.onecavo.com/wp-content/uploads/2015/11/MIT-InsideSales.com_Lead-Response-Management.pdf"

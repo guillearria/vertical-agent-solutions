@@ -2,6 +2,7 @@
 title: "Travel Advisors Worry an AI Agent Will Cost Them Clients. Five Beliefs, Checked."
 description: "Five beliefs independent travel advisors hold about AI agents, tested against real booking work: relationships, quoting, GDS access, disruptions, and older…"
 pubDate: 'Sep 11 2026'
+industry: hospitality-leisure
 sources:
   - "TravelPulse, \"New Data Reveals Who Is Using Travel Advisors and Why\" (Phocuswright data) — https://www.travelpulse.com/news/agents/new-data-reveals-who-is-using-travel-advisors-and-why"
   - "Phocuswright, \"The advisor advantage\" — https://www.phocuswright.com/Travel-Research/Research-Updates/2026/the-advisor-advantage"

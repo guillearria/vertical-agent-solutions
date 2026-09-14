@@ -3,6 +3,7 @@ title: "Automating an Independent Pharmacy's Refill Line Without Breaking HIPAA,
 description: "Which pharmacy calls a voice agent can take, which consent rules govern refill-due outreach, and the exact words it should say before handing off."
 pubDate: 'Jul 29 2026'
 updatedDate: 'Aug 26 2026'
+industry: healthcare
 sources:
   - "Interruptions in community pharmacies (RSAP) — https://www.sciencedirect.com/science/article/abs/pii/S1551741118307435"
   - "Reduction of phone interruptions post implementation of a central call center, AJHP 2021 — https://pubmed.ncbi.nlm.nih.gov/33244596/"

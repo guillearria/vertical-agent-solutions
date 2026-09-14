@@ -2,6 +2,7 @@
 title: "AI Phone Agent for Pool Service Companies: A Heat-Wave Monday Walkthrough"
 description: "A composite pool service company's AI phone agent triages green-pool panics, skip-day questions, and repair calls on a 105-degree Monday."
 pubDate: 'Aug 17 2026'
+industry: home-services
 sources:
   - "Pool chemical injury data — https://www.cdc.gov/mmwr/volumes/68/wr/mm6819a2.htm"
   - "Chlorine gas mixing danger — https://alliancechemical.com/blogs/news/chlorine-gas-mixing-cleaning-products-pool-safety"

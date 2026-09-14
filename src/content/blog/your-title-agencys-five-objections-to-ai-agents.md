@@ -2,6 +2,7 @@
 title: "Your Title Agency's Five Objections to AI Agents, Ranked From Legitimate to Overblown"
 description: "An honest scorecard for title and escrow owners: which AI agent objections hold up, from wire fraud liability to NPI rules and underwriter pushback."
 pubDate: 'Aug 5 2026'
+industry: professional-services
 sources:
   - "ALTA — Title Companies Help Mitigate Risk of Wire Fraud, ALTA Cybercrime Study Shows — https://alta.org/news-and-publications/news/20250227-Title-Companies-Help-Mitigate-Risk-of-Wire-Fraud-ALTA-Cybercrime-Study-Shows"
   - "CertifID — 2026 State of Wire Fraud Report: Key Findings — https://www.certifid.com/article/2026-state-of-wire-fraud-report"

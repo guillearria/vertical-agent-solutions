@@ -2,7 +2,7 @@
 title: "Tenant Calls, Late Rent, and Vendor Scheduling: An AI Agent FAQ for Small Landlords"
 description: "Where an AI agent helps a small residential property manager with tenant calls, late rent, and vendor scheduling, plus the fair-housing lines it cannot cross."
 pubDate: 'Jul 6 2026'
-industry: property-management
+industry: real-estate-property
 sources:
   - "HUD guidance on the Fair Housing Act and AI screening — https://www.consumerfinancialserviceslawmonitor.com/2024/05/hud-issues-guidance-on-applicability-of-the-fair-housing-act-to-tenant-screening-and-housing-related-advertising-that-relies-upon-algorithms-and-ai/"
   - "Fair housing risk in AI chatbot applicant interactions — https://www.spencerfane.com/insight/the-next-frontier-of-fair-housing-risk-ai-chatbots-and-early-stage-applicant-interactions/"

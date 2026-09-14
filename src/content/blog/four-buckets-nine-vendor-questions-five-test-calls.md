@@ -2,6 +2,7 @@
 title: "Four Buckets, Nine Vendor Questions, Five Test Calls: Rolling Out an AI Agent at a Small RIA"
 description: "Independent advisory firms can hand scheduling, paperwork chases and portal resets to an AI agent. Sort the tasks, quiz the vendor, then test with your CCO."
 pubDate: 'Sep 13 2026'
+industry: professional-services
 sources:
   - "17 CFR § 275.204-2, Books and records (Cornell LII) — https://www.law.cornell.edu/cfr/text/17/275.204-2"
   - "SEC Rule 204-2 recordkeeping overview (Global Relay) — https://www.globalrelay.com/resources/the-compliance-hub/rules-and-regulations/recordkeeping-sec-rule-204/"
@@ -96,4 +97,4 @@ Record all five. Failures are usually configuration, not capability, and they sh
 
 ## Take this to your next compliance meeting
 
-Print the four buckets, give your client service associate a marker, and have them move any task they think is misfiled. The arguments that produces are the real policy document, and your annual review under Rule 206(4)-7 is a reasonable place to lodge it. Firms thinking more broadly about agents across the practice may find [this piece on wealth workflows](/blog/how-to-set-up-an-ai-agent-system-to-manage-wealth/) useful next.
+Print the four buckets, give your client service associate a marker, and have them move any task they think is misfiled. The arguments that produces are the real policy document, and your annual review under Rule 206(4)-7 is a reasonable place to lodge it.

@@ -2,6 +2,7 @@
 title: "What Voice AI, Live Operators, and a Booking Widget Each Do With 80 Appliance Repair Calls a Day"
 description: "A six-tech appliance repair shop weighs three intake fixes against after-hours calls, trip fees, serial numbers, and home-warranty dispatches."
 pubDate: 'Sep 12 2026'
+industry: home-services
 sources:
   - "Rossware, Warranty Companies That Dispatch Through ServiceBench — https://rossware.freshdesk.com/support/solutions/articles/31000146283-warranty-companies-that-dispatch-through-servicebench"
   - "Warranty Week, NEW Acquires ServiceBench — https://www.warrantyweek.com/archive/ww20080123.html"

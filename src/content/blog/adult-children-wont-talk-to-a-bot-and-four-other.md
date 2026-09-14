@@ -2,6 +2,7 @@
 title: "Adult Children Won't Talk to a Bot, and Four Other Assisted Living Myths About AI Phone Agents"
 description: "Assisted living and memory care operators fear an AI phone agent will drive families away. Five common beliefs, checked against how placement calls actually…"
 pubDate: 'Aug 12 2026'
+industry: healthcare
 sources:
   - "Senior Housing News, \"19% of Calls to Senior Housing Communities Go Unanswered\" (Enquire Solutions benchmark) — https://seniorhousingnews.com/2018/04/16/19-calls-senior-housing-communities-go-unanswered/"
   - "NextWave, \"How to Respond FIRST to A Place for Mom leads\" — https://info.nextwaveco.com/blog/how-to-respond-first-to-a-place-for-mom-leads"

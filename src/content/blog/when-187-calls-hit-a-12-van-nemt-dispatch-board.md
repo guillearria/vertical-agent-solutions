@@ -2,6 +2,7 @@
 title: "When 187 Calls Hit a 12-Van NEMT Dispatch Board, the AI Agent Answered First"
 description: "Dialysis runs, will-calls, and \"where's my driver\" calls at a 12-van NEMT company, mapped hour by hour against what an AI phone agent can actually do."
 pubDate: 'Aug 10 2026'
+industry: automotive-transportation
 sources:
   - "Louisiana Medicaid Medical Transportation manual (will-call two-hour standard) — https://www.lamedicaid.com/provweb1/Providermanuals/manuals/Med_Trans/Med_Trans_10.2_11-16-21.pdf"
   - "Louisiana DHH Informational Bulletin 12-8, scheduling NEMT — https://www.ldh.la.gov/assets/docs/BayouHealth/Informational_Bulletins/12-08/IB12-8_revised_2.25.19.pdf"

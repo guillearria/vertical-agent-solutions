@@ -2,6 +2,7 @@
 title: "Quote the Corporate Lunches, Route the Weddings: Catering Owners Ask About AI Inquiry Agents"
 description: "Eight questions catering owners ask before letting software near an event quote: per-head pricing, final counts, deposits, and allergy notes."
 pubDate: 'Aug 25 2026'
+industry: hospitality-leisure
 sources:
   - "FDA Food Code 2022, Chapter 2 (Management and Personnel) — https://www.c-uphd.org/documents/eh/2022-FDA-Food-Code-Chapter-2-Management-and-Personnel.pdf"
   - "Cornell Institute for Food Safety — Understanding Required Competencies for the 2022 Food Code — https://cals.cornell.edu/institute-for-food-safety/extension-services/understanding-required-competencies-for-2022-food-code"

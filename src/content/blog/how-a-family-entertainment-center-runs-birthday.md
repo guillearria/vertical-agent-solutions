@@ -2,6 +2,7 @@
 title: "How a Family Entertainment Center Runs Birthday Party and Group Rate Calls Through an AI Agent"
 description: "Party quotes, deposit chasing, and one blown group rate: a Saturday walkthrough of an AI phone agent at a two-location bowling and trampoline venue."
 pubDate: 'Sep 8 2026'
+industry: hospitality-leisure
 sources:
   - "White Hutchinson Leisure e-Newsletter, \"The Party Hero: turning LBE birthday parties into unforgettable experiences\" — https://www.whitehutchinson.com/news/lenews/2026/august/article107.shtml"
   - "CenterEdge Software, Advantage Events (party booking, deposits, online waivers) — https://centeredgesoftware.com/products/advantage-events/"

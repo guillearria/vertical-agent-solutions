@@ -2,6 +2,7 @@
 title: "Sorting Which Loan-Inquiry Tasks a Mortgage Brokerage Can Hand an AI Agent"
 description: "TRID, TCPA, and NMLS rules decide how far an AI agent can go on mortgage leads. A sorting list for brokerages running 2 to 20 people."
 pubDate: 'Aug 14 2026'
+industry: professional-services
 sources:
   - "MBA, IMBs Production Profits Remain Flat in First Quarter of 2026 — https://www.mba.org/news-and-research/newsroom/news/2026/05/15/imbs-production-profits-remain-flat-in-first-quarter-of-2026"
   - "HousingWire, IMB profit rises to $727 per loan in Q1 2026 even as costs jump — https://www.housingwire.com/articles/mba-imb-profit-costs-q1-2026/"

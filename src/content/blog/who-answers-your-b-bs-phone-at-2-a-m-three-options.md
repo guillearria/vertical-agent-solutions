@@ -2,6 +2,7 @@
 title: "Who Answers Your B&B's Phone at 2 a.m.? Three Options for a 5–20 Room Property"
 description: "For a small hotel or B&B, compare an AI booking agent, an answering service, and part-time night staff on cost, coverage, and where each one fails."
 pubDate: 'Jul 14 2026'
+industry: hospitality-leisure
 sources:
   - "Answering service cost guide (Nextiva) — https://www.nextiva.com/blog/answering-service-cost.html"
   - "Answering service 2026 pricing (Answering365) — https://www.answering365.com/blog/answering-service-cost-2026-pricing-guide/"

@@ -2,6 +2,7 @@
 title: "A 30-Day Plan for Nonprofits That Want an AI Agent Handling Donor and Volunteer Email"
 description: "Executive directors with 1–15 staff: pick one job, connect it to the list you already keep, write escalation rules, and test on 20 people before going live."
 pubDate: 'Aug 1 2026'
+industry: education-nonprofits
 sources:
   - "IRS — Charitable contributions: Written acknowledgments — https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments"
   - "Google Workspace for Nonprofits with Gemini — https://workspace.google.com/learning/google-workspace-for-nonprofits-with-gemini"

@@ -2,6 +2,7 @@
 title: "What an AI Check-Call Agent Costs a 5-Person Freight Brokerage (and How Many Loads It Takes to Break Even)"
 description: "Line-by-line numbers for a 3–10 person brokerage: the hours an AI voice agent absorbs, what the monthly stack costs, and the break-even load count."
 pubDate: 'Jul 26 2026'
+industry: automotive-transportation
 sources:
   - "DAT: Dry van spot rates top contract for first time since February 2022 (July 9, 2026) — https://www.dat.com/company/news-events/news-releases/dat-dry-van-spot-rates-top-contract-for-first-time-since-february-2022-flatbed-rates-hit-record-high"
   - "Verisk CargoNet: Cargo theft losses surge to estimated $725 million in 2025 — https://www.cargonet.com/news-and-events/cargonet-in-the-media/2025-theft-trends/"

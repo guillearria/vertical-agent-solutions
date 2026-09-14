@@ -2,6 +2,7 @@
 title: "11 Questions Equipment Rental Yards Ask Before Handing the Phone to an AI Agent"
 description: "Rate cards, cross-yard availability, deposits, overdue trenchers, DOT windows: 11 questions rental yards ask before trusting an AI with the counter phone."
 pubDate: 'Aug 4 2026'
+industry: trade-industrial
 sources:
   - "ARA 2026 equipment and event rental forecast (Lift and Access) — https://www.liftandaccess.com/article/ara-updates-2026-rental-forecast-for-equipment-industry"
   - "ARA updated North American forecasts (Rental Management) — https://news.ararental.org/ara-releases-updated-equipment-event-economic-forecasts-for-north-america"

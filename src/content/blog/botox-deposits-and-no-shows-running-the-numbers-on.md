@@ -2,6 +2,7 @@
 title: "Botox, Deposits, and No-Shows: Running the Numbers on a Med Spa Booking Agent"
 description: "A line-by-line look at where a med spa's front-desk hours go, what an AI booking agent offsets, and when it breaks even for a 1–3 room clinic."
 pubDate: 'Jul 12 2026'
+industry: healthcare
 sources:
   - "Med spa no-show rates (Mangomint) — https://www.mangomint.com/blog/med-spa-booking-statistics/"
   - "No-show statistics by industry (Etisia) — https://www.etisia.com/no-show-statistics"

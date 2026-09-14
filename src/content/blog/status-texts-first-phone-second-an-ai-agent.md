@@ -2,6 +2,7 @@
 title: "Status Texts First, Phone Second: An AI Agent Rollout for Collision Repair Shops"
 description: "Body shops can hand repair-status texts and calls to an AI agent in a set order, from CCC milestones to rental handoffs. Includes five pre-launch test calls."
 pubDate: 'Sep 6 2026'
+industry: automotive-transportation
 sources:
   - "Enterprise U.S. Length of Rental Q2 2025 — https://www.enterprise.com/content/dam/ent-brand/LOB/ReplacementResources/q2-2025/25_ENT_N01966_RLD%20LOR_Q2_2025_USA_V2.pdf"
   - "CollisionWeek, U.S. Length of Rental Holds at 15.1 Days in Second Quarter — https://collisionweek.com/2026/08/14/u-s-length-rental-holds-15-1-days-second-quarter/"

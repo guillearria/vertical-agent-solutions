@@ -2,6 +2,7 @@
 title: "Where a Staffing Agency's Recruiter Hours Go — and What a Screening Agent Costs to Win Them Back"
 description: "Line-by-line: where a small staffing agency's recruiter hours go, which tasks an AI agent offsets, what the tools cost, and the break-even point."
 pubDate: 'Jul 18 2026'
+industry: professional-services
 sources:
   - "2026 Recruiting Coordination Statistics on Interview Scheduling — https://candidate.fyi/post/2026-recruiting-coordination-statistics"
   - "38% of Recruiter Time Is Wasted on Scheduling Tasks (Cadient) — https://cadient.ai/article/38-percent-of-your-recruiters-day-is-wasted-on-scheduling"

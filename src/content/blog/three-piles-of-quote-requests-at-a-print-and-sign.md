@@ -2,6 +2,7 @@
 title: "Three Piles of Quote Requests at a Print and Sign Shop, and What an AI Agent Does With Each"
 description: "Price-list lookups, estimator jobs, and requests missing half their specs: sorting those three piles is where an AI agent earns its keep at a print or sign…"
 pubDate: 'Sep 2 2026'
+industry: trade-industrial
 sources:
   - "Paper Market Update, April 2026 (Sheridan) — https://www.sheridan.com/insights/paper-market-update-april-2026/"
   - "Paper Market Update, January 2026 (Sheridan) — https://www.sheridan.com/insights/paper-market-update-january-2026/"

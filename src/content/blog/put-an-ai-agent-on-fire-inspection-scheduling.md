@@ -2,6 +2,7 @@
 title: "Put an AI Agent on Fire Inspection Scheduling Before It Ever Answers an Alarm Call"
 description: "Three-stage rollout for fire protection and alarm contractors: outbound inspection booking, after-hours triage, monitoring renewals, plus escalation rules."
 pubDate: 'Aug 15 2026'
+industry: home-services
 sources:
   - "FCC, Declaratory Ruling on AI-generated voices under the TCPA (FCC 24-17) — https://docs.fcc.gov/public/attachments/FCC-24-17A1.pdf"
   - "Wilson Sonsini, FCC Rules AI-Generated Voices Are \"Artificial\" Under the TCPA — https://www.wsgr.com/en/insights/fcc-rules-ai-generated-voices-are-artificial-under-the-tcpa.html"

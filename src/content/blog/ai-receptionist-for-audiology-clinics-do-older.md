@@ -2,6 +2,7 @@
 title: "AI Receptionist for Audiology Clinics: Do Older Patients Really Hang Up?"
 description: "Verdicts on the five objections independent hearing practices raise about voice agents, from patient age and HIPAA to Medicare Advantage benefit checks."
 pubDate: 'Aug 27 2026'
+industry: healthcare
 sources:
   - "NIDCD, Age-Related Hearing Loss (Presbycusis) — https://www.nidcd.nih.gov/health/age-related-hearing-loss"
   - "Pew Research Center, Internet use, smartphone ownership, digital divides in the US — https://www.pewresearch.org/short-reads/2026/01/08/internet-use-smartphone-ownership-digital-divides-in-u-s/"

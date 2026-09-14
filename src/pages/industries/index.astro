@@ -4,7 +4,7 @@ import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
-import { industries } from '../../data/industries';
+import { industries } from '../../../lib/industries';
 
 const active = (await getCollection('blog')).filter((p) => !p.data.archived);
 const hubs = Object.entries(industries)
@@ -22,7 +22,7 @@ const hubs = Object.entries(industries)
 	<head>
 		<BaseHead
 			title={`Industries — ${SITE_TITLE}`}
-			description="AI agent guides by industry: dental, auto repair, law, real estate, salons, restaurants, and more. Pick yours for guides that map onto your actual work."
+			description="AI agent guides by sector: home services, healthcare, automotive, professional services, hospitality, and more. Pick yours for guides that map onto your actual work."
 		/>
 		<style>
 			.standfirst {
@@ -84,7 +84,7 @@ const hubs = Object.entries(industries)
 			</ul>
 			<p class="general">
 				Not your industry yet? The cross-industry guides in <a href="/blog/">all guides</a> cover
-				what agents are and how to adopt them anywhere — and new industries land regularly.
+				what agents are and how to adopt them anywhere. New industries land most weeks.
 			</p>
 		</main>
 		<Footer />

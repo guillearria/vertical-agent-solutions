@@ -2,6 +2,7 @@
 title: "A Go/No-Go List for Limo and Black Car Fleets Adding an AI Booking Agent"
 description: "Airport runs, ETA texts, prom quotes: which ones a 5-to-40-car fleet's AI agent can book alone, plus the data to wire in and five test calls to run first."
 pubDate: 'Sep 5 2026'
+industry: automotive-transportation
 sources:
   - "Limo Anywhere Knowledge Center, How to Set Up and Use Real-Time Flight Tracking — https://kb.limoanywhere.com/docs/how-the-set-up-and-use-real-time-flight-tracking/"
   - "Limo Anywhere, Black Car Service Software — https://www.limoanywhere.com/black-car-service-software/"

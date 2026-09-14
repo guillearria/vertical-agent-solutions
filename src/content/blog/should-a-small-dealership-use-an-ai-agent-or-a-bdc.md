@@ -2,6 +2,7 @@
 title: "Should a Small Dealership Use an AI Agent or a BDC Rep for Lead Follow-Up?"
 description: "For independent dealers: how an AI follow-up agent, an in-house BDC rep, and an outsourced call center compare on speed, cost, and where each fails."
 pubDate: 'Jul 22 2026'
+industry: automotive-transportation
 sources:
   - "MIT/InsideSales Lead Response Management Study — https://25649.fs1.hubspotusercontent-na2.net/hub/25649/file-13535879-pdf/docs/mit_study.pdf"
   - "Kixie, speed-to-lead statistics (HBR 2.24M leads) — https://www.kixie.com/sales-blog/speed-to-lead-response-time-statistics-that-drive-conversions/"

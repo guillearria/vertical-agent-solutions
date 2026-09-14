@@ -6,7 +6,7 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import PostCard from '../components/PostCard.astro';
 import { AUTHOR_NAME, AUTHOR_URL, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import { industries } from '../data/industries';
+import { industries } from '../../lib/industries';
 
 const active = (await getCollection('blog')).filter((post) => !post.data.archived);
 const latest = [...active]

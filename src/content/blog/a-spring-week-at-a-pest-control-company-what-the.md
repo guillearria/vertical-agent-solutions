@@ -2,7 +2,7 @@
 title: "A Spring Week at a Pest Control Company: What the AI Booking Agent Caught and What It Passed to a Human"
 description: "Five spring days at a small pest control company, call by call: what the AI scheduler booked, what it escalated, and why."
 pubDate: 'Jul 11 2026'
-industry: pest-control
+industry: home-services
 sources:
   - "Aptive Pest Control Forecasts One of the Busiest Pest Seasons in Years (Business Wire) — https://www.businesswire.com/news/home/20260402724999/en/Aptive-Pest-Control-Forecasts-One-of-the-Busiest-Pest-Seasons-in-Years"
   - "62% of Business Calls Go Unanswered (Aira) — https://www.getaira.io/blog/missed-business-calls-statistics"

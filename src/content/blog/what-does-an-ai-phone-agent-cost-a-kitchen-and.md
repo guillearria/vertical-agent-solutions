@@ -2,6 +2,7 @@
 title: "What Does an AI Phone Agent Cost a Kitchen-and-Bath Remodeler?"
 description: "Illustrative line-item costs for a remodeler's AI phone agent, plus break-even math in booked in-home consultations instead of vague percentages."
 pubDate: 'Aug 31 2026'
+industry: home-services
 sources:
   - "Google Ads for Remodelers: CPC and CPL benchmarks (BG Collective) — https://www.bgcollective.com/solutions-lab/google-ads-for-remodelers-wins"
   - "Real cost of contractor leads: Angi, SEO, Ads (HomeShowOff) — https://homeshowoff.com/real-cost-of-contractor-leads/"

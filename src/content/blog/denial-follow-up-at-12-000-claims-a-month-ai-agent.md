@@ -2,6 +2,7 @@
 title: "Denial Follow-Up at 12,000 Claims a Month: AI Agent, Offshore Team, or a New Biller?"
 description: "Cost per touch, turnaround, rework, and BAA realities for a small RCM company choosing between an AI voice agent, offshore staff, or another in-house biller."
 pubDate: 'Aug 7 2026'
+industry: healthcare
 sources:
   - "CAQH 2024 Index Report — https://www.caqh.org/hubfs/Index/2024%20Index%20Report/CAQH_IndexReport_2024_FINAL.pdf"
   - "CAQH: New Index Reveals $20B Savings Opportunity — https://www.caqh.org/blog/new-caqh-index-reveals-20b-savings-opportunity-to-cut-waste-reduce-costs-and-improve-patient-access"

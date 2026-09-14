@@ -2,6 +2,7 @@
 title: "What Golf Course GMs Get Wrong About Putting AI on the Pro Shop Phone"
 description: "Members won't be insulted, your tee sheet software won't cover it, and frost delays are easier to automate than you'd guess. Five golf myths, tested."
 pubDate: 'Sep 3 2026'
+industry: hospitality-leisure
 sources:
   - "National Golf Foundation, \"Golf's $100 Million Phone Problem\" — https://www.ngf.org/short-game/golfs-100-million-phone-problem/"
   - "National Golf Foundation, \"Record Rounds Again in 2025, with 2K Fewer Courses\" — https://www.ngf.org/short-game/record-rounds-again-in-2025-with-2k-fewer-courses/"

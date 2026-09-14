@@ -2,6 +2,7 @@
 title: "An AI Agent Can Book Your Trade School's Campus Tours. It Cannot Answer FAFSA Questions."
 description: "Fifteen admissions inquiry tasks at a CDL, HVAC, or cosmetology school, graded for AI phone and text agents, with the TCPA and Title IV rules behind each."
 pubDate: 'Aug 21 2026'
+industry: education-nonprofits
 sources:
   - "Dear Colleague Letter GEN-25-01, misrepresentations by third-party service providers — https://fsapartners.ed.gov/knowledge-center/library/dear-colleague-letters/2025-01-16/notice-interpretation-regarding-misrepresentations-third-party-service-providers-engaged-institution-higher-education"
   - "Holland & Knight, U.S. Department of Education Focuses on Misrepresentation by Higher Education, Partners — https://www.hklaw.com/en/insights/publications/2025/01/us-department-of-education-focuses-on-misrepresentation"

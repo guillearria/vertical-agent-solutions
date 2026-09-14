@@ -10,7 +10,7 @@ import { resolve } from 'node:path';
 import satori from 'satori';
 import sharp from 'sharp';
 import { SITE_TITLE } from '../../consts';
-import { industries, industryName } from '../../data/industries';
+import { industries, industryName } from '../../../lib/industries';
 
 const DOMAIN = 'verticalagentsolutions.com';
 

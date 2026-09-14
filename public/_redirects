@@ -1,0 +1,25 @@
+# 2026-09-14: the twelve per-vertical hubs became nine sector hubs (lib/industries.ts).
+/industries/dental-practices/ /industries/healthcare/ 301
+/industries/dental-practices /industries/healthcare/ 301
+/industries/veterinary/ /industries/healthcare/ 301
+/industries/veterinary /industries/healthcare/ 301
+/industries/auto-repair/ /industries/automotive-transportation/ 301
+/industries/auto-repair /industries/automotive-transportation/ 301
+/industries/real-estate/ /industries/real-estate-property/ 301
+/industries/real-estate /industries/real-estate-property/ 301
+/industries/property-management/ /industries/real-estate-property/ 301
+/industries/property-management /industries/real-estate-property/ 301
+/industries/law-firms/ /industries/professional-services/ 301
+/industries/law-firms /industries/professional-services/ 301
+/industries/insurance-agencies/ /industries/professional-services/ 301
+/industries/insurance-agencies /industries/professional-services/ 301
+/industries/accounting-bookkeeping/ /industries/professional-services/ 301
+/industries/accounting-bookkeeping /industries/professional-services/ 301
+/industries/pest-control/ /industries/home-services/ 301
+/industries/pest-control /industries/home-services/ 301
+/industries/gyms-fitness/ /industries/personal-services/ 301
+/industries/gyms-fitness /industries/personal-services/ 301
+/industries/salons/ /industries/personal-services/ 301
+/industries/salons /industries/personal-services/ 301
+/industries/restaurants/ /industries/hospitality-leisure/ 301
+/industries/restaurants /industries/hospitality-leisure/ 301

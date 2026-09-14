@@ -2,6 +2,7 @@
 title: "Three Ways to Clear a Machine Shop's RFQ Inbox (and What Each One Gets Wrong)"
 description: "Speed-to-quote, monthly cost, and failure modes for three ways a 5–50 person machine shop can handle RFQ intake: an AI agent, a part-timer, or you."
 pubDate: 'Jul 30 2026'
+industry: trade-industrial
 sources:
   - "The Fabricator — 5 steps to faster quoting in the job shop — https://www.thefabricator.com/thefabricator/article/shopmanagement/5-steps-to-faster-quoting-in-the-job-shop"
   - "CNCCookbook — Machine Shop Quoting + Cost Estimation survey results — https://www.cnccookbook.com/job-quote-cost-estimation-survey-results/"

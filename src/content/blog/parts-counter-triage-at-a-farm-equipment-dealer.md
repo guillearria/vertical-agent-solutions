@@ -1,7 +1,8 @@
 ---
 title: "Parts Counter Triage at a Farm Equipment Dealer: One Harvest Day With an AI Agent on the Phone"
-description: "Hour by hour through harvest at a two-store ag dealership: the calls an AI parts agent closed, the ones it escalated in seconds, and the ones it botched."
+description: "One harvest day at a two-store ag dealership: the parts calls an AI agent closed, the ones it escalated in seconds, and the ones it botched."
 pubDate: 'Sep 1 2026'
+industry: trade-industrial
 sources:
   - "Farm Progress, \"Measuring Planter Downtime\" — https://www.farmprogress.com/farm-business/measuring-planter-downtime"
   - "United Soybean Board, \"Study Reveals Ramifications of Limited Rural Broadband Service on American Farmers\" — https://unitedsoybean.org/hopper/study-rural-broadband-ag-technology/"

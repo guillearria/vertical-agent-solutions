@@ -2,6 +2,7 @@
 title: "Before You Let an AI Agent Near Your Wedding Venue's Calendar: A Booking-Season Checklist"
 description: "Date checks, tour bookings, and deposit reminders can go to an AI agent. Custom pricing and day-of chaos can't. A checklist for testing the line first."
 pubDate: 'Jul 31 2026'
+industry: hospitality-leisure
 sources:
   - "Lead Response Management Study (MIT / InsideSales, Dr. James Oldroyd) — https://www.leadresponsemanagement.org/lrm_study/"
   - "Executive summary of the MIT–InsideSales lead response study (PDF) — https://www.onecavo.com/wp-content/uploads/2015/11/MIT-InsideSales.com_Lead-Response-Management.pdf"

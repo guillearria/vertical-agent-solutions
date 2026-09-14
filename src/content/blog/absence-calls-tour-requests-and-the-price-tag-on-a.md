@@ -2,6 +2,7 @@
 title: "Absence Calls, Tour Requests, and the Price Tag on a Private School's AI Front-Office Agent"
 description: "Setup fees, monthly rates, SIS integration effort, and break-even math for a K-12 school of 150-600 students where two people answer every call."
 pubDate: 'Aug 9 2026'
+industry: education-nonprofits
 sources:
   - "Aircall — AI Voice Agent Pricing in 2026 — https://aircall.io/blog/best-practices/ai-voice-agent-cost/"
   - "Retell AI — AI Voice Agent Pricing: Full Cost Breakdown — https://www.retellai.com/blog/ai-voice-agent-pricing-full-cost-breakdown-platform-comparison-roi-analysis"
