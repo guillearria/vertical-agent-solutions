@@ -25,9 +25,10 @@ Status: **fully automated and verified end-to-end** (Jul 2 2026; Telegram made i
   rule across this portfolio is that a document may name another repo but must never depend on
   a file path inside one — paths break silently when the other repo reorganises. Fix: keep the
   TODO, drop the path — `{/* TODO: add LinkedIn URL once live */}`. Present since 2026-08-05.
-- [ ] **One-line cutover, later — not now.** When the portfolio's front-door site goes live, the
-  footer's author link (`AUTHOR_URL` in `src/consts.ts`) changes from the GitHub profile to the
-  front door. One string; listed here only so it is not a surprise.
+- [x] ~~**One-line cutover, later.** When the portfolio's front-door site goes live, the footer's
+  author link (`AUTHOR_URL` in `src/consts.ts`) changes from the GitHub profile to the front
+  door.~~ **Retired 2026-09-13** — there will be no front-door site; the GitHub profile is the
+  hub and `AUTHOR_URL` stays exactly where it is. Nothing to do.
 
 - [x] **Sort `rss.xml` newest-first** — **done Aug 5 2026**: feed now sorts by `pubDate` (descending) after the `archived` filter. Remaining quirk: `pubDate`s are date-only (midnight GMT), so same-day ordering is undefined — harmless at one post/day.
 - [ ] **Watch the next 2–3 editor runs** (cron 13:17 UTC) for varied titles/formats now that the de-templating rules are live; the HVAC vertical is uncovered and fair game again.
