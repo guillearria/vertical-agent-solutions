@@ -6,3 +6,4 @@ export const SITE_DESCRIPTION =
 	'Practical, plain-English guides to adopting AI agents in your industry.';
 export const AUTHOR_NAME = 'Guillermo Arria-Devoe';
 export const AUTHOR_URL = 'https://github.com/guillearria';
+export const REPO_URL = 'https://github.com/guillearria/vertical-agent-solutions';

@@ -4,7 +4,7 @@ Status: **fully automated and verified end-to-end** (Jul 2 2026; Telegram made i
 
 ## Open items
 
-- [ ] **Design floor: the footer needs a repo link** — *one must-fail, one line.* A
+- [x] **Design floor: the footer needs a repo link** — **done 2026-09-13**: `.fine` now reads `… Built and supervised by [author] · Project code on [GitHub]` via a new `REPO_URL` in `src/consts.ts`. *Original note:* A
   deterministic floor checker now grades the three public sites in this portfolio on the same
   fifteen required elements. This site scores **one must-fail**, and it is the only one:
   **F8 — the footer must carry a link to the project's own source repo.** The ruled floor is a
@@ -15,7 +15,7 @@ Status: **fully automated and verified end-to-end** (Jul 2 2026; Telegram made i
   author link or as a `footer-links` entry). Nothing else about this footer changes — it was
   reviewed and is the reference for the rest of the portfolio. This site is otherwise at 14/15
   and was the donor the standard was extracted from.
-- [ ] **Three source comments point at a file in a different, private repo** — *found by a
+- [x] **Three source comments point at a file in a different, private repo** — **done 2026-09-13**: the path is gone from all three comments; the bare `TODO: add LinkedIn URL once live` stays. *Original note: found by a
   portfolio sweep 2026-09-11, low severity, three-line fix.* `src/components/Footer.astro:25`,
   `src/pages/about.astro:59`, and `src/pages/how-this-site-writes-itself.astro:79` each carry
   `{/* TODO: add LinkedIn URL once live — see <path in a private repo> */}`. They are
