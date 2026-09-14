@@ -29,7 +29,19 @@ export interface Post {
 
 export function frontmatterValue(fm: string, key: string): string {
 	const m = fm.match(new RegExp(`^${key}:\\s*(.+)$`, 'm'));
-	return m ? m[1].trim().replace(/^['"]|['"]$/g, '') : '';
+	if (!m) return '';
+	const raw = m[1].trim();
+	// buildFrontmatter writes title/description via JSON.stringify, so a value
+	// holding a double quote arrives as \" — decode it, or it gets escaped
+	// again on the next write (found 2026-09-14 on a description with quotes).
+	if (raw.startsWith('"')) {
+		try {
+			return JSON.parse(raw) as string;
+		} catch {
+			/* not valid JSON: fall through to the plain strip */
+		}
+	}
+	return raw.replace(/^['"]|['"]$/g, '');
 }
 
 export function splitPost(content: string): { fm: string; body: string } {
