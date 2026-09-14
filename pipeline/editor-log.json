@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-15T13:50:03.203Z",
-		"action": "new_post",
-		"slug": "put-an-ai-agent-on-fire-inspection-scheduling",
-		"reason": "Fire protection and alarm/security service companies are a sizable, compliance-driven vertical the catalog has never touched and whose recurring-inspection scheduling problem is distinct from its home-services and clinic clusters; practical guide is the least-recently-used format (last on Aug 8)."
-	},
-	{
 		"date": "2026-08-16T13:49:11.760Z",
 		"action": "new_post",
 		"slug": "ai-answering-service-pricing-for-hvac-shops-the",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "four-buckets-nine-vendor-questions-five-test-calls",
 		"reason": "Independent RIAs and financial advisory practices are a sizable, compliance-heavy vertical the catalog has never covered (the existing wealth post is consumer-facing, not firm front-office), and checklist is the least-recently-used format."
+	},
+	{
+		"date": "2026-09-14T18:44:01.554Z",
+		"action": "improve_post",
+		"slug": "put-an-ai-agent-on-fire-inspection-scheduling",
+		"reason": "Fourteen of the last fifteen actions were new posts, and this is the catalog's only flagged style-redundancy issue — a templated title colliding with the propane post, fixable alongside real depth on inspection codes and escalation wording."
 	}
 ]
