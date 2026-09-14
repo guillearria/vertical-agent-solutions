@@ -21,6 +21,8 @@ The daily editor publishes on its own and you supervise after the fact. Hard-cod
 
 Anti-template safeguards (`pipeline/src/variety.ts`): every draft is checked in code against the catalog for reused title phrasing and repeated description openers, and retried once with feedback if it collides; the decider is shown a computed `Catalog health:` block and picks a per-post article format; `improve_post` may retitle a templated post (the slug/URL never changes, and the Telegram summary shows the retitle).
 
+Catalog structure (since Sep 14 2026): every post carries a sector tag (`industry:` in frontmatter, one of the nine hubs in `lib/industries.ts`, which the decider picks for new posts) and the hub pages at `/industries/<slug>/` are built from it. The primer post is linked once from the post layout ("New to AI agents?"); the writer is told never to link it from a body, because 68 posts had grown the same pointer sentence.
+
 ---
 
 ## One-time setup
@@ -48,9 +50,13 @@ Optionally add a repo **variable** (Settings → Secrets and variables → Actio
    | `TELEGRAM_OWNER_ID` | your numeric id |
    | `TURNSTILE_SECRET_KEY` | from step 4 (contact-form spam check; skipped if unset) |
    | `PUBLIC_TURNSTILE_SITE_KEY` | from step 4 — ⚠️ needed at **build** time (Astro inlines it), so set it for the build environment and redeploy |
+   | `PUBLIC_GSC_VERIFICATION` | from step 7 (Search Console HTML-tag `content` value) — build-time like the Turnstile key; the meta tag is omitted until set |
 4. **Turnstile (contact-form spam protection):** Cloudflare dashboard → **Turnstile** → Add widget → hostname `vertical-agent-solutions.pages.dev` (add `verticalagentsolutions.com` later), mode **Managed**. ⚠️ Type the hostname, then **press Enter / pick the suggestion** so it becomes a list entry under the field — if the text isn't confirmed, Create fails with "At least 1 hostname must be added" (`pages.dev` subdomains are supported). Copy the **Site Key** → `PUBLIC_TURNSTILE_SITE_KEY` and **Secret Key** → `TURNSTILE_SECRET_KEY` (both in the Pages env vars above). Until these are set, the form still works behind the honeypot + rate limit only.
 5. **Custom domain (pending):** Pages project → Custom domains → add `verticalagentsolutions.com`. Then flip `site` in `astro.config.mjs`, the `SITE_URL` vars, and the Turnstile hostname.
 6. **Avoid wasted builds (optional):** Settings → Builds → Build watch paths → include `src/*` so non-`src` commits don't rebuild.
+7. **Analytics (two switches, both dashboard-only):**
+   - **Cloudflare Web Analytics:** Pages project → **Metrics** → Enable Web Analytics. One click; Cloudflare injects its beacon on the next deploy, so no token or code is involved (the old `PUBLIC_CF_BEACON_TOKEN` path was removed Sep 14 2026). Free, cookieless: visitors, top pages, referrers, countries.
+   - **Google Search Console:** add a **URL-prefix** property for the live base URL (`https://vertical-agent-solutions.pages.dev/` is fine; add the custom domain as a second property when it lands). Pick the **HTML tag** method, copy the `content` value into `PUBLIC_GSC_VERIFICATION` (build env), redeploy, click Verify, then submit `sitemap-index.xml`. Bing Webmaster Tools can import from Search Console afterwards.
 
 ### 3. Telegram bot
 Create the bot with @BotFather; the token is only ever used to **send** messages. The bot must have **no webhook registered** — if one exists from an earlier setup, remove it:
