@@ -30,6 +30,18 @@ export interface VarietyEntry {
 const TITLE_NGRAM = 4;
 const OPENER_WORDS = 4;
 
+/**
+ * A 4-gram built only from the site's topic vocabulary ("an ai phone agent",
+ * "what does an ai") is the subject, not a formula: it recurs because every
+ * post is about AI agents. Left in, it clustered four groups of unrelated
+ * posts by Sep 2026 and would keep growing with every phone-agent title. A
+ * gram needs at least one word outside this set to count as shared phrasing.
+ */
+const TOPIC_WORDS = new Set([
+	'a', 'an', 'the', 'your', 'for', 'on', 'with', 'what', 'does',
+	'ai', 'agent', 'agents', 'phone', 'voice', 'booking', 'receptionist', 'answering', 'service', 'services',
+]);
+
 function words(s: string): string[] {
 	return s
 		.toLowerCase()
@@ -44,7 +56,9 @@ function titleNgrams(title: string): Set<string> {
 	const w = words(title);
 	const grams = new Set<string>();
 	for (let i = 0; i + TITLE_NGRAM <= w.length; i++) {
-		grams.add(w.slice(i, i + TITLE_NGRAM).join(' '));
+		const gram = w.slice(i, i + TITLE_NGRAM);
+		if (gram.every((word) => TOPIC_WORDS.has(word))) continue;
+		grams.add(gram.join(' '));
 	}
 	return grams;
 }
