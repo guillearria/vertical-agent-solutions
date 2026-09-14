@@ -2,6 +2,7 @@
 title: "A 30-Day Plan for Nonprofits That Want an AI Agent Handling Donor and Volunteer Email"
 description: "Executive directors with 1–15 staff: pick one job, connect it to the list you already keep, write escalation rules, and test on 20 people before going live."
 pubDate: 'Aug 1 2026'
+updatedDate: 'Sep 14 2026'
 industry: education-nonprofits
 sources:
   - "IRS — Charitable contributions: Written acknowledgments — https://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments"
@@ -17,7 +18,7 @@ sources:
 
 Small shops don't have a communications problem. They have a Tuesday problem: 31 volunteer shift emails, a donor asking why her receipt says the wrong amount, four RSVPs to a gala that closed, and a thank-you letter backlog going back to March.
 
-That's the pile an AI agent can genuinely take. Not fundraising strategy — the pile.
+That's the pile an AI agent can genuinely take. Not fundraising strategy. The pile.
 
 Here's a month that works.
 
@@ -31,11 +32,11 @@ Pick a single, repetitive, high-volume task. Two good candidates:
 
 Do not pick both. Do not pick "all our email." The single-job constraint is what makes the rest of the month possible.
 
-One legal note if you choose receipts: the IRS requires a written acknowledgment for any gift of $250 or more, and it must state whether the donor received goods or services in return and what those were worth. Email counts. But that language is a template a human approves once — not something you let the agent improvise.
+One legal note if you choose receipts: the IRS requires a written acknowledgment for any gift of $250 or more, and it must state whether the donor received goods or services in return and what those were worth. Email counts. But that language is a template a human approves once, not something you let the agent improvise.
 
 ## Week 2: Connect it to the list you already keep
 
-Whatever holds your people — Bloomerang, Little Green Light, a Salesforce instance, or a Google Sheet a board member built in 2019 — that's what the agent reads from and writes to. You do not need a new system.
+Whatever holds your people (Bloomerang, Little Green Light, a Salesforce instance, or a Google Sheet a board member built in 2019) is what the agent reads from and writes to. You do not need a new system.
 
 The practical question is whether your tool can be reached by the agent. Most modern nonprofit CRMs can. A spreadsheet in Google Drive absolutely can, and honestly, for an org with 400 donors, a well-structured sheet is a fine starting point.
 
@@ -50,18 +51,18 @@ This is the part organizations skip and regret. Write a plain list of triggers t
 
 Escalate on:
 
-- Any gift, or mention of a gift, above a threshold you set — $1,000 is a common line for a small shop
+- Any gift, or mention of a gift, above a threshold you set ($1,000 is a common line for a small shop)
 - The words *bequest, estate, will, trust, stock, donor-advised fund*
 - Any complaint, any mention of a refund, any "I want to stop hearing from you"
 - Anyone identifying as a beneficiary, client, or someone seeking services
 - Press, board members, and current or prospective funders
-- Anything the agent isn't confident about — build in "when unsure, hand off" as a standing instruction
+- Anything the agent isn't confident about (build in "when unsure, hand off" as a standing instruction)
 
 ## The red lines that stay red
 
 Some categories don't get a threshold. They get a no.
 
-**Major-gift conversations.** A $25,000 relationship is built on a human remembering that her father died of the disease you fight. Retention is the whole game — the Fundraising Effectiveness Project's 2025 data showed overall donor retention around 43%, with total donors down 3.6% even as dollars rose. You don't automate the 43%.
+**Major-gift conversations.** A $25,000 relationship is built on a human remembering that her father died of the disease you fight. Retention is the whole game: the Fundraising Effectiveness Project's 2025 data showed overall donor retention around 43%, with total donors down 3.6% even as dollars rose. You don't automate the 43%.
 
 **Crisis and grief contact.** If you run a shelter, a hotline, a hospice-adjacent service, or anything where a caller might be in danger, the agent stays off that channel entirely. The reasoning is the same as in [funeral homes](/blog/would-an-ai-answer-a-grieving-familys-call-where/).
 
@@ -71,9 +72,9 @@ Some categories don't get a threshold. They get a no.
 
 ## Week 4: Test on twenty people, in draft mode
 
-Run the agent for two weeks with every message held for human approval before sending. Pick 20 forgiving recipients — long-time volunteers, monthly donors under $100, staff on a test list.
+Run the agent for two weeks with every message held for human approval before sending. Pick 20 forgiving recipients: long-time volunteers, monthly donors under $100, staff on a test list.
 
-Track three things: how many drafts you sent unchanged, how many you edited, and how many should have escalated but didn't. When the "should have escalated" number is zero for a full week, let it send on its own — for that one job only.
+Track three things: how many drafts you sent unchanged, how many you edited, and how many should have escalated but didn't. When the "should have escalated" number is zero for a full week, let it send on its own, for that one job only.
 
 ## Budget, and the board question
 
@@ -83,4 +84,4 @@ The optics question is the harder one, and it will come from your board. Answer 
 
 ## Pick your twenty names
 
-Open your volunteer list. Find 20 people who've shown up more than three times and would tell you honestly if a message felt off. That list is your Week 4 test group — and having it on paper is what turns this from a plan into a project with a date attached.
+Open your volunteer list. Find 20 people who've shown up more than three times and would tell you honestly if a message felt off. That list is your Week 4 test group, and having it on paper is what turns this from a plan into a project with a date attached.

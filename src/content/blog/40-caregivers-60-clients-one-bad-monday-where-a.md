@@ -1,5 +1,5 @@
 ---
-title: "Home Care Agencies Can Let AI Fill Caregiver Call-Outs, but Only From a Pre-Cleared List"
+title: "40 Caregivers, 60 Clients, One Bad Monday: Where a Home Care Agency Let AI Run Scheduling"
 description: "A composite home care agency's Monday shows how an AI agent covered caregiver call-outs, answered late inquiries, and escalated a client's fall."
 pubDate: 'Jul 27 2026'
 updatedDate: 'Sep 14 2026'
