@@ -20,6 +20,8 @@ export interface Post {
 	description: string;
 	pubDate: string;
 	updatedDate: string;
+	/** Sector hub slug (lib/industries.ts); '' when untagged. */
+	industry: string;
 	wordCount: number;
 	excerpt: string;
 	archived: boolean;
@@ -51,6 +53,7 @@ export async function loadPosts(): Promise<Post[]> {
 				description: frontmatterValue(fm, 'description'),
 				pubDate: frontmatterValue(fm, 'pubDate'),
 				updatedDate: frontmatterValue(fm, 'updatedDate'),
+				industry: frontmatterValue(fm, 'industry'),
 				wordCount: text ? text.split(/\s+/).length : 0,
 				excerpt: text.replace(/\s+/g, ' ').slice(0, 600),
 				archived: /^archived:\s*true\s*$/m.test(fm),

@@ -5,6 +5,7 @@ import { runClaude } from './claude';
 import { loadPosts, repoRoot, splitPost, frontmatterValue, type Post } from './posts';
 import { sendMessage } from './telegram';
 import { catalogHealth } from './variety';
+import { industries } from '../../lib/industries';
 import {
 	buildFrontmatter,
 	draftFromText,
@@ -52,6 +53,8 @@ interface Decision {
 	topic?: string;
 	brief?: string;
 	format?: string;
+	/** Sector hub slug for a new post (one of lib/industries.ts). */
+	industry?: string;
 	reason?: string;
 }
 
@@ -65,7 +68,7 @@ interface LogEntry {
 const DECIDER_SYSTEM = `You are the editor-in-chief of "Vertical Agent Solutions", a blog teaching non-technical business owners how to adopt AI agents, one industry (vertical) at a time. Once per day you pick exactly ONE action that most moves the blog forward.
 
 Actions:
-- "new_post": commission a post on a vertical or topic the blog has not covered yet. Prefer breadth — reach new industries before deepening covered ones. Phrase "topic" the way the target reader would type it into Google, and write a 2–4 sentence "brief" for the writer. Also set "format" — the article's structure — picked to differ from what recent posts used: practical guide, cost/ROI breakdown, FAQ, case walkthrough, myth-busting, checklist, or comparison.
+- "new_post": commission a post on a vertical or topic the blog has not covered yet. Prefer breadth — reach new industries before deepening covered ones. Phrase "topic" the way the target reader would type it into Google, and write a 2–4 sentence "brief" for the writer. Also set "format" — the article's structure — picked to differ from what recent posts used: practical guide, cost/ROI breakdown, FAQ, case walkthrough, myth-busting, checklist, or comparison. Also set "industry" to the sector hub the post belongs on: one slug from the "Sector hubs" list (they are broad sectors, so nearly every business fits one; omit it only if none does).
 - "improve_post": upgrade an existing post that is thin (well under ~600 words), stale, weaker than its topic deserves, or style-redundant — a templated title that mirrors another post's phrasing, or boilerplate sections duplicated across posts (see "Catalog health"). Set "slug" and a specific "brief" saying what to fix or expand. Retitling is allowed and encouraged for templated titles — say so explicitly in the brief; the URL/slug never changes, so it is safe.
 - "archive_post": retire a post that is clearly redundant with a better one or off-mission. Set "slug" and "reason". Be conservative — only clear cases.
 - "skip": nothing worth doing today. A respectable choice; do not invent work.
@@ -76,7 +79,7 @@ Rules:
 - Always explain "reason" in one or two sentences.
 
 Respond with ONLY a JSON object, no prose, in exactly this shape (omit fields that don't apply):
-{"action":"new_post|improve_post|archive_post|skip","slug":"...","topic":"...","brief":"...","format":"...","reason":"..."}`;
+{"action":"new_post|improve_post|archive_post|skip","slug":"...","topic":"...","brief":"...","format":"...","industry":"...","reason":"..."}`;
 
 function git(...args: string[]): string {
 	return execFileSync('git', args, { cwd: repoRoot, encoding: 'utf8' });
@@ -118,7 +121,7 @@ async function decide(posts: Post[], log: LogEntry[]): Promise<Decision> {
 			(p) =>
 				`### ${p.slug}${p.archived ? ' [ARCHIVED]' : ''}\n` +
 				`Title: ${p.title}\nDescription: ${p.description}\n` +
-				`Published: ${p.pubDate}${p.updatedDate ? ` (updated ${p.updatedDate})` : ''} · ${p.wordCount} words\n` +
+				`Published: ${p.pubDate}${p.updatedDate ? ` (updated ${p.updatedDate})` : ''} · ${p.wordCount} words · Sector: ${p.industry || 'untagged'}\n` +
 				`Excerpt: ${p.excerpt}`,
 		)
 		.join('\n\n');
@@ -132,9 +135,14 @@ async function decide(posts: Post[], log: LogEntry[]): Promise<Decision> {
 	const health = catalogHealth(active);
 	console.log(`Catalog health:\n${health}`);
 
+	const hubs = Object.entries(industries)
+		.map(([slug, i]) => `- ${slug}: ${i.name}`)
+		.join('\n');
+
 	const user =
 		`Today is ${pubDateString()}. The catalog has ${active.length} active post(s):\n\n${catalog}\n\n` +
 		`Catalog health (computed template-collision check):\n${health}\n\n` +
+		`Sector hubs (slug: name) — a new_post must name one as "industry":\n${hubs}\n\n` +
 		`Recently touched (cooldown — do not pick these):\n${cooling.join('\n') || '- none'}\n\n` +
 		`Recent editor actions:\n${recent.join('\n') || '- none'}\n\n` +
 		`Pick today's single action.`;
@@ -171,6 +179,10 @@ function applyGuards(decision: Decision, posts: Post[], log: LogEntry[]): Decisi
 	}
 
 	if (decision.action === 'new_post' && !decision.topic) return skip('Guard: new_post without a topic.');
+	if (decision.industry && !(decision.industry in industries)) {
+		console.warn(`⚠️ Guard: unknown sector "${decision.industry}" — publishing untagged.`);
+		delete decision.industry;
+	}
 	if (decision.action === 'improve_post' && !decision.brief) return skip('Guard: improve_post without a brief.');
 
 	return decision;
@@ -213,10 +225,12 @@ async function execute(decision: Decision, posts: Post[]): Promise<Outcome> {
 		const parsed = await draftFromText(idea, { catalog: activeCatalog });
 		const slug = await uniqueSlug(parsed.title);
 		const filePath = `src/content/blog/${slug}.md`;
-		await fs.writeFile(path.join(repoRoot, filePath), buildFrontmatter(parsed));
+		await fs.writeFile(path.join(repoRoot, filePath), buildFrontmatter(parsed, { industry: decision.industry }));
 		return {
 			summary:
-				`🤖 Daily editor: published a new post\n\n*${parsed.title}*\n${parsed.description}\n\n` +
+				`🤖 Daily editor: published a new post\n\n*${parsed.title}*\n${parsed.description}\n` +
+				(decision.industry ? `Sector: ${industries[decision.industry].name}\n` : '') +
+				`\n` +
 				`_Why: ${decision.reason}_\n${SITE_URL}/blog/${slug}/\n(Live in ~30–60s after the build.)`,
 			commitMessage: `Editor: publish "${parsed.title}"`,
 			changedFiles: [filePath],
