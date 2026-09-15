@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-16T13:49:11.760Z",
-		"action": "new_post",
-		"slug": "ai-answering-service-pricing-for-hvac-shops-the",
-		"reason": "HVAC/plumbing is the largest trade vertical the catalog has never covered, and its after-hours emergency dispatch economics are distinct from the roofing/landscaping/pest posts; cost/ROI is the least-recently-used format (last on Aug 9)."
-	},
-	{
 		"date": "2026-08-17T13:57:04.708Z",
 		"action": "new_post",
 		"slug": "ai-phone-agent-for-pool-service-companies-a-heat",
@@ -178,5 +172,11 @@
 		"action": "improve_post",
 		"slug": "put-an-ai-agent-on-fire-inspection-scheduling",
 		"reason": "Fourteen of the last fifteen actions were new posts, and this is the catalog's only flagged style-redundancy issue — a templated title colliding with the propane post, fixable alongside real depth on inspection codes and escalation wording."
+	},
+	{
+		"date": "2026-09-15T17:43:33.500Z",
+		"action": "new_post",
+		"slug": "four-stages-of-ai-guest-messaging-for-vacation",
+		"reason": "Short-term/vacation rental management is a sizable 24/7 guest-messaging vertical the catalog has never covered and is distinct from the small-landlord, HOA, self-storage, and B&B posts; practical guide is the least-recently-used format."
 	}
 ]
