@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-17T13:57:04.708Z",
-		"action": "new_post",
-		"slug": "ai-phone-agent-for-pool-service-companies-a-heat",
-		"reason": "Pool service and repair is a sizable, seasonal, route-based vertical the catalog has never covered and is distinct from its landscaping/pest/HVAC posts, and case walkthrough is the least-recently-used format (last on Aug 10)."
-	},
-	{
 		"date": "2026-08-18T14:01:34.847Z",
 		"action": "new_post",
 		"slug": "from-first-call-to-pto-what-ai-phone-agents-handle",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "four-stages-of-ai-guest-messaging-for-vacation",
 		"reason": "Short-term/vacation rental management is a sizable 24/7 guest-messaging vertical the catalog has never covered and is distinct from the small-landlord, HOA, self-storage, and B&B posts; practical guide is the least-recently-used format."
+	},
+	{
+		"date": "2026-09-16T17:41:05.659Z",
+		"action": "new_post",
+		"slug": "ai-receptionist-cost-for-a-dance-studio-or-martial",
+		"reason": "Kids' activity studios (dance, music, martial arts) are a large enrollment-driven vertical the catalog has never covered and are distinct from the daycare, tutoring, and private school posts; cost/ROI is the least-recently-used format."
 	}
 ]
