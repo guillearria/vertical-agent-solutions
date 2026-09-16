@@ -8,7 +8,7 @@ Astro blog ("Vertical Agent Solutions") with an autonomous AI publishing pipelin
 - `functions/` — **Cloudflare Pages Functions (Workers runtime)**. No Node APIs, no npm dependencies. `functions/api/contact.ts` (contact form) is the only Function.
 - `pipeline/` — Node 22 scripts run by GitHub Actions (`tsx`). `editor.ts` = daily autonomous editor; `writer.ts` = shared drafting core; `variety.ts` = anti-template collision checks (writer gate + decider's `Catalog health:` block). Model access goes through `claude.ts` → headless Claude Code (`claude -p`) on **subscription auth** — never the metered Anthropic SDK/API (owner's explicit choice; `claude.ts` strips `ANTHROPIC_API_KEY` defensively).
 
-`lib/` holds zero-dependency helpers imported by BOTH `functions/` and `pipeline/` — keep it free of imports and runtime-specific APIs.
+`lib/` holds zero-dependency modules shared across runtimes: `slug.ts` (used by `functions/` and `pipeline/`) and `industries.ts`, the sector-hub list (used by `src/` and the pipeline's decider). Keep it free of imports and runtime-specific APIs.
 
 ## Commands
 
