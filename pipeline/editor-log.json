@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-20T14:03:47.257Z",
-		"action": "new_post",
-		"slug": "plan-of-care-dropoff-in-physical-therapy-ai-agent",
-		"reason": "Outpatient PT/chiropractic clinics are a large uncovered vertical whose visit-adherence and recall problem is distinct from the dental, vet, and therapy-practice posts, and comparison is the least-recently-used format (last on Aug 13)."
-	},
-	{
 		"date": "2026-08-21T14:04:07.515Z",
 		"action": "new_post",
 		"slug": "an-ai-agent-can-book-your-trade-schools-campus",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "tattoo-shop-faq-ai-booking-agents-deposits-and-per",
 		"reason": "Tattoo and piercing studios are a deposit-driven, artist-scheduled vertical the catalog has never touched, and personal services is still the thinnest sector hub; FAQ is the least-recently-used format (last on Sep 10)."
+	},
+	{
+		"date": "2026-09-19T16:34:59.916Z",
+		"action": "new_post",
+		"slug": "does-an-ai-leasing-assistant-actually-work-at-a",
+		"reason": "Multifamily apartment leasing offices are a large vertical the catalog has never covered and are distinct from the small-landlord, HOA, and short-term-rental posts; real-estate-property is the thinnest sector hub and myth-busting is the least-recently-used format."
 	}
 ]
