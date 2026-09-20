@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-21T14:04:07.515Z",
-		"action": "new_post",
-		"slug": "an-ai-agent-can-book-your-trade-schools-campus",
-		"reason": "Private trade/vocational schools are a large, speed-to-lead-driven vertical with compliance rules unlike anything covered (K-12, daycare, tutoring are all different buyers), and checklist is the least-recently-used format (last on Aug 14)."
-	},
-	{
 		"date": "2026-08-22T13:49:54.030Z",
 		"action": "new_post",
 		"slug": "setting-up-an-ai-phone-agent-for-the-homeowner",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "does-an-ai-leasing-assistant-actually-work-at-a",
 		"reason": "Multifamily apartment leasing offices are a large vertical the catalog has never covered and are distinct from the small-landlord, HOA, and short-term-rental posts; real-estate-property is the thinnest sector hub and myth-busting is the least-recently-used format."
+	},
+	{
+		"date": "2026-09-20T16:52:45.347Z",
+		"action": "new_post",
+		"slug": "photography-studio-inquiries-scoring-an-ai-agent-a",
+		"reason": "Photography studios are a common inquiry-driven small business the catalog has never covered, personal-services is still the thinnest sector hub, and comparison is the least-recently-used format (last on Sep 12)."
 	}
 ]
