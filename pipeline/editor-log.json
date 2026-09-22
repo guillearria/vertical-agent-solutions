@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-23T13:51:08.038Z",
-		"action": "new_post",
-		"slug": "why-a-marina-should-price-its-ai-phone-agent-by",
-		"reason": "Marinas, boat dealers, and boatyards are a sizable, intensely seasonal, phone-driven vertical the catalog has never touched and is distinct from its auto repair, dealership, and equipment rental posts; cost/ROI is the least-recently-used format (last on Aug 16)."
-	},
-	{
 		"date": "2026-08-24T14:08:11.248Z",
 		"action": "new_post",
 		"slug": "a-propane-dealer-put-an-ai-agent-on-the-phone-the",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "if-the-caller-is-grieving-the-ai-agent-stops",
 		"reason": "Churches and religious congregations are a very large, phone-driven vertical the catalog has never touched and is distinct from the nonprofit-email post; checklist is the least-recently-used format (last on Sep 13)."
+	},
+	{
+		"date": "2026-09-22T17:40:46.453Z",
+		"action": "new_post",
+		"slug": "home-builder-ai-agent-setup-for-new-home-sales",
+		"reason": "New-home builders' sales and warranty offices are a large vertical the catalog has never covered, and real-estate-property is still one of the thinnest sector hubs. Practical guide is the least-recently-used format (last used Sep 15)."
 	}
 ]
