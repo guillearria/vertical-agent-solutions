@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-25T14:10:20.734Z",
-		"action": "new_post",
-		"slug": "quote-the-corporate-lunches-route-the-weddings",
-		"reason": "Catering and event food service is a sizable, inquiry-flooded vertical the catalog has never covered and is distinct from the wedding venue and restaurant posts, and FAQ is the least-recently-used format (last on Aug 18)."
-	},
-	{
 		"date": "2026-08-26T14:09:05.735Z",
 		"action": "improve_post",
 		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "winery-tasting-room-phones-the-break-even-on-ai",
 		"reason": "Wineries and tasting rooms are a common reservation- and membership-driven vertical the catalog has never covered, distinct from the restaurant, venue, and golf posts. Cost/ROI is the least-recently-used format (last used Sep 16)."
+	},
+	{
+		"date": "2026-09-24T17:53:49.570Z",
+		"action": "new_post",
+		"slug": "driving-school-lesson-scheduling-with-an-ai-phone",
+		"reason": "Driving schools are a common, scheduling-heavy small business the catalog has never covered, and they are distinct from the tutoring, trade school, and dance studio posts. Case walkthrough is the least recently used format (last used Sep 17)."
 	}
 ]
