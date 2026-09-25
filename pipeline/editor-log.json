@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-26T14:09:05.735Z",
-		"action": "improve_post",
-		"slug": "is-it-ready-yet-what-an-ai-phone-agent-can-legally",
-		"reason": "It is the only non-cooldown post flagged for a templated title, and pharmacy deserves deeper treatment on outbound refill outreach and counseling rules than the current 913 words give it."
-	},
-	{
 		"date": "2026-08-27T23:01:12.818Z",
 		"action": "new_post",
 		"slug": "ai-receptionist-for-audiology-clinics-do-older",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "driving-school-lesson-scheduling-with-an-ai-phone",
 		"reason": "Driving schools are a common, scheduling-heavy small business the catalog has never covered, and they are distinct from the tutoring, trade school, and dance studio posts. Case walkthrough is the least recently used format (last used Sep 17)."
+	},
+	{
+		"date": "2026-09-25T17:59:36.485Z",
+		"action": "new_post",
+		"slug": "scrap-metal-yard-phones-letting-an-ai-agent-read",
+		"reason": "Scrap and metal recycling yards are a common, phone-heavy vertical the catalog has never covered, and FAQ is the least recently used format (last used Sep 18)."
 	}
 ]
