@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-27T23:01:12.818Z",
-		"action": "new_post",
-		"slug": "ai-receptionist-for-audiology-clinics-do-older",
-		"reason": "Audiology and hearing aid clinics are a sizable, phone-heavy vertical the catalog has never touched, with a patient-population objection unlike any covered practice type; myth-busting is the least-recently-used format (last on Aug 19)."
-	},
-	{
 		"date": "2026-08-28T23:06:54.983Z",
 		"action": "new_post",
 		"slug": "cpap-and-dme-resupply-outreach-compared-ai-agent",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "scrap-metal-yard-phones-letting-an-ai-agent-read",
 		"reason": "Scrap and metal recycling yards are a common, phone-heavy vertical the catalog has never covered, and FAQ is the least recently used format (last used Sep 18)."
+	},
+	{
+		"date": "2026-09-26T17:14:51.108Z",
+		"action": "new_post",
+		"slug": "taking-flower-shop-phone-orders-with-an-ai-agent",
+		"reason": "Retail florists are a common, holiday-spike, phone-order business the catalog has never covered, and personal-services is one of the thinner hubs. Myth-busting is the least recently used format; it was last used Sep 19."
 	}
 ]
