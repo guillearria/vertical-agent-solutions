@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-28T23:06:54.983Z",
-		"action": "new_post",
-		"slug": "cpap-and-dme-resupply-outreach-compared-ai-agent",
-		"reason": "Independent DME/HME suppliers are a sizable, phone-and-outreach-driven vertical the catalog has never covered and is distinct from its pharmacy, PT, and NEMT posts; comparison is the least-recently-used format (last on Aug 20)."
-	},
-	{
 		"date": "2026-08-29T17:12:34.978Z",
 		"action": "new_post",
 		"slug": "ai-phone-agents-at-roll-off-dumpster-companies",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "taking-flower-shop-phone-orders-with-an-ai-agent",
 		"reason": "Retail florists are a common, holiday-spike, phone-order business the catalog has never covered, and personal-services is one of the thinner hubs. Myth-busting is the least recently used format; it was last used Sep 19."
+	},
+	{
+		"date": "2026-09-27T17:48:44.699Z",
+		"action": "new_post",
+		"slug": "mobile-home-park-phone-coverage-compared-on-four",
+		"reason": "Manufactured housing communities are a large, phone-heavy, owner-operated vertical the catalog has never covered, and they differ from the landlord, HOA, and apartment posts. Real-estate-property is the thinnest sector hub, and comparison is the least recently used format (last used Sep 20)."
 	}
 ]
