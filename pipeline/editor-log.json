@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-29T17:12:34.978Z",
-		"action": "new_post",
-		"slug": "ai-phone-agents-at-roll-off-dumpster-companies",
-		"reason": "Roll-off dumpster rental and waste hauling is a sizable, dispatch-and-phone-driven vertical the catalog has never covered and is distinct from the equipment rental yard and home-services posts; checklist is the least-recently-used format (last on Aug 21)."
-	},
-	{
 		"date": "2026-08-30T17:36:09.149Z",
 		"action": "new_post",
 		"slug": "how-to-configure-an-optometry-practices-ai-front",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "mobile-home-park-phone-coverage-compared-on-four",
 		"reason": "Manufactured housing communities are a large, phone-heavy, owner-operated vertical the catalog has never covered, and they differ from the landlord, HOA, and apartment posts. Real-estate-property is the thinnest sector hub, and comparison is the least recently used format (last used Sep 20)."
+	},
+	{
+		"date": "2026-09-28T20:09:24.151Z",
+		"action": "new_post",
+		"slug": "unlimited-car-wash-membership-cancellations-and",
+		"reason": "Car washes are a common, membership-driven automotive business the catalog has never covered, and they are distinct from the auto repair, collision, and dealership posts. Checklist is the least recently used format; it was last used Sep 21."
 	}
 ]
