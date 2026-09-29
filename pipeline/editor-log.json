@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-30T17:36:09.149Z",
-		"action": "new_post",
-		"slug": "how-to-configure-an-optometry-practices-ai-front",
-		"reason": "Independent optometry and optical retail is a sizable, phone-heavy vertical the catalog has never touched, distinct from the audiology, dental, and vet posts because of the vision-vs-medical insurance and eyewear-order call types; practical guide is the least-recently-used format (last on Aug 22)."
-	},
-	{
 		"date": "2026-08-31T19:35:22.860Z",
 		"action": "new_post",
 		"slug": "what-does-an-ai-phone-agent-cost-a-kitchen-and",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "unlimited-car-wash-membership-cancellations-and",
 		"reason": "Car washes are a common, membership-driven automotive business the catalog has never covered, and they are distinct from the auto repair, collision, and dealership posts. Checklist is the least recently used format; it was last used Sep 21."
+	},
+	{
+		"date": "2026-09-29T18:40:47.440Z",
+		"action": "new_post",
+		"slug": "rv-park-ai-phone-agent-setup-step-by-step-for",
+		"reason": "RV parks and campgrounds are a common, reservation-heavy, seasonal business the catalog has never covered. Site-fit questions make the job different from the B&B, marina, and golf posts. Practical guide is the least recently used format; it was last used Sep 22."
 	}
 ]
