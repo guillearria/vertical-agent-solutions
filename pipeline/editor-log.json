@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-08-31T19:35:22.860Z",
-		"action": "new_post",
-		"slug": "what-does-an-ai-phone-agent-cost-a-kitchen-and",
-		"reason": "Residential remodeling and design-build contractors are a large, high-ticket vertical the catalog has never covered and is distinct from its roofing, solar, and HVAC posts; cost/ROI is the least-recently-used format (last on Aug 23)."
-	},
-	{
 		"date": "2026-09-01T17:23:50.474Z",
 		"action": "new_post",
 		"slug": "parts-counter-triage-at-a-farm-equipment-dealer",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "rv-park-ai-phone-agent-setup-step-by-step-for",
 		"reason": "RV parks and campgrounds are a common, reservation-heavy, seasonal business the catalog has never covered. Site-fit questions make the job different from the B&B, marina, and golf posts. Practical guide is the least recently used format; it was last used Sep 22."
+	},
+	{
+		"date": "2026-09-30T18:29:18.706Z",
+		"action": "new_post",
+		"slug": "pricing-an-ai-receptionist-for-a-coworking-space",
+		"reason": "Coworking and flex-office operators are a common vertical the catalog has not covered, and real-estate-property is among the thinnest hubs. Cost/ROI is the least recently used format, last used Sep 23."
 	}
 ]
