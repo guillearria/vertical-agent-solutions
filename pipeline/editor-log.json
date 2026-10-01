@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-01T17:23:50.474Z",
-		"action": "new_post",
-		"slug": "parts-counter-triage-at-a-farm-equipment-dealer",
-		"reason": "Agriculture — farm equipment dealers' parts and service counters — is a large, intensely seasonal, phone-driven vertical the catalog has never touched and is distinct from its auto repair, dealership, and equipment rental posts; case walkthrough is the least-recently-used format (last on Aug 24)."
-	},
-	{
 		"date": "2026-09-02T17:15:57.996Z",
 		"action": "new_post",
 		"slug": "three-piles-of-quote-requests-at-a-print-and-sign",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "pricing-an-ai-receptionist-for-a-coworking-space",
 		"reason": "Coworking and flex-office operators are a common vertical the catalog has not covered, and real-estate-property is among the thinnest hubs. Cost/ROI is the least recently used format, last used Sep 23."
+	},
+	{
+		"date": "2026-10-01T18:56:11.185Z",
+		"action": "new_post",
+		"slug": "massage-studio-ai-receptionist-a-december-week-of",
+		"reason": "Massage therapy studios are a common, booking-heavy small business the catalog has not covered, and personal-services is still thinner than the home-services hub. Case walkthrough is the least recently used format; it was last used Sep 24."
 	}
 ]
