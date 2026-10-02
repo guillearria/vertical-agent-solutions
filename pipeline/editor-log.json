@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-02T17:15:57.996Z",
-		"action": "new_post",
-		"slug": "three-piles-of-quote-requests-at-a-print-and-sign",
-		"reason": "Commercial print and sign shops are a sizable, quote-and-proof-driven B2B vertical the catalog has never covered and is distinct from the machine shop RFQ and wholesale distributor posts; FAQ is the least-recently-used format (last on Aug 25)."
-	},
-	{
 		"date": "2026-09-03T17:07:39.070Z",
 		"action": "new_post",
 		"slug": "what-golf-course-gms-get-wrong-about-putting-ai-on",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "massage-studio-ai-receptionist-a-december-week-of",
 		"reason": "Massage therapy studios are a common, booking-heavy small business the catalog has not covered, and personal-services is still thinner than the home-services hub. Case walkthrough is the least recently used format; it was last used Sep 24."
+	},
+	{
+		"date": "2026-10-02T18:28:39.754Z",
+		"action": "new_post",
+		"slug": "summer-camp-directors-questions-about-letting-ai",
+		"reason": "Summer camps are a common, seasonal, registration-heavy business the catalog has never covered, and fall is when their registration surge starts. FAQ is the least recently used format; it was last used Sep 25."
 	}
 ]
