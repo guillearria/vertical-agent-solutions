@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-03T17:07:39.070Z",
-		"action": "new_post",
-		"slug": "what-golf-course-gms-get-wrong-about-putting-ai-on",
-		"reason": "Golf courses and country clubs are a sizable seasonal hospitality vertical the catalog has never touched, with a call mix (tee sheets, outings, member relations) unlike the wedding venue, B&B, or restaurant posts; myth-busting is the least-recently-used format (last on Aug 27)."
-	},
-	{
 		"date": "2026-09-04T16:56:07.757Z",
 		"action": "new_post",
 		"slug": "water-damage-restoration-after-hours-intake-graded",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "summer-camp-directors-questions-about-letting-ai",
 		"reason": "Summer camps are a common, seasonal, registration-heavy business the catalog has never covered, and fall is when their registration surge starts. FAQ is the least recently used format; it was last used Sep 25."
+	},
+	{
+		"date": "2026-10-03T17:20:18.060Z",
+		"action": "new_post",
+		"slug": "myth-or-fact-ai-phone-agents-for-small-tax-prep",
+		"reason": "Independent tax preparation offices are a common, sharply seasonal, phone-heavy vertical the catalog hasn't covered, and October is the right time to publish before owners plan for January. Myth-busting is the least recently used format; it was last used Sep 26."
 	}
 ]
