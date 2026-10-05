@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-05T16:10:00.981Z",
-		"action": "new_post",
-		"slug": "a-go-no-go-list-for-limo-and-black-car-fleets",
-		"reason": "Chauffeured ground transportation (limo, black car, shuttle) is a sizable 24/7 phone-and-dispatch vertical the catalog has never covered and is distinct from the NEMT and towing posts; checklist is the least-recently-used format (last on Aug 29)."
-	},
-	{
 		"date": "2026-09-06T16:22:55.792Z",
 		"action": "new_post",
 		"slug": "status-texts-first-phone-second-an-ai-agent",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "missing-calls-while-you-fix-phones-comparing-three",
 		"reason": "Independent device repair shops are a common, phone-heavy small business the catalog has never covered, and they differ from the auto and appliance repair posts. Comparison is the least recently used format; it was last used Sep 27."
+	},
+	{
+		"date": "2026-10-05T21:19:57.128Z",
+		"action": "new_post",
+		"slug": "boxes-to-tick-before-an-ai-agent-quotes-winter",
+		"reason": "Independent tire dealers are a common, quote-heavy business the catalog hasn't covered, and October is the start of their seasonal changeover surge. Checklist is the least recently used format; it was last used Sep 28."
 	}
 ]
