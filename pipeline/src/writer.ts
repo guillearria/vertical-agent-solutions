@@ -1,4 +1,5 @@
 import { runClaude } from './claude';
+import { solicitationFeedback } from './solicitation';
 import { varietyFeedback } from './variety';
 import { slugify, truncateDescription } from '../../lib/slug';
 
@@ -14,6 +15,7 @@ export const SYSTEM = `You are the staff writer for "Vertical Agent Solutions", 
 Voice and rules:
 - Write in plain English for a smart but non-technical reader — a business owner, not an engineer. Assume no coding background.
 - No hype, no buzzword salad, no "in today's fast-paced world" filler. Be concrete and specific.
+- This site is an independent publication, not a vendor or consultancy, and nothing on it is for sale. Never write in a publisher voice that offers, builds, sells, or consults ("we design", "our clients", "talk to us"), never invite the reader to contact the site, and never name the site in the post. Quoted dialogue inside a scenario may say "we" because the business is speaking, not the site. When the reader needs help beyond the post, point to the kinds of vendors, professionals, or resources to look for, never to this site.
 - At most one em-dash in the entire post, and none in the TITLE or DESCRIPTION. Where you reach for one, use a period, comma, colon, or parentheses instead.
 - Cut stock pivots ("Here's the thing", "The honest answer is", "That's the…"). If a sentence could appear in any post on this site, it is filler.
 - Simplify hard ideas with everyday analogies and real, named use cases across different industries.
@@ -154,12 +156,17 @@ function catalogNote(catalog?: CatalogEntry[]): string {
 
 /**
  * Run the writer (headless Claude Code with WebSearch) against a user message
- * and return the parsed draft. Retries once if the output format is ignored,
- * and once more if the draft's title/description collide with the catalog
- * (the variety gate) — the prompt rules request variety, this enforces it.
- * A draft that still collides after the retry is accepted with a warning:
- * publishing a templated post beats a failed run, and the improve loop can
- * fix it later.
+ * and return the parsed draft. Retries once if the output format is ignored.
+ * Two code gates then run on the draft:
+ *
+ *   - Solicitation (fail-closed): a draft that reads as the site pitching a
+ *     service is sent back once with feedback; if it still reads that way,
+ *     the run fails rather than publish it. A skipped day beats a pitch.
+ *   - Variety: a title/description that collides with the catalog is sent
+ *     back once; a draft that still collides is accepted with a warning,
+ *     because publishing a templated post beats a failed run and the
+ *     improve loop can fix it later. A variety retry that trips the
+ *     solicitation gate is discarded for the first, clean draft.
  */
 async function runWriter(userContent: string, catalog?: CatalogEntry[]): Promise<Parsed> {
 	let text = '';
@@ -169,6 +176,29 @@ async function runWriter(userContent: string, catalog?: CatalogEntry[]): Promise
 		console.warn(`⚠️ Attempt ${attempt}: no TITLE: line in output. First 300 chars:\n` + text.slice(0, 300));
 	}
 	let parsed = parseOutput(text);
+
+	const pitch = solicitationFeedback(parsed);
+	if (pitch) {
+		console.warn(`⚠️ Solicitation gate: draft reads as a pitch — retrying once.\n${pitch}`);
+		const retryText = await runClaude({
+			system: SYSTEM,
+			prompt:
+				userContent +
+				`\n\nYour previous draft failed a voice check:\n${pitch}\n\n` +
+				`Previous draft:\n"""\n${text}\n"""\n\n` +
+				`Produce the corrected post in the exact same output format. Keep the substance, sources, and ` +
+				`verified facts; rewrite only what the check flagged (and anything else that reads as a pitch).`,
+			tools: ['WebSearch'],
+		});
+		const retry = parseOutput(retryText);
+		if (!retry.titleExplicit) {
+			throw new Error('Solicitation gate: the retry lost the TITLE format; refusing to publish the flagged draft.');
+		}
+		const still = solicitationFeedback(retry);
+		if (still) throw new Error(`Solicitation gate: draft still reads as a pitch after one retry; not publishing.\n${still}`);
+		parsed = retry;
+		text = retryText;
+	}
 
 	// Always run: the em-dash check needs no catalog to compare against.
 	const feedback = varietyFeedback(parsed, catalog ?? []);
@@ -185,7 +215,9 @@ async function runWriter(userContent: string, catalog?: CatalogEntry[]): Promise
 			tools: ['WebSearch'],
 		});
 		const retry = parseOutput(retryText);
-		if (retry.titleExplicit) {
+		if (retry.titleExplicit && solicitationFeedback(retry)) {
+			console.warn('⚠️ Variety gate: the retry reads as a pitch — keeping the first, clean draft.');
+		} else if (retry.titleExplicit) {
 			parsed = retry;
 			const still = varietyFeedback(parsed, catalog ?? []);
 			if (still) console.warn(`⚠️ Variety gate: still colliding after retry — accepting anyway.\n${still}`);
