@@ -1,20 +1,20 @@
 ---
-import { AUTHOR_NAME, AUTHOR_URL, SITE_TITLE } from '../consts';
+import { AUTHOR_NAME, AUTHOR_URL, ISSUES_URL, SITE_TITLE } from '../consts';
 import Layout from '../layouts/BlogPost.astro';
 
-const founderId = new URL('/#founder', Astro.site).toString();
+const personId = new URL('/#author', Astro.site).toString();
 const jsonLd = {
 	'@context': 'https://schema.org',
 	'@type': 'AboutPage',
 	name: `About ${SITE_TITLE}`,
 	url: new URL('/about/', Astro.site).toString(),
 	mainEntity: {
-		'@type': 'Organization',
+		'@type': 'WebSite',
 		name: SITE_TITLE,
 		url: Astro.site?.toString(),
-		founder: {
+		publisher: {
 			'@type': 'Person',
-			'@id': founderId,
+			'@id': personId,
 			name: AUTHOR_NAME,
 			url: AUTHOR_URL,
 			sameAs: [AUTHOR_URL],
@@ -25,30 +25,29 @@ const jsonLd = {
 
 <Layout
 	title="About Vertical Agent Solutions"
-	description="Who is behind Vertical Agent Solutions, what we publish, and how an autonomously-edited site stays honest."
+	description="What Vertical Agent Solutions publishes, who supervises it, and how an autonomously edited site stays honest."
 	pubDate={new Date('June 20 2026')}
 	isArticle={false}
 >
 	<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 	<p>
 		<strong>Vertical Agent Solutions</strong> exists to make the agentic wave legible to people who
-		run real businesses — not just the engineers building the tools. The promise is simple: take what
-		is genuinely useful about AI agents, strip away the noise, and explain it clearly enough to act
-		on.
+		run real businesses, not just the engineers building the tools. It is a free, independent
+		publication: take what is genuinely useful about AI agents, strip away the noise, and explain
+		it clearly enough to act on. Nothing here is for sale.
 	</p>
 
-	<h2>What we publish</h2>
+	<h2>What this site publishes</h2>
 	<p>
 		Short, practical guides on adopting AI agents across industries. Every post is fact-checked
 		against real sources as it's written, simplified for a non-technical reader, and checked in
-		code against everything we've already published so we never waste your time repeating
-		ourselves.
+		code against everything already published so the catalog never repeats itself.
 	</p>
 
 	<h2>Who runs this</h2>
 	<!-- Photo goes here when available: a small portrait of Guillermo, floated
-	     right of the paragraph below (e.g. <Image> from astro:assets). The
-	     section is written to read complete without it. -->
+		 right of the paragraph below (e.g. <Image> from astro:assets). The
+		 section is written to read complete without it. -->
 	<p>
 		<strong>{AUTHOR_NAME}</strong> is a software engineer building autonomous,
 		verification-gated AI systems — agents that do real work, with the safety rules enforced in
@@ -68,13 +67,14 @@ const jsonLd = {
 		<a href="/how-this-site-writes-itself/">how this site writes itself</a>.
 	</p>
 
-	<h2>Work with us</h2>
+	<h2 id="feedback">Feedback and corrections</h2>
 	<p>
-		If your team wants to put agents to work — on the phones, the follow-ups, the scheduling, the
-		busywork — we design and ship those systems. Tell us what you're trying to automate and a real
-		person will read it and reply.
+		Spotted an error, a stale claim, or a dead source? Open an issue on GitHub and name the guide.
+		Corrections land as public commits, so you can see the fix. Suggestions for industries or
+		questions the guides should cover are welcome the same way. The issue tracker is the only
+		inbox: this site has no contact form and no mailing list.
 	</p>
 	<p>
-		<a class="button" href="/contact/">Get in touch</a>
+		<a class="button" href={ISSUES_URL}>Open an issue on GitHub</a>
 	</p>
 </Layout>

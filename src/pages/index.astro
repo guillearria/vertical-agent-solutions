@@ -1,7 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import CtaBand from '../components/CtaBand.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import PostCard from '../components/PostCard.astro';
@@ -17,7 +16,7 @@ const hubs = Object.entries(industries)
 	.map(([slug, { name }]) => ({ slug, name }))
 	.sort((a, b) => a.name.localeCompare(b.name));
 
-const founderId = new URL('#founder', Astro.site).toString();
+const personId = new URL('#author', Astro.site).toString();
 const jsonLd = {
 	'@context': 'https://schema.org',
 	'@graph': [
@@ -26,16 +25,11 @@ const jsonLd = {
 			name: SITE_TITLE,
 			description: SITE_DESCRIPTION,
 			url: Astro.site?.toString(),
-		},
-		{
-			'@type': 'Organization',
-			name: SITE_TITLE,
-			url: Astro.site?.toString(),
-			founder: { '@id': founderId },
+			publisher: { '@id': personId },
 		},
 		{
 			'@type': 'Person',
-			'@id': founderId,
+			'@id': personId,
 			name: AUTHOR_NAME,
 			url: AUTHOR_URL,
 			sameAs: [AUTHOR_URL],
@@ -161,14 +155,15 @@ const jsonLd = {
 		<Header />
 		<main>
 			<section class="hero">
-				<h1>AI agents are coming to your industry. We help you get ready.</h1>
+				<h1>AI agents are coming to your industry. These guides explain what to expect.</h1>
 				<p class="standfirst">
-					Plain-English guides to the agentic wave: the shift from software you operate to
-					software that operates on your behalf. Written for people who run real businesses.
+					The agentic wave is the shift from software you operate to software that operates on your
+					behalf. These are plain-English guides to it for people who run real businesses, one industry
+					at a time.
 				</p>
 				<p class="hero-ctas">
 					<a class="button" href="/blog/">Read the guides</a>
-					<a class="text-cta" href="/contact/">Work with us →</a>
+					<a class="text-cta" href="/how-this-site-writes-itself/">How this site writes itself →</a>
 				</p>
 			</section>
 
@@ -216,7 +211,6 @@ const jsonLd = {
 						<p>Pick one task, connect it to what you already use, and test it before going live.</p>
 					</div>
 				</div>
-				<CtaBand />
 			</section>
 
 			<p class="trust">

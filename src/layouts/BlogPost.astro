@@ -2,13 +2,12 @@
 import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
-import CtaBand from '../components/CtaBand.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import PostCard from '../components/PostCard.astro';
 import Sources from '../components/Sources.astro';
-import { AUTHOR_NAME, AUTHOR_URL, PRIMER_POST_ID } from '../consts';
+import { AUTHOR_NAME, AUTHOR_URL, PRIMER_POST_ID, REPO_URL, SITE_TITLE } from '../consts';
 
 // isArticle=false lets non-post pages (e.g. /about) reuse this layout without
 // getting article metadata / BlogPosting structured data.
@@ -36,6 +35,11 @@ const {
 const socialImage = heroImage ?? (postId ? `/og/${postId}.png` : undefined);
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+// Corrections go through GitHub Issues (the site has no contact form); the
+// link pre-fills the guide's title and URL.
+const issueURL =
+	`${REPO_URL}/issues/new?title=${encodeURIComponent(`Correction: ${title}`)}` +
+	`&body=${encodeURIComponent(`Guide: ${canonicalURL}\n\nWhat is wrong:\n`)}`;
 const blogPostingLd = isArticle && {
 	'@context': 'https://schema.org',
 	'@type': 'BlogPosting',
@@ -49,16 +53,12 @@ const blogPostingLd = isArticle && {
 		typeof socialImage === 'string' ? socialImage : (socialImage?.src ?? '/og/default.png'),
 		Astro.site,
 	).toString(),
-	// Author stays the Organization: posts are machine-written by the autonomous
-	// editor, so claiming personal authorship would be dishonest. The human shows
-	// up where he belongs — as the publisher's founder.
-	author: { '@type': 'Organization', name: 'Vertical Agent Solutions', url: Astro.site?.toString() },
-	publisher: {
-		'@type': 'Organization',
-		name: 'Vertical Agent Solutions',
-		url: Astro.site?.toString(),
-		founder: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL, sameAs: [AUTHOR_URL] },
-	},
+	// Author is the publication, not a person: posts are machine-written by the
+	// autonomous editor, so claiming personal authorship would be dishonest. The
+	// human is the publisher who supervises it. The site is a publication, not a
+	// company, so no Organization-with-founder node appears anywhere.
+	author: { '@type': 'Organization', name: SITE_TITLE, url: Astro.site?.toString() },
+	publisher: { '@type': 'Person', name: AUTHOR_NAME, url: AUTHOR_URL, sameAs: [AUTHOR_URL] },
 };
 const breadcrumbLd = isArticle && {
 	'@context': 'https://schema.org',
@@ -142,6 +142,12 @@ const breadcrumbLd = isArticle && {
 				font-size: 0.9375rem;
 				color: var(--text-secondary);
 			}
+			.corrections {
+				max-width: 68ch;
+				margin: var(--space-xl) auto 0;
+				font-size: 0.9375rem;
+				color: var(--text-secondary);
+			}
 			.keep-reading {
 				max-width: 68ch;
 				margin: var(--space-xl) auto 0;
@@ -191,7 +197,7 @@ const breadcrumbLd = isArticle && {
 							isArticle && (
 								<p class="byline">
 									Published by the <a href="/how-this-site-writes-itself/">autonomous editor</a> ·
-									reviewed by <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
+									supervised by <a href={AUTHOR_URL}>{AUTHOR_NAME}</a>
 								</p>
 							)
 						}
@@ -206,7 +212,14 @@ const breadcrumbLd = isArticle && {
 					}
 					<slot />
 					{isArticle && <Sources sources={sources} />}
-					{isArticle && <CtaBand />}
+					{
+						isArticle && (
+							<p class="corrections">
+								Spotted an error or a stale claim? <a href={issueURL}>Open an issue on GitHub</a>. Fixes
+								land as public commits.
+							</p>
+						)
+					}
 					{
 						isArticle && related.length > 0 && (
 							<section class="keep-reading">

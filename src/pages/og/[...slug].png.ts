@@ -12,7 +12,6 @@ import sharp from 'sharp';
 import { SITE_TITLE } from '../../consts';
 import { industries, industryName } from '../../../lib/industries';
 
-const DOMAIN = 'verticalagentsolutions.com';
 
 // Resolved from the project root (where `astro build` runs) — a plain
 // import.meta.url-relative URL would point inside dist/ after bundling.
@@ -32,7 +31,7 @@ export async function getStaticPaths() {
 	return [
 		{
 			params: { slug: 'default' },
-			props: { title: 'Practical guides to putting AI agents to work in your business' },
+			props: { title: 'Plain-English guides to adopting AI agents, industry by industry' },
 		},
 		...posts.map((p) => ({
 			params: { slug: p.id },
@@ -47,7 +46,7 @@ export async function getStaticPaths() {
 	];
 }
 
-export const GET: APIRoute<Props> = async ({ props }) => {
+export const GET: APIRoute<Props> = async ({ props, site }) => {
 	const { title, label } = props;
 	const svg = await satori(
 		{
@@ -115,7 +114,7 @@ export const GET: APIRoute<Props> = async ({ props }) => {
 										children: label ?? '',
 									},
 								},
-								{ type: 'div', props: { style: { color: '#7B766E' }, children: DOMAIN } },
+								{ type: 'div', props: { style: { color: '#7B766E' }, children: site?.host ?? '' } },
 							],
 						},
 					},

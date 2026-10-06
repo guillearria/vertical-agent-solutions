@@ -14,7 +14,7 @@ import Logo from './Logo.astro';
 			<HeaderLink href="/blog/">Guides</HeaderLink>
 			<HeaderLink href="/industries/">Industries</HeaderLink>
 			<HeaderLink href="/about/">About</HeaderLink>
-			<a class="button cta" href="/contact/">Work with us</a>
+			<HeaderLink href="/how-this-site-writes-itself/">How it works</HeaderLink>
 		</div>
 	</nav>
 </header>
@@ -56,15 +56,12 @@ import Logo from './Logo.astro';
 		align-items: center;
 		gap: var(--space-lg);
 	}
-	.links :global(a:not(.button)) {
+	.links :global(a) {
 		color: var(--text);
 		font-size: 0.9375rem;
 	}
-	.links :global(a:not(.button):hover) {
+	.links :global(a:hover) {
 		color: var(--accent);
-	}
-	.cta {
-		font-size: 0.875rem;
 	}
 	@media (max-width: 640px) {
 		.links {
@@ -74,6 +71,12 @@ import Logo from './Logo.astro';
 	@media (max-width: 480px) {
 		.wordmark {
 			display: none;
+		}
+		.links {
+			gap: var(--space-sm);
+		}
+		.links :global(a) {
+			font-size: 0.875rem;
 		}
 	}
 </style>
