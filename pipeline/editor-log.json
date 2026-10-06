@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-06T16:22:55.792Z",
-		"action": "new_post",
-		"slug": "status-texts-first-phone-second-an-ai-agent",
-		"reason": "Collision repair and auto body is a large, status-call-heavy vertical the catalog has never covered and is distinct from the mechanical auto repair and dealership lead-follow-up posts; practical guide is the least-recently-used format (last on Aug 30)."
-	},
-	{
 		"date": "2026-09-07T18:20:09.089Z",
 		"action": "new_post",
 		"slug": "ai-scheduling-agent-costs-for-a-home-inspection",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "boxes-to-tick-before-an-ai-agent-quotes-winter",
 		"reason": "Independent tire dealers are a common, quote-heavy business the catalog hasn't covered, and October is the start of their seasonal changeover surge. Checklist is the least recently used format; it was last used Sep 28."
+	},
+	{
+		"date": "2026-10-06T16:39:40.778Z",
+		"action": "improve_post",
+		"slug": "why-solo-and-small-firms-are-the-right-target",
+		"reason": "The post's description and framing pitch a 'done-for-you' service, which breaks the no-solicitation rule that took effect today. Document review is a distinct topic from the general law-firm post, so rewriting it as a neutral guide preserves its value."
 	}
 ]

@@ -1,54 +1,85 @@
 ---
-title: "AI Document Review for Solo Attorneys: The Safe, Unglamorous Win"
-description: "A done-for-you AI service that reads intake forms, retainers, and discovery, then hands attorneys structured facts to review instead of raw documents."
+title: "Letting AI Summarize Intake Forms and Discovery: What a Solo Attorney Should Check First"
+description: "Where AI summaries of intake forms and discovery go wrong, which ABA Opinion 512 questions to ask, and a closed-matter test for solo lawyers."
 pubDate: 'Jun 25 2026'
-updatedDate: 'Sep 14 2026'
+updatedDate: 'Oct 6 2026'
 industry: professional-services
 sources:
-  - "ABA Profile of the Legal Profession (lawyer population) — https://www.americanbar.org/news/profile-legal-profession/"
-  - "Federal Bar Association / ALPS (49% of private-practice lawyers are solo) — https://www.fedbar.org/blog/insights-from-solo-attorneys-on-well-being-and-resilience/"
-  - "Legal.io on Bloomberg Law 2024 Attorney Workload & Hours Survey — https://www.legal.io/blog/5685631/Lawyers-Are-Working-More-Billing-Less-and-Many-Want-Out"
-  - "RemoteAttorneys summary of ABA 2024 AI TechReport (solo AI adoption) — https://www.remoteattorneys.com/blog/lawyer-legal-statistics"
-  - "Litera Kira (extraction accuracy and time savings) — https://www.litera.com/products/kira"
-  - "Mata v. Avianca, Inc. — https://en.wikipedia.org/wiki/Mata_v._Avianca,_Inc."
-  - "ACC, \\\"Practical Lessons from the Attorney AI Missteps in Mata v. Avianca\\\" — https://www.acc.com/resource-library/practical-lessons-attorney-ai-missteps-mata-v-avianca"
-  - "ABA Formal Opinion 512 (Generative AI Tools) — https://www.lawnext.com/wp-content/uploads/2024/07/aba-formal-opinion-512.pdf"
+  - "ABA Litigation Section, \"Generative AI for Lawyers, Part 2: Maintaining Confidentiality\" (Opinion 512, informed consent, boilerplate) — https://www.americanbar.org/groups/litigation/resources/newsletters/ethics-professionalism/generative-ai-lawyers-part-2-maintaining-confidentiality/"
+  - "National Law Review, \"ABA Weighs In on Generative AI Use in Legal Practice\" (Opinion 512, reading terms of use and privacy policy) — https://natlawreview.com/article/aba-weighs-generative-ai-use-legal-practice"
+  - "Mondaq, \"American Bar Association Issues Guidance on Ethical Use of GAI in Legal Services\" (Opinion 512, verification depends on tool and task) — https://www.mondaq.com/unitedstates/new-technology/1519430/american-bar-association-issues-guidance-on-ethical-use-of-gai-in-legal-services"
+  - "The Florida Bar, Ethics Opinion 24-1 — https://www.floridabar.org/etopinions/opinion-24-1/"
+  - "Liu et al., \"Lost in the Middle: How Language Models Use Long Contexts\" — https://arxiv.org/abs/2307.03172v3"
+  - "Stanford HAI, \"AI on Trial: Legal Models Hallucinate in 1 out of 6 (or More) Benchmarking Queries\" — https://hai.stanford.edu/news/ai-trial-legal-models-hallucinate-1-out-6-or-more-benchmarking-queries"
+  - "OpenAI, Business data privacy, security, and compliance — https://openai.com/business-data/"
+  - "Bitdefender, \"Anthropic Shifts Privacy Stance, Lets Users Share Data for AI Training\" — https://www.bitdefender.com/en-us/blog/hotforsecurity/anthropic-shifts-privacy-stance-lets-users-share-data-for-ai-training"
+  - "Engadget, \"OpenAI no longer has to preserve all of its ChatGPT data, with some exceptions\" — https://engadget.com/ai/openai-no-longer-has-to-preserve-all-of-its-chatgpt-data-with-some-exceptions-192422093.html"
 ---
 
-Most legal AI headlines are about robots writing briefs. This is about something less flashy and far safer: a service that reads a solo attorney's incoming paperwork and turns it into a tidy, structured summary with names, dates, key clauses, and a flag for what's missing. The lawyer reviews the summary, not the stack of PDFs. That single design choice is what makes the idea both useful and defensible.
+A new personal-injury client hands you a 12-page intake questionnaire and a signed contingency agreement. Months later, the defense produces 900 pages of medical records and claim notes. More and more AI tools will read all of it and give you back a one-page fact sheet listing the parties, dates, amounts, key clauses and gaps. For a solo attorney without a paralegal, that's hard to ignore. This post is only about the document-reading job. Phone intake and the wider risk of sanctions are covered in [how far a small firm can trust an AI agent](/blog/ai-agents-for-small-law-firms-and-solo-attorneys/).
 
-## Why solo and small firms are the right target
+## What the summaries usually get right
 
-Solo practice isn't a niche. Roughly half of all lawyers in private practice in the United States are solo practitioners, out of a profession of more than 1.3 million active attorneys. These are one-person businesses with no paralegal, no document-review team, and no budget for enterprise software.
+Picture a reader with a highlighter who never gets tired and has never been to law school. It does well with facts that are printed plainly on the page:
 
-They also lose a lot of time to paperwork. Bloomberg Law's 2024 workload survey found attorneys averaged about 48 working hours a week but billed only around 36, a roughly 12-hour weekly gap swallowed by administrative work. Separate surveys from Thomson Reuters and Clio put non-billable time somewhere between a quarter and nearly half of the day. For a solo, every hour spent hand-combing an intake questionnaire is an hour not spent on billable, client-facing work.
+- Names of parties, witnesses, insurers and opposing counsel
+- Dates that are stated outright, such as the date of loss or the signing date
+- Typed dollar figures, fee percentages and policy limits
+- Whether a standard clause exists at all, such as governing law, arbitration or fee-shifting
+- An index of a production by document type and date
 
-And adoption is wide open. By one read of the ABA's 2024 AI tech data, fewer than one in five solo practitioners report using AI tools at all. The big firms are moving; the solos mostly aren't. That's the market.
+These are lookup jobs. The answer is already on a page, and the tool only has to find it and copy it into the right box.
 
-## What the service actually does
+## Where they misread or leave things out
 
-Think of it like a sharp new clerk who reads everything that comes in and writes you a one-page brief, but never files anything without your sign-off.
+Problems start when the page is messy or the meaning depends on context.
 
-The workflow is simple:
+- **Scans and handwriting.** A faxed intake form has to go through text recognition before the AI can read it. A smudged digit can turn $18,000 into $13,000, and the summary will state the wrong number as confidently as everything else.
+- **Negatives and exceptions.** "Client shall not be responsible for costs unless..." can come back as "client responsible for costs."
+- **Later papers that change earlier ones.** Say an addendum raises the contingency fee once suit is filed. A summary built only from the original retainer will get the fee wrong.
+- **The middle of long files.** A 2023 study called "Lost in the Middle," by researchers at Stanford and elsewhere, found that AI models used information at the start or end of a long document more reliably than information buried in the middle. In a 900-page production, most of the file is the middle.
+- **Guesses presented as facts.** A client who wrote "after my shift ended" can show up in the summary as "incident occurred at approximately 5:30 p.m."
 
-1. **Documents come in:** a client intake questionnaire, a signed retainer agreement, a batch of discovery PDFs, or an email thread.
-2. **The AI reads and extracts:** party names, key dates, the facts of the matter, important clauses (fee terms, jurisdiction, deadlines), and anything that looks missing or inconsistent.
-3. **The attorney reviews structured output:** a clean, labeled summary with links back to the source page, instead of the raw 80-page bundle.
+Missing facts are the hardest problem to catch, because a summary with one fact missing looks just as finished as a complete one. Tools built for lawyers aren't immune. A 2024 Stanford study found that research tools from LexisNexis and Thomson Reuters gave incorrect information on more than one in six test questions. That study tested legal research, not summaries, but it shows that a product built for lawyers still needs checking.
 
-The "missing-info flags" are the underrated part. If a retainer has no governing-law clause, or an intake form skips the opposing party's address, the system says so. It's catching gaps, not just copying text.
+## Why every summary goes back to the source
 
-## This is proven technology, with one firm rule
+In July 2024 the ABA issued Formal Opinion 512, its first formal ethics guidance on generative AI. It says three things that matter here:
 
-Reading and tagging legal documents is one of the more mature uses of AI in law. Litera's Kira, for example, has been doing clause extraction for years and reports 90%-plus accuracy on extractions and up to 50% time savings in contract review. Tools like Thomson Reuters CoCounsel, Lexis+ AI, Spellbook, and Diligen play in nearby territory. The capability is real and commercially available.
+- Lawyers must review AI output before relying on it.
+- How much review is needed depends on the tool and the task.
+- The tool can't replace the lawyer's own judgment.
 
-The rule that keeps it safe: **the AI extracts, the human decides.** This matters because of a now-famous cautionary tale. In *Mata v. Avianca*, a New York federal judge fined two attorneys $5,000 after they filed a brief citing court cases that ChatGPT had simply invented. The lesson isn't "don't use AI." The same judge noted there's nothing inherently improper about using a reliable AI tool. The lesson is don't let AI generate facts you then trust blindly.
+A fact sheet that feeds a limitations deadline or a settlement demand is a high-stakes task.
 
-Pulling a date that already exists in a document is a low-risk task. Inventing legal arguments is a high-risk one. This service deliberately lives on the safe side of that line: it only surfaces what's in the documents, and a licensed attorney verifies it.
+In practice:
 
-## The ethics and privacy piece you can't skip
+- Use only tools that link each fact they pull out to the page it came from.
+- Check every date that sets a deadline and every dollar figure against the original.
+- Don't trust a "not found" or "clause absent" result until you've looked yourself.
 
-In July 2024, the ABA issued Formal Opinion 512, its first formal guidance on generative AI. It spells out that lawyers' existing duties (competence, confidentiality, client communication, and reasonable fees) all apply when using these tools. For a service handling client documents, two things become non-negotiable: tight data security with clear confidentiality terms, and output that's traceable back to the source so the attorney can actually verify it. Build those in from day one, or the offering is a liability instead of an asset.
+## Confidentiality questions to put to any tool
 
-## A concrete next step
+Opinion 512 says lawyers should, at a minimum, read and understand a tool's terms of use, privacy policy and related contract terms. If they can't, they should get help from colleagues, IT staff or security experts. It also covers "self-learning" tools, meaning tools that can reuse what they're given. Putting client information into one requires the client's informed consent, and boilerplate in an engagement letter doesn't count. Florida Bar Opinion 24-1 also tells lawyers to look into a program's policies on keeping data, sharing data and self-learning. Check whether your own state bar has issued guidance.
 
-If you're a solo attorney curious about this, you don't need to hire a developer or buy a platform. Run a small, controlled pilot: take five closed matters where you already know the answers, feed the intake forms and retainers into one established extraction tool, and check the structured output against reality. Track two numbers: how much time it saved, and how often you had to correct it. That hour-long test will tell you more about whether this fits your practice than any vendor demo ever could.
+Get answers to these questions in writing:
+
+1. **Do you train your AI models on our uploads, and is that the default?** It varies by product tier. OpenAI says it doesn't train on business ChatGPT or API data by default. In 2025, Anthropic changed its consumer Claude terms so chats are used for training unless the user opts out, and that data can be kept for up to five years. Its commercial and API products aren't affected. Terms change, so read the current version.
+2. **How long do you keep files and outputs, and can we delete them?** A promise to delete has limits. In 2025, the federal court hearing the New York Times copyright case ordered OpenAI to preserve ChatGPT logs, including chats users had deleted. It didn't end that requirement for new chats until that fall.
+3. **Who at your company, or at companies you hire, can see client files?**
+4. **Can our uploads ever affect the answers another customer gets?**
+5. **Where is data stored, is it encrypted, and how quickly will you tell us about a breach?**
+
+## Run it on a closed matter first
+
+1. Pick three closed matters with different kinds of paperwork: a clean typed intake, a scanned or handwritten one, and one with a retainer amendment or a long production.
+2. Write your own answer key before running anything. List 15 to 20 facts per matter, plus two or three things you know aren't in the file.
+3. Only use a product tier whose terms you've already checked. Closed files are still confidential, so remove names if you have any doubt.
+4. Count wrong facts, missed facts, made-up facts, things the tool wrongly said were absent, and source links that point to the wrong page.
+5. Compare how long the checking took with how long reading the file yourself would take.
+
+One made-up fact on a matter you know well is a fail. If checking takes as long as reading, the tool isn't saving you any time.
+
+## Before the next new file lands
+
+Choose the one tool you're considering, download its terms of use and privacy policy, and answer the five questions above on a single page. Where the documents don't say, ask the vendor in writing. If you're unsure what the answers mean, you can get help from a legal-technology consultant, your malpractice insurer's risk-management staff, or your state bar's ethics hotline if it has one. Then set aside an afternoon for the closed-matter test.
