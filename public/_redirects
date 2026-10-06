@@ -23,3 +23,8 @@
 /industries/salons /industries/personal-services/ 301
 /industries/restaurants/ /industries/hospitality-leisure/ 301
 /industries/restaurants /industries/hospitality-leisure/ 301
+
+# 2026-10-06: the contact page and its form were retired; the site has no contact
+# form. Corrections go through GitHub Issues, linked from the About page.
+/contact/ /about/#feedback 301
+/contact /about/#feedback 301

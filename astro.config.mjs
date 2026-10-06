@@ -6,9 +6,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-	// TODO: flip to https://verticalagentsolutions.com once the custom domain is
-	// connected in Cloudflare Pages (also update SITE_URL in the Pages env and
-	// DEFAULT_SITE in functions/api/telegram.ts).
+	// The pages.dev host is canonical. The custom domain (verticalagentsolutions.com)
+	// was dropped in July 2026 and never connected; nothing else carries it.
 	site: 'https://vertical-agent-solutions.pages.dev',
 	trailingSlash: 'always',
 	integrations: [mdx(), sitemap()],
