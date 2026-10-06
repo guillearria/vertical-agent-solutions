@@ -3,11 +3,9 @@
 This wires the repo into the **$0-compute serverless** setup:
 
 - **Cloudflare Pages** — hosts the static Astro site, auto-deploys on every push to `main`.
-- **Cloudflare Pages Functions** — `functions/api/contact.ts` (contact form → Telegram, Turnstile-protected).
 - **GitHub Actions** — the heavy AI work: the **daily autonomous editor** (`editor.yml`). All model calls run through headless Claude Code on the owner's **Claude Max subscription** (`CLAUDE_CODE_OAUTH_TOKEN`), not metered API credits.
-- **Cloudflare KV** — contact-form rate-limit counters only.
 
-Telegram is **outbound-only and purely informational**: the editor reports what it did, the workflow alerts on failure, and the contact form forwards messages. There is no webhook, no bot commands, and no interactive buttons. Supervision happens in git — every editor action is a single commit, so undoing one is `git revert`.
+Telegram is **outbound-only and purely informational**: the editor reports what it did and the workflow alerts on failure. There is no webhook, no bot commands, and no interactive buttons. Supervision happens in git — every editor action is a single commit, so undoing one is `git revert`.
 
 One publishing path:
 
@@ -20,6 +18,8 @@ Autonomous:      editor.yml (daily cron) → editor.ts reviews the catalog → O
 The daily editor publishes on its own and you supervise after the fact. Hard-coded guards keep it sane: one action per day, a 14-day per-slug cooldown (`pipeline/editor-log.json`), it never archives below 4 active posts nor anything touched in the last 30 days.
 
 Anti-template safeguards (`pipeline/src/variety.ts`): every draft is checked in code against the catalog for reused title phrasing and repeated description openers, and retried once with feedback if it collides; the decider is shown a computed `Catalog health:` block and picks a per-post article format; `improve_post` may retitle a templated post (the slug/URL never changes, and the Telegram summary shows the retitle).
+
+Voice guard (since Oct 6 2026): the site is a publication with nothing for sale — no contact form, no services, no mailing list. Corrections come in through GitHub Issues (linked under every post and on `/about/#feedback`). The writer enforces the no-pitch rule in code (`pipeline/src/solicitation.ts`): a draft that reads as the site offering anything is sent back once with feedback, and a draft that still reads that way fails the run instead of publishing.
 
 Catalog structure (since Sep 14 2026): every post carries a sector tag (`industry:` in frontmatter, one of the nine hubs in `lib/industries.ts`, which the decider picks for new posts) and the hub pages at `/industries/<slug>/` are built from it. The primer post is linked once from the post layout ("New to AI agents?"); the writer is told never to link it from a body, because 68 posts had grown the same pointer sentence.
 
@@ -38,24 +38,16 @@ The repo is already pushed. Add **Actions secrets** (Settings → Secrets and va
 
 Optionally add a repo **variable** (Settings → Secrets and variables → Actions → Variables): `SITE_URL` = the live base URL (defaults to `https://vertical-agent-solutions.pages.dev` in code).
 
-### 2. Cloudflare — Pages + KV
+### 2. Cloudflare — Pages
 1. **Pages:** Workers & Pages → Create → Pages → **Connect to Git** → this repo.
    - Framework preset **Astro**, build command `npm run build`, output dir `dist`.
    - Build var `NODE_VERSION = 22`.
-2. **KV (contact-form rate limiting):** Workers & Pages → KV → Create namespace, e.g. `vas-inbox`. Bind it to the Pages project: Settings → Functions → **KV namespace bindings** → variable name **`INBOX_KV`** → your namespace.
-3. **Pages env vars** (Settings → Environment variables, Production):
-   | Var | Value |
-   |---|---|
-   | `TELEGRAM_BOT_TOKEN` | same bot token |
-   | `TELEGRAM_OWNER_ID` | your numeric id |
-   | `TURNSTILE_SECRET_KEY` | from step 4 (contact-form spam check; skipped if unset) |
-   | `PUBLIC_TURNSTILE_SITE_KEY` | from step 4 — ⚠️ needed at **build** time (Astro inlines it), so set it for the build environment and redeploy |
-4. **Turnstile (contact-form spam protection):** Cloudflare dashboard → **Turnstile** → Add widget → hostname `vertical-agent-solutions.pages.dev` (add `verticalagentsolutions.com` later), mode **Managed**. ⚠️ Type the hostname, then **press Enter / pick the suggestion** so it becomes a list entry under the field — if the text isn't confirmed, Create fails with "At least 1 hostname must be added" (`pages.dev` subdomains are supported). Copy the **Site Key** → `PUBLIC_TURNSTILE_SITE_KEY` and **Secret Key** → `TURNSTILE_SECRET_KEY` (both in the Pages env vars above). Until these are set, the form still works behind the honeypot + rate limit only.
-5. **Custom domain (pending):** Pages project → Custom domains → add `verticalagentsolutions.com`. Then flip `site` in `astro.config.mjs`, the `SITE_URL` vars, and the Turnstile hostname.
-6. **Avoid wasted builds (optional):** Settings → Builds → Build watch paths → include `src/*` so non-`src` commits don't rebuild.
-7. **Analytics (two switches, both dashboard-only):**
+2. **No custom domain:** `verticalagentsolutions.com` was dropped in July 2026 and never connected; the `pages.dev` host is canonical (`site` in `astro.config.mjs`).
+3. **No Functions, KV, or Turnstile:** the contact form that used them was retired on Oct 6 2026. The Pages env vars, the `INBOX_KV` binding, and the Turnstile widget it left behind are listed for removal in `BACKLOG.md`; nothing in the repo reads them.
+4. **Avoid wasted builds (optional):** Settings → Builds → Build watch paths → include `src/*` so non-`src` commits don't rebuild.
+5. **Analytics (two switches, both dashboard-only):**
    - **Cloudflare Web Analytics:** Pages project → **Metrics** → Enable Web Analytics. One click; Cloudflare injects its beacon on the next deploy, so no token or code is involved (the old `PUBLIC_CF_BEACON_TOKEN` path was removed Sep 14 2026). Free, cookieless: visitors, top pages, referrers, countries.
-   - **Google Search Console:** the URL-prefix property `https://vertical-agent-solutions.pages.dev/` was added Sep 15 2026 and verified by the **HTML tag** method; the tag's token is `GSC_VERIFICATION` in `src/consts.ts` (account-level and public by design, so it is committed, not an env var). When the custom domain lands, add it as a second URL-prefix property: the same tag verifies it. Do not use the HTML-file method on Pages: `/google….html` is 308-redirected to a clean URL and Google wants a 200 at the exact path. Bing Webmaster Tools can import from Search Console afterwards.
+   - **Google Search Console:** the URL-prefix property `https://vertical-agent-solutions.pages.dev/` was added Sep 15 2026 and verified by the **HTML tag** method; the tag's token is `GSC_VERIFICATION` in `src/consts.ts` (account-level and public by design, so it is committed, not an env var). Do not use the HTML-file method on Pages: `/google….html` is 308-redirected to a clean URL and Google wants a 200 at the exact path. Bing Webmaster Tools can import from Search Console afterwards.
 
 ### 3. Telegram bot
 Create the bot with @BotFather; the token is only ever used to **send** messages. The bot must have **no webhook registered** — if one exists from an earlier setup, remove it:
@@ -70,9 +62,7 @@ curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/deleteWebhook"
 
 1. **Hosting:** push any change → Pages build succeeds → the site, `/blog`, and `/rss.xml` are live.
 2. **Daily editor:** Actions tab → run **Daily editor** with `dry_run: true` → check the run log for the decision JSON (nothing pushed). Then run it for real → a commit lands, Pages rebuilds, and a plain Telegram summary arrives (no buttons). To undo an action, revert its commit.
-3. **Contact form:** submit the form on `/contact` → a `📬 Contact form` message arrives in Telegram. Fill the hidden "Company" field (or submit 6× in an hour) → silently dropped / rate-limited.
 
 ## Local development
 - `npm run dev` — site at localhost:4321.
 - **Editor dry run:** `cd pipeline && EDITOR_DRY_RUN=1 npx tsx src/editor.ts` — uses the logged-in `claude` CLI (subscription auth; no API key). Prints the decision and writes any draft into the working tree — no push, no Telegram.
-- **Functions:** `npm run build && npx wrangler pages dev dist --kv INBOX_KV` serves the site + contact form locally (use Turnstile test keys: site `1x00000000000000000000AA`, secret `1x0000000000000000000000000000000AA`).
