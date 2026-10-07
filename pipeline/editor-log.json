@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-07T18:20:09.089Z",
-		"action": "new_post",
-		"slug": "ai-scheduling-agent-costs-for-a-home-inspection",
-		"reason": "Home inspection firms are a distinct, referral-speed-driven vertical the catalog has never covered, separate from the remodeler, roofing, and realtor posts; cost/ROI is the least-recently-used format (last on Aug 31)."
-	},
-	{
 		"date": "2026-09-08T17:19:56.606Z",
 		"action": "new_post",
 		"slug": "how-a-family-entertainment-center-runs-birthday",
@@ -178,5 +172,11 @@
 		"action": "improve_post",
 		"slug": "why-solo-and-small-firms-are-the-right-target",
 		"reason": "The post's description and framing pitch a 'done-for-you' service, which breaks the no-solicitation rule that took effect today. Document review is a distinct topic from the general law-firm post, so rewriting it as a neutral guide preserves its value."
+	},
+	{
+		"date": "2026-10-07T19:24:03.978Z",
+		"action": "new_post",
+		"slug": "uniform-and-linen-rental-call-automation-starts-at",
+		"reason": "Route-based uniform and linen rental is a common, phone-heavy B2B vertical the catalog has never covered, and it is distinct from the distributor and janitorial posts. Practical guide is the least recently used format; it was last used Sep 29."
 	}
 ]
