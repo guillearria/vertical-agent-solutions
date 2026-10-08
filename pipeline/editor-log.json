@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-08T17:19:56.606Z",
-		"action": "new_post",
-		"slug": "how-a-family-entertainment-center-runs-birthday",
-		"reason": "Family entertainment and party venues are a sizable, booking-driven consumer vertical the catalog has never touched and is distinct from the wedding venue, golf, restaurant, and gym posts; case walkthrough is the least-recently-used format (last on Sep 1)."
-	},
-	{
 		"date": "2026-09-09T17:16:28.188Z",
 		"action": "improve_post",
 		"slug": "ai-agents-for-realtors-where-they-actually-help",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "uniform-and-linen-rental-call-automation-starts-at",
 		"reason": "Route-based uniform and linen rental is a common, phone-heavy B2B vertical the catalog has never covered, and it is distinct from the distributor and janitorial posts. Practical guide is the least recently used format; it was last used Sep 29."
+	},
+	{
+		"date": "2026-10-08T19:19:30.614Z",
+		"action": "new_post",
+		"slug": "is-an-ai-scheduling-agent-worth-it-for-a",
+		"reason": "Residential appraisal firms are a common, scheduling-heavy real estate business the catalog hasn't covered, and real-estate-property is one of the thinner hubs. Cost/ROI is the least recently used format; it was last used Sep 30."
 	}
 ]
