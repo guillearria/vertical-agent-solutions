@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-09T17:16:28.188Z",
-		"action": "improve_post",
-		"slug": "ai-agents-for-realtors-where-they-actually-help",
-		"reason": "Thirteen consecutive new posts have left the oldest entries stale, and this one is both thin and still using the retired templated title pattern we've already replaced on two sibling posts."
-	},
-	{
 		"date": "2026-09-10T17:06:11.270Z",
 		"action": "new_post",
 		"slug": "no-square-foot-quotes-no-alarm-codes-an-ai-phone",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "is-an-ai-scheduling-agent-worth-it-for-a",
 		"reason": "Residential appraisal firms are a common, scheduling-heavy real estate business the catalog hasn't covered, and real-estate-property is one of the thinner hubs. Cost/ROI is the least recently used format; it was last used Sep 30."
+	},
+	{
+		"date": "2026-10-09T18:52:12.195Z",
+		"action": "new_post",
+		"slug": "is-biscuit-still-available-an-animal-rescues-ai",
+		"reason": "Animal shelters and rescues are a common, phone-heavy nonprofit vertical the catalog has never covered, and they are distinct from the kennel and donor-email posts because of surrender and stray triage. Case walkthrough is the least recently used format; it was last used Oct 1."
 	}
 ]
