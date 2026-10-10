@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-10T17:06:11.270Z",
-		"action": "new_post",
-		"slug": "no-square-foot-quotes-no-alarm-codes-an-ai-phone",
-		"reason": "Commercial janitorial/BSC is a huge B2B vertical the catalog has never covered, with a callout-and-complaint call pattern distinct from the residential maid-service post; FAQ is the least-recently-used format (last on Sep 2)."
-	},
-	{
 		"date": "2026-09-11T17:05:05.432Z",
 		"action": "new_post",
 		"slug": "travel-advisors-worry-an-ai-agent-will-cost-them",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "is-biscuit-still-available-an-animal-rescues-ai",
 		"reason": "Animal shelters and rescues are a common, phone-heavy nonprofit vertical the catalog has never covered, and they are distinct from the kennel and donor-email posts because of surrender and stray triage. Case walkthrough is the least recently used format; it was last used Oct 1."
+	},
+	{
+		"date": "2026-10-10T17:54:07.859Z",
+		"action": "new_post",
+		"slug": "ready-mix-producers-ask-whether-an-ai-phone-agent",
+		"reason": "Ready-mix concrete dispatch is a common, phone-heavy B2B business the catalog hasn't covered, and trade-industrial is the thinnest hub. October's cold-weather pours make it timely, and FAQ is the least recently used format, last used Oct 2."
 	}
 ]
