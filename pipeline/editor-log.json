@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-11T17:05:05.432Z",
-		"action": "new_post",
-		"slug": "travel-advisors-worry-an-ai-agent-will-cost-them",
-		"reason": "Leisure travel agencies and tour operators are a sizable, relationship-driven vertical the catalog has never touched and is distinct from the B&B/hotel and wedding venue posts; myth-busting is the least-recently-used format (last on Sep 3)."
-	},
-	{
 		"date": "2026-09-12T16:25:25.936Z",
 		"action": "new_post",
 		"slug": "what-voice-ai-live-operators-and-a-booking-widget",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "ready-mix-producers-ask-whether-an-ai-phone-agent",
 		"reason": "Ready-mix concrete dispatch is a common, phone-heavy B2B business the catalog hasn't covered, and trade-industrial is the thinnest hub. October's cold-weather pours make it timely, and FAQ is the least recently used format, last used Oct 2."
+	},
+	{
+		"date": "2026-10-11T18:08:24.051Z",
+		"action": "new_post",
+		"slug": "true-false-or-half-true-five-pawn-shop-beliefs",
+		"reason": "Pawn shops are a common, phone-heavy business the catalog has never covered, and their regulated loan and police-hold calls make them distinct from other retail. Myth-busting is the least recently used format; it was last used Oct 3."
 	}
 ]
