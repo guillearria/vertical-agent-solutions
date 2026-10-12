@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-12T16:25:25.936Z",
-		"action": "new_post",
-		"slug": "what-voice-ai-live-operators-and-a-booking-widget",
-		"reason": "Residential appliance repair is a large, dispatch-fee-and-warranty-driven trade vertical the catalog has never covered and is distinct from the HVAC, auto repair, and pool service posts; comparison is the least-recently-used format (last on Sep 4)."
-	},
-	{
 		"date": "2026-09-13T17:01:47.672Z",
 		"action": "new_post",
 		"slug": "four-buckets-nine-vendor-questions-five-test-calls",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "true-false-or-half-true-five-pawn-shop-beliefs",
 		"reason": "Pawn shops are a common, phone-heavy business the catalog has never covered, and their regulated loan and police-hold calls make them distinct from other retail. Myth-busting is the least recently used format; it was last used Oct 3."
+	},
+	{
+		"date": "2026-10-12T21:46:32.328Z",
+		"action": "new_post",
+		"slug": "testing-an-ai-phone-agent-a-booking-widget-and-a",
+		"reason": "Escape rooms are a common, phone-heavy leisure business the catalog hasn't covered, and hospitality-leisure is one of the thinner hubs. Comparison is the least recently used format; it was last used Oct 4."
 	}
 ]
