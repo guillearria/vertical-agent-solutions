@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-13T17:01:47.672Z",
-		"action": "new_post",
-		"slug": "four-buckets-nine-vendor-questions-five-test-calls",
-		"reason": "Independent RIAs and financial advisory practices are a sizable, compliance-heavy vertical the catalog has never covered (the existing wealth post is consumer-facing, not firm front-office), and checklist is the least-recently-used format."
-	},
-	{
 		"date": "2026-09-14T18:44:01.554Z",
 		"action": "improve_post",
 		"slug": "put-an-ai-agent-on-fire-inspection-scheduling",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "testing-an-ai-phone-agent-a-booking-widget-and-a",
 		"reason": "Escape rooms are a common, phone-heavy leisure business the catalog hasn't covered, and hospitality-leisure is one of the thinner hubs. Comparison is the least recently used format; it was last used Oct 4."
+	},
+	{
+		"date": "2026-10-13T19:53:55.945Z",
+		"action": "new_post",
+		"slug": "the-party-and-tent-rental-call-sheet-for-an-ai",
+		"reason": "Party and event rental is a common, phone-heavy business the catalog hasn't covered, and it differs from both the equipment rental and wedding venue posts. Checklist is the least recently used format; it was last used Oct 5."
 	}
 ]
