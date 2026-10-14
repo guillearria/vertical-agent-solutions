@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-14T18:44:01.554Z",
-		"action": "improve_post",
-		"slug": "put-an-ai-agent-on-fire-inspection-scheduling",
-		"reason": "Fourteen of the last fifteen actions were new posts, and this is the catalog's only flagged style-redundancy issue — a templated title colliding with the propane post, fixable alongside real depth on inspection codes and escalation wording."
-	},
-	{
 		"date": "2026-09-15T17:43:33.500Z",
 		"action": "new_post",
 		"slug": "four-stages-of-ai-guest-messaging-for-vacation",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "the-party-and-tent-rental-call-sheet-for-an-ai",
 		"reason": "Party and event rental is a common, phone-heavy business the catalog hasn't covered, and it differs from both the equipment rental and wedding venue posts. Checklist is the least recently used format; it was last used Oct 5."
+	},
+	{
+		"date": "2026-10-14T18:04:07.524Z",
+		"action": "new_post",
+		"slug": "training-an-ai-phone-agent-for-auto-glass",
+		"reason": "Independent auto glass shops are a common, phone-heavy business the catalog has not covered, and their insurance-claim and calibration calls set them apart from the collision, tire, and repair posts. Practical guide is the least recently used format; it was last used Oct 7."
 	}
 ]
