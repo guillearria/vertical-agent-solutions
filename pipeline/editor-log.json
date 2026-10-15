@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-15T17:43:33.500Z",
-		"action": "new_post",
-		"slug": "four-stages-of-ai-guest-messaging-for-vacation",
-		"reason": "Short-term/vacation rental management is a sizable 24/7 guest-messaging vertical the catalog has never covered and is distinct from the small-landlord, HOA, self-storage, and B&B posts; practical guide is the least-recently-used format."
-	},
-	{
 		"date": "2026-09-16T17:41:05.659Z",
 		"action": "new_post",
 		"slug": "ai-receptionist-cost-for-a-dance-studio-or-martial",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "training-an-ai-phone-agent-for-auto-glass",
 		"reason": "Independent auto glass shops are a common, phone-heavy business the catalog has not covered, and their insurance-claim and calibration calls set them apart from the collision, tire, and repair posts. Practical guide is the least recently used format; it was last used Oct 7."
+	},
+	{
+		"date": "2026-10-15T17:48:53.639Z",
+		"action": "new_post",
+		"slug": "does-a-small-museum-book-enough-field-trips-to-pay",
+		"reason": "Small museums and historical societies are a common, phone-heavy nonprofit vertical the catalog has never covered, and education-nonprofits is one of the thinner hubs. Cost/ROI is the least recently used format; it was last used Oct 8."
 	}
 ]
