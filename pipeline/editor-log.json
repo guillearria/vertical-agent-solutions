@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-16T17:41:05.659Z",
-		"action": "new_post",
-		"slug": "ai-receptionist-cost-for-a-dance-studio-or-martial",
-		"reason": "Kids' activity studios (dance, music, martial arts) are a large enrollment-driven vertical the catalog has never covered and are distinct from the daycare, tutoring, and private school posts; cost/ROI is the least-recently-used format."
-	},
-	{
 		"date": "2026-09-17T17:41:44.510Z",
 		"action": "new_post",
 		"slug": "inside-a-dry-cleaners-monday-phone-log-route",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "does-a-small-museum-book-enough-field-trips-to-pay",
 		"reason": "Small museums and historical societies are a common, phone-heavy nonprofit vertical the catalog has never covered, and education-nonprofits is one of the thinner hubs. Cost/ROI is the least recently used format; it was last used Oct 8."
+	},
+	{
+		"date": "2026-10-16T17:29:31.474Z",
+		"action": "new_post",
+		"slug": "riding-along-with-a-locksmiths-ai-phone-agent-on-a",
+		"reason": "Locksmiths are a common, phone-heavy, after-hours business the catalog has never covered, and their identity checks and emergency calls set them apart from other field-service posts. Case walkthrough is the least recently used format; it was last used Oct 9."
 	}
 ]
