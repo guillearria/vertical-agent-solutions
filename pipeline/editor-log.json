@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-18T17:09:02.280Z",
-		"action": "new_post",
-		"slug": "tattoo-shop-faq-ai-booking-agents-deposits-and-per",
-		"reason": "Tattoo and piercing studios are a deposit-driven, artist-scheduled vertical the catalog has never touched, and personal services is still the thinnest sector hub; FAQ is the least-recently-used format (last on Sep 10)."
-	},
-	{
 		"date": "2026-09-19T16:34:59.916Z",
 		"action": "new_post",
 		"slug": "does-an-ai-leasing-assistant-actually-work-at-a",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "ai-answering-service-escalation-rules-for",
 		"reason": "Commercial property management is a common, phone-heavy business the catalog has never covered, and real-estate-property is tied for the thinnest hub. FAQ is the least recently used format; it was last used Oct 10."
+	},
+	{
+		"date": "2026-10-18T16:35:54.329Z",
+		"action": "new_post",
+		"slug": "small-3pl-warehouses-overrate-two-ai-agent-risks",
+		"reason": "Third-party logistics warehouses are a common B2B vertical with heavy phone and email traffic, and the catalog has not covered them yet. Trade-industrial is the thinnest sector hub, and myth-busting is the format that has gone longest without use (last used Oct 11)."
 	}
 ]
