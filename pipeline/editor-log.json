@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-20T16:52:45.347Z",
-		"action": "new_post",
-		"slug": "photography-studio-inquiries-scoring-an-ai-agent-a",
-		"reason": "Photography studios are a common inquiry-driven small business the catalog has never covered, personal-services is still the thinnest sector hub, and comparison is the least-recently-used format (last on Sep 12)."
-	},
-	{
 		"date": "2026-09-21T18:49:51.964Z",
 		"action": "new_post",
 		"slug": "if-the-caller-is-grieving-the-ai-agent-stops",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "bail-bonds-answering-service-or-ai-agent-let-four",
 		"reason": "The catalog has never covered bail bond agencies, a common, phone-heavy, overnight business whose licensing and legal-advice limits set it apart from the other professional-services posts. Comparison is the format that has gone longest without use; it was last used Oct 12."
+	},
+	{
+		"date": "2026-10-20T18:01:36.922Z",
+		"action": "new_post",
+		"slug": "ai-receptionist-for-a-small-bridal-shop-a-call-by",
+		"reason": "Bridal salons are a common, appointment-heavy business the catalog has never covered, and their special-order and alterations calls differ from the salon, photography, and wedding venue posts. Personal-services is tied for the thinnest hub, and checklist is the format that has gone longest without use (last used Oct 13)."
 	}
 ]
