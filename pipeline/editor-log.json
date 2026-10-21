@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-21T18:49:51.964Z",
-		"action": "new_post",
-		"slug": "if-the-caller-is-grieving-the-ai-agent-stops",
-		"reason": "Churches and religious congregations are a very large, phone-driven vertical the catalog has never touched and is distinct from the nonprofit-email post; checklist is the least-recently-used format (last on Sep 13)."
-	},
-	{
 		"date": "2026-09-22T17:40:46.453Z",
 		"action": "new_post",
 		"slug": "home-builder-ai-agent-setup-for-new-home-sales",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "ai-receptionist-for-a-small-bridal-shop-a-call-by",
 		"reason": "Bridal salons are a common, appointment-heavy business the catalog has never covered, and their special-order and alterations calls differ from the salon, photography, and wedding venue posts. Personal-services is tied for the thinnest hub, and checklist is the format that has gone longest without use (last used Oct 13)."
+	},
+	{
+		"date": "2026-10-21T18:07:09.509Z",
+		"action": "new_post",
+		"slug": "getting-an-ai-phone-agent-ready-for-swim-school",
+		"reason": "Swim schools are a common, phone-heavy youth-lessons business the catalog has never covered. Their safety and placement calls set them apart from the dance studio post. Education-nonprofits is tied for the thinnest hub, and practical guide is the format that has gone longest without use (last used Oct 14)."
 	}
 ]
