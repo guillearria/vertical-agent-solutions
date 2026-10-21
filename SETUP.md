@@ -65,4 +65,7 @@ curl "https://api.telegram.org/bot<TELEGRAM_BOT_TOKEN>/deleteWebhook"
 
 ## Local development
 - `npm run dev` — site at localhost:4321.
+- `npm run build` — production build to `dist/`.
+- `cd pipeline && npx tsc --noEmit` — type-check the pipeline.
+- **Where things live:** the Astro site is `src/` (posts in `src/content/blog/`), the Node pipeline run by GitHub Actions is `pipeline/`, shared helpers are `lib/`.
 - **Editor dry run:** `cd pipeline && EDITOR_DRY_RUN=1 npx tsx src/editor.ts` — uses the logged-in `claude` CLI (subscription auth; no API key). Prints the decision and writes any draft into the working tree — no push, no Telegram.
