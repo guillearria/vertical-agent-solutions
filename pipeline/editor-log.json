@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-23T17:54:12.054Z",
-		"action": "new_post",
-		"slug": "winery-tasting-room-phones-the-break-even-on-ai",
-		"reason": "Wineries and tasting rooms are a common reservation- and membership-driven vertical the catalog has never covered, distinct from the restaurant, venue, and golf posts. Cost/ROI is the least-recently-used format (last used Sep 16)."
-	},
-	{
 		"date": "2026-09-24T17:53:49.570Z",
 		"action": "new_post",
 		"slug": "driving-school-lesson-scheduling-with-an-ai-phone",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "lumber-yard-ai-phone-agent-costs-monthly-fees-erp",
 		"reason": "The catalog has never covered lumber yards and building supply dealers, which are common, phone-heavy businesses, and trade-industrial is the thinnest sector hub. Cost/ROI is the format that has gone longest without use; it was last used Oct 15."
+	},
+	{
+		"date": "2026-10-23T17:54:21.724Z",
+		"action": "new_post",
+		"slug": "what-happens-when-an-ai-agent-answers-a-parking",
+		"reason": "Parking garage and lot operators are a common, phone-heavy property business the catalog has never covered, and real-estate-property is the thinnest hub with 11 posts. Case walkthrough is the format that has gone longest without use; it was last used Oct 16."
 	}
 ]
