@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-24T17:53:49.570Z",
-		"action": "new_post",
-		"slug": "driving-school-lesson-scheduling-with-an-ai-phone",
-		"reason": "Driving schools are a common, scheduling-heavy small business the catalog has never covered, and they are distinct from the tutoring, trade school, and dance studio posts. Case walkthrough is the least recently used format (last used Sep 17)."
-	},
-	{
 		"date": "2026-09-25T17:59:36.485Z",
 		"action": "new_post",
 		"slug": "scrap-metal-yard-phones-letting-an-ai-agent-read",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "what-happens-when-an-ai-agent-answers-a-parking",
 		"reason": "Parking garage and lot operators are a common, phone-heavy property business the catalog has never covered, and real-estate-property is the thinnest hub with 11 posts. Case walkthrough is the format that has gone longest without use; it was last used Oct 16."
+	},
+	{
+		"date": "2026-10-24T16:39:51.911Z",
+		"action": "new_post",
+		"slug": "pediatric-practice-ai-phone-agent-questions-from",
+		"reason": "The catalog has no post on independent pediatric or primary care practices, a common and phone-heavy vertical whose parent-driven sick-call triage sets it apart from the dental, therapy, and pharmacy posts. FAQ is the format that has gone longest without use; it was last used Oct 17."
 	}
 ]
