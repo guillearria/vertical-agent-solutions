@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-25T17:59:36.485Z",
-		"action": "new_post",
-		"slug": "scrap-metal-yard-phones-letting-an-ai-agent-read",
-		"reason": "Scrap and metal recycling yards are a common, phone-heavy vertical the catalog has never covered, and FAQ is the least recently used format (last used Sep 18)."
-	},
-	{
 		"date": "2026-09-26T17:14:51.108Z",
 		"action": "new_post",
 		"slug": "taking-flower-shop-phone-orders-with-an-ai-agent",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "pediatric-practice-ai-phone-agent-questions-from",
 		"reason": "The catalog has no post on independent pediatric or primary care practices, a common and phone-heavy vertical whose parent-driven sick-call triage sets it apart from the dental, therapy, and pharmacy posts. FAQ is the format that has gone longest without use; it was last used Oct 17."
+	},
+	{
+		"date": "2026-10-25T17:05:42.053Z",
+		"action": "new_post",
+		"slug": "putting-ai-on-a-motorcycle-and-powersports",
+		"reason": "The catalog has never covered powersports dealerships, a common and phone-heavy business whose seasonal service rush and parts-by-VIN calls set it apart from the car dealership and marina posts. Myth-busting is the format that has gone longest without use; it was last used Oct 18."
 	}
 ]
