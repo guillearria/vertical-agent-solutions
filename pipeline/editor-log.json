@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-26T17:14:51.108Z",
-		"action": "new_post",
-		"slug": "taking-flower-shop-phone-orders-with-an-ai-agent",
-		"reason": "Retail florists are a common, holiday-spike, phone-order business the catalog has never covered, and personal-services is one of the thinner hubs. Myth-busting is the least recently used format; it was last used Sep 19."
-	},
-	{
 		"date": "2026-09-27T17:48:44.699Z",
 		"action": "new_post",
 		"slug": "mobile-home-park-phone-coverage-compared-on-four",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "putting-ai-on-a-motorcycle-and-powersports",
 		"reason": "The catalog has never covered powersports dealerships, a common and phone-heavy business whose seasonal service rush and parts-by-VIN calls set it apart from the car dealership and marina posts. Myth-busting is the format that has gone longest without use; it was last used Oct 18."
+	},
+	{
+		"date": "2026-10-26T19:23:45.515Z",
+		"action": "new_post",
+		"slug": "small-flight-schools-lose-discovery-flight-calls",
+		"reason": "Flight schools are a common, phone-heavy training business the catalog has never covered, and their weather-driven rescheduling and airworthiness red lines set them apart from the driving school and trade school posts. Comparison is the format that has gone longest without use; it was last used Oct 19."
 	}
 ]
