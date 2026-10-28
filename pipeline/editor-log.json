@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-28T20:09:24.151Z",
-		"action": "new_post",
-		"slug": "unlimited-car-wash-membership-cancellations-and",
-		"reason": "Car washes are a common, membership-driven automotive business the catalog has never covered, and they are distinct from the auto repair, collision, and dealership posts. Checklist is the least recently used format; it was last used Sep 21."
-	},
-	{
 		"date": "2026-09-29T18:40:47.440Z",
 		"action": "new_post",
 		"slug": "rv-park-ai-phone-agent-setup-step-by-step-for",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "give-the-ai-phone-agent-your-jewelry-repair-status",
 		"reason": "Independent jewelers' repair and appraisal counters are a common, phone-heavy business the catalog has never covered, and personal-services is tied for the thinnest hub. Checklist is the format that has gone longest without use; it was last used Oct 20."
+	},
+	{
+		"date": "2026-10-28T18:54:01.094Z",
+		"action": "new_post",
+		"slug": "what-to-load-into-an-ai-phone-agent-before-it",
+		"reason": "Charter fishing and boat tour operators are a common, phone-heavy seasonal business the catalog has never covered. Their passenger-cap and weather-call rules set them apart from the marina post. Hospitality is tied for the thinnest hub, and practical guide is the format that has gone longest without use (last used Oct 21)."
 	}
 ]
