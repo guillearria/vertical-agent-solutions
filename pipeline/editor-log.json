@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-29T18:40:47.440Z",
-		"action": "new_post",
-		"slug": "rv-park-ai-phone-agent-setup-step-by-step-for",
-		"reason": "RV parks and campgrounds are a common, reservation-heavy, seasonal business the catalog has never covered. Site-fit questions make the job different from the B&B, marina, and golf posts. Practical guide is the least recently used format; it was last used Sep 22."
-	},
-	{
 		"date": "2026-09-30T18:29:18.706Z",
 		"action": "new_post",
 		"slug": "pricing-an-ai-receptionist-for-a-coworking-space",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "what-to-load-into-an-ai-phone-agent-before-it",
 		"reason": "Charter fishing and boat tour operators are a common, phone-heavy seasonal business the catalog has never covered. Their passenger-cap and weather-call rules set them apart from the marina post. Hospitality is tied for the thinnest hub, and practical guide is the format that has gone longest without use (last used Oct 21)."
+	},
+	{
+		"date": "2026-10-29T18:59:44.877Z",
+		"action": "new_post",
+		"slug": "the-monthly-bill-for-an-ai-receptionist-at-a-land",
+		"reason": "The catalog has never covered land surveying firms, a common and phone-heavy business whose title-company status calls and licensed-judgment red lines set it apart from the appraisal and home inspection posts. Cost/ROI is the format that has gone longest without use (last used Oct 22), and professional-services is tied for the thinnest hub."
 	}
 ]
