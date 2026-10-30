@@ -1,11 +1,5 @@
 [
 	{
-		"date": "2026-09-30T18:29:18.706Z",
-		"action": "new_post",
-		"slug": "pricing-an-ai-receptionist-for-a-coworking-space",
-		"reason": "Coworking and flex-office operators are a common vertical the catalog has not covered, and real-estate-property is among the thinnest hubs. Cost/ROI is the least recently used format, last used Sep 23."
-	},
-	{
 		"date": "2026-10-01T18:56:11.185Z",
 		"action": "new_post",
 		"slug": "massage-studio-ai-receptionist-a-december-week-of",
@@ -178,5 +172,11 @@
 		"action": "new_post",
 		"slug": "the-monthly-bill-for-an-ai-receptionist-at-a-land",
 		"reason": "The catalog has never covered land surveying firms, a common and phone-heavy business whose title-company status calls and licensed-judgment red lines set it apart from the appraisal and home inspection posts. Cost/ROI is the format that has gone longest without use (last used Oct 22), and professional-services is tied for the thinnest hub."
+	},
+	{
+		"date": "2026-10-30T18:40:11.968Z",
+		"action": "new_post",
+		"slug": "commercial-kitchen-equipment-repair-calls-on-a",
+		"reason": "Commercial kitchen equipment repair is a common, phone-heavy B2B service vertical the catalog has never covered, and its food-loss emergencies and warranty dispatch set it apart from the residential appliance repair post. Trade-industrial is tied for the thinnest hub, and case walkthrough is the format that has gone longest without use (last used Oct 23)."
 	}
 ]
